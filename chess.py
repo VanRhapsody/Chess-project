@@ -16,10 +16,6 @@ class Sachovnice(pygame.sprite.Sprite):
                     pygame.draw.rect(screen, (139,69,19), (x * scale, y * scale, scale, scale))
 
 
-
-
-
-
 pygame.init()
 
 #Nastavení připojení k databázi
