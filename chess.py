@@ -1019,6 +1019,150 @@ rect_kar_cer_y4=kardinal_cerny_rect.centery+krok
 rect_kar_cer_4=pygame.Rect(rect_kar_cer_x4-30,rect_kar_cer_y4-30,60,60)
 ctverce_kardinal_cerny.append(rect_kar_cer_1)
 
+#Hádes černý
+ctverce_hades_cerny=[]
+
+rect_had_cer_x1=hades_cerny_rect.centerx+krok
+rect_had_cer_y1=hades_cerny_rect.centery
+rect_had_cer_1=pygame.Rect(rect_had_cer_x1-30,rect_had_cer_y1-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x2=hades_cerny_rect.centerx+krok*2
+rect_had_cer_y2=hades_cerny_rect.centery
+rect_had_cer_2=pygame.Rect(rect_had_cer_x2-30,rect_had_cer_y2-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x3=hades_cerny_rect.centerx+krok*3
+rect_had_cer_y3=hades_cerny_rect.centery
+rect_had_cer_3=pygame.Rect(rect_had_cer_x3-30,rect_had_cer_y3-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x4=hades_cerny_rect.centerx-krok
+rect_had_cer_y4=hades_cerny_rect.centery
+rect_had_cer_4=pygame.Rect(rect_had_cer_x4-30,rect_had_cer_y4-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x5=hades_cerny_rect.centerx-krok*2
+rect_had_cer_y5=hades_cerny_rect.centery
+rect_had_cer_5=pygame.Rect(rect_had_cer_x5-30,rect_had_cer_y5-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x6=hades_cerny_rect.centerx-krok*3
+rect_had_cer_y6=hades_cerny_rect.centery
+rect_had_cer_6=pygame.Rect(rect_had_cer_x6-30,rect_had_cer_y3-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x7=hades_cerny_rect.centerx
+rect_had_cer_y7=hades_cerny_rect.centery-krok
+rect_had_cer_7=pygame.Rect(rect_had_cer_x7-30,rect_had_cer_y7-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x8=hades_cerny_rect.centerx
+rect_had_cer_y8=hades_cerny_rect.centery-krok*2
+rect_had_cer_8=pygame.Rect(rect_had_cer_x8-30,rect_had_cer_y8-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x9=hades_cerny_rect.centerx
+rect_had_cer_y9=hades_cerny_rect.centery-krok*3
+rect_had_cer_9=pygame.Rect(rect_had_cer_x9-30,rect_had_cer_y9-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x10=hades_cerny_rect.centerx+krok
+rect_had_cer_y10=hades_cerny_rect.centery-krok
+rect_had_cer_10=pygame.Rect(rect_had_cer_x10-30,rect_had_cer_y10-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x11=hades_cerny_rect.centerx+krok*2
+rect_had_cer_y11=hades_cerny_rect.centery-krok*2
+rect_had_cer_11=pygame.Rect(rect_had_cer_x11-30,rect_had_cer_y11-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x12=hades_cerny_rect.centerx+krok*3
+rect_had_cer_y12=hades_cerny_rect.centery-krok*3
+rect_had_cer_12=pygame.Rect(rect_had_cer_x12-30,rect_had_cer_y12-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x13=hades_cerny_rect.centerx-krok
+rect_had_cer_y13=hades_cerny_rect.centery-krok
+rect_had_cer_13=pygame.Rect(rect_had_cer_x13-30,rect_had_cer_y13-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x14=hades_cerny_rect.centerx-krok*2
+rect_had_cer_y14=hades_cerny_rect.centery-krok*2
+rect_had_cer_14=pygame.Rect(rect_had_cer_x14-30,rect_had_cer_y14-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x15=hades_cerny_rect.centerx-krok*3
+rect_had_cer_y15=hades_cerny_rect.centery-krok*3
+rect_had_cer_15=pygame.Rect(rect_had_cer_x15-30,rect_had_cer_y15-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x16=hades_cerny_rect.centerx+krok
+rect_had_cer_y16=hades_cerny_rect.centery+krok
+rect_had_cer_16=pygame.Rect(rect_had_cer_x16-30,rect_had_cer_y16-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x17=hades_cerny_rect.centerx+krok*2
+rect_had_cer_y17=hades_cerny_rect.centery+krok*2
+rect_had_cer_17=pygame.Rect(rect_had_cer_x17-30,rect_had_cer_y17-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x18=hades_cerny_rect.centerx-krok
+rect_had_cer_y18=hades_cerny_rect.centery+krok
+rect_had_cer_18=pygame.Rect(rect_had_cer_x18-30,rect_had_cer_y18-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+rect_had_cer_x19=hades_cerny_rect.centerx-krok*2
+rect_had_cer_y19=hades_cerny_rect.centery+krok*2
+rect_had_cer_19=pygame.Rect(rect_had_cer_x19-30,rect_had_cer_y19-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_1)
+
+#Persefona černá
+ctverce_persefona_cerna=[]
+
+rect_per_cer_x1=persefona_cerna_rect.centerx+krok
+rect_per_cer_y1=persefona_cerna_rect.centery-krok
+rect_per_cer_1=pygame.Rect(rect_per_cer_x1-30,rect_per_cer_y1-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_1)
+
+rect_per_cer_x2=persefona_cerna_rect.centerx+krok
+rect_per_cer_y2=persefona_cerna_rect.centery
+rect_per_cer_2=pygame.Rect(rect_per_cer_x2-30,rect_per_cer_y2-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_2)
+
+rect_per_cer_x3=persefona_cerna_rect.centerx+krok
+rect_per_cer_y3=persefona_cerna_rect.centery+krok
+rect_per_cer_3=pygame.Rect(rect_per_cer_x3-30,rect_per_cer_y3-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_3)
+
+rect_per_cer_x4=persefona_cerna_rect.centerx
+rect_per_cer_y4=persefona_cerna_rect.centery+krok
+rect_per_cer_4=pygame.Rect(rect_per_cer_x4-30,rect_per_cer_y4-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_1)
+
+rect_per_cer_x5=persefona_cerna_rect.centerx
+rect_per_cer_y5=persefona_cerna_rect.centery-krok
+rect_per_cer_5=pygame.Rect(rect_per_cer_x5-30,rect_per_cer_y5-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_1)
+
+rect_per_cer_x6=persefona_cerna_rect.centerx-krok
+rect_per_cer_y6=persefona_cerna_rect.centery-krok
+rect_per_cer_6=pygame.Rect(rect_per_cer_x6-30,rect_per_cer_y6-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_1)
+
+rect_per_cer_x7=persefona_cerna_rect.centerx-krok
+rect_per_cer_y7=persefona_cerna_rect.centery
+rect_per_cer_7=pygame.Rect(rect_per_cer_x7-30,rect_per_cer_y7-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_1)
+
+rect_per_cer_x8=persefona_cerna_rect.centerx-krok
+rect_per_cer_y8=persefona_cerna_rect.centery+krok
+rect_per_cer_8=pygame.Rect(rect_per_cer_x8-30,rect_per_cer_y8-30,60,60)
+ctverce_persefona_cerna.append(rect_per_cer_1)
+
+
+
+
 
 
 
@@ -2101,6 +2245,156 @@ while run:
             rect_kar_cer_4=pygame.Rect(rect_kar_cer_x4-30,rect_kar_cer_y4-30,60,60)
             ctverce_kardinal_cerny.append(rect_kar_cer_1)
 
+            #Hádes černý
+            hades_cerny_x_pred=hades_cerny_rect.centerx
+            hades_cerny_y_pred=hades_cerny_rect.centery
+
+            ctverce_hades_cerny=[]
+
+            rect_had_cer_x1=hades_cerny_rect.centerx+krok
+            rect_had_cer_y1=hades_cerny_rect.centery
+            rect_had_cer_1=pygame.Rect(rect_had_cer_x1-30,rect_had_cer_y1-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x2=hades_cerny_rect.centerx+krok*2
+            rect_had_cer_y2=hades_cerny_rect.centery
+            rect_had_cer_2=pygame.Rect(rect_had_cer_x2-30,rect_had_cer_y2-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x3=hades_cerny_rect.centerx+krok*3
+            rect_had_cer_y3=hades_cerny_rect.centery
+            rect_had_cer_3=pygame.Rect(rect_had_cer_x3-30,rect_had_cer_y3-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x4=hades_cerny_rect.centerx-krok
+            rect_had_cer_y4=hades_cerny_rect.centery
+            rect_had_cer_4=pygame.Rect(rect_had_cer_x4-30,rect_had_cer_y4-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x5=hades_cerny_rect.centerx-krok*2
+            rect_had_cer_y5=hades_cerny_rect.centery
+            rect_had_cer_5=pygame.Rect(rect_had_cer_x5-30,rect_had_cer_y5-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x6=hades_cerny_rect.centerx-krok*3
+            rect_had_cer_y6=hades_cerny_rect.centery
+            rect_had_cer_6=pygame.Rect(rect_had_cer_x6-30,rect_had_cer_y3-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x7=hades_cerny_rect.centerx
+            rect_had_cer_y7=hades_cerny_rect.centery-krok
+            rect_had_cer_7=pygame.Rect(rect_had_cer_x7-30,rect_had_cer_y7-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x8=hades_cerny_rect.centerx
+            rect_had_cer_y8=hades_cerny_rect.centery-krok*2
+            rect_had_cer_8=pygame.Rect(rect_had_cer_x8-30,rect_had_cer_y8-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x9=hades_cerny_rect.centerx
+            rect_had_cer_y9=hades_cerny_rect.centery-krok*3
+            rect_had_cer_9=pygame.Rect(rect_had_cer_x9-30,rect_had_cer_y9-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x10=hades_cerny_rect.centerx+krok
+            rect_had_cer_y10=hades_cerny_rect.centery-krok
+            rect_had_cer_10=pygame.Rect(rect_had_cer_x10-30,rect_had_cer_y10-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x11=hades_cerny_rect.centerx+krok*2
+            rect_had_cer_y11=hades_cerny_rect.centery-krok*2
+            rect_had_cer_11=pygame.Rect(rect_had_cer_x11-30,rect_had_cer_y11-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x12=hades_cerny_rect.centerx+krok*3
+            rect_had_cer_y12=hades_cerny_rect.centery-krok*3
+            rect_had_cer_12=pygame.Rect(rect_had_cer_x12-30,rect_had_cer_y12-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x13=hades_cerny_rect.centerx-krok
+            rect_had_cer_y13=hades_cerny_rect.centery-krok
+            rect_had_cer_13=pygame.Rect(rect_had_cer_x13-30,rect_had_cer_y13-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x14=hades_cerny_rect.centerx-krok*2
+            rect_had_cer_y14=hades_cerny_rect.centery-krok*2
+            rect_had_cer_14=pygame.Rect(rect_had_cer_x14-30,rect_had_cer_y14-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x15=hades_cerny_rect.centerx-krok*3
+            rect_had_cer_y15=hades_cerny_rect.centery-krok*3
+            rect_had_cer_15=pygame.Rect(rect_had_cer_x15-30,rect_had_cer_y15-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x16=hades_cerny_rect.centerx+krok
+            rect_had_cer_y16=hades_cerny_rect.centery+krok
+            rect_had_cer_16=pygame.Rect(rect_had_cer_x16-30,rect_had_cer_y16-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x17=hades_cerny_rect.centerx+krok*2
+            rect_had_cer_y17=hades_cerny_rect.centery+krok*2
+            rect_had_cer_17=pygame.Rect(rect_had_cer_x17-30,rect_had_cer_y17-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x18=hades_cerny_rect.centerx-krok
+            rect_had_cer_y18=hades_cerny_rect.centery+krok
+            rect_had_cer_18=pygame.Rect(rect_had_cer_x18-30,rect_had_cer_y18-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            rect_had_cer_x19=hades_cerny_rect.centerx-krok*2
+            rect_had_cer_y19=hades_cerny_rect.centery+krok*2
+            rect_had_cer_19=pygame.Rect(rect_had_cer_x19-30,rect_had_cer_y19-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_1)
+
+            #Persefona černá
+            persefona_cerna_x_pred=persefona_cerna_rect.centerx
+            persefona_cerna_y_pred=persefona_cerna_rect.centery
+
+            ctverce_persefona_cerna=[]
+
+            rect_per_cer_x1=persefona_cerna_rect.centerx+krok
+            rect_per_cer_y1=persefona_cerna_rect.centery-krok
+            rect_per_cer_1=pygame.Rect(rect_per_cer_x1-30,rect_per_cer_y1-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_1)
+
+            rect_per_cer_x2=persefona_cerna_rect.centerx+krok
+            rect_per_cer_y2=persefona_cerna_rect.centery
+            rect_per_cer_2=pygame.Rect(rect_per_cer_x2-30,rect_per_cer_y2-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_2)
+
+            rect_per_cer_x3=persefona_cerna_rect.centerx+krok
+            rect_per_cer_y3=persefona_cerna_rect.centery+krok
+            rect_per_cer_3=pygame.Rect(rect_per_cer_x3-30,rect_per_cer_y3-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_3)
+
+            rect_per_cer_x4=persefona_cerna_rect.centerx
+            rect_per_cer_y4=persefona_cerna_rect.centery+krok
+            rect_per_cer_4=pygame.Rect(rect_per_cer_x4-30,rect_per_cer_y4-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_1)
+
+            rect_per_cer_x5=persefona_cerna_rect.centerx
+            rect_per_cer_y5=persefona_cerna_rect.centery-krok
+            rect_per_cer_5=pygame.Rect(rect_per_cer_x5-30,rect_per_cer_y5-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_1)
+
+            rect_per_cer_x6=persefona_cerna_rect.centerx-krok
+            rect_per_cer_y6=persefona_cerna_rect.centery-krok
+            rect_per_cer_6=pygame.Rect(rect_per_cer_x6-30,rect_per_cer_y6-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_1)
+
+            rect_per_cer_x7=persefona_cerna_rect.centerx-krok
+            rect_per_cer_y7=persefona_cerna_rect.centery
+            rect_per_cer_7=pygame.Rect(rect_per_cer_x7-30,rect_per_cer_y7-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_1)
+
+            rect_per_cer_x8=persefona_cerna_rect.centerx-krok
+            rect_per_cer_y8=persefona_cerna_rect.centery+krok
+            rect_per_cer_8=pygame.Rect(rect_per_cer_x8-30,rect_per_cer_y8-30,60,60)
+            ctverce_persefona_cerna.append(rect_per_cer_1)
+
+
+
+
 
 
 
@@ -2271,6 +2565,22 @@ while run:
                 
                 kardinal_cerny_rect.centerx=event.pos[0]
                 kardinal_cerny_rect.centery=event.pos[1]  
+            
+            elif hades_cerny_rect.collidepoint(event.pos):
+                for ctverec in ctverce_hades_cerny:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen,black,ctverec,5)
+                
+                hades_cerny_rect.centerx=event.pos[0]
+                hades_cerny_rect.centery=event.pos[1]  
+
+            elif persefona_cerna_rect.collidepoint(event.pos):
+                for ctverec in ctverce_persefona_cerna:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen,black,ctverec,5)
+                
+                persefona_cerna_rect.centerx=event.pos[0]
+                persefona_cerna_rect.centery=event.pos[1]  
                       
 
              
@@ -2913,7 +3223,72 @@ while run:
             if (kardinal_cerny_rect.right > 1440 or kardinal_cerny_rect.left < 475) or (kardinal_cerny_rect.bottom > 1020 or kardinal_cerny_rect.top < 60):
                 kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
                 kardinal_cerny_rect.centery=kardinal_cerny_y_pred
-            
+
+            if hades_cerny_rect.colliderect(rect_had_cer_1):
+                hades_cerny_rect.centerx=rect_had_cer_1.centerx
+                hades_cerny_rect.centery=rect_had_cer_1.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_2):
+                hades_cerny_rect.centerx=rect_had_cer_2.centerx
+                hades_cerny_rect.centery=rect_had_cer_2.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_3):
+                hades_cerny_rect.centerx=rect_had_cer_3.centerx
+                hades_cerny_rect.centery=rect_had_cer_3.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_4):
+                hades_cerny_rect.centerx=rect_had_cer_4.centerx
+                hades_cerny_rect.centery=rect_had_cer_4.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_5):
+                hades_cerny_rect.centerx=rect_had_cer_5.centerx
+                hades_cerny_rect.centery=rect_had_cer_5.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_6):
+                hades_cerny_rect.centerx=rect_had_cer_6.centerx
+                hades_cerny_rect.centery=rect_had_cer_6.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_7):
+                hades_cerny_rect.centerx=rect_had_cer_7.centerx
+                hades_cerny_rect.centery=rect_had_cer_7.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_8):
+                hades_cerny_rect.centerx=rect_had_cer_8.centerx
+                hades_cerny_rect.centery=rect_had_cer_8.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_9):
+                hades_cerny_rect.centerx=rect_had_cer_9.centerx
+                hades_cerny_rect.centery=rect_had_cer_9.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_10):
+                hades_cerny_rect.centerx=rect_had_cer_10.centerx
+                hades_cerny_rect.centery=rect_had_cer_10.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_11):
+                hades_cerny_rect.centerx=rect_had_cer_11.centerx
+                hades_cerny_rect.centery=rect_had_cer_11.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_12):
+                hades_cerny_rect.centerx=rect_had_cer_12.centerx
+                hades_cerny_rect.centery=rect_had_cer_12.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_13):
+                hades_cerny_rect.centerx=rect_had_cer_13.centerx
+                hades_cerny_rect.centery=rect_had_cer_13.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_14):
+                hades_cerny_rect.centerx=rect_had_cer_14.centerx
+                hades_cerny_rect.centery=rect_had_cer_14.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_15):
+                hades_cerny_rect.centerx=rect_had_cer_15.centerx
+                hades_cerny_rect.centery=rect_had_cer_15.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_16):
+                hades_cerny_rect.centerx=rect_had_cer_16.centerx
+                hades_cerny_rect.centery=rect_had_cer_16.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_17):
+                hades_cerny_rect.centerx=rect_had_cer_17.centerx
+                hades_cerny_rect.centery=rect_had_cer_17.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_18):
+                hades_cerny_rect.centerx=rect_had_cer_18.centerx
+                hades_cerny_rect.centery=rect_had_cer_18.centery
+            elif hades_cerny_rect.colliderect(rect_had_cer_19):
+                hades_cerny_rect.centerx=rect_had_cer_19.centerx
+                hades_cerny_rect.centery=rect_had_cer_19.centery
+            else:
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            if (hades_cerny_rect.right > 1440 or hades_cerny_rect.left < 475) or (hades_cerny_rect.bottom > 1020 or hades_cerny_rect.top < 60):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+
+            if persefona_cerna_rect.colliderect(rect)    
 
 
             
