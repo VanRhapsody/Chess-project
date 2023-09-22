@@ -1160,6 +1160,189 @@ rect_per_cer_y8=persefona_cerna_rect.centery+krok
 rect_per_cer_8=pygame.Rect(rect_per_cer_x8-30,rect_per_cer_y8-30,60,60)
 ctverce_persefona_cerna.append(rect_per_cer_1)
 
+#Kardinál černý 1
+ctverce_kardinal_cerny_1=[]
+
+rect_kar_cer_x1_1=kardinal_cerny_rect.centerx+krok
+rect_kar_cer_y1_1=kardinal_cerny_rect.centery-krok
+rect_kar_cer_1_1=pygame.Rect(rect_kar_cer_x1_1-30,rect_kar_cer_y1_1-30,60,60)
+ctverce_kardinal_cerny_1.append(rect_kar_cer_1_1)
+
+rect_kar_cer_x2_1=kardinal_cerny_rect.centerx+krok
+rect_kar_cer_y2_1=kardinal_cerny_rect.centery+krok
+rect_kar_cer_1_2=pygame.Rect(rect_kar_cer_x2_1-30,rect_kar_cer_y2_1-30,60,60)
+ctverce_kardinal_cerny_1.append(rect_kar_cer_1_2)
+
+rect_kar_cer_x3_1=kardinal_cerny_rect.centerx-krok
+rect_kar_cer_y3_1=kardinal_cerny_rect.centery-krok
+rect_kar_cer_1_3=pygame.Rect(rect_kar_cer_x3_1-30,rect_kar_cer_y3_1-30,60,60)
+ctverce_kardinal_cerny_1.append(rect_kar_cer_1_3)
+
+rect_kar_cer_x4_1=kardinal_cerny_rect.centerx-krok
+rect_kar_cer_y4_1=kardinal_cerny_rect.centery+krok
+rect_kar_cer_1_4=pygame.Rect(rect_kar_cer_x4_1-30,rect_kar_cer_y4_1-30,60,60)
+ctverce_kardinal_cerny_1.append(rect_kar_cer_1_4)
+
+#Arcibiskup černý 1
+ctverce_arcibiskup_cerny_1=[]
+
+rect_arc_cer_x1_1=arcibiskup_cerny_rect1.centerx+krok*2
+rect_arc_cer_y1_1=arcibiskup_cerny_rect1.centery
+rect_arc_cer_1_1=pygame.Rect(rect_arc_cer_x1_1-30,rect_arc_cer_y1_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_1)
+
+rect_arc_cer_x2_1=arcibiskup_cerny_rect1.centerx+krok*2
+rect_arc_cer_y2_1=arcibiskup_cerny_rect1.centery-krok
+rect_arc_cer_1_2=pygame.Rect(rect_arc_cer_x2_1-30,rect_arc_cer_x2_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_2)
+
+rect_arc_cer_x3_1=arcibiskup_cerny_rect1.centerx+krok*2
+rect_arc_cer_y3_1=arcibiskup_cerny_rect1.centery+krok
+rect_arc_cer_1_3=pygame.Rect(rect_arc_cer_x3_1-30,rect_arc_cer_y3_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_3)
+
+rect_arc_cer_x4_1=arcibiskup_cerny_rect1.centerx-krok*2
+rect_arc_cer_y4_1=arcibiskup_cerny_rect1.centery
+rect_arc_cer_1_4=pygame.Rect(rect_arc_cer_x4_1-30,rect_arc_cer_y4_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_4)
+
+rect_arc_cer_x5_1=arcibiskup_cerny_rect1.centerx-krok*2
+rect_arc_cer_y5_1=arcibiskup_cerny_rect1.centery-krok
+rect_arc_cer_1_5=pygame.Rect(rect_arc_cer_x5_1-30,rect_arc_cer_y5_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_5)
+
+rect_arc_cer_x6_1=arcibiskup_cerny_rect1.centerx-krok*2
+rect_arc_cer_y6_1=arcibiskup_cerny_rect1.centery+krok
+rect_arc_cer_1_6=pygame.Rect(rect_arc_cer_x6_1-30,rect_arc_cer_y6_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_6)
+
+rect_arc_cer_x7_1=arcibiskup_cerny_rect1.centerx
+rect_arc_cer_y7_1=arcibiskup_cerny_rect1.centery+krok*2
+rect_arc_cer_1_7=pygame.Rect(rect_arc_cer_x7_1-30,rect_arc_cer_y7_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_7)
+
+rect_arc_cer_x8_1=arcibiskup_cerny_rect1.centerx-krok
+rect_arc_cer_y8_1=arcibiskup_cerny_rect1.centery+krok*2
+rect_arc_cer_1_8=pygame.Rect(rect_arc_cer_x8_1-30,rect_arc_cer_y8_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_8)
+
+rect_arc_cer_x9_1=arcibiskup_cerny_rect1.centerx+krok
+rect_arc_cer_y9_1=arcibiskup_cerny_rect1.centery+krok*2
+rect_arc_cer_1_9=pygame.Rect(rect_arc_cer_x9_1-30,rect_arc_cer_y9_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_9)
+
+rect_arc_cer_x10_1=arcibiskup_cerny_rect1.centerx
+rect_arc_cer_y10_1=arcibiskup_cerny_rect1.centery-krok*2
+rect_arc_cer_1_10=pygame.Rect(rect_arc_cer_x10_1-30,rect_arc_cer_y10_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_10)
+
+rect_arc_cer_x11_1=arcibiskup_cerny_rect1.centerx-krok
+rect_arc_cer_y11_1=arcibiskup_cerny_rect1.centery-krok*2
+rect_arc_cer_1_11=pygame.Rect(rect_arc_cer_x11_1-30,rect_arc_cer_y11_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_11)
+
+rect_arc_cer_x12_1=arcibiskup_cerny_rect1.centerx+krok
+rect_arc_cer_y12_1=arcibiskup_cerny_rect1.centery-krok*2
+rect_arc_cer_1_12=pygame.Rect(rect_arc_cer_x12_1-30,rect_arc_cer_y12_1 -30,60,60)
+ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_12)
+
+#Morový doktor černý 1
+ctverce_morovy_doktor_cerny_1=[]
+
+rect_mor_cer_x1_1=morovy_doktor_cerny_rect1.centerx+krok
+rect_mor_cer_y1_1=morovy_doktor_cerny_rect1.centery
+rect_mor_cer_1_1=pygame.Rect(rect_mor_cer_x1_1-30,rect_mor_cer_y1_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_1)
+
+rect_mor_cer_x2_1=morovy_doktor_cerny_rect1.centerx+krok*2
+rect_mor_cer_y2_1=morovy_doktor_cerny_rect1.centery
+rect_mor_cer_1_2=pygame.Rect(rect_mor_cer_x2_1-30,rect_mor_cer_y2_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_2)
+
+rect_mor_cer_x3_1=morovy_doktor_cerny_rect1.centerx-krok
+rect_mor_cer_y3_1=morovy_doktor_cerny_rect1.centery
+rect_mor_cer_1_3=pygame.Rect(rect_mor_cer_x1_3-30,rect_mor_cer_y1_3-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_3)
+
+rect_mor_cer_x4_1=morovy_doktor_cerny_rect1.centerx-krok*2
+rect_mor_cer_y4_1=morovy_doktor_cerny_rect1.centery
+rect_mor_cer_1_4=pygame.Rect(rect_mor_cer_x4_1-30,rect_mor_cer_y4_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_4)
+
+rect_mor_cer_x5_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y5_1=morovy_doktor_cerny_rect1.centery+krok
+rect_mor_cer_1_5=pygame.Rect(rect_mor_cer_x4_1-30,rect_mor_cer_y5_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_5)
+
+rect_mor_cer_x6_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y6_1=morovy_doktor_cerny_rect1.centery+krok*2
+rect_mor_cer_1_6=pygame.Rect(rect_mor_cer_x6_1-30,rect_mor_cer_y6_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_6)
+
+rect_mor_cer_x7_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y7_1=morovy_doktor_cerny_rect1.centery+krok*3
+rect_mor_cer_1_7=pygame.Rect(rect_mor_cer_x7_1-30,rect_mor_cer_y7_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_7)
+
+rect_mor_cer_x8_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y8_1=morovy_doktor_cerny_rect1.centery+krok*4
+rect_mor_cer_1_8=pygame.Rect(rect_mor_cer_x8_1-30,rect_mor_cer_y8_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_8)
+
+rect_mor_cer_x9_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y9_1=morovy_doktor_cerny_rect1.centery+krok*5
+rect_mor_cer_1_9=pygame.Rect(rect_mor_cer_x9_1-30,rect_mor_cer_y9_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_9)
+
+rect_mor_cer_x10_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y10_1=morovy_doktor_cerny_rect1.centery+krok*6
+rect_mor_cer_1_10=pygame.Rect(rect_mor_cer_x10_1-30,rect_mor_cer_y10_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_10)
+
+rect_mor_cer_x11_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y11_1=morovy_doktor_cerny_rect1.centery+krok*7
+rect_mor_cer_1_11=pygame.Rect(rect_mor_cer_x11_1-30,rect_mor_cer_y11_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_11)
+
+rect_mor_cer_x12_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y12_1=morovy_doktor_cerny_rect1.centery-krok
+rect_mor_cer_1_12=pygame.Rect(rect_mor_cer_x12_1-30,rect_mor_cer_y12_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_12)
+
+rect_mor_cer_x13_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y13_1=morovy_doktor_cerny_rect1.centery-krok*2
+rect_mor_cer_1_13=pygame.Rect(rect_mor_cer_x13_1-30,rect_mor_cer_y13_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_12)
+
+rect_mor_cer_x14_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y14_1=morovy_doktor_cerny_rect1.centery-krok*3
+rect_mor_cer_1_14=pygame.Rect(rect_mor_cer_x14_1-30,rect_mor_cer_y14_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_14)
+
+rect_mor_cer_x15_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y15_1=morovy_doktor_cerny_rect1.centery-krok*4
+rect_mor_cer_1_15=pygame.Rect(rect_mor_cer_x15_1-30,rect_mor_cer_y15_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_15)
+
+rect_mor_cer_x16_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y16_1=morovy_doktor_cerny_rect1.centery-krok*5
+rect_mor_cer_1_16=pygame.Rect(rect_mor_cer_x16_1-30,rect_mor_cer_y16_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_16)
+
+rect_mor_cer_x17_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y17_1=morovy_doktor_cerny_rect1.centery-krok*6
+rect_mor_cer_1_17=pygame.Rect(rect_mor_cer_x17_1-30,rect_mor_cer_y17_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_17)
+
+rect_mor_cer_x18_1=morovy_doktor_cerny_rect1.centerx
+rect_mor_cer_y18_1=morovy_doktor_cerny_rect1.centery-krok*7
+rect_mor_cer_1_18=pygame.Rect(rect_mor_cer_x18_1-30,rect_mor_cer_y18_1-30,60,60)
+ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_18)
+
+
+
+
+
 
 
 
@@ -2392,6 +2575,196 @@ while run:
             rect_per_cer_8=pygame.Rect(rect_per_cer_x8-30,rect_per_cer_y8-30,60,60)
             ctverce_persefona_cerna.append(rect_per_cer_1)
 
+            #Kardinál černý 1
+            kardinal_cerny_x_pred_1=kardinal_cerny_rect1.centerx
+            kardinal_cerny_y_pred_1=kardinal_cerny_rect1.centery
+
+            ctverce_kardinal_cerny_1=[]
+
+            rect_kar_cer_x1_1=kardinal_cerny_rect.centerx+krok
+            rect_kar_cer_y1_1=kardinal_cerny_rect.centery-krok
+            rect_kar_cer_1_1=pygame.Rect(rect_kar_cer_x1_1-30,rect_kar_cer_y1_1-30,60,60)
+            ctverce_kardinal_cerny_1.append(rect_kar_cer_1_1)
+
+            rect_kar_cer_x2_1=kardinal_cerny_rect.centerx+krok
+            rect_kar_cer_y2_1=kardinal_cerny_rect.centery+krok
+            rect_kar_cer_1_2=pygame.Rect(rect_kar_cer_x2_1-30,rect_kar_cer_y2_1-30,60,60)
+            ctverce_kardinal_cerny_1.append(rect_kar_cer_1_2)
+
+            rect_kar_cer_x3_1=kardinal_cerny_rect.centerx-krok
+            rect_kar_cer_y3_1=kardinal_cerny_rect.centery-krok
+            rect_kar_cer_1_3=pygame.Rect(rect_kar_cer_x3_1-30,rect_kar_cer_y3_1-30,60,60)
+            ctverce_kardinal_cerny_1.append(rect_kar_cer_1_3)
+
+            rect_kar_cer_x4_1=kardinal_cerny_rect.centerx-krok
+            rect_kar_cer_y4_1=kardinal_cerny_rect.centery+krok
+            rect_kar_cer_1_4=pygame.Rect(rect_kar_cer_x4_1-30,rect_kar_cer_y4_1-30,60,60)
+            ctverce_kardinal_cerny_1.append(rect_kar_cer_1_4)
+
+            #Arcibiskup černý 1
+            arcibiskup_cerny_x_pred_1=arcibiskup_cerny_rect1.centerx
+            arcibiskup_cerny_y_pred_1=arcibiskup_cerny_rect1.centery
+
+            ctverce_arcibiskup_cerny_1=[]
+
+            rect_arc_cer_x1_1=arcibiskup_cerny_rect1.centerx+krok*2
+            rect_arc_cer_y1_1=arcibiskup_cerny_rect1.centery
+            rect_arc_cer_1_1=pygame.Rect(rect_arc_cer_x1_1-30,rect_arc_cer_y1_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_1)
+
+            rect_arc_cer_x2_1=arcibiskup_cerny_rect1.centerx+krok*2
+            rect_arc_cer_y2_1=arcibiskup_cerny_rect1.centery-krok
+            rect_arc_cer_1_2=pygame.Rect(rect_arc_cer_x2_1-30,rect_arc_cer_x2_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_2)
+
+            rect_arc_cer_x3_1=arcibiskup_cerny_rect1.centerx+krok*2
+            rect_arc_cer_y3_1=arcibiskup_cerny_rect1.centery+krok
+            rect_arc_cer_1_3=pygame.Rect(rect_arc_cer_x3_1-30,rect_arc_cer_y3_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_3)
+
+            rect_arc_cer_x4_1=arcibiskup_cerny_rect1.centerx-krok*2
+            rect_arc_cer_y4_1=arcibiskup_cerny_rect1.centery
+            rect_arc_cer_1_4=pygame.Rect(rect_arc_cer_x4_1-30,rect_arc_cer_y4_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_4)
+
+            rect_arc_cer_x5_1=arcibiskup_cerny_rect1.centerx-krok*2
+            rect_arc_cer_y5_1=arcibiskup_cerny_rect1.centery-krok
+            rect_arc_cer_1_5=pygame.Rect(rect_arc_cer_x5_1-30,rect_arc_cer_y5_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_5)
+
+            rect_arc_cer_x6_1=arcibiskup_cerny_rect1.centerx-krok*2
+            rect_arc_cer_y6_1=arcibiskup_cerny_rect1.centery+krok
+            rect_arc_cer_1_6=pygame.Rect(rect_arc_cer_x6_1-30,rect_arc_cer_y6_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_6)
+
+            rect_arc_cer_x7_1=arcibiskup_cerny_rect1.centerx
+            rect_arc_cer_y7_1=arcibiskup_cerny_rect1.centery+krok*2
+            rect_arc_cer_1_7=pygame.Rect(rect_arc_cer_x7_1-30,rect_arc_cer_y7_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_7)
+
+            rect_arc_cer_x8_1=arcibiskup_cerny_rect1.centerx-krok
+            rect_arc_cer_y8_1=arcibiskup_cerny_rect1.centery+krok*2
+            rect_arc_cer_1_8=pygame.Rect(rect_arc_cer_x8_1-30,rect_arc_cer_y8_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_8)
+
+            rect_arc_cer_x9_1=arcibiskup_cerny_rect1.centerx+krok
+            rect_arc_cer_y9_1=arcibiskup_cerny_rect1.centery+krok*2
+            rect_arc_cer_1_9=pygame.Rect(rect_arc_cer_x9_1-30,rect_arc_cer_y9_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_9)
+
+            rect_arc_cer_x10_1=arcibiskup_cerny_rect1.centerx
+            rect_arc_cer_y10_1=arcibiskup_cerny_rect1.centery-krok*2
+            rect_arc_cer_1_10=pygame.Rect(rect_arc_cer_x10_1-30,rect_arc_cer_y10_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_10)
+
+            rect_arc_cer_x11_1=arcibiskup_cerny_rect1.centerx-krok
+            rect_arc_cer_y11_1=arcibiskup_cerny_rect1.centery-krok*2
+            rect_arc_cer_1_11=pygame.Rect(rect_arc_cer_x11_1-30,rect_arc_cer_y11_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_11)
+
+            rect_arc_cer_x12_1=arcibiskup_cerny_rect1.centerx+krok
+            rect_arc_cer_y12_1=arcibiskup_cerny_rect1.centery-krok*2
+            rect_arc_cer_1_12=pygame.Rect(rect_arc_cer_x12_1-30,rect_arc_cer_y12_1 -30,60,60)
+            ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_12)
+
+            #Morový doktor černý 1
+            morovy_doktor_cerny_x_pred_1=morovy_doktor_cerny_rect1.centerx
+            morovy_doktor_cerny_y_pred_1=morovy_doktor_cerny_rect1.centery
+            
+            ctverce_morovy_doktor_cerny_1=[]
+
+            rect_mor_cer_x1_1=morovy_doktor_cerny_rect1.centerx+krok
+            rect_mor_cer_y1_1=morovy_doktor_cerny_rect1.centery
+            rect_mor_cer_1_1=pygame.Rect(rect_mor_cer_x1_1-30,rect_mor_cer_y1_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_1)
+
+            rect_mor_cer_x2_1=morovy_doktor_cerny_rect1.centerx+krok*2
+            rect_mor_cer_y2_1=morovy_doktor_cerny_rect1.centery
+            rect_mor_cer_1_2=pygame.Rect(rect_mor_cer_x2_1-30,rect_mor_cer_y2_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_2)
+
+            rect_mor_cer_x3_1=morovy_doktor_cerny_rect1.centerx-krok
+            rect_mor_cer_y3_1=morovy_doktor_cerny_rect1.centery
+            rect_mor_cer_1_3=pygame.Rect(rect_mor_cer_x1_3-30,rect_mor_cer_y1_3-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_3)
+
+            rect_mor_cer_x4_1=morovy_doktor_cerny_rect1.centerx-krok*2
+            rect_mor_cer_y4_1=morovy_doktor_cerny_rect1.centery
+            rect_mor_cer_1_4=pygame.Rect(rect_mor_cer_x4_1-30,rect_mor_cer_y4_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_4)
+
+            rect_mor_cer_x5_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y5_1=morovy_doktor_cerny_rect1.centery+krok
+            rect_mor_cer_1_5=pygame.Rect(rect_mor_cer_x4_1-30,rect_mor_cer_y5_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_5)
+
+            rect_mor_cer_x6_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y6_1=morovy_doktor_cerny_rect1.centery+krok*2
+            rect_mor_cer_1_6=pygame.Rect(rect_mor_cer_x6_1-30,rect_mor_cer_y6_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_6)
+
+            rect_mor_cer_x7_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y7_1=morovy_doktor_cerny_rect1.centery+krok*3
+            rect_mor_cer_1_7=pygame.Rect(rect_mor_cer_x7_1-30,rect_mor_cer_y7_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_7)
+
+            rect_mor_cer_x8_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y8_1=morovy_doktor_cerny_rect1.centery+krok*4
+            rect_mor_cer_1_8=pygame.Rect(rect_mor_cer_x8_1-30,rect_mor_cer_y8_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_8)
+
+            rect_mor_cer_x9_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y9_1=morovy_doktor_cerny_rect1.centery+krok*5
+            rect_mor_cer_1_9=pygame.Rect(rect_mor_cer_x9_1-30,rect_mor_cer_y9_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_9)
+
+            rect_mor_cer_x10_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y10_1=morovy_doktor_cerny_rect1.centery+krok*6
+            rect_mor_cer_1_10=pygame.Rect(rect_mor_cer_x10_1-30,rect_mor_cer_y10_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_10)
+
+            rect_mor_cer_x11_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y11_1=morovy_doktor_cerny_rect1.centery+krok*7
+            rect_mor_cer_1_11=pygame.Rect(rect_mor_cer_x11_1-30,rect_mor_cer_y11_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_11)
+
+            rect_mor_cer_x12_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y12_1=morovy_doktor_cerny_rect1.centery-krok
+            rect_mor_cer_1_12=pygame.Rect(rect_mor_cer_x12_1-30,rect_mor_cer_y12_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_12)
+
+            rect_mor_cer_x13_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y13_1=morovy_doktor_cerny_rect1.centery-krok*2
+            rect_mor_cer_1_13=pygame.Rect(rect_mor_cer_x13_1-30,rect_mor_cer_y13_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_12)
+
+            rect_mor_cer_x14_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y14_1=morovy_doktor_cerny_rect1.centery-krok*3
+            rect_mor_cer_1_14=pygame.Rect(rect_mor_cer_x14_1-30,rect_mor_cer_y14_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_14)
+
+            rect_mor_cer_x15_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y15_1=morovy_doktor_cerny_rect1.centery-krok*4
+            rect_mor_cer_1_15=pygame.Rect(rect_mor_cer_x15_1-30,rect_mor_cer_y15_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_15)
+
+            rect_mor_cer_x16_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y16_1=morovy_doktor_cerny_rect1.centery-krok*5
+            rect_mor_cer_1_16=pygame.Rect(rect_mor_cer_x16_1-30,rect_mor_cer_y16_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_16)
+
+            rect_mor_cer_x17_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y17_1=morovy_doktor_cerny_rect1.centery-krok*6
+            rect_mor_cer_1_17=pygame.Rect(rect_mor_cer_x17_1-30,rect_mor_cer_y17_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_17)
+
+            rect_mor_cer_x18_1=morovy_doktor_cerny_rect1.centerx
+            rect_mor_cer_y18_1=morovy_doktor_cerny_rect1.centery-krok*7
+            rect_mor_cer_1_18=pygame.Rect(rect_mor_cer_x18_1-30,rect_mor_cer_y18_1-30,60,60)
+            ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_18)
+
+
+
 
 
 
@@ -2581,6 +2954,31 @@ while run:
                 
                 persefona_cerna_rect.centerx=event.pos[0]
                 persefona_cerna_rect.centery=event.pos[1]  
+            
+            elif kardinal_cerny_rect1.collidepoint(event.pos):
+                for ctverec in ctverce_kardinal_cerny_1:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen,black,ctverec,5)
+                
+                kardinal_cerny_rect1.centerx=event.pos[0]
+                kardinal_cerny_rect1.centery=event.pos[1]  
+            
+            elif arcibiskup_cerny_rect1.collidepoint(event.pos):
+                for ctverec in ctverce_arcibiskup_cerny_1:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen,black,ctverec,5)
+                
+                arcibiskup_cerny_rect1.centerx=event.pos[0]
+                arcibiskup_cerny_rect1.centery=event.pos[1]  
+            
+            elif morovy_doktor_cerny_rect1.collidepoint(event.pos):
+                for ctverec in ctverce_morovy_doktor_cerny_1:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen,black,ctverec,5)
+                
+                morovy_doktor_cerny_rect1.centerx=event.pos[0]
+                morovy_doktor_cerny_rect1.centery=event.pos[1]  
+            
                       
 
              
@@ -3288,7 +3686,164 @@ while run:
                 hades_cerny_rect.centerx=hades_cerny_x_pred
                 hades_cerny_rect.centery=hades_cerny_y_pred
 
-            if persefona_cerna_rect.colliderect(rect)    
+            if persefona_cerna_rect.colliderect(rect_per_cer_1):
+                persefona_cerna_rect.centerx=rect_per_cer_1.centerx
+                persefona_cerna_rect.centery=rect_per_cer_1.centery
+            elif persefona_cerna_rect.colliderect(rect_per_cer_2):
+                persefona_cerna_rect.centerx=rect_per_cer_2.centerx
+                persefona_cerna_rect.centery=rect_per_cer_2.centery
+            elif persefona_cerna_rect.colliderect(rect_per_cer_3):
+                persefona_cerna_rect.centerx=rect_per_cer_3.centerx
+                persefona_cerna_rect.centery=rect_per_cer_3.centery
+            elif persefona_cerna_rect.colliderect(rect_per_cer_4):
+                persefona_cerna_rect.centerx=rect_per_cer_4.centerx
+                persefona_cerna_rect.centery=rect_per_cer_4.centery
+            elif persefona_cerna_rect.colliderect(rect_per_cer_5):
+                persefona_cerna_rect.centerx=rect_per_cer_5.centerx
+                persefona_cerna_rect.centery=rect_per_cer_5.centery
+            elif persefona_cerna_rect.colliderect(rect_per_cer_6):
+                persefona_cerna_rect.centerx=rect_per_cer_6.centerx
+                persefona_cerna_rect.centery=rect_per_cer_6.centery
+            elif persefona_cerna_rect.colliderect(rect_per_cer_7):
+                persefona_cerna_rect.centerx=rect_per_cer_7.centerx
+                persefona_cerna_rect.centery=rect_per_cer_7.centery
+            elif persefona_cerna_rect.colliderect(rect_per_cer_8):
+                persefona_cerna_rect.centerx=rect_per_cer_8.centerx
+                persefona_cerna_rect.centery=rect_per_cer_8.centery
+            else:
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            if (persefona_cerna_rect.right > 1440 or persefona_cerna_rect.left < 475) or (persefona_cerna_rect.bottom > 1020 or persefona_cerna_rect.top < 60):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+
+            if kardinal_cerny_rect1.colliderect(rect_kar_cer_1_1):
+                kardinal_cerny_rect1.centerx=rect_kar_cer_1_1.centerx
+                kardinal_cerny_rect1.centery=rect_kar_cer_1_1.centery
+            elif kardinal_cerny_rect1.colliderect(rect_kar_cer_1_2):
+                kardinal_cerny_rect1.centerx=rect_kar_cer_1_2.centerx
+                kardinal_cerny_rect1.centery=rect_kar_cer_1_2.centery
+            elif kardinal_cerny_rect1.colliderect(rect_kar_cer_1_3):
+                kardinal_cerny_rect1.centerx=rect_kar_cer_1_3.centerx
+                kardinal_cerny_rect1.centery=rect_kar_cer_1_3.centery
+            elif kardinal_cerny_rect1.colliderect(rect_kar_cer_1_4):
+                kardinal_cerny_rect1.centerx=rect_kar_cer_1_4.centerx
+                kardinal_cerny_rect1.centery=rect_kar_cer_1_4.centery
+            else:
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            if (kardinal_cerny_rect1.right > 1440 or kardinal_cerny_rect1.left < 475) or (kardinal_cerny_rect1.bottom > 1020 or kardinal_cerny_rect1.top < 60):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+
+            if arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_1):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_1.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_1.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_2):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_2.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_2.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_3):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_3.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_3.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_4):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_4.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_4.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_5):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_5.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_5.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_6):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_6.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_6.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_7):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_7.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_7.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_8):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_8.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_8.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_9):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_9.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_9.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_10):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_10.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_10.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_11):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_11.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_11.centery
+            elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_12):
+                arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_12.centerx
+                arcibiskup_cerny_rect1.centery=rect_arc_cer_1_12.centery
+            else:
+                arcibiskup_cerny_rect1.centerx=arcibiskup_cerny_x_pred_1
+                arcibiskup_cerny_rect1.centery=arcibiskup_cerny_y_pred_1
+            if (arcibiskup_cerny_rect1.right > 1440 or arcibiskup_cerny_rect1.left < 475) or (arcibiskup_cerny_rect1.bottom > 1020 or arcibiskup_cerny_rect1.top < 60):
+                arcibiskup_cerny_rect1.centerx=arcibiskup_cerny_x_pred_1
+                arcibiskup_cerny_rect1.centery=arcibiskup_cerny_y_pred_1
+
+            if morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_1):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_1.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_1.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_2):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_2.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_2.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_3):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_3.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_3.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_4):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_4.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_4.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_5):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_5.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_5.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_6):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_6.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_6.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_7):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_7.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_7.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_8):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_8.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_8.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_9):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_9.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_9.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_10):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_10.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_10.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_11):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_11.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_11.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_12):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_12.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_12.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_13):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_13.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_13.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_14):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_14.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_14.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_15):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_15.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_15.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_16):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_16.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_16.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_17):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_17.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_17.centery
+            elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_18):
+                morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_18.centerx
+                morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_18.centery
+            else:
+                morovy_doktor_cerny_rect1.centerx=morovy_doktor_cerny_x_pred_1
+                morovy_doktor_cerny_rect1.centery=morovy_doktor_cerny_y_pred_1
+            if (morovy_doktor_cerny_rect1.right > 1440 or morovy_doktor_cerny_rect1.left < 475) or (morovy_doktor_cerny_rect1.bottom > 1020 or morovy_doktor_cerny_rect1.top < 60):
+                morovy_doktor_cerny_rect1.centerx=morovy_doktor_cerny_x_pred_1
+                morovy_doktor_cerny_rect1.centery=morovy_doktor_cerny_y_pred_1
+            
+            
+            
+                
+                
 
 
             
