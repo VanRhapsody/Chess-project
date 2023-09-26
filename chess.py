@@ -803,22 +803,22 @@ ctverce_valecnik_bily_3=[]
 
 rect_val_3_x1=valecnik_bily_rect3.centerx+krok
 rect_val_3_y1=valecnik_bily_rect3.centery
-rect_val_3_1=(rect_val_3_x1-30,rect_val_3_y1-30,60,60)
+rect_val_3_1=pygame.Rect(rect_val_3_x1-30,rect_val_3_y1-30,60,60)
 ctverce_valecnik_bily_3.append(rect_val_3_1)
 
 rect_val_3_x2=valecnik_bily_rect3.centerx-krok
 rect_val_3_y2=valecnik_bily_rect3.centery
-rect_val_3_2=(rect_val_3_x2-30,rect_val_3_y2-30,60,60)
+rect_val_3_2=pygame.Rect(rect_val_3_x2-30,rect_val_3_y2-30,60,60)
 ctverce_valecnik_bily_3.append(rect_val_3_2)
 
 rect_val_3_x3=valecnik_bily_rect3.centerx
 rect_val_3_y3=valecnik_bily_rect3.centery+krok
-rect_val_3_3=(rect_val_3_x3-30,rect_val_3_y3-30,60,60)
+rect_val_3_3=pygame.Rect(rect_val_3_x3-30,rect_val_3_y3-30,60,60)
 ctverce_valecnik_bily_3.append(rect_val_3_3)
 
 rect_val_3_x4=valecnik_bily_rect3.centerx
 rect_val_3_y4=valecnik_bily_rect3.centery-krok
-rect_val_3_4=(rect_val_3_x4-30,rect_val_3_y4-30,60,60)
+rect_val_3_4=pygame.Rect(rect_val_3_x4-30,rect_val_3_y4-30,60,60)
 ctverce_valecnik_bily_3.append(rect_val_3_4)
 
 #Legionář bílý 4
@@ -976,7 +976,7 @@ rect_arc_cer_8=pygame.Rect(rect_arc_cer_x8-30,rect_arc_cer_y8-30,60,60)
 ctverce_arcibiskup_cerny.append(rect_arc_cer_2)
 
 rect_arc_cer_x9=arcibiskup_cerny_rect.centerx-krok*2
-rect_arc_cer_y9=arcibiskup_cerny_rect.center-krok
+rect_arc_cer_y9=arcibiskup_cerny_rect.centery-krok
 rect_arc_cer_9=pygame.Rect(rect_arc_cer_x9-30,rect_arc_cer_y9-30,60,60)
 ctverce_arcibiskup_cerny.append(rect_arc_cer_2)
 
@@ -1007,17 +1007,17 @@ ctverce_kardinal_cerny.append(rect_kar_cer_1)
 rect_kar_cer_x2=kardinal_cerny_rect.centerx-krok
 rect_kar_cer_y2=kardinal_cerny_rect.centery-krok
 rect_kar_cer_2=pygame.Rect(rect_kar_cer_x2-30,rect_kar_cer_y2-30,60,60)
-ctverce_kardinal_cerny.append(rect_kar_cer_1)
+ctverce_kardinal_cerny.append(rect_kar_cer_2)
 
 rect_kar_cer_x3=kardinal_cerny_rect.centerx+krok
 rect_kar_cer_y3=kardinal_cerny_rect.centery+krok
 rect_kar_cer_3=pygame.Rect(rect_kar_cer_x3-30,rect_kar_cer_y3-30,60,60)
-ctverce_kardinal_cerny.append(rect_kar_cer_1)
+ctverce_kardinal_cerny.append(rect_kar_cer_3)
 
 rect_kar_cer_x4=kardinal_cerny_rect.centerx-krok
 rect_kar_cer_y4=kardinal_cerny_rect.centery+krok
 rect_kar_cer_4=pygame.Rect(rect_kar_cer_x4-30,rect_kar_cer_y4-30,60,60)
-ctverce_kardinal_cerny.append(rect_kar_cer_1)
+ctverce_kardinal_cerny.append(rect_kar_cer_4)
 
 #Hádes černý
 ctverce_hades_cerny=[]
@@ -1030,92 +1030,92 @@ ctverce_hades_cerny.append(rect_had_cer_1)
 rect_had_cer_x2=hades_cerny_rect.centerx+krok*2
 rect_had_cer_y2=hades_cerny_rect.centery
 rect_had_cer_2=pygame.Rect(rect_had_cer_x2-30,rect_had_cer_y2-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_2)
 
 rect_had_cer_x3=hades_cerny_rect.centerx+krok*3
 rect_had_cer_y3=hades_cerny_rect.centery
 rect_had_cer_3=pygame.Rect(rect_had_cer_x3-30,rect_had_cer_y3-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_3)
 
 rect_had_cer_x4=hades_cerny_rect.centerx-krok
 rect_had_cer_y4=hades_cerny_rect.centery
 rect_had_cer_4=pygame.Rect(rect_had_cer_x4-30,rect_had_cer_y4-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_4)
 
 rect_had_cer_x5=hades_cerny_rect.centerx-krok*2
 rect_had_cer_y5=hades_cerny_rect.centery
 rect_had_cer_5=pygame.Rect(rect_had_cer_x5-30,rect_had_cer_y5-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_5)
 
 rect_had_cer_x6=hades_cerny_rect.centerx-krok*3
 rect_had_cer_y6=hades_cerny_rect.centery
-rect_had_cer_6=pygame.Rect(rect_had_cer_x6-30,rect_had_cer_y3-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+rect_had_cer_6=pygame.Rect(rect_had_cer_x6-30,rect_had_cer_y6-30,60,60)
+ctverce_hades_cerny.append(rect_had_cer_6)
 
 rect_had_cer_x7=hades_cerny_rect.centerx
 rect_had_cer_y7=hades_cerny_rect.centery-krok
 rect_had_cer_7=pygame.Rect(rect_had_cer_x7-30,rect_had_cer_y7-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_7)
 
 rect_had_cer_x8=hades_cerny_rect.centerx
 rect_had_cer_y8=hades_cerny_rect.centery-krok*2
 rect_had_cer_8=pygame.Rect(rect_had_cer_x8-30,rect_had_cer_y8-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_8)
 
 rect_had_cer_x9=hades_cerny_rect.centerx
 rect_had_cer_y9=hades_cerny_rect.centery-krok*3
 rect_had_cer_9=pygame.Rect(rect_had_cer_x9-30,rect_had_cer_y9-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_9)
 
 rect_had_cer_x10=hades_cerny_rect.centerx+krok
 rect_had_cer_y10=hades_cerny_rect.centery-krok
 rect_had_cer_10=pygame.Rect(rect_had_cer_x10-30,rect_had_cer_y10-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_10)
 
 rect_had_cer_x11=hades_cerny_rect.centerx+krok*2
 rect_had_cer_y11=hades_cerny_rect.centery-krok*2
 rect_had_cer_11=pygame.Rect(rect_had_cer_x11-30,rect_had_cer_y11-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_11)
 
 rect_had_cer_x12=hades_cerny_rect.centerx+krok*3
 rect_had_cer_y12=hades_cerny_rect.centery-krok*3
 rect_had_cer_12=pygame.Rect(rect_had_cer_x12-30,rect_had_cer_y12-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_12)
 
 rect_had_cer_x13=hades_cerny_rect.centerx-krok
 rect_had_cer_y13=hades_cerny_rect.centery-krok
 rect_had_cer_13=pygame.Rect(rect_had_cer_x13-30,rect_had_cer_y13-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_13)
 
 rect_had_cer_x14=hades_cerny_rect.centerx-krok*2
 rect_had_cer_y14=hades_cerny_rect.centery-krok*2
 rect_had_cer_14=pygame.Rect(rect_had_cer_x14-30,rect_had_cer_y14-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_14)
 
 rect_had_cer_x15=hades_cerny_rect.centerx-krok*3
 rect_had_cer_y15=hades_cerny_rect.centery-krok*3
 rect_had_cer_15=pygame.Rect(rect_had_cer_x15-30,rect_had_cer_y15-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_15)
 
 rect_had_cer_x16=hades_cerny_rect.centerx+krok
 rect_had_cer_y16=hades_cerny_rect.centery+krok
 rect_had_cer_16=pygame.Rect(rect_had_cer_x16-30,rect_had_cer_y16-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_16)
 
 rect_had_cer_x17=hades_cerny_rect.centerx+krok*2
 rect_had_cer_y17=hades_cerny_rect.centery+krok*2
 rect_had_cer_17=pygame.Rect(rect_had_cer_x17-30,rect_had_cer_y17-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_17)
 
 rect_had_cer_x18=hades_cerny_rect.centerx-krok
 rect_had_cer_y18=hades_cerny_rect.centery+krok
 rect_had_cer_18=pygame.Rect(rect_had_cer_x18-30,rect_had_cer_y18-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_18)
 
 rect_had_cer_x19=hades_cerny_rect.centerx-krok*2
 rect_had_cer_y19=hades_cerny_rect.centery+krok*2
 rect_had_cer_19=pygame.Rect(rect_had_cer_x19-30,rect_had_cer_y19-30,60,60)
-ctverce_hades_cerny.append(rect_had_cer_1)
+ctverce_hades_cerny.append(rect_had_cer_19)
 
 #Persefona černá
 ctverce_persefona_cerna=[]
@@ -1138,48 +1138,48 @@ ctverce_persefona_cerna.append(rect_per_cer_3)
 rect_per_cer_x4=persefona_cerna_rect.centerx
 rect_per_cer_y4=persefona_cerna_rect.centery+krok
 rect_per_cer_4=pygame.Rect(rect_per_cer_x4-30,rect_per_cer_y4-30,60,60)
-ctverce_persefona_cerna.append(rect_per_cer_1)
+ctverce_persefona_cerna.append(rect_per_cer_4)
 
 rect_per_cer_x5=persefona_cerna_rect.centerx
 rect_per_cer_y5=persefona_cerna_rect.centery-krok
 rect_per_cer_5=pygame.Rect(rect_per_cer_x5-30,rect_per_cer_y5-30,60,60)
-ctverce_persefona_cerna.append(rect_per_cer_1)
+ctverce_persefona_cerna.append(rect_per_cer_5)
 
 rect_per_cer_x6=persefona_cerna_rect.centerx-krok
 rect_per_cer_y6=persefona_cerna_rect.centery-krok
 rect_per_cer_6=pygame.Rect(rect_per_cer_x6-30,rect_per_cer_y6-30,60,60)
-ctverce_persefona_cerna.append(rect_per_cer_1)
+ctverce_persefona_cerna.append(rect_per_cer_6)
 
 rect_per_cer_x7=persefona_cerna_rect.centerx-krok
 rect_per_cer_y7=persefona_cerna_rect.centery
 rect_per_cer_7=pygame.Rect(rect_per_cer_x7-30,rect_per_cer_y7-30,60,60)
-ctverce_persefona_cerna.append(rect_per_cer_1)
+ctverce_persefona_cerna.append(rect_per_cer_7)
 
 rect_per_cer_x8=persefona_cerna_rect.centerx-krok
 rect_per_cer_y8=persefona_cerna_rect.centery+krok
 rect_per_cer_8=pygame.Rect(rect_per_cer_x8-30,rect_per_cer_y8-30,60,60)
-ctverce_persefona_cerna.append(rect_per_cer_1)
+ctverce_persefona_cerna.append(rect_per_cer_8)
 
 #Kardinál černý 1
 ctverce_kardinal_cerny_1=[]
 
-rect_kar_cer_x1_1=kardinal_cerny_rect.centerx+krok
-rect_kar_cer_y1_1=kardinal_cerny_rect.centery-krok
+rect_kar_cer_x1_1=kardinal_cerny_rect1.centerx+krok
+rect_kar_cer_y1_1=kardinal_cerny_rect1.centery-krok
 rect_kar_cer_1_1=pygame.Rect(rect_kar_cer_x1_1-30,rect_kar_cer_y1_1-30,60,60)
 ctverce_kardinal_cerny_1.append(rect_kar_cer_1_1)
 
-rect_kar_cer_x2_1=kardinal_cerny_rect.centerx+krok
-rect_kar_cer_y2_1=kardinal_cerny_rect.centery+krok
+rect_kar_cer_x2_1=kardinal_cerny_rect1.centerx+krok
+rect_kar_cer_y2_1=kardinal_cerny_rect1.centery+krok
 rect_kar_cer_1_2=pygame.Rect(rect_kar_cer_x2_1-30,rect_kar_cer_y2_1-30,60,60)
 ctverce_kardinal_cerny_1.append(rect_kar_cer_1_2)
 
-rect_kar_cer_x3_1=kardinal_cerny_rect.centerx-krok
-rect_kar_cer_y3_1=kardinal_cerny_rect.centery-krok
+rect_kar_cer_x3_1=kardinal_cerny_rect1.centerx-krok
+rect_kar_cer_y3_1=kardinal_cerny_rect1.centery-krok
 rect_kar_cer_1_3=pygame.Rect(rect_kar_cer_x3_1-30,rect_kar_cer_y3_1-30,60,60)
 ctverce_kardinal_cerny_1.append(rect_kar_cer_1_3)
 
-rect_kar_cer_x4_1=kardinal_cerny_rect.centerx-krok
-rect_kar_cer_y4_1=kardinal_cerny_rect.centery+krok
+rect_kar_cer_x4_1=kardinal_cerny_rect1.centerx-krok
+rect_kar_cer_y4_1=kardinal_cerny_rect1.centery+krok
 rect_kar_cer_1_4=pygame.Rect(rect_kar_cer_x4_1-30,rect_kar_cer_y4_1-30,60,60)
 ctverce_kardinal_cerny_1.append(rect_kar_cer_1_4)
 
@@ -1193,7 +1193,7 @@ ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_1)
 
 rect_arc_cer_x2_1=arcibiskup_cerny_rect1.centerx+krok*2
 rect_arc_cer_y2_1=arcibiskup_cerny_rect1.centery-krok
-rect_arc_cer_1_2=pygame.Rect(rect_arc_cer_x2_1-30,rect_arc_cer_x2_1 -30,60,60)
+rect_arc_cer_1_2=pygame.Rect(rect_arc_cer_x2_1-30,rect_arc_cer_y2_1 -30,60,60)
 ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_2)
 
 rect_arc_cer_x3_1=arcibiskup_cerny_rect1.centerx+krok*2
@@ -1261,7 +1261,7 @@ ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_2)
 
 rect_mor_cer_x3_1=morovy_doktor_cerny_rect1.centerx-krok
 rect_mor_cer_y3_1=morovy_doktor_cerny_rect1.centery
-rect_mor_cer_1_3=pygame.Rect(rect_mor_cer_x1_3-30,rect_mor_cer_y1_3-30,60,60)
+rect_mor_cer_1_3=pygame.Rect(rect_mor_cer_x3_1-30,rect_mor_cer_y3_1-30,60,60)
 ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_3)
 
 rect_mor_cer_x4_1=morovy_doktor_cerny_rect1.centerx-krok*2
@@ -1339,6 +1339,169 @@ rect_mor_cer_y18_1=morovy_doktor_cerny_rect1.centery-krok*7
 rect_mor_cer_1_18=pygame.Rect(rect_mor_cer_x18_1-30,rect_mor_cer_y18_1-30,60,60)
 ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_18)
 
+#Legionář černý
+ctverce_legionar_cerny=[]
+
+rect_leg_cer_x1=legionar_cerny_rect.centerx+krok
+rect_leg_cer_y1=legionar_cerny_rect.centery-krok
+rect_leg_cer_1=pygame.Rect(rect_leg_cer_x1-30,rect_leg_cer_y1-30,60,60)
+ctverce_legionar_cerny.append(rect_leg_cer_1)
+
+rect_leg_cer_x2=legionar_cerny_rect.centerx
+rect_leg_cer_y2=legionar_cerny_rect.centery-krok
+rect_leg_cer_2=pygame.Rect(rect_leg_cer_x2-30,rect_leg_cer_y2-30,60,60)
+ctverce_legionar_cerny.append(rect_leg_cer_2)
+
+rect_leg_cer_x3=legionar_cerny_rect.centerx-krok
+rect_leg_cer_y3=legionar_cerny_rect.centery-krok
+rect_leg_cer_3=pygame.Rect(rect_leg_cer_x3-30,rect_leg_cer_y3-30,60,60)
+ctverce_legionar_cerny.append(rect_leg_cer_3)
+
+#Válečník černý
+ctverce_valecnik_cerny=[]
+
+rect_val_cer_x1=valecnik_cerny_rect.centerx+krok
+rect_val_cer_y1=valecnik_cerny_rect.centery-krok
+rect_val_cer_1=pygame.Rect(rect_val_cer_x1-30,rect_val_cer_y1-30,60,60)
+ctverce_valecnik_cerny.append(rect_val_cer_1)
+
+rect_val_cer_x2=valecnik_cerny_rect.centerx+krok
+rect_val_cer_y2=valecnik_cerny_rect.centery+krok
+rect_val_cer_2=pygame.Rect(rect_val_cer_x2-30,rect_val_cer_y2-30,60,60)
+ctverce_valecnik_cerny.append(rect_val_cer_2)
+
+rect_val_cer_x3=valecnik_cerny_rect.centerx-krok
+rect_val_cer_y3=valecnik_cerny_rect.centery+krok
+rect_val_cer_3=pygame.Rect(rect_val_cer_x3-30,rect_val_cer_y3-30,60,60)
+ctverce_valecnik_cerny.append(rect_val_cer_3)
+
+rect_val_cer_x4=valecnik_cerny_rect.centerx-krok
+rect_val_cer_y4=valecnik_cerny_rect.centery-krok
+rect_val_cer_4=pygame.Rect(rect_val_cer_x4-30,rect_val_cer_y4-30,60,60)
+ctverce_valecnik_cerny.append(rect_val_cer_4)
+
+#Legionář černý 1
+ctverce_legionar_cerny_1=[]
+
+rect_leg_cer_x1_1=legionar_cerny_rect1.centerx+krok
+rect_leg_cer_y1_1=legionar_cerny_rect1.centery-krok
+rect_leg_cer_1_1=pygame.Rect(rect_leg_cer_x1_1-30,rect_leg_cer_y1_1-30,60,60)
+ctverce_legionar_cerny_1.append(rect_leg_cer_1_1)
+
+rect_leg_cer_x2_1=legionar_cerny_rect1.centerx
+rect_leg_cer_y2_1=legionar_cerny_rect1.centery-krok
+rect_leg_cer_1_2=pygame.Rect(rect_leg_cer_x2_1-30,rect_leg_cer_y2_1-30,60,60)
+ctverce_legionar_cerny_1.append(rect_leg_cer_1_2)
+
+rect_leg_cer_x3_1=legionar_cerny_rect1.centerx-krok
+rect_leg_cer_y3_1=legionar_cerny_rect1.centery-krok
+rect_leg_cer_1_3=pygame.Rect(rect_leg_cer_x3_1-30,rect_leg_cer_y3_1-30,60,60)
+ctverce_legionar_cerny_1.append(rect_leg_cer_1_3)
+
+#Válečník černý 1
+ctverce_valecnik_cerny_1=[]
+
+rect_val_cer_x1_1=valecnik_cerny_rect1.centerx+krok
+rect_val_cer_y1_1=valecnik_cerny_rect1.centery-krok
+rect_val_cer_1_1=pygame.Rect(rect_val_cer_x1_1-30,rect_val_cer_y1_1-30,60,60)
+ctverce_valecnik_cerny_1.append(rect_val_cer_1_1)
+
+rect_val_cer_x2_1=valecnik_cerny_rect1.centerx+krok
+rect_val_cer_y2_1=valecnik_cerny_rect1.centery+krok
+rect_val_cer_1_2=pygame.Rect(rect_val_cer_x2_1-30,rect_val_cer_y2_1-30,60,60)
+ctverce_valecnik_cerny_1.append(rect_val_cer_1_2)
+
+rect_val_cer_x3_1=valecnik_cerny_rect1.centerx-krok
+rect_val_cer_y3_1=valecnik_cerny_rect1.centery-krok
+rect_val_cer_1_3=pygame.Rect(rect_val_cer_x3_1-30,rect_val_cer_y3_1-30,60,60)
+ctverce_valecnik_cerny_1.append(rect_val_cer_1_3)
+
+rect_val_cer_x4_1=valecnik_cerny_rect1.centerx-krok
+rect_val_cer_y4_1=valecnik_cerny_rect1.centery-krok
+rect_val_cer_1_4=pygame.Rect(rect_val_cer_x4_1-30,rect_val_cer_y4_1-30,60,60)
+ctverce_valecnik_cerny_1.append(rect_val_cer_1_4)
+
+#Legionář černý 2
+ctverce_legionar_cerny_2=[]
+
+rect_leg_cer_x1_2=legionar_cerny_rect2.centerx+krok
+rect_leg_cer_y1_2=legionar_cerny_rect2.centery-krok
+rect_leg_cer_2_1=pygame.Rect(rect_leg_cer_x1_2-30,rect_leg_cer_y1_2-30,60,60)
+ctverce_legionar_cerny_2.append(rect_leg_cer_2_1)
+
+rect_leg_cer_x2_2=legionar_cerny_rect2.centerx
+rect_leg_cer_y2_2=legionar_cerny_rect2.centery-krok
+rect_leg_cer_2_2=pygame.Rect(rect_leg_cer_x2_2-30,rect_leg_cer_y2_2-30,60,60)
+ctverce_legionar_cerny_2.append(rect_leg_cer_2_2)
+
+rect_leg_cer_x3_2=legionar_cerny_rect2.centerx-krok
+rect_leg_cer_y3_2=legionar_cerny_rect2.centery-krok
+rect_leg_cer_2_3=pygame.Rect(rect_leg_cer_x3_2-30,rect_leg_cer_y3_2-30,60,60)
+ctverce_legionar_cerny_2.append(rect_leg_cer_2_3)
+
+#Válečník černý 2
+ctverce_valecnik_cerny_2=[]
+
+rect_val_cer_x1_2=valecnik_cerny_rect2.centerx+krok
+rect_val_cer_y1_2=valecnik_cerny_rect2.centery-krok
+rect_val_cer_2_1=pygame.Rect(rect_val_cer_x1_2-30,rect_val_cer_y1_2-30,60,60)
+ctverce_valecnik_cerny_2.append(rect_val_cer_2_1)
+
+rect_val_cer_x2_2=valecnik_cerny_rect2.centerx+krok
+rect_val_cer_y2_2=valecnik_cerny_rect2.centery+krok
+rect_val_cer_2_2=pygame.Rect(rect_val_cer_x2_2-30,rect_val_cer_y2_2-30,60,60)
+ctverce_valecnik_cerny_2.append(rect_val_cer_2_2)
+
+rect_val_cer_x3_2=valecnik_cerny_rect2.centerx-krok
+rect_val_cer_y3_2=valecnik_cerny_rect2.centery-krok
+rect_val_cer_2_3=pygame.Rect(rect_val_cer_x3_2-30,rect_val_cer_y3_2-30,60,60)
+ctverce_valecnik_cerny_2.append(rect_val_cer_2_3)
+
+rect_val_cer_x4_2=valecnik_cerny_rect2.centerx-krok
+rect_val_cer_y4_2=valecnik_cerny_rect2.centery+krok
+rect_val_cer_2_4=pygame.Rect(rect_val_cer_x4_2-30,rect_val_cer_y4_2-30,60,60)
+ctverce_valecnik_cerny_2.append(rect_val_cer_2_4)
+
+#Legionář černý 3
+ctverce_legionar_cerny_3=[]
+
+rect_leg_cer_x1_3=legionar_cerny_rect3.centerx+krok
+rect_leg_cer_y1_3=legionar_cerny_rect3.centery-krok
+rect_leg_cer_3_1=pygame.Rect(rect_leg_cer_x1_3-30,rect_leg_cer_y1_3-30,60,60)
+ctverce_legionar_cerny_3.append(rect_leg_cer_3_1)
+
+rect_leg_cer_x2_3=legionar_cerny_rect3.centerx
+rect_leg_cer_y2_3=legionar_cerny_rect3.centery-krok
+rect_leg_cer_3_2=pygame.Rect(rect_leg_cer_x2_3-30,rect_leg_cer_y2_3-30,60,60)
+ctverce_legionar_cerny_3.append(rect_leg_cer_3_2)
+
+rect_leg_cer_x3_3=legionar_cerny_rect3.centerx-krok
+rect_leg_cer_y3_3=legionar_cerny_rect3.centery-krok
+rect_leg_cer_3_3=pygame.Rect(rect_leg_cer_x3_3-30,rect_leg_cer_y3_3-30,60,60)
+ctverce_legionar_cerny_3.append(rect_leg_cer_3_3)
+
+#Válečník černý 3
+ctverce_valecnik_cerny_3=[]
+
+rect_val_cer_x1_3=valecnik_cerny_rect3.centerx+krok
+rect_val_cer_y1_3=valecnik_cerny_rect3.centery-krok
+rect_val_cer_3_1=pygame.Rect(rect_val_cer_x1_3-30,rect_val_cer_y1_3-30,60,60)
+ctverce_valecnik_cerny_3.append(rect_val_cer_3_1)
+
+rect_val_cer_x2_3=valecnik_cerny_rect3.centerx+krok
+rect_val_cer_y2_3=valecnik_cerny_rect3.centery+krok
+rect_val_cer_3_2=pygame.Rect(rect_val_cer_x2_3-30,rect_val_cer_y2_3-30,60,60)
+ctverce_valecnik_cerny_3.append(rect_val_cer_3_2)
+
+rect_val_cer_x3_3=valecnik_cerny_rect3.centerx-krok
+rect_val_cer_y3_3=valecnik_cerny_rect3.centery-krok
+rect_val_cer_3_3=pygame.Rect(rect_val_cer_x3_3-30,rect_val_cer_y3_3-30,60,60)
+ctverce_valecnik_cerny_3.append(rect_val_cer_3_3)
+
+rect_val_cer_x4_3=valecnik_cerny_rect3.centerx-krok
+rect_val_cer_y4_3=valecnik_cerny_rect3.centery+krok
+rect_val_cer_3_4=pygame.Rect(rect_val_cer_x4_3-30,rect_val_cer_y4_3-30,60,60)
+ctverce_valecnik_cerny_3.append(rect_val_cer_3_4)
 
 
 
@@ -1346,6 +1509,21 @@ ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_18)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Nastavení counteru, který určuje, jaká barva je na tahu
+counter=0
 
 
 
@@ -1362,7 +1540,7 @@ play_game=False
 run=True
 while run:
     mx,my=pygame.mouse.get_pos()
-    print(mx,my)
+    
     screen.fill((0,0,0))
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
@@ -1575,7 +1753,7 @@ while run:
         #figurky_cerne=[morovy_doktor_cerny_rect,arcibiskup_cerny_rect,kardinal_cerny_rect,hades_cerny_rect,persefona_cerna_rect,kardinal_bily_rect1,arcibiskup_cerny_rect1,morovy_doktor_cerny_rect1,legionar_cerny_rect,valecnik_cerny_rect,legionar_cerny_rect1,valecnik_cerny_rect1,legionar_cerny_rect2,valecnik_cerny_rect2,legionar_cerny_rect3,valecnik_cerny_rect3]
         #Tažení figurek, todo: omezit jejich pohyb na schéma tažení
         
-        
+        #Opětovné deklarování pozic čtverců pro pohyb figurek, aby zůstaly na místě a nepohybovaly se společně s figurkou při jejím pohybu
         if not pohyb:
             morovy_doktor_bily_x_pred=morovy_doktor_bily_rect.centerx
             morovy_doktor_bily_y_pred=morovy_doktor_bily_rect.centery
@@ -2201,22 +2379,22 @@ while run:
 
             rect_val_3_x1=valecnik_bily_rect3.centerx+krok
             rect_val_3_y1=valecnik_bily_rect3.centery
-            rect_val_3_1=(rect_val_3_x1-30,rect_val_3_y1-30,60,60)
+            rect_val_3_1=pygame.Rect(rect_val_3_x1-30,rect_val_3_y1-30,60,60)
             ctverce_valecnik_bily_3.append(rect_val_3_1)
 
             rect_val_3_x2=valecnik_bily_rect3.centerx-krok
             rect_val_3_y2=valecnik_bily_rect3.centery
-            rect_val_3_2=(rect_val_3_x2-30,rect_val_3_y2-30,60,60)
+            rect_val_3_2=pygame.Rect(rect_val_3_x2-30,rect_val_3_y2-30,60,60)
             ctverce_valecnik_bily_3.append(rect_val_3_2)
 
             rect_val_3_x3=valecnik_bily_rect3.centerx
             rect_val_3_y3=valecnik_bily_rect3.centery+krok
-            rect_val_3_3=(rect_val_3_x3-30,rect_val_3_y3-30,60,60)
+            rect_val_3_3=pygame.Rect(rect_val_3_x3-30,rect_val_3_y3-30,60,60)
             ctverce_valecnik_bily_3.append(rect_val_3_3)
 
             rect_val_3_x4=valecnik_bily_rect3.centerx
             rect_val_3_y4=valecnik_bily_rect3.centery-krok
-            rect_val_3_4=(rect_val_3_x4-30,rect_val_3_y4-30,60,60)
+            rect_val_3_4=pygame.Rect(rect_val_3_x4-30,rect_val_3_y4-30,60,60)
             ctverce_valecnik_bily_3.append(rect_val_3_4)
 
             #Legionář bílý 4
@@ -2338,7 +2516,7 @@ while run:
 
             #Arcibiskup černý 1
             arcibiskup_cerny_x_pred=arcibiskup_cerny_rect.centerx
-            arcibiskup_cerny_y_pred=arcibiskup_bily_rect.centery
+            arcibiskup_cerny_y_pred=arcibiskup_cerny_rect.centery
 
             ctverce_arcibiskup_cerny=[]
 
@@ -2383,7 +2561,7 @@ while run:
             ctverce_arcibiskup_cerny.append(rect_arc_cer_2)
 
             rect_arc_cer_x9=arcibiskup_cerny_rect.centerx-krok*2
-            rect_arc_cer_y9=arcibiskup_cerny_rect.center-krok
+            rect_arc_cer_y9=arcibiskup_cerny_rect.centery-krok
             rect_arc_cer_9=pygame.Rect(rect_arc_cer_x9-30,rect_arc_cer_y9-30,60,60)
             ctverce_arcibiskup_cerny.append(rect_arc_cer_2)
 
@@ -2416,17 +2594,17 @@ while run:
             rect_kar_cer_x2=kardinal_cerny_rect.centerx-krok
             rect_kar_cer_y2=kardinal_cerny_rect.centery-krok
             rect_kar_cer_2=pygame.Rect(rect_kar_cer_x2-30,rect_kar_cer_y2-30,60,60)
-            ctverce_kardinal_cerny.append(rect_kar_cer_1)
+            ctverce_kardinal_cerny.append(rect_kar_cer_2)
 
             rect_kar_cer_x3=kardinal_cerny_rect.centerx+krok
             rect_kar_cer_y3=kardinal_cerny_rect.centery+krok
             rect_kar_cer_3=pygame.Rect(rect_kar_cer_x3-30,rect_kar_cer_y3-30,60,60)
-            ctverce_kardinal_cerny.append(rect_kar_cer_1)
+            ctverce_kardinal_cerny.append(rect_kar_cer_3)
 
             rect_kar_cer_x4=kardinal_cerny_rect.centerx-krok
             rect_kar_cer_y4=kardinal_cerny_rect.centery+krok
             rect_kar_cer_4=pygame.Rect(rect_kar_cer_x4-30,rect_kar_cer_y4-30,60,60)
-            ctverce_kardinal_cerny.append(rect_kar_cer_1)
+            ctverce_kardinal_cerny.append(rect_kar_cer_4)
 
             #Hádes černý
             hades_cerny_x_pred=hades_cerny_rect.centerx
@@ -2442,93 +2620,92 @@ while run:
             rect_had_cer_x2=hades_cerny_rect.centerx+krok*2
             rect_had_cer_y2=hades_cerny_rect.centery
             rect_had_cer_2=pygame.Rect(rect_had_cer_x2-30,rect_had_cer_y2-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_2)
 
             rect_had_cer_x3=hades_cerny_rect.centerx+krok*3
             rect_had_cer_y3=hades_cerny_rect.centery
             rect_had_cer_3=pygame.Rect(rect_had_cer_x3-30,rect_had_cer_y3-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_3)
 
             rect_had_cer_x4=hades_cerny_rect.centerx-krok
             rect_had_cer_y4=hades_cerny_rect.centery
             rect_had_cer_4=pygame.Rect(rect_had_cer_x4-30,rect_had_cer_y4-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_4)
 
             rect_had_cer_x5=hades_cerny_rect.centerx-krok*2
             rect_had_cer_y5=hades_cerny_rect.centery
             rect_had_cer_5=pygame.Rect(rect_had_cer_x5-30,rect_had_cer_y5-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_5)
 
             rect_had_cer_x6=hades_cerny_rect.centerx-krok*3
             rect_had_cer_y6=hades_cerny_rect.centery
-            rect_had_cer_6=pygame.Rect(rect_had_cer_x6-30,rect_had_cer_y3-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            rect_had_cer_6=pygame.Rect(rect_had_cer_x6-30,rect_had_cer_y6-30,60,60)
+            ctverce_hades_cerny.append(rect_had_cer_6)
 
             rect_had_cer_x7=hades_cerny_rect.centerx
             rect_had_cer_y7=hades_cerny_rect.centery-krok
             rect_had_cer_7=pygame.Rect(rect_had_cer_x7-30,rect_had_cer_y7-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_7)
 
             rect_had_cer_x8=hades_cerny_rect.centerx
             rect_had_cer_y8=hades_cerny_rect.centery-krok*2
             rect_had_cer_8=pygame.Rect(rect_had_cer_x8-30,rect_had_cer_y8-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_8)
 
             rect_had_cer_x9=hades_cerny_rect.centerx
             rect_had_cer_y9=hades_cerny_rect.centery-krok*3
             rect_had_cer_9=pygame.Rect(rect_had_cer_x9-30,rect_had_cer_y9-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_9)
 
             rect_had_cer_x10=hades_cerny_rect.centerx+krok
             rect_had_cer_y10=hades_cerny_rect.centery-krok
             rect_had_cer_10=pygame.Rect(rect_had_cer_x10-30,rect_had_cer_y10-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_10)
 
             rect_had_cer_x11=hades_cerny_rect.centerx+krok*2
             rect_had_cer_y11=hades_cerny_rect.centery-krok*2
             rect_had_cer_11=pygame.Rect(rect_had_cer_x11-30,rect_had_cer_y11-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_11)
 
             rect_had_cer_x12=hades_cerny_rect.centerx+krok*3
             rect_had_cer_y12=hades_cerny_rect.centery-krok*3
             rect_had_cer_12=pygame.Rect(rect_had_cer_x12-30,rect_had_cer_y12-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_12)
 
             rect_had_cer_x13=hades_cerny_rect.centerx-krok
             rect_had_cer_y13=hades_cerny_rect.centery-krok
             rect_had_cer_13=pygame.Rect(rect_had_cer_x13-30,rect_had_cer_y13-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_13)
 
             rect_had_cer_x14=hades_cerny_rect.centerx-krok*2
             rect_had_cer_y14=hades_cerny_rect.centery-krok*2
             rect_had_cer_14=pygame.Rect(rect_had_cer_x14-30,rect_had_cer_y14-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_14)
 
             rect_had_cer_x15=hades_cerny_rect.centerx-krok*3
             rect_had_cer_y15=hades_cerny_rect.centery-krok*3
             rect_had_cer_15=pygame.Rect(rect_had_cer_x15-30,rect_had_cer_y15-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_15)
 
             rect_had_cer_x16=hades_cerny_rect.centerx+krok
             rect_had_cer_y16=hades_cerny_rect.centery+krok
             rect_had_cer_16=pygame.Rect(rect_had_cer_x16-30,rect_had_cer_y16-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_16)
 
             rect_had_cer_x17=hades_cerny_rect.centerx+krok*2
             rect_had_cer_y17=hades_cerny_rect.centery+krok*2
             rect_had_cer_17=pygame.Rect(rect_had_cer_x17-30,rect_had_cer_y17-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_17)
 
             rect_had_cer_x18=hades_cerny_rect.centerx-krok
             rect_had_cer_y18=hades_cerny_rect.centery+krok
             rect_had_cer_18=pygame.Rect(rect_had_cer_x18-30,rect_had_cer_y18-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
+            ctverce_hades_cerny.append(rect_had_cer_18)
 
             rect_had_cer_x19=hades_cerny_rect.centerx-krok*2
             rect_had_cer_y19=hades_cerny_rect.centery+krok*2
             rect_had_cer_19=pygame.Rect(rect_had_cer_x19-30,rect_had_cer_y19-30,60,60)
-            ctverce_hades_cerny.append(rect_had_cer_1)
-
+            ctverce_hades_cerny.append(rect_had_cer_19)
             #Persefona černá
             persefona_cerna_x_pred=persefona_cerna_rect.centerx
             persefona_cerna_y_pred=persefona_cerna_rect.centery
@@ -2553,27 +2730,27 @@ while run:
             rect_per_cer_x4=persefona_cerna_rect.centerx
             rect_per_cer_y4=persefona_cerna_rect.centery+krok
             rect_per_cer_4=pygame.Rect(rect_per_cer_x4-30,rect_per_cer_y4-30,60,60)
-            ctverce_persefona_cerna.append(rect_per_cer_1)
+            ctverce_persefona_cerna.append(rect_per_cer_4)
 
             rect_per_cer_x5=persefona_cerna_rect.centerx
             rect_per_cer_y5=persefona_cerna_rect.centery-krok
             rect_per_cer_5=pygame.Rect(rect_per_cer_x5-30,rect_per_cer_y5-30,60,60)
-            ctverce_persefona_cerna.append(rect_per_cer_1)
+            ctverce_persefona_cerna.append(rect_per_cer_5)
 
             rect_per_cer_x6=persefona_cerna_rect.centerx-krok
             rect_per_cer_y6=persefona_cerna_rect.centery-krok
             rect_per_cer_6=pygame.Rect(rect_per_cer_x6-30,rect_per_cer_y6-30,60,60)
-            ctverce_persefona_cerna.append(rect_per_cer_1)
+            ctverce_persefona_cerna.append(rect_per_cer_6)
 
             rect_per_cer_x7=persefona_cerna_rect.centerx-krok
             rect_per_cer_y7=persefona_cerna_rect.centery
             rect_per_cer_7=pygame.Rect(rect_per_cer_x7-30,rect_per_cer_y7-30,60,60)
-            ctverce_persefona_cerna.append(rect_per_cer_1)
+            ctverce_persefona_cerna.append(rect_per_cer_7)
 
             rect_per_cer_x8=persefona_cerna_rect.centerx-krok
             rect_per_cer_y8=persefona_cerna_rect.centery+krok
             rect_per_cer_8=pygame.Rect(rect_per_cer_x8-30,rect_per_cer_y8-30,60,60)
-            ctverce_persefona_cerna.append(rect_per_cer_1)
+            ctverce_persefona_cerna.append(rect_per_cer_8)
 
             #Kardinál černý 1
             kardinal_cerny_x_pred_1=kardinal_cerny_rect1.centerx
@@ -2581,23 +2758,23 @@ while run:
 
             ctverce_kardinal_cerny_1=[]
 
-            rect_kar_cer_x1_1=kardinal_cerny_rect.centerx+krok
-            rect_kar_cer_y1_1=kardinal_cerny_rect.centery-krok
+            rect_kar_cer_x1_1=kardinal_cerny_rect1.centerx+krok
+            rect_kar_cer_y1_1=kardinal_cerny_rect1.centery-krok
             rect_kar_cer_1_1=pygame.Rect(rect_kar_cer_x1_1-30,rect_kar_cer_y1_1-30,60,60)
             ctverce_kardinal_cerny_1.append(rect_kar_cer_1_1)
 
-            rect_kar_cer_x2_1=kardinal_cerny_rect.centerx+krok
-            rect_kar_cer_y2_1=kardinal_cerny_rect.centery+krok
+            rect_kar_cer_x2_1=kardinal_cerny_rect1.centerx+krok
+            rect_kar_cer_y2_1=kardinal_cerny_rect1.centery+krok
             rect_kar_cer_1_2=pygame.Rect(rect_kar_cer_x2_1-30,rect_kar_cer_y2_1-30,60,60)
             ctverce_kardinal_cerny_1.append(rect_kar_cer_1_2)
 
-            rect_kar_cer_x3_1=kardinal_cerny_rect.centerx-krok
-            rect_kar_cer_y3_1=kardinal_cerny_rect.centery-krok
+            rect_kar_cer_x3_1=kardinal_cerny_rect1.centerx-krok
+            rect_kar_cer_y3_1=kardinal_cerny_rect1.centery-krok
             rect_kar_cer_1_3=pygame.Rect(rect_kar_cer_x3_1-30,rect_kar_cer_y3_1-30,60,60)
             ctverce_kardinal_cerny_1.append(rect_kar_cer_1_3)
 
-            rect_kar_cer_x4_1=kardinal_cerny_rect.centerx-krok
-            rect_kar_cer_y4_1=kardinal_cerny_rect.centery+krok
+            rect_kar_cer_x4_1=kardinal_cerny_rect1.centerx-krok
+            rect_kar_cer_y4_1=kardinal_cerny_rect1.centery+krok
             rect_kar_cer_1_4=pygame.Rect(rect_kar_cer_x4_1-30,rect_kar_cer_y4_1-30,60,60)
             ctverce_kardinal_cerny_1.append(rect_kar_cer_1_4)
 
@@ -2614,7 +2791,7 @@ while run:
 
             rect_arc_cer_x2_1=arcibiskup_cerny_rect1.centerx+krok*2
             rect_arc_cer_y2_1=arcibiskup_cerny_rect1.centery-krok
-            rect_arc_cer_1_2=pygame.Rect(rect_arc_cer_x2_1-30,rect_arc_cer_x2_1 -30,60,60)
+            rect_arc_cer_1_2=pygame.Rect(rect_arc_cer_x2_1-30,rect_arc_cer_y2_1 -30,60,60)
             ctverce_arcibiskup_cerny_1.append(rect_arc_cer_1_2)
 
             rect_arc_cer_x3_1=arcibiskup_cerny_rect1.centerx+krok*2
@@ -2685,7 +2862,7 @@ while run:
 
             rect_mor_cer_x3_1=morovy_doktor_cerny_rect1.centerx-krok
             rect_mor_cer_y3_1=morovy_doktor_cerny_rect1.centery
-            rect_mor_cer_1_3=pygame.Rect(rect_mor_cer_x1_3-30,rect_mor_cer_y1_3-30,60,60)
+            rect_mor_cer_1_3=pygame.Rect(rect_mor_cer_x3_1-30,rect_mor_cer_y3_1-30,60,60)
             ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_3)
 
             rect_mor_cer_x4_1=morovy_doktor_cerny_rect1.centerx-krok*2
@@ -2763,6 +2940,52 @@ while run:
             rect_mor_cer_1_18=pygame.Rect(rect_mor_cer_x18_1-30,rect_mor_cer_y18_1-30,60,60)
             ctverce_morovy_doktor_cerny_1.append(rect_mor_cer_1_18)
 
+            #Legionář černý
+            legionar_cerny_x_pred=legionar_cerny_rect.centerx
+            legionar_cerny_y_pred=legionar_cerny_rect.centery
+
+            ctverce_legionar_cerny=[]
+
+            rect_leg_cer_x1=legionar_cerny_rect.centerx+krok
+            rect_leg_cer_y1=legionar_cerny_rect.centery-krok
+            rect_leg_cer_1=pygame.Rect(rect_leg_cer_x1-30,rect_leg_cer_y1-30,60,60)
+            ctverce_legionar_cerny.append(rect_leg_cer_1)
+
+            rect_leg_cer_x2=legionar_cerny_rect.centerx
+            rect_leg_cer_y2=legionar_cerny_rect.centery-krok
+            rect_leg_cer_2=pygame.Rect(rect_leg_cer_x2-30,rect_leg_cer_y2-30,60,60)
+            ctverce_legionar_cerny.append(rect_leg_cer_2)
+
+            rect_leg_cer_x3=legionar_cerny_rect.centerx-krok
+            rect_leg_cer_y3=legionar_cerny_rect.centery-krok
+            rect_leg_cer_3=pygame.Rect(rect_leg_cer_x3-30,rect_leg_cer_y3-30,60,60)
+            ctverce_legionar_cerny.append(rect_leg_cer_3)
+
+            #Válečník černý
+            valecnik_cerny_x_pred=valecnik_cerny_rect.centerx
+            valecnik_cerny_y_pred=valecnik_cerny_rect.centery
+            
+            ctverce_valecnik_cerny=[]
+
+            rect_val_cer_x1=valecnik_cerny_rect.centerx+krok
+            rect_val_cer_y1=valecnik_cerny_rect.centery-krok
+            rect_val_cer_1=pygame.Rect(rect_val_cer_x1-30,rect_val_cer_y1-30,60,60)
+            ctverce_valecnik_cerny.append(rect_val_cer_1)
+
+            rect_val_cer_x2=valecnik_cerny_rect.centerx+krok
+            rect_val_cer_y2=valecnik_cerny_rect.centery+krok
+            rect_val_cer_2=pygame.Rect(rect_val_cer_x2-30,rect_val_cer_y2-30,60,60)
+            ctverce_valecnik_cerny.append(rect_val_cer_2)
+
+            rect_val_cer_x3=valecnik_cerny_rect.centerx-krok
+            rect_val_cer_y3=valecnik_cerny_rect.centery+krok
+            rect_val_cer_3=pygame.Rect(rect_val_cer_x3-30,rect_val_cer_y3-30,60,60)
+            ctverce_valecnik_cerny.append(rect_val_cer_3)
+
+            rect_val_cer_x4=valecnik_cerny_rect.centerx-krok
+            rect_val_cer_y4=valecnik_cerny_rect.centery-krok
+            rect_val_cer_4=pygame.Rect(rect_val_cer_x4-30,rect_val_cer_y4-30,60,60)
+            ctverce_valecnik_cerny.append(rect_val_cer_4)
 
 
 
@@ -2783,202 +3006,223 @@ while run:
                 if figurka_bila.collidepoint(event.pos):
                     figurka_bila.centerx=event.pos[0]
                     figurka_bila.centery=event.pos[1]"""
-            if morovy_doktor_bily_rect.collidepoint(event.pos):
-                for ctverec in ctverce_morovy_doktor_bily:
+            if counter%2==0: #Algoritmus funguje následovně - pokud je counter sudé číslo, hraje bílý, pokud je liché, hraje černý hráč
+
+                if morovy_doktor_bily_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_morovy_doktor_bily:
+                        
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen,black,ctverec,5)
+                
                     
-                    if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                        pygame.draw.rect(screen,black,ctverec,5)
-               
-                
-                morovy_doktor_bily_rect.centerx=event.pos[0]
-                morovy_doktor_bily_rect.centery=event.pos[1]
+                    morovy_doktor_bily_rect.centerx=event.pos[0]
+                    morovy_doktor_bily_rect.centery=event.pos[1]
 
-            elif arcibiskup_bily_rect.collidepoint(event.pos):
-                for ctverec in ctverce_arcibiskup_bily:
+                elif arcibiskup_bily_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_arcibiskup_bily:
+                        
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen,black,ctverec,5)
+                
                     
-                    if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                        pygame.draw.rect(screen,black,ctverec,5)
-               
-                
-                arcibiskup_bily_rect.centerx=event.pos[0]
-                arcibiskup_bily_rect.centery=event.pos[1]
+                    arcibiskup_bily_rect.centerx=event.pos[0]
+                    arcibiskup_bily_rect.centery=event.pos[1]
 
-            elif kardinal_bily_rect.collidepoint(event.pos):
-                for ctverec in ctverce_kardinal_bily:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif kardinal_bily_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_kardinal_bily:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    kardinal_bily_rect.centerx=event.pos[0]
+                    kardinal_bily_rect.centery=event.pos[1]
                 
-                kardinal_bily_rect.centerx=event.pos[0]
-                kardinal_bily_rect.centery=event.pos[1]
-            
-            elif hades_bily_rect.collidepoint(event.pos):
-                for ctverec in ctverce_hades_bily:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                hades_bily_rect.centerx=event.pos[0]
-                hades_bily_rect.centery=event.pos[1]
+                elif hades_bily_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_hades_bily:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    hades_bily_rect.centerx=event.pos[0]
+                    hades_bily_rect.centery=event.pos[1]
 
-            elif persefona_bila_rect.collidepoint(event.pos):
-                for ctverec in ctverce_persefona_bila:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif persefona_bila_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_persefona_bila:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    persefona_bila_rect.centerx=event.pos[0]
+                    persefona_bila_rect.centery=event.pos[1]
                 
-                persefona_bila_rect.centerx=event.pos[0]
-                persefona_bila_rect.centery=event.pos[1]
-            
-            elif kardinal_bily_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_kardinal_bily_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif kardinal_bily_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_kardinal_bily_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    kardinal_bily_rect1.centerx=event.pos[0]
+                    kardinal_bily_rect1.centery=event.pos[1]
                 
-                kardinal_bily_rect1.centerx=event.pos[0]
-                kardinal_bily_rect1.centery=event.pos[1]
-            
-            elif arcibiskup_bily_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_arcibiskup_bily_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                arcibiskup_bily_rect1.centerx=event.pos[0]
-                arcibiskup_bily_rect1.centery=event.pos[1]
-                 
-            elif morovy_doktor_bily_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_morovy_doktor_bily_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                morovy_doktor_bily_rect1.centerx=event.pos[0]
-                morovy_doktor_bily_rect1.centery=event.pos[1]
+                elif arcibiskup_bily_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_arcibiskup_bily_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    arcibiskup_bily_rect1.centerx=event.pos[0]
+                    arcibiskup_bily_rect1.centery=event.pos[1]
+                    
+                elif morovy_doktor_bily_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_morovy_doktor_bily_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    morovy_doktor_bily_rect1.centerx=event.pos[0]
+                    morovy_doktor_bily_rect1.centery=event.pos[1]
 
-            elif valecnik_bily_rect.collidepoint(event.pos):
-                for ctverec in ctverce_valecnik_bily:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                valecnik_bily_rect.centerx=event.pos[0]
-                valecnik_bily_rect.centery=event.pos[1]
+                elif valecnik_bily_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_valecnik_bily:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    valecnik_bily_rect.centerx=event.pos[0]
+                    valecnik_bily_rect.centery=event.pos[1]
 
-            elif legionar_bily_rect.collidepoint(event.pos):
-                for ctverec in ctverce_legionar_bily:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif legionar_bily_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_legionar_bily:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    legionar_bily_rect.centerx=event.pos[0]
+                    legionar_bily_rect.centery=event.pos[1]
                 
-                legionar_bily_rect.centerx=event.pos[0]
-                legionar_bily_rect.centery=event.pos[1]
-            
-            elif valecnik_bily_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_valecnik_bily_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif valecnik_bily_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_valecnik_bily_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    valecnik_bily_rect1.centerx=event.pos[0]
+                    valecnik_bily_rect1.centery=event.pos[1]
                 
-                valecnik_bily_rect1.centerx=event.pos[0]
-                valecnik_bily_rect1.centery=event.pos[1]
-            
-            elif legionar_bily_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_legionar_bily_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                legionar_bily_rect1.centerx=event.pos[0]
-                legionar_bily_rect1.centery=event.pos[1]
-                
-            elif valecnik_bily_rect2.collidepoint(event.pos):
-                for ctverec in ctverce_valecnik_bily_2:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                valecnik_bily_rect2.centerx=event.pos[0]
-                valecnik_bily_rect2.centery=event.pos[1]
-                 
-            elif legionar_bily_rect2.collidepoint(event.pos):
-                for ctverec in ctverce_legionar_bily_2:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                legionar_bily_rect2.centerx=event.pos[0]
-                legionar_bily_rect2.centery=event.pos[1]   
+                elif legionar_bily_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_legionar_bily_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    legionar_bily_rect1.centerx=event.pos[0]
+                    legionar_bily_rect1.centery=event.pos[1]
+                    
+                elif valecnik_bily_rect2.collidepoint(event.pos):
+                    for ctverec in ctverce_valecnik_bily_2:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    valecnik_bily_rect2.centerx=event.pos[0]
+                    valecnik_bily_rect2.centery=event.pos[1]
+                    
+                elif legionar_bily_rect2.collidepoint(event.pos):
+                    for ctverec in ctverce_legionar_bily_2:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    legionar_bily_rect2.centerx=event.pos[0]
+                    legionar_bily_rect2.centery=event.pos[1]   
 
-            elif valecnik_bily_rect3.collidepoint(event.pos):
-                for ctverec in ctverce_valecnik_bily_3:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif valecnik_bily_rect3.collidepoint(event.pos):
+                    for ctverec in ctverce_valecnik_bily_3:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    valecnik_bily_rect3.centerx=event.pos[0]
+                    valecnik_bily_rect3.centery=event.pos[1]     
                 
-                valecnik_bily_rect3.centerx=event.pos[0]
-                valecnik_bily_rect3.centery=event.pos[1]     
-            
-            elif legionar_bily_rect3.collidepoint(event.pos):
-                for ctverec in ctverce_legionar_bily_3:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                legionar_bily_rect3.centerx=event.pos[0]
-                legionar_bily_rect3.centery=event.pos[1]   
+                elif legionar_bily_rect3.collidepoint(event.pos):
+                    for ctverec in ctverce_legionar_bily_3:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    legionar_bily_rect3.centerx=event.pos[0]
+                    legionar_bily_rect3.centery=event.pos[1]   
+            else:
 
-            elif morovy_doktor_cerny_rect.collidepoint(event.pos):
-                for ctverec in ctverce_morovy_doktor_cerny:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                morovy_doktor_cerny_rect.centerx=event.pos[0]
-                morovy_doktor_cerny_rect.centery=event.pos[1]  
-                
-            elif arcibiskup_cerny_rect.collidepoint(event.pos):
-                for ctverec in ctverce_morovy_doktor_cerny:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                arcibiskup_cerny_rect.centerx=event.pos[0]
-                arcibiskup_cerny_rect.centery=event.pos[1]  
+                if morovy_doktor_cerny_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_morovy_doktor_cerny:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    morovy_doktor_cerny_rect.centerx=event.pos[0]
+                    morovy_doktor_cerny_rect.centery=event.pos[1]  
+                    
+                elif arcibiskup_cerny_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_morovy_doktor_cerny:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    arcibiskup_cerny_rect.centerx=event.pos[0]
+                    arcibiskup_cerny_rect.centery=event.pos[1]  
 
-            elif kardinal_cerny_rect.collidepoint(event.pos):
-                for ctverec in ctverce_kardinal_cerny:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif kardinal_cerny_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_kardinal_cerny:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    kardinal_cerny_rect.centerx=event.pos[0]
+                    kardinal_cerny_rect.centery=event.pos[1]  
                 
-                kardinal_cerny_rect.centerx=event.pos[0]
-                kardinal_cerny_rect.centery=event.pos[1]  
-            
-            elif hades_cerny_rect.collidepoint(event.pos):
-                for ctverec in ctverce_hades_cerny:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
-                
-                hades_cerny_rect.centerx=event.pos[0]
-                hades_cerny_rect.centery=event.pos[1]  
+                elif hades_cerny_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_hades_cerny:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    hades_cerny_rect.centerx=event.pos[0]
+                    hades_cerny_rect.centery=event.pos[1]  
 
-            elif persefona_cerna_rect.collidepoint(event.pos):
-                for ctverec in ctverce_persefona_cerna:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif persefona_cerna_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_persefona_cerna:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    persefona_cerna_rect.centerx=event.pos[0]
+                    persefona_cerna_rect.centery=event.pos[1]  
                 
-                persefona_cerna_rect.centerx=event.pos[0]
-                persefona_cerna_rect.centery=event.pos[1]  
-            
-            elif kardinal_cerny_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_kardinal_cerny_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif kardinal_cerny_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_kardinal_cerny_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    kardinal_cerny_rect1.centerx=event.pos[0]
+                    kardinal_cerny_rect1.centery=event.pos[1]  
                 
-                kardinal_cerny_rect1.centerx=event.pos[0]
-                kardinal_cerny_rect1.centery=event.pos[1]  
-            
-            elif arcibiskup_cerny_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_arcibiskup_cerny_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif arcibiskup_cerny_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_arcibiskup_cerny_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    arcibiskup_cerny_rect1.centerx=event.pos[0]
+                    arcibiskup_cerny_rect1.centery=event.pos[1]  
                 
-                arcibiskup_cerny_rect1.centerx=event.pos[0]
-                arcibiskup_cerny_rect1.centery=event.pos[1]  
-            
-            elif morovy_doktor_cerny_rect1.collidepoint(event.pos):
-                for ctverec in ctverce_morovy_doktor_cerny_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen,black,ctverec,5)
+                elif morovy_doktor_cerny_rect1.collidepoint(event.pos):
+                    for ctverec in ctverce_morovy_doktor_cerny_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    morovy_doktor_cerny_rect1.centerx=event.pos[0]
+                    morovy_doktor_cerny_rect1.centery=event.pos[1]  
                 
-                morovy_doktor_cerny_rect1.centerx=event.pos[0]
-                morovy_doktor_cerny_rect1.centery=event.pos[1]  
-            
+                elif legionar_cerny_rect.collidepoint(event.pos):
+                    for ctverec in ctverce_legionar_cerny:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    legionar_cerny_rect.centerx=event.pos[0]
+                    legionar_cerny_rect.centery=event.pos[1]  
+                
+                elif valecnik_cerny_rect.collidepoint(event.pos):
+                        for ctverec in ctverce_valecnik_cerny:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen,black,ctverec,5)
+                    
+                    valecnik_cerny_rect.centerx=event.pos[0]
+                    valecnik_cerny_rect.centery=event.pos[1]  
+
+                    
+                
                       
 
              
@@ -2996,57 +3240,75 @@ while run:
             if morovy_doktor_bily_rect.colliderect(rect1):
                     morovy_doktor_bily_rect.centerx=rect1.centerx
                     morovy_doktor_bily_rect.centery=rect1.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect2):
                     morovy_doktor_bily_rect.centerx=rect2.centerx
                     morovy_doktor_bily_rect.centery=rect2.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect3):
                     morovy_doktor_bily_rect.centerx=rect3.centerx
                     morovy_doktor_bily_rect.centery=rect3.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect4):
                     morovy_doktor_bily_rect.centerx=rect4.centerx
                     morovy_doktor_bily_rect.centery=rect4.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect5):
                     morovy_doktor_bily_rect.centerx=rect5.centerx
                     morovy_doktor_bily_rect.centery=rect5.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect6):
                     morovy_doktor_bily_rect.centerx=rect6.centerx
                     morovy_doktor_bily_rect.centery=rect6.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect7):
                     morovy_doktor_bily_rect.centerx=rect7.centerx
                     morovy_doktor_bily_rect.centery=rect7.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect8):
                     morovy_doktor_bily_rect.centerx=rect8.centerx
                     morovy_doktor_bily_rect.centery=rect8.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect9):
                     morovy_doktor_bily_rect.centerx=rect9.centerx
                     morovy_doktor_bily_rect.centery=rect9.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect10):
                     morovy_doktor_bily_rect.centerx=rect10.centerx
                     morovy_doktor_bily_rect.centery=rect10.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect11):
                     morovy_doktor_bily_rect.centerx=rect11.centerx
                     morovy_doktor_bily_rect.centery=rect11.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect12):
                     morovy_doktor_bily_rect.centerx=rect12.centerx
                     morovy_doktor_bily_rect.centery=rect12.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect13):
                     morovy_doktor_bily_rect.centerx=rect13.centerx
                     morovy_doktor_bily_rect.centery=rect13.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect14):
                     morovy_doktor_bily_rect.centerx=rect14.centerx
                     morovy_doktor_bily_rect.centery=rect14.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect15):
                     morovy_doktor_bily_rect.centerx=rect15.centerx
                     morovy_doktor_bily_rect.centery=rect15.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect16):
                     morovy_doktor_bily_rect.centerx=rect16.centerx
                     morovy_doktor_bily_rect.centery=rect16.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect17):
                     morovy_doktor_bily_rect.centerx=rect17.centerx
                     morovy_doktor_bily_rect.centery=rect17.centery
+                    counter+=1
             elif morovy_doktor_bily_rect.colliderect(rect18):
                     morovy_doktor_bily_rect.centerx=rect18.centerx
                     morovy_doktor_bily_rect.centery=rect18.centery
+                    counter+=1
             else:
                     morovy_doktor_bily_rect.centerx=morovy_doktor_bily_x_pred
                     morovy_doktor_bily_rect.centery=morovy_doktor_bily_y_pred
@@ -3057,39 +3319,51 @@ while run:
             if arcibiskup_bily_rect.colliderect(rect19):
                 arcibiskup_bily_rect.centerx=rect19.centerx
                 arcibiskup_bily_rect.centery=rect19.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect20):
                 arcibiskup_bily_rect.centerx=rect20.centerx
                 arcibiskup_bily_rect.centery=rect20.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect21):
                 arcibiskup_bily_rect.centerx=rect21.centerx
                 arcibiskup_bily_rect.centery=rect21.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect22):
                 arcibiskup_bily_rect.centerx=rect22.centerx
                 arcibiskup_bily_rect.centery=rect22.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect23):
                 arcibiskup_bily_rect.centerx=rect23.centerx
                 arcibiskup_bily_rect.centery=rect23.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect24):
                 arcibiskup_bily_rect.centerx=rect24.centerx
                 arcibiskup_bily_rect.centery=rect24.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect25):
                 arcibiskup_bily_rect.centerx=rect25.centerx
                 arcibiskup_bily_rect.centery=rect25.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect26):
                 arcibiskup_bily_rect.centerx=rect26.centerx
                 arcibiskup_bily_rect.centery=rect26.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect27):
                 arcibiskup_bily_rect.centerx=rect27.centerx
                 arcibiskup_bily_rect.centery=rect27.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect28):
                 arcibiskup_bily_rect.centerx=rect28.centerx
                 arcibiskup_bily_rect.centery=rect28.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect29):
                 arcibiskup_bily_rect.centerx=rect29.centerx
                 arcibiskup_bily_rect.centery=rect29.centery
+                counter+=1
             elif arcibiskup_bily_rect.colliderect(rect30):
                 arcibiskup_bily_rect.centerx=rect30.centerx
                 arcibiskup_bily_rect.centery=rect30.centery
+                counter+=1
             else:
                 arcibiskup_bily_rect.centerx=arcibiskup_bily_x_pred
                 arcibiskup_bily_rect.centery=arcibiskup_bily_y_pred
@@ -3099,16 +3373,20 @@ while run:
             
             if kardinal_bily_rect.colliderect(rect31):
                 kardinal_bily_rect.centerx=rect31.centerx
-                kardinal_bily_rect.centery=rect31.centery              
+                kardinal_bily_rect.centery=rect31.centery      
+                counter+=1        
             elif kardinal_bily_rect.colliderect(rect32):
                 kardinal_bily_rect.centerx=rect32.centerx
-                kardinal_bily_rect.centery=rect32.centery              
+                kardinal_bily_rect.centery=rect32.centery   
+                counter+=1           
             elif kardinal_bily_rect.colliderect(rect33):
                 kardinal_bily_rect.centerx=rect33.centerx
-                kardinal_bily_rect.centery=rect34.centery              
+                kardinal_bily_rect.centery=rect34.centery  
+                counter+=1            
             elif kardinal_bily_rect.colliderect(rect34):
                 kardinal_bily_rect.centerx=rect34.centerx
-                kardinal_bily_rect.centery=rect34.centery      
+                kardinal_bily_rect.centery=rect34.centery  
+                counter+=1    
             else:
                 kardinal_bily_rect.centerx=kardinal_bily_x_pred
                 kardinal_bily_rect.centery=kardinal_bily_y_pred
@@ -3119,81 +3397,100 @@ while run:
             if hades_bily_rect.colliderect(rect35):
                 hades_bily_rect.centerx=rect35.centerx
                 hades_bily_rect.centery=rect35.centery
+                counter+=1
                 print("35")
             elif hades_bily_rect.colliderect(rect36):
                 hades_bily_rect.centerx=rect36.centerx
                 hades_bily_rect.centery=rect36.centery
+                counter+=1
                 print("36")
                 
             elif hades_bily_rect.colliderect(rect37):
                 hades_bily_rect.centerx=rect37.centerx
                 hades_bily_rect.centery=rect37.centery
+                counter+=1
                 print("37")
             elif hades_bily_rect.colliderect(rect38):
                 hades_bily_rect.centerx=rect38.centerx
                 hades_bily_rect.centery=rect38.centery
+                counter+=1
                 print("38")
             elif hades_bily_rect.colliderect(rect39):
                 hades_bily_rect.centerx=rect39.centerx
                 hades_bily_rect.centery=rect39.centery
+                counter+=1
                 print("39")
                 
                 
             elif hades_bily_rect.colliderect(rect40):
                 hades_bily_rect.centerx=rect40.centerx
                 hades_bily_rect.centery=rect40.centery
+                counter+=1
                 print("40")
             elif hades_bily_rect.colliderect(rect41):
                 hades_bily_rect.centerx=rect41.centerx
                 hades_bily_rect.centery=rect41.centery
+                counter+=1
                 print("41")
             elif hades_bily_rect.colliderect(rect42):
                 hades_bily_rect.centerx=rect42.centerx
                 hades_bily_rect.centery=rect42.centery
+                counter+=1
                 print("42")
             elif hades_bily_rect.colliderect(rect43):
                 hades_bily_rect.centerx=rect43.centerx
                 hades_bily_rect.centery=rect43.centery
+                counter+=1
                 print("43")
             elif hades_bily_rect.colliderect(rect44):
                 hades_bily_rect.centerx=rect44.centerx
                 hades_bily_rect.centery=rect44.centery
+                counter+=1
                 print("44")
             elif hades_bily_rect.colliderect(rect45):
                 hades_bily_rect.centerx=rect45.centerx
                 hades_bily_rect.centery=rect45.centery
+                counter+=1
                 print("45")
             elif hades_bily_rect.colliderect(rect46):
                 hades_bily_rect.centerx=rect46.centerx
                 hades_bily_rect.centery=rect46.centery
+                counter+=1
                 print("46")
             elif hades_bily_rect.colliderect(rect47):
                 hades_bily_rect.centerx=rect47.centerx
                 hades_bily_rect.centery=rect47.centery
+                counter+=1
                 print("47")
             elif hades_bily_rect.colliderect(rect48):
                 hades_bily_rect.centerx=rect48.centerx
                 hades_bily_rect.centery=rect48.centery
+                counter+=1
                 print("48")
             elif hades_bily_rect.colliderect(rect49):
                 hades_bily_rect.centerx=rect49.centerx
                 hades_bily_rect.centery=rect49.centery
+                counter+=1
                 print("49")
             elif hades_bily_rect.colliderect(rect50):
                 hades_bily_rect.centerx=rect50.centerx
                 hades_bily_rect.centery=rect50.centery
+                counter+=1
                 print("50")
             elif hades_bily_rect.colliderect(rect51):
                 hades_bily_rect.centerx=rect51.centerx
                 hades_bily_rect.centery=rect51.centery
+                counter+=1
                 print("51")
             elif hades_bily_rect.colliderect(rect52):
                 hades_bily_rect.centerx=rect52.centerx
                 hades_bily_rect.centery=rect52.centery
+                counter+=1
                 print("52")
             elif hades_bily_rect.colliderect(rect53):
                 hades_bily_rect.centerx=rect53.centerx
                 hades_bily_rect.centery=rect53.centery
+                counter+=1
                 print("53")
             else:
                 hades_bily_rect.centerx=hades_bily_x_pred
@@ -3205,30 +3502,39 @@ while run:
             if persefona_bila_rect.colliderect(rect_per_1):
                 persefona_bila_rect.centerx=rect_per_1.centerx
                 persefona_bila_rect.centery=rect_per_1.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_2):
                 persefona_bila_rect.centerx=rect_per_2.centerx
                 persefona_bila_rect.centery=rect_per_2.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_3):
                 persefona_bila_rect.centerx=rect_per_3.centerx
                 persefona_bila_rect.centery=rect_per_3.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_4):
                 persefona_bila_rect.centerx=rect_per_4.centerx
                 persefona_bila_rect.centery=rect_per_4.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_5):
                 persefona_bila_rect.centerx=rect_per_5.centerx
                 persefona_bila_rect.centery=rect_per_5.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_6):
                 persefona_bila_rect.centerx=rect_per_6.centerx
                 persefona_bila_rect.centery=rect_per_6.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_7):
                 persefona_bila_rect.centerx=rect_per_7.centerx
                 persefona_bila_rect.centery=rect_per_7.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_8):
                 persefona_bila_rect.centerx=rect_per_8.centerx
                 persefona_bila_rect.centery=rect_per_8.centery
+                counter+=1
             elif persefona_bila_rect.colliderect(rect_per_9):
                 persefona_bila_rect.centerx=rect_per_9.centerx
                 persefona_bila_rect.centery=rect_per_9.centery
+                counter+=1
             else:
                 persefona_bila_rect.centerx=persefona_bila_x_pred
                 persefona_bila_rect.centery=persefona_bila_y_pred
@@ -3239,15 +3545,19 @@ while run:
             if kardinal_bily_rect1.colliderect(rect_kar_1):
                 kardinal_bily_rect1.centerx=rect_kar_1.centerx
                 kardinal_bily_rect1.centery=rect_kar_1.centery
+                counter+=1
             elif kardinal_bily_rect1.colliderect(rect_kar_2):
                 kardinal_bily_rect1.centerx=rect_kar_2.centerx
                 kardinal_bily_rect1.centery=rect_kar_2.centery
+                counter+=1
             elif kardinal_bily_rect1.colliderect(rect_kar_3):
                 kardinal_bily_rect1.centerx=rect_kar_3.centerx
                 kardinal_bily_rect1.centery=rect_kar_3.centery
+                counter+=1
             elif kardinal_bily_rect1.colliderect(rect_kar_4):
                 kardinal_bily_rect1.centerx=rect_kar_4.centerx
                 kardinal_bily_rect1.centery=rect_kar_4.centery
+                counter+=1
             else:
                 kardinal_bily_rect1.centerx=kardinal_bily_x_pred_1
                 kardinal_bily_rect1.centery=kardinal_bily_y_pred_1
@@ -3258,39 +3568,51 @@ while run:
             if arcibiskup_bily_rect1.colliderect(rect_arc_1):
                 arcibiskup_bily_rect1.centerx=rect_arc_1.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_1.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_2):
                 arcibiskup_bily_rect1.centerx=rect_arc_2.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_2.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_3):
                 arcibiskup_bily_rect1.centerx=rect_arc_3.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_3.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_4):
                 arcibiskup_bily_rect1.centerx=rect_arc_4.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_4.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_5):
                 arcibiskup_bily_rect1.centerx=rect_arc_5.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_5.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_6):
                 arcibiskup_bily_rect1.centerx=rect_arc_6.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_6.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_7):
                 arcibiskup_bily_rect1.centerx=rect_arc_7.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_7.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_8):
                 arcibiskup_bily_rect1.centerx=rect_arc_8.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_8.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_9):
                 arcibiskup_bily_rect1.centerx=rect_arc_9.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_9.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_10):
                 arcibiskup_bily_rect1.centerx=rect_arc_10.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_10.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_11):
                 arcibiskup_bily_rect1.centerx=rect_arc_11.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_11.centery
+                counter+=1
             elif arcibiskup_bily_rect1.colliderect(rect_arc_12):
                 arcibiskup_bily_rect1.centerx=rect_arc_12.centerx
                 arcibiskup_bily_rect1.centery=rect_arc_12.centery
+                counter+=1
             else:
                 arcibiskup_bily_rect1.centerx=arcibiskup_bily_x_pred_1
                 arcibiskup_bily_rect1.centery=arcibiskup_bily_y_pred_1
@@ -3301,57 +3623,75 @@ while run:
             if morovy_doktor_bily_rect1.colliderect(rect_mor_1):
                 morovy_doktor_bily_rect1.centerx=rect_mor_1.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_1.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_2):
                 morovy_doktor_bily_rect1.centerx=rect_mor_2.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_2.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_3):
                 morovy_doktor_bily_rect1.centerx=rect_mor_3.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_3.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_4):
                 morovy_doktor_bily_rect1.centerx=rect_mor_4.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_4.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_5):
                 morovy_doktor_bily_rect1.centerx=rect_mor_5.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_5.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_6):
                 morovy_doktor_bily_rect1.centerx=rect_mor_6.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_6.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_7):
                 morovy_doktor_bily_rect1.centerx=rect_mor_7.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_7.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_8):
                 morovy_doktor_bily_rect1.centerx=rect_mor_8.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_8.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_9):
                 morovy_doktor_bily_rect1.centerx=rect_mor_9.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_9.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_10):
                 morovy_doktor_bily_rect1.centerx=rect_mor_10.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_10.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_11):
                 morovy_doktor_bily_rect1.centerx=rect_mor_11.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_11.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_12):
                 morovy_doktor_bily_rect1.centerx=rect_mor_12.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_12.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_13):
                 morovy_doktor_bily_rect1.centerx=rect_mor_13.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_13.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_14):
                 morovy_doktor_bily_rect1.centerx=rect_mor_14.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_14.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_15):
                 morovy_doktor_bily_rect1.centerx=rect_mor_15.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_15.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_16):
                 morovy_doktor_bily_rect1.centerx=rect_mor_16.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_16.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_17):
                 morovy_doktor_bily_rect1.centerx=rect_mor_17.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_17.centery
+                counter+=1
             elif morovy_doktor_bily_rect1.colliderect(rect_mor_18):
                 morovy_doktor_bily_rect1.centerx=rect_mor_18.centerx
                 morovy_doktor_bily_rect1.centery=rect_mor_18.centery
+                counter+=1
             else:
                 morovy_doktor_bily_rect1.centerx=morovy_doktor_bily_x_pred_1
                 morovy_doktor_bily_rect1.centery=morovy_doktor_bily_y_pred_1
@@ -3362,15 +3702,19 @@ while run:
             if valecnik_bily_rect.colliderect(rect_val_1):
                 valecnik_bily_rect.centerx=rect_val_1.centerx
                 valecnik_bily_rect.centery=rect_val_1.centery
+                counter+=1
             elif valecnik_bily_rect.colliderect(rect_val_2):
                 valecnik_bily_rect.centerx=rect_val_2.centerx
                 valecnik_bily_rect.centery=rect_val_2.centery
+                counter+=1
             elif valecnik_bily_rect.colliderect(rect_val_3):
                 valecnik_bily_rect.centerx=rect_val_3.centerx
                 valecnik_bily_rect.centery=rect_val_3.centery
+                counter+=1
             elif valecnik_bily_rect.colliderect(rect_val_4):
                 valecnik_bily_rect.centerx=rect_val_4.centerx
                 valecnik_bily_rect.centery=rect_val_4.centery
+                counter+=1
             else:
                 valecnik_bily_rect.centerx=valecnik_bily_x_pred
                 valecnik_bily_rect.centery=valecnik_bily_y_pred
@@ -3381,12 +3725,15 @@ while run:
             if legionar_bily_rect.colliderect(rect_leg_1):
                 legionar_bily_rect.centerx=rect_leg_1.centerx
                 legionar_bily_rect.centery=rect_leg_1.centery
+                counter+=1
             elif legionar_bily_rect.colliderect(rect_leg_2):
                 legionar_bily_rect.centerx=rect_leg_2.centerx
                 legionar_bily_rect.centery=rect_leg_2.centery
+                counter+=1
             elif legionar_bily_rect.colliderect(rect_leg_3):
                 legionar_bily_rect.centerx=rect_leg_3.centerx
                 legionar_bily_rect.centery=rect_leg_3.centery
+                counter+=1
             else:
                 legionar_bily_rect.centerx=legionar_bily_x_pred
                 legionar_bily_rect.centery=legionar_bily_y_pred
@@ -3397,15 +3744,19 @@ while run:
             if valecnik_bily_rect1.colliderect(rect_val_1_1):
                 valecnik_bily_rect1.centerx=rect_val_1_1.centerx
                 valecnik_bily_rect1.centery=rect_val_1_1.centery
+                counter+=1
             elif valecnik_bily_rect1.colliderect(rect_val_1_2):
                 valecnik_bily_rect1.centerx=rect_val_1_2.centerx
                 valecnik_bily_rect1.centery=rect_val_1_2.centery
+                counter+=1
             elif valecnik_bily_rect1.colliderect(rect_val_1_3):
                 valecnik_bily_rect1.centerx=rect_val_1_3.centerx
                 valecnik_bily_rect1.centery=rect_val_1_3.centery
+                counter+=1
             elif valecnik_bily_rect1.colliderect(rect_val_1_4):
                 valecnik_bily_rect1.centerx=rect_val_1_4.centerx
                 valecnik_bily_rect1.centery=rect_val_1_4.centery
+                counter+=1
             else:
                 valecnik_bily_rect1.centerx=valecnik_bily_x_pred_1
                 valecnik_bily_rect1.centery=valecnik_bily_y_pred_1
@@ -3416,12 +3767,15 @@ while run:
             if legionar_bily_rect1.colliderect(rect_leg_1_1):
                 legionar_bily_rect1.centerx=rect_leg_1_1.centerx
                 legionar_bily_rect1.centery=rect_leg_1_1.centery
+                counter+=1
             elif legionar_bily_rect1.colliderect(rect_leg_1_2):
                 legionar_bily_rect1.centerx=rect_leg_1_2.centerx
                 legionar_bily_rect1.centery=rect_leg_1_2.centery
+                counter+=1
             elif legionar_bily_rect1.colliderect(rect_leg_1_3):
                 legionar_bily_rect1.centerx=rect_leg_1_3.centerx
                 legionar_bily_rect1.centery=rect_leg_1_3.centery
+                counter+=1
             else:
                 legionar_bily_rect1.centerx=legionar_bily_x_pred_1
                 legionar_bily_rect1.centery=legionar_bily_y_pred_1
@@ -3432,15 +3786,19 @@ while run:
             if valecnik_bily_rect2.colliderect(rect_val_2_1):
                 valecnik_bily_rect2.centerx=rect_val_2_1.centerx
                 valecnik_bily_rect2.centery=rect_val_2_1.centery
+                counter+=1
             elif valecnik_bily_rect2.colliderect(rect_val_2_2):
                 valecnik_bily_rect2.centerx=rect_val_2_2.centerx
                 valecnik_bily_rect2.centery=rect_val_2_2.centery
+                counter+=1
             elif valecnik_bily_rect2.colliderect(rect_val_2_3):
                 valecnik_bily_rect2.centerx=rect_val_2_3.centerx
                 valecnik_bily_rect2.centery=rect_val_2_3.centery
+                counter+=1
             elif valecnik_bily_rect2.colliderect(rect_val_2_4):
                 valecnik_bily_rect2.centerx=rect_val_2_4.centerx
                 valecnik_bily_rect2.centery=rect_val_2_4.centery
+                counter+=1
             else:
                 valecnik_bily_rect2.centerx=valecnik_bily_x_pred_2
                 valecnik_bily_rect2.centery=valecnik_bily_y_pred_2
@@ -3451,12 +3809,15 @@ while run:
             if legionar_bily_rect2.colliderect(rect_leg_2_1):
                 legionar_bily_rect2.centerx=rect_leg_2_1.centerx
                 legionar_bily_rect2.centery=rect_leg_2_1.centery
+                counter+=1
             elif legionar_bily_rect2.colliderect(rect_leg_2_2):
                 legionar_bily_rect2.centerx=rect_leg_2_2.centerx
                 legionar_bily_rect2.centery=rect_leg_2_2.centery
+                counter+=1
             elif legionar_bily_rect2.colliderect(rect_leg_2_3):
                 legionar_bily_rect2.centerx=rect_leg_2_3.centerx
                 legionar_bily_rect2.centery=rect_leg_2_3.centery
+                counter+=1
             else:
                 legionar_bily_rect2.centerx=legionar_bily_x_pred_2
                 legionar_bily_rect2.centery=legionar_bily_y_pred_2
@@ -3467,15 +3828,19 @@ while run:
             if valecnik_bily_rect3.colliderect(rect_val_3_1):
                 valecnik_bily_rect3.centerx=rect_val_3_1.centerx
                 valecnik_bily_rect3.centery=rect_val_3_1.centery
+                counter+=1
             elif valecnik_bily_rect3.colliderect(rect_val_3_2):
                 valecnik_bily_rect3.centerx=rect_val_3_2.centerx
                 valecnik_bily_rect3.centery=rect_val_3_2.centery
+                counter+=1
             elif valecnik_bily_rect3.colliderect(rect_val_3_3):
                 valecnik_bily_rect3.centerx=rect_val_3_3.centerx
                 valecnik_bily_rect3.centery=rect_val_3_3.centery
+                counter+=1
             elif valecnik_bily_rect3.colliderect(rect_val_3_4):
                 valecnik_bily_rect3.centerx=rect_val_3_4.centerx
                 valecnik_bily_rect3.centery=rect_val_3_4.centery
+                counter+=1
             else:
                 valecnik_bily_rect3.centerx=valecnik_bily_x_pred_3
                 valecnik_bily_rect3.centery=valecnik_bily_y_pred_3
@@ -3486,12 +3851,15 @@ while run:
             if legionar_bily_rect3.colliderect(rect_leg_3_1):
                 legionar_bily_rect3.centerx=rect_leg_3_1.centerx
                 legionar_bily_rect3.centery=rect_leg_3_1.centery
+                counter+=1
             elif legionar_bily_rect3.colliderect(rect_leg_3_2):
                 legionar_bily_rect3.centerx=rect_leg_3_2.centerx
                 legionar_bily_rect3.centery=rect_leg_3_2.centery
+                counter+=1
             elif legionar_bily_rect3.colliderect(rect_leg_3_3):
                 legionar_bily_rect3.centerx=rect_leg_3_3.centerx
                 legionar_bily_rect3.centery=rect_leg_3_3.centery
+                counter+=1
             else:
                 legionar_bily_rect3.centerx=legionar_bily_x_pred_3
                 legionar_bily_rect3.centery=legionar_bily_y_pred_3
@@ -3499,60 +3867,78 @@ while run:
                 legionar_bily_rect3.centerx=legionar_bily_x_pred_3
                 legionar_bily_rect3.centery=legionar_bily_y_pred_3
 
-            if morovy_doktor_cerny.colliderect(rect_mor_cer_1):
+            if morovy_doktor_cerny_rect.colliderect(rect_mor_cer_1):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_1.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_1.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_2):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_2):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_2.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_2.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_3):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_3):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_3.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_3.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_4):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_4):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_4.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_4.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_5):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_5):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_5.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_5.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_6):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_6):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_6.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_6.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_7):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_7):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_7.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_7.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_8):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_8):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_8.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_8.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_9):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_9):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_9.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_9.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_10):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_10):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_10.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_10.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_11):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_11):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_11.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_11.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_12):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_12):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_12.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_12.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_13):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_13):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_13.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_13.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_14):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_14):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_14.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_14.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_15):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_15):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_15.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_15.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_16):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_16):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_16.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_16.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_17):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_17):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_17.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_17.centery
-            elif morovy_doktor_cerny.colliderect(rect_mor_cer_18):
+                counter+=1
+            elif morovy_doktor_cerny_rect.colliderect(rect_mor_cer_18):
                 morovy_doktor_cerny_rect.centerx=rect_mor_cer_18.centerx
                 morovy_doktor_cerny_rect.centery=rect_mor_cer_18.centery
+                counter+=1
             else:
                 morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
                 morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
@@ -3563,39 +3949,51 @@ while run:
             if arcibiskup_cerny_rect.colliderect(rect_arc_cer_1):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_1.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_1.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_2):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_2.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_2.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_3):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_3.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_3.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_4):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_4.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_4.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_5):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_5.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_5.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_6):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_6.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_6.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_7):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_7.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_7.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_8):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_8.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_8.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_9):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_9.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_9.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_10):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_10.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_10.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_11):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_11.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_11.centery
+                counter+=1
             elif arcibiskup_cerny_rect.colliderect(rect_arc_cer_12):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_12.centerx
                 arcibiskup_cerny_rect.centery=rect_arc_cer_12.centery
+                counter+=1
             else:
                 arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
                 arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
@@ -3606,15 +4004,19 @@ while run:
             if kardinal_cerny_rect.colliderect(rect_kar_cer_1):
                 kardinal_cerny_rect.centerx=rect_kar_cer_1.centerx
                 kardinal_cerny_rect.centery=rect_kar_cer_1.centery
+                counter+=1
             elif kardinal_cerny_rect.colliderect(rect_kar_cer_2):
                 kardinal_cerny_rect.centerx=rect_kar_cer_2.centerx
                 kardinal_cerny_rect.centery=rect_kar_cer_2.centery
+                counter+=1
             elif kardinal_cerny_rect.colliderect(rect_kar_cer_3):
                 kardinal_cerny_rect.centerx=rect_kar_cer_3.centerx
                 kardinal_cerny_rect.centery=rect_kar_cer_3.centery
+                counter+=1
             elif kardinal_cerny_rect.colliderect(rect_kar_cer_4):
                 kardinal_cerny_rect.centerx=rect_kar_cer_4.centerx
                 kardinal_cerny_rect.centery=rect_kar_cer_4.centery
+                counter+=1
             else:
                 kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
                 kardinal_cerny_rect.centery=kardinal_cerny_y_pred
@@ -3625,60 +4027,79 @@ while run:
             if hades_cerny_rect.colliderect(rect_had_cer_1):
                 hades_cerny_rect.centerx=rect_had_cer_1.centerx
                 hades_cerny_rect.centery=rect_had_cer_1.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_2):
                 hades_cerny_rect.centerx=rect_had_cer_2.centerx
                 hades_cerny_rect.centery=rect_had_cer_2.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_3):
                 hades_cerny_rect.centerx=rect_had_cer_3.centerx
                 hades_cerny_rect.centery=rect_had_cer_3.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_4):
                 hades_cerny_rect.centerx=rect_had_cer_4.centerx
                 hades_cerny_rect.centery=rect_had_cer_4.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_5):
                 hades_cerny_rect.centerx=rect_had_cer_5.centerx
                 hades_cerny_rect.centery=rect_had_cer_5.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_6):
                 hades_cerny_rect.centerx=rect_had_cer_6.centerx
                 hades_cerny_rect.centery=rect_had_cer_6.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_7):
                 hades_cerny_rect.centerx=rect_had_cer_7.centerx
                 hades_cerny_rect.centery=rect_had_cer_7.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_8):
                 hades_cerny_rect.centerx=rect_had_cer_8.centerx
                 hades_cerny_rect.centery=rect_had_cer_8.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_9):
                 hades_cerny_rect.centerx=rect_had_cer_9.centerx
                 hades_cerny_rect.centery=rect_had_cer_9.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_10):
                 hades_cerny_rect.centerx=rect_had_cer_10.centerx
                 hades_cerny_rect.centery=rect_had_cer_10.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_11):
                 hades_cerny_rect.centerx=rect_had_cer_11.centerx
                 hades_cerny_rect.centery=rect_had_cer_11.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_12):
                 hades_cerny_rect.centerx=rect_had_cer_12.centerx
                 hades_cerny_rect.centery=rect_had_cer_12.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_13):
                 hades_cerny_rect.centerx=rect_had_cer_13.centerx
                 hades_cerny_rect.centery=rect_had_cer_13.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_14):
                 hades_cerny_rect.centerx=rect_had_cer_14.centerx
                 hades_cerny_rect.centery=rect_had_cer_14.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_15):
                 hades_cerny_rect.centerx=rect_had_cer_15.centerx
                 hades_cerny_rect.centery=rect_had_cer_15.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_16):
                 hades_cerny_rect.centerx=rect_had_cer_16.centerx
                 hades_cerny_rect.centery=rect_had_cer_16.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_17):
                 hades_cerny_rect.centerx=rect_had_cer_17.centerx
                 hades_cerny_rect.centery=rect_had_cer_17.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_18):
                 hades_cerny_rect.centerx=rect_had_cer_18.centerx
                 hades_cerny_rect.centery=rect_had_cer_18.centery
+                counter+=1
             elif hades_cerny_rect.colliderect(rect_had_cer_19):
                 hades_cerny_rect.centerx=rect_had_cer_19.centerx
                 hades_cerny_rect.centery=rect_had_cer_19.centery
+                counter+=1
             else:
                 hades_cerny_rect.centerx=hades_cerny_x_pred
                 hades_cerny_rect.centery=hades_cerny_y_pred
@@ -3689,27 +4110,35 @@ while run:
             if persefona_cerna_rect.colliderect(rect_per_cer_1):
                 persefona_cerna_rect.centerx=rect_per_cer_1.centerx
                 persefona_cerna_rect.centery=rect_per_cer_1.centery
+                counter+=1
             elif persefona_cerna_rect.colliderect(rect_per_cer_2):
                 persefona_cerna_rect.centerx=rect_per_cer_2.centerx
                 persefona_cerna_rect.centery=rect_per_cer_2.centery
+                counter+=1
             elif persefona_cerna_rect.colliderect(rect_per_cer_3):
                 persefona_cerna_rect.centerx=rect_per_cer_3.centerx
                 persefona_cerna_rect.centery=rect_per_cer_3.centery
+                counter+=1
             elif persefona_cerna_rect.colliderect(rect_per_cer_4):
                 persefona_cerna_rect.centerx=rect_per_cer_4.centerx
                 persefona_cerna_rect.centery=rect_per_cer_4.centery
+                counter+=1
             elif persefona_cerna_rect.colliderect(rect_per_cer_5):
                 persefona_cerna_rect.centerx=rect_per_cer_5.centerx
                 persefona_cerna_rect.centery=rect_per_cer_5.centery
+                counter+=1
             elif persefona_cerna_rect.colliderect(rect_per_cer_6):
                 persefona_cerna_rect.centerx=rect_per_cer_6.centerx
                 persefona_cerna_rect.centery=rect_per_cer_6.centery
+                counter+=1
             elif persefona_cerna_rect.colliderect(rect_per_cer_7):
                 persefona_cerna_rect.centerx=rect_per_cer_7.centerx
                 persefona_cerna_rect.centery=rect_per_cer_7.centery
+                counter+=1
             elif persefona_cerna_rect.colliderect(rect_per_cer_8):
                 persefona_cerna_rect.centerx=rect_per_cer_8.centerx
                 persefona_cerna_rect.centery=rect_per_cer_8.centery
+                counter+=1
             else:
                 persefona_cerna_rect.centerx=persefona_cerna_x_pred
                 persefona_cerna_rect.centery=persefona_cerna_y_pred
@@ -3720,15 +4149,19 @@ while run:
             if kardinal_cerny_rect1.colliderect(rect_kar_cer_1_1):
                 kardinal_cerny_rect1.centerx=rect_kar_cer_1_1.centerx
                 kardinal_cerny_rect1.centery=rect_kar_cer_1_1.centery
+                counter+=1
             elif kardinal_cerny_rect1.colliderect(rect_kar_cer_1_2):
                 kardinal_cerny_rect1.centerx=rect_kar_cer_1_2.centerx
                 kardinal_cerny_rect1.centery=rect_kar_cer_1_2.centery
+                counter+=1
             elif kardinal_cerny_rect1.colliderect(rect_kar_cer_1_3):
                 kardinal_cerny_rect1.centerx=rect_kar_cer_1_3.centerx
                 kardinal_cerny_rect1.centery=rect_kar_cer_1_3.centery
+                counter+=1
             elif kardinal_cerny_rect1.colliderect(rect_kar_cer_1_4):
                 kardinal_cerny_rect1.centerx=rect_kar_cer_1_4.centerx
                 kardinal_cerny_rect1.centery=rect_kar_cer_1_4.centery
+                counter+=1
             else:
                 kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
                 kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
@@ -3739,106 +4172,184 @@ while run:
             if arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_1):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_1.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_1.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_2):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_2.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_2.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_3):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_3.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_3.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_4):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_4.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_4.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_5):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_5.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_5.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_6):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_6.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_6.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_7):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_7.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_7.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_8):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_8.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_8.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_9):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_9.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_9.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_10):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_10.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_10.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_11):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_11.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_11.centery
+                counter+=1
             elif arcibiskup_cerny_rect1.colliderect(rect_arc_cer_1_12):
                 arcibiskup_cerny_rect1.centerx=rect_arc_cer_1_12.centerx
                 arcibiskup_cerny_rect1.centery=rect_arc_cer_1_12.centery
+                counter+=1
             else:
                 arcibiskup_cerny_rect1.centerx=arcibiskup_cerny_x_pred_1
                 arcibiskup_cerny_rect1.centery=arcibiskup_cerny_y_pred_1
+                
             if (arcibiskup_cerny_rect1.right > 1440 or arcibiskup_cerny_rect1.left < 475) or (arcibiskup_cerny_rect1.bottom > 1020 or arcibiskup_cerny_rect1.top < 60):
                 arcibiskup_cerny_rect1.centerx=arcibiskup_cerny_x_pred_1
                 arcibiskup_cerny_rect1.centery=arcibiskup_cerny_y_pred_1
+                
 
             if morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_1):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_1.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_1.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_2):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_2.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_2.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_3):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_3.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_3.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_4):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_4.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_4.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_5):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_5.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_5.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_6):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_6.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_6.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_7):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_7.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_7.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_8):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_8.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_8.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_9):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_9.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_9.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_10):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_10.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_10.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_11):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_11.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_11.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_12):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_12.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_12.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_13):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_13.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_13.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_14):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_14.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_14.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_15):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_15.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_15.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_16):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_16.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_16.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_17):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_17.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_17.centery
+                counter+=1
             elif morovy_doktor_cerny_rect1.colliderect(rect_mor_cer_1_18):
                 morovy_doktor_cerny_rect1.centerx=rect_mor_cer_1_18.centerx
                 morovy_doktor_cerny_rect1.centery=rect_mor_cer_1_18.centery
+                counter+=1
             else:
                 morovy_doktor_cerny_rect1.centerx=morovy_doktor_cerny_x_pred_1
                 morovy_doktor_cerny_rect1.centery=morovy_doktor_cerny_y_pred_1
+                
             if (morovy_doktor_cerny_rect1.right > 1440 or morovy_doktor_cerny_rect1.left < 475) or (morovy_doktor_cerny_rect1.bottom > 1020 or morovy_doktor_cerny_rect1.top < 60):
                 morovy_doktor_cerny_rect1.centerx=morovy_doktor_cerny_x_pred_1
                 morovy_doktor_cerny_rect1.centery=morovy_doktor_cerny_y_pred_1
+                
+
+            if legionar_cerny_rect.colliderect(rect_leg_cer_1):
+                legionar_cerny_rect.centerx=rect_leg_cer_1.centerx
+                legionar_cerny_rect.centery=rect_leg_cer_1.centery
+                counter+=1
+            elif legionar_cerny_rect.colliderect(rect_leg_cer_2):
+                legionar_cerny_rect.centerx=rect_leg_cer_2.centerx
+                legionar_cerny_rect.centery=rect_leg_cer_2.centery
+                counter+=1
+            elif legionar_cerny_rect.colliderect(rect_leg_cer_3):
+                legionar_cerny_rect.centerx=rect_leg_cer_3.centerx
+                legionar_cerny_rect.centery=rect_leg_cer_3.centery
+                counter+=1
+            else:
+                legionar_cerny_rect.centerx=legionar_cerny_x_pred
+                legionar_cerny_rect.centery=legionar_cerny_y_pred
+            if (legionar_cerny_rect.right > 1440 or legionar_cerny_rect.left < 475) or (legionar_cerny_rect.bottom > 1020 or legionar_cerny_rect.top < 60):
+                legionar_cerny_rect.centerx=legionar_cerny_x_pred
+                legionar_cerny_rect.centery=legionar_cerny_y_pred
+
+            if valecnik_cerny_rect.colliderect(rect_val_cer_1):
+                valecnik_cerny_rect.centerx=rect_val_cer_1.centerx
+                valecnik_cerny_rect.centery=rect_val_cer_1.centery
+            elif valecnik_cerny_rect.colliderect(rect_val_cer_2):
+                valecnik_cerny_rect.centerx=rect_val_cer_2.centerx
+                valecnik_cerny_rect.centery=rect_val_cer_2.centery
+            elif valecnik_cerny_rect.colliderect(rect_val_cer_3):
+                valecnik_cerny_rect.centerx=rect_val_cer_3.centerx
+                valecnik_cerny_rect.centery=rect_val_cer_3.centery
+            elif valecnik_cerny_rect.colliderect(rect_val_cer_4):
+                valecnik_cerny_rect.centerx=rect_val_cer_4.centerx
+                valecnik_cerny_rect.centery=rect_val_cer_4.centery
+            else: 
+                valecnik_cerny_rect.centerx=valecnik_cerny_x_pred
+                valecnik_cerny_rect.centery=valecnik_cerny_y_pred
+            if (valecnik_cerny_rect.right > 1440 or valecnik_cerny_rect.left < 475) or (valecnik_cerny_rect.bottom > 1020 or valecnik_cerny_rect.top < 60):
+                valecnik_cerny_rect.centerx=valecnik_cerny_x_pred
+                valecnik_cerny_rect.centery=valecnik_cerny_y_pred
+            
+
+
+            print(counter)
+
+            
             
             
             
@@ -3853,7 +4364,9 @@ while run:
 
             
         
-        #todo: Kontrola kolize
+        #todo: Kontrola kolize 
+        #Bude to fungovat tak, že jakmile dojde ke kolizi mezi dvěma figurkami, zkontroluje se hodnota counteru a v závislosti na jeho modulu bude odebrána figurka příslušné barvy
+        #counter=0 odehrál bílý, tedy musí brát černou figurku
 
 
     pygame.display.update()
