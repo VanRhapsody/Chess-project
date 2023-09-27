@@ -7,13 +7,13 @@ class morovy_doktor_bily(entity):
         super().__init__(image)
         morovy_doktor_bily_rect=morovy_doktor_bily.get_rect()
         morovy_doktor_bily_rect.center=(540,120)
-        def move():
+    def move():
             for event in pygame.event.get():
                 if event.type==pygame.MOUSEMOTION and event.buttons[0]==1: 
                     if morovy_doktor_bily.collidepoint(event.pos):
                         morovy_doktor_bily.draw()
 
-    def update(sel, figurka):
+    def update(self, figurka):
         krok=120
 
         ctverce_morovy_doktor_bily=[]
