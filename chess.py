@@ -3,6 +3,9 @@ import mysql.connector
 import random
 from entities.morovy_doktor_bily import morovy_doktor_bily
 from entities.arcibiskup_bily import arcibiskup_bily
+from entities.kardinal_bily import kardinal_bily
+from entities.hades_bily import hades_bily
+
 
 #Classy
 
@@ -60,7 +63,9 @@ fps=60
 # valecnik_bily=pygame.image.load("img/Valecnik_bily.png")
 # valecnik_cerny=pygame.image.load("img/Valecnik_cerny.png")
 morovy_doktor_bily_figurka=morovy_doktor_bily("img/Morovy_doktor_bily.png")
-arcibiskup_bily_figuka=arcibiskup_bily("img/Arcibiskup_bily.png")
+arcibiskup_bily_figurka=arcibiskup_bily("img/Arcibiskup_bily.png")
+kardinal_bily_figurka=kardinal_bily("img/Kardinal_bily.png")
+hades_bily_figurka=hades_bily("img/Hades_bily.png")
 
 #Nastavení pozic bílých figurek
 # morovy_doktor_bily_rect=morovy_doktor_bily.get_rect()
@@ -230,7 +235,9 @@ krok=120
 
 
 morovy_doktor_bily_figurka.update(morovy_doktor_bily_figurka.morovy_doktor_bily_rect)
-arcibiskup_bily_figuka.update(arcibiskup_bily_figuka.arcibiskup_bily_rect)
+arcibiskup_bily_figurka.update(arcibiskup_bily_figurka.arcibiskup_bily_rect)
+kardinal_bily_figurka.update(kardinal_bily_figurka.kardinal_bily_rect)
+hades_bily_figurka.update(hades_bily_figurka.hades_bily_rect)
 
 
 
@@ -424,10 +431,14 @@ while run:
                     pygame.draw.rect(screen, (139,69,19), (x * scale+480, y * scale+60, scale, scale))
         
         morovy_doktor_bily_figurka.update(morovy_doktor_bily_figurka.morovy_doktor_bily_rect)
-        arcibiskup_bily_figuka.update(arcibiskup_bily_figuka.arcibiskup_bily_rect)
+        arcibiskup_bily_figurka.update(arcibiskup_bily_figurka.arcibiskup_bily_rect)
+        kardinal_bily_figurka.update(kardinal_bily_figurka.kardinal_bily_rect)
+        hades_bily_figurka.update(hades_bily_figurka.hades_bily_rect)
 
         morovy_doktor_bily_figurka.draw(screen,morovy_doktor_bily_figurka.morovy_doktor_bily,morovy_doktor_bily_figurka.morovy_doktor_bily_rect)
-        arcibiskup_bily_figuka.draw(screen,arcibiskup_bily_figuka.arcibiskup_bily,arcibiskup_bily_figuka.arcibiskup_bily_rect)
+        arcibiskup_bily_figurka.draw(screen,arcibiskup_bily_figurka.arcibiskup_bily,arcibiskup_bily_figurka.arcibiskup_bily_rect)
+        kardinal_bily_figurka.draw(screen,kardinal_bily_figurka.kardinal_bily,kardinal_bily_figurka.kardinal_bily_rect)
+        hades_bily_figurka.draw(screen,hades_bily_figurka.hades_bily,hades_bily_figurka.hades_bily_rect)
 
 
         pygame.display.update()
@@ -459,8 +470,14 @@ while run:
                 if figurka_bila.collidepoint(event.pos):
                     figurka_bila.centerx=event.pos[0]
                     figurka_bila.centery=event.pos[1]"""
+            
             morovy_doktor_bily_figurka.move(screen,morovy_doktor_bily_figurka.morovy_doktor_bily_rect,morovy_doktor_bily_figurka.ctverce_morovy_doktor_bily)
-            arcibiskup_bily_figuka.move(screen,arcibiskup_bily_figuka.arcibiskup_bily_rect,arcibiskup_bily_figuka.ctverce_arcibiskup_bily)
+            
+            arcibiskup_bily_figurka.move(screen,arcibiskup_bily_figurka.arcibiskup_bily_rect,arcibiskup_bily_figurka.ctverce_arcibiskup_bily)
+            
+            kardinal_bily_figurka.move(screen,kardinal_bily_figurka.kardinal_bily_rect,kardinal_bily_figurka.ctverce_kardinal_bily)
+            
+            hades_bily_figurka.move(screen,hades_bily_figurka.hades_bily_rect,hades_bily_figurka.ctverce_hades_bily)
            
                  
 

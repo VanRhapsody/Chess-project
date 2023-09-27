@@ -16,8 +16,8 @@ class morovy_doktor_bily():
 
     def move(self, screen,figurka, ctverce):
             for event in pygame.event.get():
-                if event.type==pygame.MOUSEMOTION and event.buttons[0]==1: 
-                    if figurka.collidepoint(event.pos):
+                
+                if figurka.collidepoint(event.pos):
                         for ctverec in ctverce:
                             if (ctverec.right > 1440 or ctverec.left < 475) or (ctverec.bottom > 850 or ctverec.top < 60):
                                 continue
