@@ -167,12 +167,12 @@ button_text_start_game_rect2=button_text_start_game2.get_rect()
 button_text_start_game_rect2.center=(screen_width/2,600)
 
 #Text pro leaderboard a pozadí pro ni
-leaderboard_font=pygame.font.SysFont("georgia",50,False)
-leadeboard_text_font=pygame.font.SysFont("georgia",30,False)
+leaderboard_font=pygame.font.SysFont("georgia",80,False)
+leadeboard_text_font=pygame.font.SysFont("georgia",50,False)
 leaderboard_text=leaderboard_font.render("Leaderboard",True, white)
 leaderboard_text_rect=leaderboard_text.get_rect()
-leaderboard_text_rect.center=(1660,60)
-leaderboard_background=pygame.Rect(1400,30,500,1000)
+leaderboard_text_rect.center=(1650,60)
+leaderboard_background=pygame.Rect(1400,10,500,1050)
 
 #Zvuk zahájení hry
 start_game=pygame.mixer.Sound("Sound effect bell.mp3")
@@ -183,32 +183,32 @@ input_font=pygame.font.SysFont("georgia",40,False)
 mail_header=header_font.render("Zadejte E-Mail",True, white)
 mail_header_rect=mail_header.get_rect()
 mail_header_rect.midleft=(100,300)
-input_box1=pygame.rect.Rect(100,350,2000,100)
+input_box1=pygame.rect.Rect(100,350,2000,70)
 input_user_text1=''
 
 pass_header=header_font.render("Zadejte heslo",True, white)
 pass_header_rect=pass_header.get_rect()
-pass_header_rect.midleft=(100,520)
-input_box2=pygame.rect.Rect(100,570,2000,100)
+pass_header_rect.midleft=(100,460)
+input_box2=pygame.rect.Rect(100,510,2000,70)
 input_user_text2=''
 
 send_header=header_font.render("Přihlásit se",True, black)
 send_header_rect=send_header.get_rect()
-send_header_rect.midleft=(100,740)
-send_box=pygame.rect.Rect(100,700,350,90)
+send_header_rect.midleft=(100,645)
+send_box=pygame.rect.Rect(100,607,250,75)
 
 #Text pro oznámení přihlášení
 logged_header=header_font.render("Úspěšně přihlášeno",True,white)
 logged_header_rect=logged_header.get_rect()
-logged_header_rect.midleft=(100,950)
+logged_header_rect.midleft=(100,715)
 
 failed_header=header_font.render("Neplatné údaje",True,white)
 failed_header_rect=failed_header.get_rect()
-failed_header_rect.midleft=(100,950)
+failed_header_rect.midleft=(100,710)
 
 fill_header=header_font.render("Vyplňte prosím všechna pole",True,white)
 fill_header_rect=fill_header.get_rect()
-fill_header_rect.midleft=(100,950)
+fill_header_rect.midleft=(100,710)
 
 #Text pro název hry
 title_font=pygame.font.SysFont("georgia",80,False)
@@ -1651,10 +1651,10 @@ while run:
         #Vypsání dat pro leadeboard
         y=100
         for row in result:
-            text=", ".join(str(item) for item in row)
+            text=" - ".join(str(item) for item in row)
             text_surface=leadeboard_text_font.render(text,True, white)
             print(text_surface)
-            screen.blit(text_surface, (1580,y))
+            screen.blit(text_surface, (1500,y))
             y+=40  
 
         #Vykreslení login formu
@@ -1683,13 +1683,14 @@ while run:
         pygame.draw.rect(screen, color2 ,send_box)
 
         input_text = input_font.render(input_user_text1, True, (0,0,0))
-        input_text1 = input_font.render(input_user_text2, True, (0,0,0))
+        #input_text1 = input_font.render(input_user_text2, True, (0,0,0))
 
         screen.blit(input_text, (input_box1.x+5, input_box1.y+5))
-        screen.blit(input_text1, (input_box2.x+5, input_box2.y+5))
+        #screen.blit(input_text1, (input_box2.x+5, input_box2.y+5))
 
         input_box1.w = max(500, input_text.get_width()+10)
-        input_box2.w = max(500, input_text1.get_width()+10)
+        #input_box2.w = max(500, input_text1.get_width()+10)
+        input_box2.w=500
 
         screen.blit(mail_header,mail_header_rect)
         screen.blit(pass_header,pass_header_rect)
@@ -1749,8 +1750,8 @@ while run:
 
         
 
-        #figurky_bile=[morovy_doktor_bily_rect,arcibiskup_bily_rect,kardinal_bily_rect,hades_bily_rect,persefona_bila_rect,kardinal_bily_rect1,arcibiskup_bily_rect1,morovy_doktor_bily_rect1,legionar_bily_rect,valecnik_bily_rect,legionar_bily_rect1,valecnik_bily_rect1,legionar_bily_rect2,valecnik_bily_rect2,legionar_bily_rect3,valecnik_bily_rect3]
-        #figurky_cerne=[morovy_doktor_cerny_rect,arcibiskup_cerny_rect,kardinal_cerny_rect,hades_cerny_rect,persefona_cerna_rect,kardinal_bily_rect1,arcibiskup_cerny_rect1,morovy_doktor_cerny_rect1,legionar_cerny_rect,valecnik_cerny_rect,legionar_cerny_rect1,valecnik_cerny_rect1,legionar_cerny_rect2,valecnik_cerny_rect2,legionar_cerny_rect3,valecnik_cerny_rect3]
+        figurky_bile=[morovy_doktor_bily_rect,arcibiskup_bily_rect,kardinal_bily_rect,hades_bily_rect,persefona_bila_rect,kardinal_bily_rect1,arcibiskup_bily_rect1,morovy_doktor_bily_rect1,legionar_bily_rect,valecnik_bily_rect,legionar_bily_rect1,valecnik_bily_rect1,legionar_bily_rect2,valecnik_bily_rect2,legionar_bily_rect3,valecnik_bily_rect3]
+        figurky_cerne=[morovy_doktor_cerny_rect,arcibiskup_cerny_rect,kardinal_cerny_rect,hades_cerny_rect,persefona_cerna_rect,kardinal_bily_rect1,arcibiskup_cerny_rect1,morovy_doktor_cerny_rect1,legionar_cerny_rect,valecnik_cerny_rect,legionar_cerny_rect1,valecnik_cerny_rect1,legionar_cerny_rect2,valecnik_cerny_rect2,legionar_cerny_rect3,valecnik_cerny_rect3]
         #Tažení figurek, todo: omezit jejich pohyb na schéma tažení
         
         #Opětovné deklarování pozic čtverců pro pohyb figurek, aby zůstaly na místě a nepohybovaly se společně s figurkou při jejím pohybu
@@ -4667,6 +4668,89 @@ while run:
             if (valecnik_cerny_rect3.right > 1440 or valecnik_cerny_rect3.left < 475) or (valecnik_cerny_rect3.bottom > 1020 or valecnik_cerny_rect3.top < 60):
                 valecnik_cerny_rect3.centerx=valecnik_cerny_x_pred_3
                 valecnik_cerny_rect3.centery=valecnik_cerny_y_pred_3
+            
+            for figurka in figurky_bile:
+                if morovy_doktor_bily_rect.colliderect(figurka):
+                    morovy_doktor_bily_rect.centerx=morovy_doktor_bily_x_pred
+                    morovy_doktor_bily_rect.centery=morovy_doktor_bily_y_pred
+                    counter-=1
+                    break
+
+                elif arcibiskup_bily_rect.colliderect(figurka):
+                    arcibiskup_bily_rect.centerx=arcibiskup_bily_x_pred
+                    arcibiskup_bily_rect.centery=arcibiskup_bily_y_pred
+                    counter-=1
+                    break
+                elif kardinal_bily_rect.colliderect(figurka):
+                    kardinal_bily_rect.centerx=kardinal_bily_x_pred
+                    kardinal_bily_rect.centery=kardinal_bily_y_pred
+                    counter-=1
+                    break
+                elif hades_bily_rect.colliderect(figurka):
+                    hades_bily_rect.centerx=hades_bily_x_pred
+                    hades_bily_rect.centery=hades_bily_y_pred
+                    counter-=1
+                    break
+                elif persefona_bila_rect.colliderect(figurka):
+                    persefona_bila_rect.centerx=persefona_bila_x_pred
+                    persefona_bila_rect.centery=persefona_bila_y_pred
+                    counter-=1
+                    break
+                elif kardinal_bily_rect1.colliderect(figurka):
+                    kardinal_bily_rect1.centerx=kardinal_bily_x_pred_1
+                    kardinal_bily_rect1.centery=kardinal_bily_y_pred_1
+                    counter-=1
+                    break
+                elif arcibiskup_bily_rect1.colliderect(figurka):
+                    arcibiskup_bily_rect1.centerx=arcibiskup_bily_x_pred_1
+                    arcibiskup_bily_rect1.centery=arcibiskup_bily_y_pred_1
+                    counter-=1
+                    break
+                elif morovy_doktor_bily_rect1.colliderect(figurka):
+                    morovy_doktor_bily_rect1.centerx=morovy_doktor_bily_x_pred_1
+                    morovy_doktor_bily_rect1.centery=morovy_doktor_bily_y_pred_1
+                    counter-=1
+                    break
+                elif valecnik_bily_rect.colliderect(figurka):
+                    valecnik_bily_rect.centerx=valecnik_bily_x_pred
+                    valecnik_bily_rect.centery=valecnik_bily_y_pred
+                    counter-=1
+                    break
+                elif legionar_bily_rect.colliderect(figurka):
+                    legionar_bily_rect.centerx=legionar_bily_x_pred
+                    legionar_bily_rect.centery=legionar_bily_y_pred
+                    counter-=1
+                    break
+                elif valecnik_bily_rect1.colliderect(figurka):
+                    valecnik_bily_rect1.centerx=valecnik_bily_x_pred_1
+                    valecnik_bily_rect1.centery=valecnik_bily_y_pred_1
+                    counter-=1
+                    break
+                elif legionar_bily_rect1.colliderect(figurka):
+                    legionar_bily_rect1.centerx=legionar_bily_x_pred_1
+                    legionar_bily_rect1.centery=legionar_bily_y_pred_1
+                    counter-=1
+                    break
+                elif valecnik_bily_rect2.colliderect(figurka):
+                    valecnik_bily_rect2.centerx=valecnik_bily_x_pred_2
+                    valecnik_bily_rect2.centery=valecnik_bily_y_pred_2
+                    counter-=1
+                    break
+                elif legionar_bily_rect2.colliderect(figurka):
+                    legionar_bily_rect2.centerx=legionar_bily_x_pred_2
+                    legionar_bily_rect2.centery=legionar_bily_y_pred_2
+                    counter-=1
+                    break
+                elif valecnik_bily_rect3.colliderect(figurka):
+                    valecnik_bily_rect3.centerx=valecnik_bily_x_pred_3
+                    valecnik_bily_rect3.centery=valecnik_bily_y_pred_3
+                    counter-=1
+                    break
+                elif legionar_bily_rect3.colliderect(figurka):
+                    legionar_bily_rect3.centerx=legionar_bily_x_pred_3
+                    legionar_bily_rect3.centery=legionar_bily_y_pred_3
+                    counter-=1
+                    break
 
             
             
