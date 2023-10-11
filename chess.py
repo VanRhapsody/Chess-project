@@ -4879,6 +4879,52 @@ while run:
             if (morovy_doktor_cerny_rect.right > 1440 or morovy_doktor_cerny_rect.left < 475) or (morovy_doktor_cerny_rect.bottom > 1020 or morovy_doktor_cerny_rect.top < 60):
                 morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
                 morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            if morovy_doktor_cerny_rect.colliderect(arcibiskup_cerny_rect):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(kardinal_cerny_rect):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(hades_cerny_rect):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(persefona_cerna_rect):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(kardinal_cerny_rect1):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(arcibiskup_cerny_rect1):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(morovy_doktor_cerny_rect1):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(legionar_cerny_rect):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(valecnik_cerny_rect):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(legionar_cerny_rect1):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(valecnik_cerny_rect1):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(legionar_cerny_rect2):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(valecnik_cerny_rect2):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(legionar_bily_rect3):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+            elif morovy_doktor_cerny_rect.colliderect(valecnik_cerny_rect3):
+                morovy_doktor_cerny_rect.centerx=morovy_doktor_cerny_x_pred
+                morovy_doktor_cerny_rect.centery=morovy_doktor_cerny_y_pred
+
             
             if arcibiskup_cerny_rect.colliderect(rect_arc_cer_1):
                 arcibiskup_cerny_rect.centerx=rect_arc_cer_1.centerx
@@ -4934,6 +4980,51 @@ while run:
             if (arcibiskup_cerny_rect.right > 1440 or arcibiskup_cerny_rect.left < 475) or (arcibiskup_cerny_rect.bottom > 1020 or arcibiskup_cerny_rect.top < 60):
                 arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
                 arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            if arcibiskup_cerny_rect.colliderect(morovy_doktor_cerny_rect):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(kardinal_cerny_rect):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(hades_cerny_rect):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(persefona_cerna_rect):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(kardinal_cerny_rect1):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(arcibiskup_cerny_rect1):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(morovy_doktor_cerny_rect1):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(legionar_cerny_rect):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(valecnik_cerny_rect):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(legionar_cerny_rect1):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(valecnik_cerny_rect1):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(legionar_cerny_rect2):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(valecnik_cerny_rect2):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(legionar_bily_rect3):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
+            elif arcibiskup_cerny_rect.colliderect(valecnik_cerny_rect3):
+                arcibiskup_cerny_rect.centerx=arcibiskup_cerny_x_pred
+                arcibiskup_cerny_rect.centery=arcibiskup_cerny_y_pred
 
             if kardinal_cerny_rect.colliderect(rect_kar_cer_1):
                 kardinal_cerny_rect.centerx=rect_kar_cer_1.centerx
@@ -4955,6 +5046,51 @@ while run:
                 kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
                 kardinal_cerny_rect.centery=kardinal_cerny_y_pred
             if (kardinal_cerny_rect.right > 1440 or kardinal_cerny_rect.left < 475) or (kardinal_cerny_rect.bottom > 1020 or kardinal_cerny_rect.top < 60):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            if kardinal_cerny_rect.colliderect(morovy_doktor_cerny_rect):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(arcibiskup_cerny_rect):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(hades_cerny_rect):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(persefona_cerna_rect):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(kardinal_cerny_rect1):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(arcibiskup_cerny_rect1):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(morovy_doktor_cerny_rect1):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(legionar_cerny_rect):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(valecnik_cerny_rect):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(legionar_cerny_rect1):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(valecnik_cerny_rect1):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(legionar_cerny_rect2):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(valecnik_cerny_rect2):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(legionar_bily_rect3):
+                kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
+                kardinal_cerny_rect.centery=kardinal_cerny_y_pred
+            elif kardinal_cerny_rect.colliderect(valecnik_cerny_rect3):
                 kardinal_cerny_rect.centerx=kardinal_cerny_x_pred
                 kardinal_cerny_rect.centery=kardinal_cerny_y_pred
 
@@ -5040,6 +5176,52 @@ while run:
             if (hades_cerny_rect.right > 1440 or hades_cerny_rect.left < 475) or (hades_cerny_rect.bottom > 1020 or hades_cerny_rect.top < 60):
                 hades_cerny_rect.centerx=hades_cerny_x_pred
                 hades_cerny_rect.centery=hades_cerny_y_pred
+            if hades_cerny_rect.colliderect(morovy_doktor_cerny_rect):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(arcibiskup_cerny_rect):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(kardinal_cerny_rect):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(persefona_cerna_rect):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(kardinal_cerny_rect1):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(arcibiskup_cerny_rect1):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(morovy_doktor_cerny_rect1):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(legionar_cerny_rect):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(valecnik_cerny_rect):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(legionar_cerny_rect1):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(valecnik_cerny_rect1):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(legionar_cerny_rect2):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(valecnik_cerny_rect2):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(legionar_bily_rect3):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+            elif hades_cerny_rect.colliderect(valecnik_cerny_rect3):
+                hades_cerny_rect.centerx=hades_cerny_x_pred
+                hades_cerny_rect.centery=hades_cerny_y_pred
+
 
             if persefona_cerna_rect.colliderect(rect_per_cer_1):
                 persefona_cerna_rect.centerx=rect_per_cer_1.centerx
@@ -5079,6 +5261,51 @@ while run:
             if (persefona_cerna_rect.right > 1440 or persefona_cerna_rect.left < 475) or (persefona_cerna_rect.bottom > 1020 or persefona_cerna_rect.top < 60):
                 persefona_cerna_rect.centerx=persefona_cerna_x_pred
                 persefona_cerna_rect.centery=persefona_cerna_y_pred
+            if persefona_cerna_rect.colliderect(morovy_doktor_cerny_rect):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(arcibiskup_cerny_rect):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(kardinal_cerny_rect):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(hades_cerny_rect):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(kardinal_cerny_rect1):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(arcibiskup_cerny_rect1):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(morovy_doktor_cerny_rect1):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(legionar_cerny_rect):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(valecnik_cerny_rect):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(legionar_cerny_rect1):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(valecnik_cerny_rect1):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(legionar_cerny_rect2):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(valecnik_cerny_rect2):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(legionar_bily_rect3):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
+            elif persefona_cerna_rect.colliderect(valecnik_cerny_rect3):
+                persefona_cerna_rect.centerx=persefona_cerna_x_pred
+                persefona_cerna_rect.centery=persefona_cerna_y_pred
 
             if kardinal_cerny_rect1.colliderect(rect_kar_cer_1_1):
                 kardinal_cerny_rect1.centerx=rect_kar_cer_1_1.centerx
@@ -5100,6 +5327,51 @@ while run:
                 kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
                 kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
             if (kardinal_cerny_rect1.right > 1440 or kardinal_cerny_rect1.left < 475) or (kardinal_cerny_rect1.bottom > 1020 or kardinal_cerny_rect1.top < 60):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            if kardinal_cerny_rect1.colliderect(morovy_doktor_cerny_rect):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(arcibiskup_cerny_rect):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(kardinal_cerny_rect):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(hades_cerny_rect):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(persefona_cerna_rect):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(arcibiskup_cerny_rect1):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(morovy_doktor_cerny_rect1):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(legionar_cerny_rect):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(valecnik_cerny_rect):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(legionar_cerny_rect1):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(valecnik_cerny_rect1):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(legionar_cerny_rect2):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(valecnik_cerny_rect2):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(legionar_bily_rect3):
+                kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
+                kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
+            elif kardinal_cerny_rect1.colliderect(valecnik_cerny_rect3):
                 kardinal_cerny_rect1.centerx=kardinal_cerny_x_pred_1
                 kardinal_cerny_rect1.centery=kardinal_cerny_y_pred_1
 
@@ -5154,7 +5426,6 @@ while run:
             else:
                 arcibiskup_cerny_rect1.centerx=arcibiskup_cerny_x_pred_1
                 arcibiskup_cerny_rect1.centery=arcibiskup_cerny_y_pred_1
-                
             if (arcibiskup_cerny_rect1.right > 1440 or arcibiskup_cerny_rect1.left < 475) or (arcibiskup_cerny_rect1.bottom > 1020 or arcibiskup_cerny_rect1.top < 60):
                 arcibiskup_cerny_rect1.centerx=arcibiskup_cerny_x_pred_1
                 arcibiskup_cerny_rect1.centery=arcibiskup_cerny_y_pred_1
