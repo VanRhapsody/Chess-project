@@ -1542,6 +1542,7 @@ pohybuje=False
 
 figurky_bile=[morovy_doktor_bily_rect,arcibiskup_bily_rect,kardinal_bily_rect,hades_bily_rect,persefona_bila_rect,kardinal_bily_rect1,arcibiskup_bily_rect1,morovy_doktor_bily_rect1,legionar_bily_rect,valecnik_bily_rect,legionar_bily_rect1,valecnik_bily_rect1,legionar_bily_rect2,valecnik_bily_rect2,legionar_bily_rect3,valecnik_bily_rect3]
 figurky_cerne=[morovy_doktor_cerny_rect,arcibiskup_cerny_rect,kardinal_cerny_rect,hades_cerny_rect,persefona_cerna_rect,kardinal_cerny_rect1,arcibiskup_cerny_rect1,morovy_doktor_cerny_rect1,legionar_cerny_rect,valecnik_cerny_rect,legionar_cerny_rect1,valecnik_cerny_rect1,legionar_cerny_rect2,valecnik_cerny_rect2,legionar_cerny_rect3,valecnik_cerny_rect3]
+
 while run:
     mx,my=pygame.mouse.get_pos()
     
@@ -1717,45 +1718,76 @@ while run:
                     pygame.draw.rect(screen, (255,248,220), (x * scale+480, y * scale+60, scale, scale))
                 else:
                     pygame.draw.rect(screen, (139,69,19), (x * scale+480, y * scale+60, scale, scale))
+        if morovy_doktor_bily_rect in figurky_bile:
+            screen.blit(morovy_doktor_bily,morovy_doktor_bily_rect)
+        if arcibiskup_bily_rect in figurky_bile:
+            screen.blit(arcibiskup_bily,arcibiskup_bily_rect)
+        if kardinal_bily_rect in figurky_bile:
+            screen.blit(kardinal_bily,kardinal_bily_rect)
+        if hades_bily_rect in figurky_bile:
+            screen.blit(hades_bily,hades_bily_rect)
+        if persefona_bila_rect in figurky_bile:
+            screen.blit(persefona_bila,persefona_bila_rect)
+        if kardinal_bily_rect1 in figurky_bile:
+            screen.blit(kardinal_bily,kardinal_bily_rect1)
+        if arcibiskup_bily_rect1 in figurky_bile:
+            screen.blit(arcibiskup_bily,arcibiskup_bily_rect1)
+        if morovy_doktor_bily_rect1 in figurky_bile:
+            screen.blit(morovy_doktor_bily,morovy_doktor_bily_rect1)
+        if legionar_bily_rect in figurky_bile:
+            screen.blit(legionar_bily,legionar_bily_rect)
+        if valecnik_bily_rect in figurky_bile:
+            screen.blit(valecnik_bily,valecnik_bily_rect)
+        if legionar_bily_rect1 in figurky_bile:
+            screen.blit(legionar_bily,legionar_bily_rect1)
+        if valecnik_bily_rect1 in figurky_bile:
+            screen.blit(valecnik_bily,valecnik_bily_rect1)
+        if legionar_bily_rect2 in figurky_bile:
+            screen.blit(legionar_bily,legionar_bily_rect2)
+        if valecnik_bily_rect2 in figurky_bile:
+            screen.blit(valecnik_bily,valecnik_bily_rect2)
+        if legionar_bily_rect3 in figurky_bile:
+            screen.blit(legionar_bily,legionar_bily_rect3)
+        if valecnik_bily_rect3 in figurky_bile:
+            screen.blit(valecnik_bily,valecnik_bily_rect3)
 
-        screen.blit(morovy_doktor_bily,morovy_doktor_bily_rect)
-        screen.blit(arcibiskup_bily,arcibiskup_bily_rect)
-        screen.blit(kardinal_bily,kardinal_bily_rect)
-        screen.blit(hades_bily,hades_bily_rect)
-        screen.blit(persefona_bila,persefona_bila_rect)
-        screen.blit(kardinal_bily,kardinal_bily_rect1)
-        screen.blit(arcibiskup_bily,arcibiskup_bily_rect1)
-        screen.blit(morovy_doktor_bily,morovy_doktor_bily_rect1)
-        screen.blit(legionar_bily,legionar_bily_rect)
-        screen.blit(valecnik_bily,valecnik_bily_rect)
-        screen.blit(legionar_bily,legionar_bily_rect1)
-        screen.blit(valecnik_bily,valecnik_bily_rect1)
-        screen.blit(legionar_bily,legionar_bily_rect2)
-        screen.blit(valecnik_bily,valecnik_bily_rect2)
-        screen.blit(legionar_bily,legionar_bily_rect3)
-        screen.blit(valecnik_bily,valecnik_bily_rect3)
-
-        screen.blit(morovy_doktor_cerny,morovy_doktor_cerny_rect)
-        screen.blit(arcibiskup_cerny,arcibiskup_cerny_rect)
-        screen.blit(kardinal_cerny,kardinal_cerny_rect)
-        screen.blit(hades_cerny,hades_cerny_rect)
-        screen.blit(persefona_cerna,persefona_cerna_rect)
-        screen.blit(kardinal_cerny,kardinal_cerny_rect1)
-        screen.blit(arcibiskup_cerny,arcibiskup_cerny_rect1)
-        screen.blit(morovy_doktor_cerny,morovy_doktor_cerny_rect1)
-        screen.blit(legionar_cerny,legionar_cerny_rect)
-        screen.blit(valecnik_cerny,valecnik_cerny_rect)
-        screen.blit(legionar_cerny,legionar_cerny_rect1)
-        screen.blit(valecnik_cerny,valecnik_cerny_rect1)
-        screen.blit(legionar_cerny,legionar_cerny_rect2)
-        screen.blit(valecnik_cerny,valecnik_cerny_rect2)
-        screen.blit(legionar_cerny,legionar_cerny_rect3)
-        screen.blit(valecnik_cerny,valecnik_cerny_rect3)
+        if morovy_doktor_cerny_rect in figurky_cerne:
+            screen.blit(morovy_doktor_cerny,morovy_doktor_cerny_rect)
+        if arcibiskup_cerny_rect in figurky_cerne:
+            screen.blit(arcibiskup_cerny,arcibiskup_cerny_rect)
+        if kardinal_cerny_rect in figurky_cerne:
+            screen.blit(kardinal_cerny,kardinal_cerny_rect)
+        if hades_cerny_rect in figurky_cerne:
+            screen.blit(hades_cerny,hades_cerny_rect)
+        if persefona_cerna_rect in figurky_cerne:
+            screen.blit(persefona_cerna,persefona_cerna_rect)
+        if kardinal_cerny_rect1 in figurky_cerne:
+            screen.blit(kardinal_cerny,kardinal_cerny_rect1)
+        if arcibiskup_cerny_rect1 in figurky_cerne:
+            screen.blit(arcibiskup_cerny,arcibiskup_cerny_rect1)
+        if morovy_doktor_cerny_rect1 in figurky_cerne:
+            screen.blit(morovy_doktor_cerny,morovy_doktor_cerny_rect1)
+        if legionar_cerny_rect in figurky_cerne:
+            screen.blit(legionar_cerny,legionar_cerny_rect)
+        if valecnik_cerny_rect in figurky_cerne:
+            screen.blit(valecnik_cerny,valecnik_cerny_rect)
+        if legionar_cerny_rect1 in figurky_cerne:
+            screen.blit(legionar_cerny,legionar_cerny_rect1)
+        if valecnik_cerny_rect1 in figurky_cerne:
+            screen.blit(valecnik_cerny,valecnik_cerny_rect1)
+        if legionar_cerny_rect2 in figurky_cerne:
+            screen.blit(legionar_cerny,legionar_cerny_rect2)
+        if valecnik_cerny_rect2 in figurky_cerne:
+            screen.blit(valecnik_cerny,valecnik_cerny_rect2)
+        if legionar_cerny_rect3 in figurky_cerne:
+            screen.blit(legionar_cerny,legionar_cerny_rect3)
+        if valecnik_cerny_rect3 in figurky_cerne:
+            screen.blit(valecnik_cerny,valecnik_cerny_rect3)
 
         
 
         
-        #Tažení figurek, todo: omezit jejich pohyb na schéma tažení
+        #Tažení figurek
         
         #Opětovné deklarování pozic čtverců pro pohyb figurek, aby zůstaly na místě a nepohybovaly se společně s figurkou při jejím pohybu
         if not pohyb:
@@ -6912,25 +6944,896 @@ while run:
 
 
             print(counter)
-
-            
-            
-            
-            
-                
-                
-
-
-            
-            
-
-            
-
-            
         
         #todo: Kontrola kolize 
         #Bude to fungovat tak, že jakmile dojde ke kolizi mezi dvěma figurkami, zkontroluje se hodnota counteru a v závislosti na jeho modulu bude odebrána figurka příslušné barvy
         #counter=0 odehrál bílý, tedy musí brát černou figurku
+        if counter%2!=0:
+            if morovy_doktor_bily_rect.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if morovy_doktor_bily_rect.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if arcibiskup_bily_rect.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if arcibiskup_bily_rect.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if arcibiskup_bily_rect.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if arcibiskup_bily_rect.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if arcibiskup_bily_rect.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if arcibiskup_bily_rect.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if arcibiskup_bily_rect.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if arcibiskup_bily_rect.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+
+            if kardinal_bily_rect.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if kardinal_bily_rect.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if kardinal_bily_rect.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if kardinal_bily_rect.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if kardinal_bily_rect.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if kardinal_bily_rect.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if kardinal_bily_rect.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if kardinal_bily_rect.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if kardinal_bily_rect.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if kardinal_bily_rect.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if kardinal_bily_rect.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if kardinal_bily_rect.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if kardinal_bily_rect.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if hades_bily_rect.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if hades_bily_rect.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if hades_bily_rect.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if hades_bily_rect.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if hades_bily_rect.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if hades_bily_rect.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if hades_bily_rect.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if hades_bily_rect.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if hades_bily_rect.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if hades_bily_rect.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if hades_bily_rect.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if hades_bily_rect.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if hades_bily_rect.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if persefona_bila_rect.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if persefona_bila_rect.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if persefona_bila_rect.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if persefona_bila_rect.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if persefona_bila_rect.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if persefona_bila_rect.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if persefona_bila_rect.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if persefona_bila_rect.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if persefona_bila_rect.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if persefona_bila_rect.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if persefona_bila_rect.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if persefona_bila_rect.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if persefona_bila_rect.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if kardinal_bily_rect1.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if kardinal_bily_rect1.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if kardinal_bily_rect1.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if kardinal_bily_rect1.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if kardinal_bily_rect1.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if kardinal_bily_rect1.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if kardinal_bily_rect1.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if kardinal_bily_rect1.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if kardinal_bily_rect1.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if kardinal_bily_rect1.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if kardinal_bily_rect1.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if kardinal_bily_rect1.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if kardinal_bily_rect1.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if arcibiskup_bily_rect1.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if arcibiskup_bily_rect1.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if arcibiskup_bily_rect1.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if arcibiskup_bily_rect1.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if arcibiskup_bily_rect1.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if arcibiskup_bily_rect1.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect1.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect1.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect1.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if arcibiskup_bily_rect1.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if arcibiskup_bily_rect1.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect1.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if arcibiskup_bily_rect1.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if morovy_doktor_bily_rect1.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if morovy_doktor_bily_rect1.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if legionar_bily_rect.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if legionar_bily_rect.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if legionar_bily_rect.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if legionar_bily_rect.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if legionar_bily_rect.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if legionar_bily_rect.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if legionar_bily_rect.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if legionar_bily_rect.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if legionar_bily_rect.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if legionar_bily_rect.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if legionar_bily_rect.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if legionar_bily_rect.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if legionar_bily_rect.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if valecnik_bily_rect.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if valecnik_bily_rect.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if valecnik_bily_rect.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if valecnik_bily_rect.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if valecnik_bily_rect.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if valecnik_bily_rect.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if valecnik_bily_rect.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if valecnik_bily_rect.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if valecnik_bily_rect.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if valecnik_bily_rect.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if valecnik_bily_rect.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if valecnik_bily_rect.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if valecnik_bily_rect.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if legionar_bily_rect1.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if legionar_bily_rect1.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if legionar_bily_rect1.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if legionar_bily_rect1.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if legionar_bily_rect1.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if legionar_bily_rect1.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if legionar_bily_rect1.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if legionar_bily_rect1.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if legionar_bily_rect1.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if legionar_bily_rect1.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if legionar_bily_rect1.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if legionar_bily_rect1.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if legionar_bily_rect1.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if valecnik_bily_rect1.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if valecnik_bily_rect1.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if valecnik_bily_rect1.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if valecnik_bily_rect1.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if valecnik_bily_rect1.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if valecnik_bily_rect1.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if valecnik_bily_rect1.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if valecnik_bily_rect1.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if valecnik_bily_rect1.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if valecnik_bily_rect1.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if valecnik_bily_rect1.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if valecnik_bily_rect1.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if valecnik_bily_rect1.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if legionar_bily_rect2.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if legionar_bily_rect2.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if legionar_bily_rect2.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if legionar_bily_rect2.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if legionar_bily_rect2.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if legionar_bily_rect2.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if legionar_bily_rect2.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if legionar_bily_rect2.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if legionar_bily_rect2.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if legionar_bily_rect2.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if legionar_bily_rect2.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if legionar_bily_rect2.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if legionar_bily_rect2.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if valecnik_bily_rect2.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if valecnik_bily_rect2.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if valecnik_bily_rect2.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if valecnik_bily_rect2.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if valecnik_bily_rect2.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if valecnik_bily_rect2.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if valecnik_bily_rect2.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if valecnik_bily_rect2.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if valecnik_bily_rect2.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if valecnik_bily_rect2.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if valecnik_bily_rect2.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if valecnik_bily_rect2.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if valecnik_bily_rect2.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if legionar_bily_rect3.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if legionar_bily_rect3.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if legionar_bily_rect3.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if legionar_bily_rect3.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if legionar_bily_rect3.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if legionar_bily_rect3.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if legionar_bily_rect3.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if legionar_bily_rect3.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if legionar_bily_rect3.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if legionar_bily_rect3.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if legionar_bily_rect3.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if legionar_bily_rect3.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if legionar_bily_rect3.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+            
+            if valecnik_bily_rect3.colliderect(morovy_doktor_cerny_rect):
+                figurky_cerne[0]="gone"
+                morovy_doktor_cerny_rect.centerx=-60
+                morovy_doktor_cerny_rect.centery=-60
+            if valecnik_bily_rect3.colliderect(arcibiskup_cerny_rect):
+                figurky_cerne[1]="gone"
+                arcibiskup_cerny_rect.centerx=-60
+                arcibiskup_cerny_rect.centery=-60
+            if valecnik_bily_rect3.colliderect(kardinal_cerny_rect):
+                figurky_cerne[2]="gone"
+                kardinal_cerny_rect.centerx=-60
+                kardinal_cerny_rect.centery=-60
+            if valecnik_bily_rect3.colliderect(hades_cerny_rect):
+                figurky_cerne[3]="gone"
+                hades_cerny_rect.centerx=-60
+                hades_cerny_rect.centery=-60
+            if valecnik_bily_rect3.colliderect(persefona_cerna_rect):
+                figurky_cerne[4]="gone"
+                persefona_cerna_rect.centerx=-60
+                persefona_cerna_rect.centery=-60
+            if valecnik_bily_rect3.colliderect(kardinal_cerny_rect1):
+                figurky_cerne[5]="gone"
+                kardinal_cerny_rect1.centerx=-60
+                kardinal_cerny_rect1.centery=-60
+            if valecnik_bily_rect3.colliderect(arcibiskup_cerny_rect1):
+                figurky_cerne[6]="gone"
+                arcibiskup_cerny_rect1.centerx=-60
+                arcibiskup_cerny_rect1.centery=-60
+            if valecnik_bily_rect3.colliderect(morovy_doktor_cerny_rect1):
+                figurky_cerne[7]="gone"
+                morovy_doktor_cerny_rect1.centerx=-60
+                morovy_doktor_cerny_rect1.centery=-60
+            if valecnik_bily_rect3.colliderect(legionar_cerny_rect):
+                figurky_cerne[8]="gone"
+                legionar_cerny_rect.centerx=-60
+                legionar_cerny_rect.centery=-60
+            if valecnik_bily_rect3.colliderect(valecnik_cerny_rect):
+                figurky_cerne[9]="gone"
+                valecnik_cerny_rect.centerx=-60
+                valecnik_cerny_rect.centery=-60
+            if valecnik_bily_rect3.colliderect(legionar_cerny_rect1):
+                figurky_cerne[10]="gone"
+                legionar_cerny_rect1.centerx=-60
+                legionar_cerny_rect1.centery=-60
+            if valecnik_bily_rect3.colliderect(valecnik_cerny_rect1):
+                figurky_cerne[11]="gone"
+                valecnik_cerny_rect1.centerx=-60
+                valecnik_cerny_rect1.centery=-60
+            if valecnik_bily_rect3.colliderect(legionar_cerny_rect2):
+                figurky_cerne[12]="gone"
+                legionar_cerny_rect2.centerx=-60
+                legionar_cerny_rect2.centery=-60
+        else:
+            if morovy_doktor_cerny_rect.colliderect(morovy_doktor_bily_rect):
+                figurky_bile[0]="gone"
+                morovy_doktor_bily_rect.centerx=-120
+                morovy_doktor_bily_rect.centery=-120
+            if morovy_doktor_cerny_rect.colliderect(arcibiskup_bily_rect):
+                figurky_bile[1]="gone"
+                arcibiskup_bily_rect.centerx=-120
+                morovy_doktor_bily_rect.centery=-120
+            if morovy_doktor_cerny_rect.colliderect(kardinal_bily_rect):
+                figurky_bile[2]="gone"
+                kardinal_cerny_rect.centerx=-120
+                kardinal_cerny_rect.centery=-120
+            if morovy_doktor_cerny_rect.colliderect(hades_bily_rect):
+                figurky_bile[3]="gone"
+                hades_bily_rect.centerx=-120
+                hades_bily_rect.centery=-120
+            if morovy_doktor_cerny_rect.colliderect(persefona_bila_rect):
+                figurky_bile[4]="gone"
+                kardinal_cerny_rect.centerx=-120
+                kardinal_cerny_rect.centery=-120
+            if morovy_doktor_cerny_rect.colliderect(kardinal_cerny_rect):
+                figurky_bile[2]="gone"
+                kardinal_cerny_rect.centerx=-120
+                kardinal_cerny_rect.centery=-120
+            if morovy_doktor_cerny_rect.colliderect(kardinal_cerny_rect):
+                figurky_bile[2]="gone"
+                kardinal_cerny_rect.centerx=-120
+                kardinal_cerny_rect.centery=-120
+            if morovy_doktor_cerny_rect.colliderect(kardinal_cerny_rect):
+                figurky_bile[2]="gone"
+                kardinal_cerny_rect.centerx=-120
+                kardinal_cerny_rect.centery=-120
+            
+
+            
+                
+
 
 
     pygame.display.update()
