@@ -698,6 +698,29 @@ rect_val_y4=valecnik_bily_rect.centery-krok
 rect_val_4=pygame.Rect(rect_val_x4-30,rect_val_y4-30,60,60)
 ctverce_valecnik_bily.append(rect_val_4)
 
+#Válečník bílý 1 abilita
+ctverce_valecnik_bily_abilita=[]
+
+rect_val_ab_x1=valecnik_bily_rect.centerx+krok*2
+rect_val_ab_y1=valecnik_bily_rect.centery
+rect_val_ab_1=pygame.Rect(rect_val_ab_x1-30,rect_val_ab_y1-30,60,60)
+ctverce_valecnik_bily_abilita.append(rect_val_ab_1)
+
+rect_val_ab_x2=valecnik_bily_rect.centerx-krok*2
+rect_val_ab_y2=valecnik_bily_rect.centery
+rect_val_ab_2=pygame.Rect(rect_val_ab_x2-30,rect_val_ab_y2-30,60,60)
+ctverce_valecnik_bily_abilita.append(rect_val_ab_2)
+
+rect_val_ab_x3=valecnik_bily_rect.centerx
+rect_val_ab_y3=valecnik_bily_rect.centery-krok*2
+rect_val_ab_3=pygame.Rect(rect_val_ab_x3-30,rect_val_ab_y3-30,60,60)
+ctverce_valecnik_bily_abilita.append(rect_val_ab_3)
+
+rect_val_ab_x4=valecnik_bily_rect.centerx
+rect_val_ab_y4=valecnik_bily_rect.centery+krok*2
+rect_val_ab_4=pygame.Rect(rect_val_ab_x4-30,rect_val_ab_y4-30,60,60)
+ctverce_valecnik_bily_abilita.append(rect_val_ab_4)
+
 #Legionář bílý 1
 ctverce_legionar_bily=[]
 
@@ -738,6 +761,29 @@ rect_val_1_x4=valecnik_bily_rect1.centerx
 rect_val_1_y4=valecnik_bily_rect1.centery-krok
 rect_val_1_4=pygame.Rect(rect_val_1_x4-30,rect_val_1_y4-30,60,60)
 ctverce_valecnik_bily_1.append(rect_val_1_4)
+
+#Válečník bílý 2 abilita
+ctverce_valecnik_bily_abilita_1=[]
+
+rect_val_ab_x1_1=valecnik_bily_rect1.centerx+krok*2
+rect_val_ab_y1_1=valecnik_bily_rect1.centery
+rect_val_ab_1_1=pygame.Rect(rect_val_ab_x1_1-30,rect_val_ab_y1_1-30,60,60)
+ctverce_valecnik_bily_abilita_1.append(rect_val_ab_1_1)
+
+rect_val_ab_x2_1=valecnik_bily_rect1.centerx-krok*2
+rect_val_ab_y2_1=valecnik_bily_rect1.centery
+rect_val_ab_2_1=pygame.Rect(rect_val_ab_x2_1-30,rect_val_ab_y2_1-30,60,60)
+ctverce_valecnik_bily_abilita_1.append(rect_val_ab_2_1)
+
+rect_val_ab_x3_1=valecnik_bily_rect1.centerx
+rect_val_ab_y3_1=valecnik_bily_rect1.centery-krok*2
+rect_val_ab_3_1=pygame.Rect(rect_val_ab_x3_1-30,rect_val_ab_y3_1-30,60,60)
+ctverce_valecnik_bily_abilita_1.append(rect_val_ab_3_1)
+
+rect_val_ab_x4_1=valecnik_bily_rect1.centerx
+rect_val_ab_y4_1=valecnik_bily_rect1.centery+krok*2
+rect_val_ab_4_1=pygame.Rect(rect_val_ab_x4_1-30,rect_val_ab_y4_1-30,60,60)
+ctverce_valecnik_bily_abilita_1.append(rect_val_ab_4_1)
 
 #Legionář bílý 2
 ctverce_legionar_bily_1=[]
@@ -780,6 +826,29 @@ rect_val_2_y4=valecnik_bily_rect2.centery-krok
 rect_val_2_4=pygame.Rect(rect_val_2_x4-30,rect_val_2_y4-30,60,60)
 ctverce_valecnik_bily_2.append(rect_val_2_4)
 
+#Válečník bílý 3 abilita
+ctverce_valecnik_bily_abilita_2=[]
+
+rect_val_ab_x1_2=valecnik_bily_rect2.centerx+krok*2
+rect_val_ab_y1_2=valecnik_bily_rect2.centery
+rect_val_ab_1_2=pygame.Rect(rect_val_ab_x1_2-30,rect_val_ab_y1_2-30,60,60)
+ctverce_valecnik_bily_abilita_2.append(rect_val_ab_1_2)
+
+rect_val_ab_x2_2=valecnik_bily_rect2.centerx-krok*2
+rect_val_ab_y2_2=valecnik_bily_rect2.centery
+rect_val_ab_2_2=pygame.Rect(rect_val_ab_x2_2-30,rect_val_ab_y2_2-30,60,60)
+ctverce_valecnik_bily_abilita_2.append(rect_val_ab_2_2)
+
+rect_val_ab_x3_2=valecnik_bily_rect2.centerx
+rect_val_ab_y3_2=valecnik_bily_rect2.centery-krok*2
+rect_val_ab_3_2=pygame.Rect(rect_val_ab_x3_2-30,rect_val_ab_y3_2-30,60,60)
+ctverce_valecnik_bily_abilita_2.append(rect_val_ab_3_2)
+
+rect_val_ab_x4_2=valecnik_bily_rect2.centerx
+rect_val_ab_y4_2=valecnik_bily_rect2.centery+krok*2
+rect_val_ab_4_2=pygame.Rect(rect_val_ab_x4_2-30,rect_val_ab_y4_2-30,60,60)
+ctverce_valecnik_bily_abilita_2.append(rect_val_ab_4_2)
+
 #Legionář bílý 3
 ctverce_legionar_bily_2=[]
 
@@ -820,6 +889,30 @@ rect_val_3_x4=valecnik_bily_rect3.centerx
 rect_val_3_y4=valecnik_bily_rect3.centery-krok
 rect_val_3_4=pygame.Rect(rect_val_3_x4-30,rect_val_3_y4-30,60,60)
 ctverce_valecnik_bily_3.append(rect_val_3_4)
+
+#Válečník bílý 4 abilita
+ctverce_valecnik_bily_abilita_3=[]
+
+rect_val_ab_x1_3=valecnik_bily_rect3.centerx+krok*2
+rect_val_ab_y1_3=valecnik_bily_rect3.centery
+rect_val_ab_1_3=pygame.Rect(rect_val_ab_x1_3-30,rect_val_ab_y1_3-30,60,60)
+ctverce_valecnik_bily_abilita_3.append(rect_val_ab_1_3)
+
+rect_val_ab_x2_3=valecnik_bily_rect3.centerx-krok*2
+rect_val_ab_y2_3=valecnik_bily_rect3.centery
+rect_val_ab_2_3=pygame.Rect(rect_val_ab_x2_3-30,rect_val_ab_y2_3-30,60,60)
+ctverce_valecnik_bily_abilita_3.append(rect_val_ab_2_3)
+
+rect_val_ab_x3_3=valecnik_bily_rect3.centerx
+rect_val_ab_y3_3=valecnik_bily_rect3.centery-krok*2
+rect_val_ab_3_3=pygame.Rect(rect_val_ab_x3_3-30,rect_val_ab_y3_3-30,60,60)
+ctverce_valecnik_bily_abilita_3.append(rect_val_ab_3_3)
+
+rect_val_ab_x4_3=valecnik_bily_rect3.centerx
+rect_val_ab_y4_3=valecnik_bily_rect3.centery+krok*2
+rect_val_ab_4_3=pygame.Rect(rect_val_ab_x4_3-30,rect_val_ab_y4_3-30,60,60)
+ctverce_valecnik_bily_abilita_3.append(rect_val_ab_4_3)
+
 
 #Legionář bílý 4
 ctverce_legionar_bily_3=[]
@@ -2291,6 +2384,29 @@ while run:
             rect_val_4=pygame.Rect(rect_val_x4-30,rect_val_y4-30,60,60)
             ctverce_valecnik_bily.append(rect_val_4)
 
+            #Válečník bílý 1 abilita
+            ctverce_valecnik_bily_abilita=[]
+
+            rect_val_ab_x1=valecnik_bily_rect.centerx+krok*2
+            rect_val_ab_y1=valecnik_bily_rect.centery
+            rect_val_ab_1=pygame.Rect(rect_val_ab_x1-30,rect_val_ab_y1-30,60,60)
+            ctverce_valecnik_bily_abilita.append(rect_val_ab_1)
+
+            rect_val_ab_x2=valecnik_bily_rect.centerx-krok*2
+            rect_val_ab_y2=valecnik_bily_rect.centery
+            rect_val_ab_2=pygame.Rect(rect_val_ab_x2-30,rect_val_ab_y2-30,60,60)
+            ctverce_valecnik_bily_abilita.append(rect_val_ab_2)
+
+            rect_val_ab_x3=valecnik_bily_rect.centerx
+            rect_val_ab_y3=valecnik_bily_rect.centery-krok*2
+            rect_val_ab_3=pygame.Rect(rect_val_ab_x3-30,rect_val_ab_y3-30,60,60)
+            ctverce_valecnik_bily_abilita.append(rect_val_ab_3)
+
+            rect_val_ab_x4=valecnik_bily_rect.centerx
+            rect_val_ab_y4=valecnik_bily_rect.centery+krok*2
+            rect_val_ab_4=pygame.Rect(rect_val_ab_x4-30,rect_val_ab_y4-30,60,60)
+            ctverce_valecnik_bily_abilita.append(rect_val_ab_4)
+
             #Legionář bílý 1
             legionar_bily_x_pred=legionar_bily_rect.centerx
             legionar_bily_y_pred=legionar_bily_rect.centery
@@ -2339,6 +2455,29 @@ while run:
             rect_val_1_4=pygame.Rect(rect_val_1_x4-30,rect_val_1_y4-30,60,60)
             ctverce_valecnik_bily_1.append(rect_val_1_4)
 
+            #Válečník bílý 2 abilita
+            ctverce_valecnik_bily_abilita_1=[]
+
+            rect_val_ab_x1_1=valecnik_bily_rect1.centerx+krok*2
+            rect_val_ab_y1_1=valecnik_bily_rect1.centery
+            rect_val_ab_1_1=pygame.Rect(rect_val_ab_x1_1-30,rect_val_ab_y1_1-30,60,60)
+            ctverce_valecnik_bily_abilita_1.append(rect_val_ab_1_1)
+
+            rect_val_ab_x2_1=valecnik_bily_rect1.centerx-krok*2
+            rect_val_ab_y2_1=valecnik_bily_rect1.centery
+            rect_val_ab_2_1=pygame.Rect(rect_val_ab_x2_1-30,rect_val_ab_y2_1-30,60,60)
+            ctverce_valecnik_bily_abilita_1.append(rect_val_ab_2_1)
+
+            rect_val_ab_x3_1=valecnik_bily_rect1.centerx
+            rect_val_ab_y3_1=valecnik_bily_rect1.centery-krok*2
+            rect_val_ab_3_1=pygame.Rect(rect_val_ab_x3_1-30,rect_val_ab_y3_1-30,60,60)
+            ctverce_valecnik_bily_abilita_1.append(rect_val_ab_3_1)
+
+            rect_val_ab_x4_1=valecnik_bily_rect1.centerx
+            rect_val_ab_y4_1=valecnik_bily_rect1.centery+krok*2
+            rect_val_ab_4_1=pygame.Rect(rect_val_ab_x4_1-30,rect_val_ab_y4_1-30,60,60)
+            ctverce_valecnik_bily_abilita_1.append(rect_val_ab_4_1)
+
             #Legionář bílý 2
             legionar_bily_x_pred_1=legionar_bily_rect1.centerx
             legionar_bily_y_pred_1=legionar_bily_rect1.centery
@@ -2386,6 +2525,29 @@ while run:
             rect_val_2_4=pygame.Rect(rect_val_2_x4-30,rect_val_2_y4-30,60,60)
             ctverce_valecnik_bily_2.append(rect_val_2_4)
 
+            #Válečník bílý 3 abilita
+            ctverce_valecnik_bily_abilita_2=[]
+
+            rect_val_ab_x1_2=valecnik_bily_rect2.centerx+krok*2
+            rect_val_ab_y1_2=valecnik_bily_rect2.centery
+            rect_val_ab_1_2=pygame.Rect(rect_val_ab_x1_2-30,rect_val_ab_y1_2-30,60,60)
+            ctverce_valecnik_bily_abilita_2.append(rect_val_ab_1_2)
+
+            rect_val_ab_x2_2=valecnik_bily_rect2.centerx-krok*2
+            rect_val_ab_y2_2=valecnik_bily_rect2.centery
+            rect_val_ab_2_2=pygame.Rect(rect_val_ab_x2_2-30,rect_val_ab_y2_2-30,60,60)
+            ctverce_valecnik_bily_abilita_2.append(rect_val_ab_2_2)
+
+            rect_val_ab_x3_2=valecnik_bily_rect2.centerx
+            rect_val_ab_y3_2=valecnik_bily_rect2.centery-krok*2
+            rect_val_ab_3_2=pygame.Rect(rect_val_ab_x3_2-30,rect_val_ab_y3_2-30,60,60)
+            ctverce_valecnik_bily_abilita_2.append(rect_val_ab_3_2)
+
+            rect_val_ab_x4_2=valecnik_bily_rect2.centerx
+            rect_val_ab_y4_2=valecnik_bily_rect2.centery+krok*2
+            rect_val_ab_4_2=pygame.Rect(rect_val_ab_x4_2-30,rect_val_ab_y4_2-30,60,60)
+            ctverce_valecnik_bily_abilita_2.append(rect_val_ab_4_2)
+
             #Legionář bílý 3
             legionar_bily_x_pred_2=legionar_bily_rect2.centerx
             legionar_bily_y_pred_2=legionar_bily_rect2.centery
@@ -2432,6 +2594,29 @@ while run:
             rect_val_3_y4=valecnik_bily_rect3.centery-krok
             rect_val_3_4=pygame.Rect(rect_val_3_x4-30,rect_val_3_y4-30,60,60)
             ctverce_valecnik_bily_3.append(rect_val_3_4)
+
+            #Válečník bílý 4 abilita
+            ctverce_valecnik_bily_abilita_3=[]
+
+            rect_val_ab_x1_3=valecnik_bily_rect3.centerx+krok*2
+            rect_val_ab_y1_3=valecnik_bily_rect3.centery
+            rect_val_ab_1_3=pygame.Rect(rect_val_ab_x1_3-30,rect_val_ab_y1_3-30,60,60)
+            ctverce_valecnik_bily_abilita_3.append(rect_val_ab_1_3)
+
+            rect_val_ab_x2_3=valecnik_bily_rect3.centerx-krok*2
+            rect_val_ab_y2_3=valecnik_bily_rect3.centery
+            rect_val_ab_2_3=pygame.Rect(rect_val_ab_x2_3-30,rect_val_ab_y2_3-30,60,60)
+            ctverce_valecnik_bily_abilita_3.append(rect_val_ab_2_3)
+
+            rect_val_ab_x3_3=valecnik_bily_rect3.centerx
+            rect_val_ab_y3_3=valecnik_bily_rect3.centery-krok*2
+            rect_val_ab_3_3=pygame.Rect(rect_val_ab_x3_3-30,rect_val_ab_y3_3-30,60,60)
+            ctverce_valecnik_bily_abilita_3.append(rect_val_ab_3_3)
+
+            rect_val_ab_x4_3=valecnik_bily_rect3.centerx
+            rect_val_ab_y4_3=valecnik_bily_rect3.centery+krok*2
+            rect_val_ab_4_3=pygame.Rect(rect_val_ab_x4_3-30,rect_val_ab_y4_3-30,60,60)
+            ctverce_valecnik_bily_abilita_3.append(rect_val_ab_4_3)
 
             #Legionář bílý 4
             legionar_bily_x_pred_3=legionar_bily_rect3.centerx
@@ -3328,6 +3513,10 @@ while run:
                         for ctverec in ctverce_valecnik_bily:
                                 if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen,black,ctverec,5)
+                        if counter%4==0:
+                            for ctverec in ctverce_valecnik_bily_abilita:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen,black,ctverec,5)
                         
                         valecnik_bily_rect.centerx=event.pos[0]
                         valecnik_bily_rect.centery=event.pos[1]
@@ -3344,6 +3533,10 @@ while run:
                 elif valecnik_bily_rect1.collidepoint(event.pos):
                   
                         for ctverec in ctverce_valecnik_bily_1:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen,black,ctverec,5)
+                        if counter%4==0:
+                            for ctverec in ctverce_valecnik_bily_abilita_1:
                                 if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen,black,ctverec,5)
                         
@@ -3364,6 +3557,10 @@ while run:
                         for ctverec in ctverce_valecnik_bily_2:
                                 if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen,black,ctverec,5)
+                        if counter%4==0:
+                            for ctverec in ctverce_valecnik_bily_abilita_2:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen,black,ctverec,5)
                     
                         valecnik_bily_rect2.centerx=event.pos[0]
                         valecnik_bily_rect2.centery=event.pos[1]
@@ -3380,6 +3577,10 @@ while run:
                 elif valecnik_bily_rect3.collidepoint(event.pos):
                  
                         for ctverec in ctverce_valecnik_bily_3:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen,black,ctverec,5)
+                        if counter%4==0:
+                            for ctverec in ctverce_valecnik_bily_abilita_3:
                                 if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen,black,ctverec,5)
                         
@@ -4489,6 +4690,24 @@ while run:
                 morovy_doktor_bily_rect1.centery=morovy_doktor_bily_y_pred_1
                 counter-=1
 
+            if counter%4==0:
+                if valecnik_bily_rect.colliderect(rect_val_ab_1):
+                    valecnik_bily_rect.centerx=rect_val_ab_1.centerx
+                    valecnik_bily_rect.centery=rect_val_ab_1.centery
+                    counter+=1
+                elif valecnik_bily_rect.colliderect(rect_val_ab_2):
+                    valecnik_bily_rect.centerx=rect_val_ab_2.centerx
+                    valecnik_bily_rect.centery=rect_val_ab_2.centery
+                    counter+=1
+                if valecnik_bily_rect.colliderect(rect_val_ab_3):
+                    valecnik_bily_rect.centerx=rect_val_ab_3.centerx
+                    valecnik_bily_rect.centery=rect_val_ab_3.centery
+                    counter+=1
+                if valecnik_bily_rect.colliderect(rect_val_ab_4):
+                    valecnik_bily_rect.centerx=rect_val_ab_4.centerx
+                    valecnik_bily_rect.centery=rect_val_ab_4.centery
+                    counter+=1
+
             if valecnik_bily_rect.colliderect(rect_val_1):
                 valecnik_bily_rect.centerx=rect_val_1.centerx
                 valecnik_bily_rect.centery=rect_val_1.centery
@@ -4659,6 +4878,24 @@ while run:
                 legionar_bily_rect.centerx=legionar_bily_x_pred
                 legionar_bily_rect.centery=legionar_bily_y_pred
                 counter-=1
+
+            if counter%4==0:
+                if valecnik_bily_rect1.colliderect(rect_val_ab_1_1):
+                    valecnik_bily_rect1.centerx=rect_val_ab_1_1.centerx
+                    valecnik_bily_rect1.centery=rect_val_ab_1_1.centery
+                    counter+=1
+                elif valecnik_bily_rect1.colliderect(rect_val_ab_2_1):
+                    valecnik_bily_rect1.centerx=rect_val_ab_2_1.centerx
+                    valecnik_bily_rect1.centery=rect_val_ab_2_1.centery
+                    counter+=1
+                if valecnik_bily_rect1.colliderect(rect_val_ab_3_1):
+                    valecnik_bily_rect1.centerx=rect_val_ab_3_1.centerx
+                    valecnik_bily_rect1.centery=rect_val_ab_3_1.centery
+                    counter+=1
+                if valecnik_bily_rect1.colliderect(rect_val_ab_4_1):
+                    valecnik_bily_rect1.centerx=rect_val_ab_4_1.centerx
+                    valecnik_bily_rect1.centery=rect_val_ab_4_1.centery
+                    counter+=1
 
             if valecnik_bily_rect1.colliderect(rect_val_1_1):
                 valecnik_bily_rect1.centerx=rect_val_1_1.centerx
