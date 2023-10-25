@@ -3165,8 +3165,67 @@ while run:
             rect_val_cer_3_4=pygame.Rect(rect_val_cer_x4_3-30,rect_val_cer_y4_3-30,60,60)
             ctverce_valecnik_cerny_3.append(rect_val_cer_3_4)
 
+        
+
+            
+            
+        if event.type==pygame.KEYDOWN:
+            if counter%2==0:
+                keys=pygame.key.get_pressed()
+                
+                if legionar_bily_rect.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_bily_rect.centerx=legionar_bily_x_abilita
+                        legionar_bily_rect.centery=legionar_bily_y_abilita
+                        counter+=1
+                elif legionar_bily_rect1.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_bily_rect1.centerx=legionar_bily_x_abilita_1
+                        legionar_bily_rect1.centery=legionar_bily_y_abilita_1
+                        counter+=1
+                elif legionar_bily_rect2.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_bily_rect2.centerx=legionar_bily_x_abilita_2
+                        legionar_bily_rect2.centery=legionar_bily_y_abilita_2
+                        counter+=1
+                elif legionar_bily_rect3.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_bily_rect3.centerx=legionar_bily_x_abilita_3
+                        legionar_bily_rect3.centery=legionar_bily_y_abilita_3
+                        counter+=1
+                    
+            else:
+                keys=pygame.key.get_pressed()
+
+                if legionar_cerny_rect.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_cerny_rect.centerx=legionar_cerny_x_abilita
+                        legionar_cerny_rect.centery=legionar_cerny_y_abilita
+                        counter+=1
+                if legionar_cerny_rect1.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_cerny_rect1.centerx=legionar_cerny_x_abilita_1
+                        legionar_cerny_rect1.centery=legionar_cerny_y_abilita_1
+                        counter+=1
+                if legionar_cerny_rect2.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_cerny_rect2.centerx=legionar_cerny_x_abilita_2
+                        legionar_cerny_rect2.centery=legionar_cerny_y_abilita_2
+                        counter+=1
+                if legionar_cerny_rect3.collidepoint(pygame.mouse.get_pos()):
+                    if event.key==pygame.K_F9:
+                        legionar_cerny_rect3.centerx=legionar_cerny_x_abilita_3
+                        legionar_cerny_rect3.centery=legionar_cerny_y_abilita_3
+                        counter+=1
+                    
 
 
+
+
+                    
+
+
+    
 
 
 
@@ -3175,6 +3234,7 @@ while run:
             
 
         if event.type==pygame.MOUSEMOTION and event.buttons[0]==1:
+            
             pohyb=True
             """for figurka_cerna in figurky_cerne:
                 if figurka_cerna.collidepoint(event.pos):
@@ -3185,6 +3245,7 @@ while run:
                     figurka_bila.centerx=event.pos[0]
                     figurka_bila.centery=event.pos[1]"""
             if counter%2==0: #Algoritmus funguje následovně - pokud je counter sudé číslo, hraje bílý, pokud je liché, hraje černý hráč
+                keys=pygame.key.get_pressed()
 
                 if morovy_doktor_bily_rect.collidepoint(event.pos):
                     
@@ -3276,7 +3337,7 @@ while run:
                         for ctverec in ctverce_legionar_bily:
                                 if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen,black,ctverec,5)
-                        
+                                  
                         legionar_bily_rect.centerx=event.pos[0]
                         legionar_bily_rect.centery=event.pos[1]
                 
@@ -3333,6 +3394,8 @@ while run:
                         
                         legionar_bily_rect3.centerx=event.pos[0]
                         legionar_bily_rect3.centery=event.pos[1]   
+                
+                
             else:
 
                 if morovy_doktor_cerny_rect.collidepoint(event.pos):
@@ -4510,17 +4573,26 @@ while run:
                 counter-=1
 
             if legionar_bily_rect.colliderect(rect_leg_1):
+                legionar_bily_x_abilita=legionar_bily_x_pred
+                legionar_bily_y_abilita=legionar_bily_y_pred
                 legionar_bily_rect.centerx=rect_leg_1.centerx
                 legionar_bily_rect.centery=rect_leg_1.centery
                 counter+=1
+                
             elif legionar_bily_rect.colliderect(rect_leg_2):
+                legionar_bily_x_abilita=legionar_bily_x_pred
+                legionar_bily_y_abilita=legionar_bily_y_pred
                 legionar_bily_rect.centerx=rect_leg_2.centerx
                 legionar_bily_rect.centery=rect_leg_2.centery
                 counter+=1
+                
             elif legionar_bily_rect.colliderect(rect_leg_3):
+                legionar_bily_x_abilita=legionar_bily_x_pred
+                legionar_bily_y_abilita=legionar_bily_y_pred
                 legionar_bily_rect.centerx=rect_leg_3.centerx
                 legionar_bily_rect.centery=rect_leg_3.centery
                 counter+=1
+                
             else:
                 legionar_bily_rect.centerx=legionar_bily_x_pred
                 legionar_bily_rect.centery=legionar_bily_y_pred
@@ -4672,14 +4744,20 @@ while run:
                 counter-=1
             
             if legionar_bily_rect1.colliderect(rect_leg_1_1):
+                legionar_bily_x_abilita_1=legionar_bily_x_pred_1
+                legionar_bily_y_abilita_1=legionar_bily_y_pred_1
                 legionar_bily_rect1.centerx=rect_leg_1_1.centerx
                 legionar_bily_rect1.centery=rect_leg_1_1.centery
                 counter+=1
             elif legionar_bily_rect1.colliderect(rect_leg_1_2):
+                legionar_bily_x_abilita_1=legionar_bily_x_pred_1
+                legionar_bily_y_abilita_1=legionar_bily_y_pred_1
                 legionar_bily_rect1.centerx=rect_leg_1_2.centerx
                 legionar_bily_rect1.centery=rect_leg_1_2.centery
                 counter+=1
             elif legionar_bily_rect1.colliderect(rect_leg_1_3):
+                legionar_bily_x_abilita_1=legionar_bily_x_pred_1
+                legionar_bily_y_abilita_1=legionar_bily_y_pred_1
                 legionar_bily_rect1.centerx=rect_leg_1_3.centerx
                 legionar_bily_rect1.centery=rect_leg_1_3.centery
                 counter+=1
@@ -4834,14 +4912,20 @@ while run:
                 counter-=1
 
             if legionar_bily_rect2.colliderect(rect_leg_2_1):
+                legionar_bily_x_abilita_2=legionar_bily_x_pred_2
+                legionar_bily_y_abilita_2=legionar_bily_y_pred_2
                 legionar_bily_rect2.centerx=rect_leg_2_1.centerx
                 legionar_bily_rect2.centery=rect_leg_2_1.centery
                 counter+=1
             elif legionar_bily_rect2.colliderect(rect_leg_2_2):
+                legionar_bily_x_abilita_2=legionar_bily_x_pred_2
+                legionar_bily_y_abilita_2=legionar_bily_y_pred_2
                 legionar_bily_rect2.centerx=rect_leg_2_2.centerx
                 legionar_bily_rect2.centery=rect_leg_2_2.centery
                 counter+=1
             elif legionar_bily_rect2.colliderect(rect_leg_2_3):
+                legionar_bily_x_abilita_2=legionar_bily_x_pred_2
+                legionar_bily_y_abilita_2=legionar_bily_y_pred_2
                 legionar_bily_rect2.centerx=rect_leg_2_3.centerx
                 legionar_bily_rect2.centery=rect_leg_2_3.centery
                 counter+=1
@@ -4996,14 +5080,20 @@ while run:
                 counter-=1
             
             if legionar_bily_rect3.colliderect(rect_leg_3_1):
+                legionar_bily_x_abilita_3=legionar_bily_x_pred_3
+                legionar_bily_y_abilita_3=legionar_bily_y_pred_3
                 legionar_bily_rect3.centerx=rect_leg_3_1.centerx
                 legionar_bily_rect3.centery=rect_leg_3_1.centery
                 counter+=1
             elif legionar_bily_rect3.colliderect(rect_leg_3_2):
+                legionar_bily_x_abilita_3=legionar_bily_x_pred_3
+                legionar_bily_y_abilita_3=legionar_bily_y_pred_3
                 legionar_bily_rect3.centerx=rect_leg_3_2.centerx
                 legionar_bily_rect3.centery=rect_leg_3_2.centery
                 counter+=1
             elif legionar_bily_rect3.colliderect(rect_leg_3_3):
+                legionar_bily_x_abilita_3=legionar_bily_x_pred_3
+                legionar_bily_y_abilita_3=legionar_bily_y_pred_3
                 legionar_bily_rect3.centerx=rect_leg_3_3.centerx
                 legionar_bily_rect3.centery=rect_leg_3_3.centery
                 counter+=1
@@ -5997,14 +6087,20 @@ while run:
                 
 
             if legionar_cerny_rect.colliderect(rect_leg_cer_1):
+                legionar_cerny_x_abilita=legionar_cerny_x_pred
+                legionar_cerny_y_abilita=legionar_cerny_y_pred
                 legionar_cerny_rect.centerx=rect_leg_cer_1.centerx
                 legionar_cerny_rect.centery=rect_leg_cer_1.centery
                 counter+=1
             elif legionar_cerny_rect.colliderect(rect_leg_cer_2):
+                legionar_cerny_x_abilita=legionar_cerny_x_pred
+                legionar_cerny_y_abilita=legionar_cerny_y_pred
                 legionar_cerny_rect.centerx=rect_leg_cer_2.centerx
                 legionar_cerny_rect.centery=rect_leg_cer_2.centery
                 counter+=1
             elif legionar_cerny_rect.colliderect(rect_leg_cer_3):
+                legionar_cerny_x_abilita=legionar_cerny_x_pred
+                legionar_cerny_y_abilita=legionar_cerny_y_pred
                 legionar_cerny_rect.centerx=rect_leg_cer_3.centerx
                 legionar_cerny_rect.centery=rect_leg_cer_3.centery
                 counter+=1
@@ -6160,14 +6256,20 @@ while run:
                 counter-=1
 
             if legionar_cerny_rect1.colliderect(rect_leg_cer_1_1):
+                legionar_cerny_x_abilita_1=legionar_cerny_x_pred_1
+                legionar_cerny_y_abilita_1=legionar_cerny_y_pred_1
                 legionar_cerny_rect1.centerx=rect_leg_cer_1_1.centerx
                 legionar_cerny_rect1.centery=rect_leg_cer_1_1.centery
                 counter+=1
             elif legionar_cerny_rect1.colliderect(rect_leg_cer_1_2):
+                legionar_cerny_x_abilita_1=legionar_cerny_x_pred_1
+                legionar_cerny_y_abilita_1=legionar_cerny_y_pred_1
                 legionar_cerny_rect1.centerx=rect_leg_cer_1_2.centerx
                 legionar_cerny_rect1.centery=rect_leg_cer_1_2.centery
                 counter+=1
             elif legionar_cerny_rect1.colliderect(rect_leg_cer_1_3):
+                legionar_cerny_x_abilita_1=legionar_cerny_x_pred_1
+                legionar_cerny_y_abilita_1=legionar_cerny_y_pred_1
                 legionar_cerny_rect1.centerx=rect_leg_cer_1_3.centerx
                 legionar_cerny_rect1.centery=rect_leg_cer_1_3.centery
                 counter+=1
@@ -6322,14 +6424,20 @@ while run:
                 counter-=1
             
             if legionar_cerny_rect2.colliderect(rect_leg_cer_2_1):
+                legionar_cerny_x_abilita_2=legionar_cerny_x_pred_2
+                legionar_cerny_y_abilita_2=legionar_cerny_y_pred_2
                 legionar_cerny_rect2.centerx=rect_leg_cer_2_1.centerx
                 legionar_cerny_rect2.centery=rect_leg_cer_2_1.centery
                 counter+=1
             elif legionar_cerny_rect2.colliderect(rect_leg_cer_2_2):
+                legionar_cerny_x_abilita_2=legionar_cerny_x_pred_2
+                legionar_cerny_y_abilita_2=legionar_cerny_y_pred_2
                 legionar_cerny_rect2.centerx=rect_leg_cer_2_2.centerx
                 legionar_cerny_rect2.centery=rect_leg_cer_2_2.centery
                 counter+=1
             elif legionar_cerny_rect2.colliderect(rect_leg_cer_2_3):
+                legionar_cerny_x_abilita_2=legionar_cerny_x_pred_2
+                legionar_cerny_y_abilita_2=legionar_cerny_y_pred_2
                 legionar_cerny_rect2.centerx=rect_leg_cer_2_3.centerx
                 legionar_cerny_rect2.centery=rect_leg_cer_2_3.centery
                 counter+=1
@@ -6484,14 +6592,20 @@ while run:
                 counter-=1
             
             if legionar_cerny_rect3.colliderect(rect_leg_cer_3_1):
+                legionar_cerny_x_abilita_3=legionar_cerny_x_pred_3
+                legionar_cerny_y_abilita_3=legionar_cerny_y_pred_3
                 legionar_cerny_rect3.centerx=rect_leg_cer_3_1.centerx
                 legionar_cerny_rect3.centery=rect_leg_cer_3_1.centery
                 counter+=1
             elif legionar_cerny_rect3.colliderect(rect_leg_cer_3_2):
+                legionar_cerny_x_abilita_3=legionar_cerny_x_pred_3
+                legionar_cerny_y_abilita_3=legionar_cerny_y_pred_3
                 legionar_cerny_rect3.centerx=rect_leg_cer_3_2.centerx
                 legionar_cerny_rect3.centery=rect_leg_cer_3_2.centery
                 counter+=1
             elif legionar_cerny_rect3.colliderect(rect_leg_cer_3_3):
+                legionar_cerny_x_abilita_3=legionar_cerny_x_pred_3
+                legionar_cerny_y_abilita_3=legionar_cerny_y_pred_3
                 legionar_cerny_rect3.centerx=rect_leg_cer_3_3.centerx
                 legionar_cerny_rect3.centery=rect_leg_cer_3_3.centery
                 counter+=1
