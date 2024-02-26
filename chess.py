@@ -3785,6 +3785,7 @@ while run:
                     figurka_bila.centery=event.pos[1]"""
             if counter % 2 == 0:  # Algoritmus funguje následovně - pokud je counter sudé číslo, hraje bílý, pokud je liché, hraje černý hráč
                 keys = pygame.key.get_pressed()
+<<<<<<< HEAD
                 
                 if plagueDoctorWhiteRect.collidepoint(event.pos) and pygame.mouse.get_pressed()[0] or plagueDoctorWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
@@ -3943,6 +3944,13 @@ while run:
                         if not warriorWhitePlaying:
                             warriorWhitePlaying=True
                         for ctverec in rectsWarriorWhite:
+=======
+                if not tazeni:
+                    if plagueDoctorWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsPlagueDoctorWhite:
+
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                             if (ctverec.right < 1440 or ctverec.left > 475) or (
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
@@ -3952,6 +3960,7 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
+<<<<<<< HEAD
                         warriorWhiteRect.centerx = event.pos[0]
                         warriorWhiteRect.centery = event.pos[1]
 
@@ -3984,6 +3993,15 @@ while run:
                         if not warriorWhitePlaying1:
                             warriorWhitePlaying1=True
                         for ctverec in rectsWarriorWhite_1:
+=======
+                        plagueDoctorWhiteRect.centerx = event.pos[0]
+                        plagueDoctorWhiteRect.centery = event.pos[1]
+
+                    elif archbishopWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsArchbishopWhite:
+
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                             if (ctverec.right < 1440 or ctverec.left > 475) or (
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
@@ -3993,6 +4011,7 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
+<<<<<<< HEAD
                         warriorWhiteRect1.centerx = event.pos[0]
                         warriorWhiteRect1.centery = event.pos[1]
 
@@ -4025,6 +4044,14 @@ while run:
                         if not warriorWhitePlaying2:
                             warriorWhitePlaying2=True
                         for ctverec in rectsWarriorWhite_2:
+=======
+                        archbishopWhiteRect.centerx = event.pos[0]
+                        archbishopWhiteRect.centery = event.pos[1]
+
+                    elif cardinalWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsCardinalWhite:
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                             if (ctverec.right < 1440 or ctverec.left > 475) or (
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
@@ -4034,6 +4061,7 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
+<<<<<<< HEAD
                         warriorWhiteRect2.centerx = event.pos[0]
                         warriorWhiteRect2.centery = event.pos[1]
 
@@ -4048,10 +4076,19 @@ while run:
                         if not legionaryWhitePlaying2:
                             legionaryWhitePlaying2=True
                         for ctverec in rectsLegionaryWhite_2:
+=======
+                        cardinalWhiteRect.centerx = event.pos[0]
+                        cardinalWhiteRect.centery = event.pos[1]
+
+                    elif hadesWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsHadesWhite:
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                             if (ctverec.right < 1440 or ctverec.left > 475) or (
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
 
+<<<<<<< HEAD
                         legionaryWhiteRect2.centerx = event.pos[0]
                         legionaryWhiteRect2.centery = event.pos[1]
 
@@ -4093,6 +4130,148 @@ while run:
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
 
+=======
+                        hadesWhiteRect.centerx = event.pos[0]
+                        hadesWhiteRect.centery = event.pos[1]
+
+                    elif persephoneWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsPersephoneWhite:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                        persephoneWhiteRect.centerx = event.pos[0]
+                        persephoneWhiteRect.centery = event.pos[1]
+
+                    elif cardinalWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsCardinalWhite_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                        cardinalWhiteRect1.centerx = event.pos[0]
+                        cardinalWhiteRect1.centery = event.pos[1]
+
+                    elif archbishopWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsArchbishopWhite_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                        archbishopWhiteRect1.centerx = event.pos[0]
+                        archbishopWhiteRect1.centery = event.pos[1]
+
+                    elif plagueDoctorWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsPlagueDoctorWhite_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                        plagueDoctorWhiteRect1.centerx = event.pos[0]
+                        plagueDoctorWhiteRect1.centery = event.pos[1]
+
+                    elif warriorWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsWarriorWhite:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+                        if counter % 4 == 0:
+                            for ctverec in rectsWarriorWhiteAbility:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                        ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen, black, ctverec, 5)
+
+                        warriorWhiteRect.centerx = event.pos[0]
+                        warriorWhiteRect.centery = event.pos[1]
+
+                    elif legionaryWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsLegionaryWhite:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                        legionaryWhiteRect.centerx = event.pos[0]
+                        legionaryWhiteRect.centery = event.pos[1]
+
+                    elif warriorWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsWarriorWhite_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+                        if counter % 4 == 0:
+                            for ctverec in rectsWarriorWhiteAbility_1:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                        ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen, black, ctverec, 5)
+
+                        warriorWhiteRect1.centerx = event.pos[0]
+                        warriorWhiteRect1.centery = event.pos[1]
+
+                    elif legionaryWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsLegionaryWhite_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                        legionaryWhiteRect1.centerx = event.pos[0]
+                        legionaryWhiteRect1.centery = event.pos[1]
+
+                    elif warriorWhiteRect2.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsWarriorWhite_2:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+                        if counter % 4 == 0:
+                            for ctverec in rectsWarriorWhiteAbility_2:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                        ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen, black, ctverec, 5)
+
+                        warriorWhiteRect2.centerx = event.pos[0]
+                        warriorWhiteRect2.centery = event.pos[1]
+
+                    elif legionaryWhiteRect2.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsLegionaryWhite_2:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                        legionaryWhiteRect2.centerx = event.pos[0]
+                        legionaryWhiteRect2.centery = event.pos[1]
+
+                    elif warriorWhiteRect3.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsWarriorWhite_3:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+                        if counter % 4 == 0:
+                            for ctverec in rectsWarriorWhiteAbility_3:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                        ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen, black, ctverec, 5)
+
+                        warriorWhiteRect3.centerx = event.pos[0]
+                        warriorWhiteRect3.centery = event.pos[1]
+
+                    elif legionaryWhiteRect3.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+
+                        for ctverec in rectsLegionaryWhite_3:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                         legionaryWhiteRect3.centerx = event.pos[0]
                         legionaryWhiteRect3.centery = event.pos[1]
 
@@ -4271,8 +4450,22 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
+<<<<<<< HEAD
                         warriorBlackRect.centerx = event.pos[0]
                         warriorBlackRect.centery = event.pos[1]
+=======
+                    for ctverec in rectsWarriorBlack:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen, black, ctverec, 5)
+                    if (counter - 1) % 4 == 0:
+                        for ctverec in rectsWarriorBlackAbility:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                    warriorBlackRect.centerx = event.pos[0]
+                    warriorBlackRect.centery = event.pos[1]
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
 
                 elif warriorBlackRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4293,8 +4486,22 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
+<<<<<<< HEAD
                         warriorBlackRect1.centerx = event.pos[0]
                         warriorBlackRect1.centery = event.pos[1]
+=======
+                    for ctverec in rectsWarriorBlack_1:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen, black, ctverec, 5)
+                    if (counter - 1) % 4 == 0:
+                        for ctverec in rectsWarriorBlackAbility_1:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                    warriorBlackRect1.centerx = event.pos[0]
+                    warriorBlackRect1.centery = event.pos[1]
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
 
                 elif legionaryBlackRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4332,8 +4539,22 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
+<<<<<<< HEAD
                         warriorBlackRect2.centerx = event.pos[0]
                         warriorBlackRect2.centery = event.pos[1]
+=======
+                    for ctverec in rectsWarriorBlack_2:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen, black, ctverec, 5)
+                    if (counter - 1) % 4 == 0:
+                        for ctverec in rectsWarriorBlackAbility_2:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                    warriorBlackRect2.centerx = event.pos[0]
+                    warriorBlackRect2.centery = event.pos[1]
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
 
                 elif legionaryBlackRect2.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4370,6 +4591,7 @@ while run:
                         legionaryBlackRect3.centery = event.pos[1]
 
                 elif warriorBlackRect3.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+<<<<<<< HEAD
                     playing=False
                     for play in figuresBlackPlaying:
                         if play==True:
@@ -4390,6 +4612,19 @@ while run:
 
                         warriorBlackRect3.centerx = event.pos[0]
                         warriorBlackRect3.centery = event.pos[1]
+=======
+                    for ctverec in rectsWarriorBlack_3:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen, black, ctverec, 5)
+                    if (counter - 1) % 4 == 0:
+                        for ctverec in rectsWarriorBlackAbility_3:
+                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                    ctverec.bottom < 850 or ctverec.top > 60):
+                                pygame.draw.rect(screen, black, ctverec, 5)
+
+                    warriorBlackRect3.centerx = event.pos[0]
+                    warriorBlackRect3.centery = event.pos[1]
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
 
         if event.type == pygame.MOUSEBUTTONUP:
 
@@ -5372,22 +5607,34 @@ while run:
                 warriorWhiteRect.centerx = rectWarriorWhite1Ability.centerx
                 warriorWhiteRect.centery = rectWarriorWhite1Ability.centery
                 counter += 1
+<<<<<<< HEAD
                 warriorWhitePlaying=False
+=======
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
             elif warriorWhiteRect.colliderect(rectWarriorWhite2Ability) and counter % 4 == 0:
                 warriorWhiteRect.centerx = rectWarriorWhite2Ability.centerx
                 warriorWhiteRect.centery = rectWarriorWhite2Ability.centery
                 counter += 1
+<<<<<<< HEAD
                 warriorWhitePlaying=False
+=======
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
             elif warriorWhiteRect.colliderect(rectWarriorWhite3Ability) and counter % 4 == 0:
                 warriorWhiteRect.centerx = rectWarriorWhite3Ability.centerx
                 warriorWhiteRect.centery = rectWarriorWhite3Ability.centery
                 counter += 1
+<<<<<<< HEAD
                 warriorWhitePlaying=False
+=======
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
             elif warriorWhiteRect.colliderect(rectWarriorWhite4Ability) and counter % 4 == 0:
                 warriorWhiteRect.centerx = rectWarriorWhite4Ability.centerx
                 warriorWhiteRect.centery = rectWarriorWhite4Ability.centery
                 counter += 1
+<<<<<<< HEAD
                 warriorWhitePlaying=False
+=======
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
             elif warriorWhiteRect.colliderect(rectWarriorWhite1):
                 warriorWhiteRect.centerx = rectWarriorWhite1.centerx
                 warriorWhiteRect.centery = rectWarriorWhite1.centery
@@ -5513,7 +5760,10 @@ while run:
                 legionaryWhiteRect.centerx = rectLegionaryWhite3.centerx
                 legionaryWhiteRect.centery = rectLegionaryWhite3.centery
                 counter += 1
+<<<<<<< HEAD
                 legionaryWhitePlaying=False
+=======
+>>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
             else:
                 legionaryWhiteRect.centerx = legionaryWhitexInit
                 legionaryWhiteRect.centery = legionaryWhiteyInit
