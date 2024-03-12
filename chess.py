@@ -3772,7 +3772,7 @@ while run:
                         legionaryBlackRect3.centery = legionar_cerny_y_abilita_3
                         counter += 1
 
-        if event.type == pygame.MOUSEMOTION and event.buttons[0] == 1:
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button==1:
 
             pohyb = True
             """for figurka_cerna in figuresBlack:
@@ -3785,253 +3785,1597 @@ while run:
                     figurka_bila.centery=event.pos[1]"""
             if counter % 2 == 0:  # Algoritmus funguje následovně - pokud je counter sudé číslo, hraje bílý, pokud je liché, hraje černý hráč
                 keys = pygame.key.get_pressed()
-<<<<<<< HEAD
                 
-                if plagueDoctorWhiteRect.collidepoint(event.pos) and pygame.mouse.get_pressed()[0] or plagueDoctorWhitePlaying:
+                if plagueDoctorWhiteRect.collidepoint(event.pos):
+                    if not plagueDoctorWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
-                                plagueDoctorWhitePlaying=False
+                                playing=False
+                                plagueDoctorWhitePlaying=True
                                 break
                             elif x==len(figuresWhitePlaying)-1:
                                 plagueDoctorWhitePlaying=True
+                elif plagueDoctorWhitePlaying:
+                    if rectPlagueWhite1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite1.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite2.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite2.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite2.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite3.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite3.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite3.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite4.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite4.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite4.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite5.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite5.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite5.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite6.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite6.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite6.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite7.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite7.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite7.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite8.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite8.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite8.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite9.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite9.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite9.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite10.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite10.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite10.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite11.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite11.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite11.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite12.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite12.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite12.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite13.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite13.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite13.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite14.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite14.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite14.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite15.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite15.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite15.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite16.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite16.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite16.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite17.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite17.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite17.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    elif rectPlagueWhite18.collidepoint(event.pos):
+                        plagueDoctorWhiteRect.centerx = rectPlagueWhite18.centerx
+                        plagueDoctorWhiteRect.centery = rectPlagueWhite18.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying=False
+                    else:
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        plagueDoctorWhitePlaying=False
+                    if plagueDoctorWhiteRect.colliderect(archbishopWhiteRect):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(cardinalWhiteRect):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(hadesWhiteRect):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(persephoneWhiteRect):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(cardinalWhiteRect1):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(archbishopWhiteRect1):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(plagueDoctorWhiteRect1):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect1):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect1):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect2):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect2):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect3):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False
+                    elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect3):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        counter -= 1
+                        plagueDoctorWhitePlaying=False        
                         
-                        if plagueDoctorWhitePlaying:
-                            for ctverec in rectsPlagueDoctorWhite:
-                                if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                        ctverec.bottom < 850 or ctverec.top > 60):
-                                    pygame.draw.rect(screen, black, ctverec, 5)
 
                         #plagueDoctorWhiteRect.centerx = event.pos[0]
                         #plagueDoctorWhiteRect.centery = event.pos[1]
 
-                elif archbishopWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or archbishopWhitePlaying==True:
-                        if not archbishopWhitePlaying:
-                            archbishopWhitePlaying=True
-                        
-                        print(archbishopWhitePlaying)
-                        for ctverec in rectsArchbishopWhite:
+                if archbishopWhiteRect.collidepoint(event.pos):
+                    if not archbishopWhitePlaying:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                archbishopWhitePlaying=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                archbishopWhitePlaying=True
+                elif archbishopWhitePlaying:
+                    if rectArchbishopWhite1.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite1.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite1.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite2.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite2.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite2.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite3.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite3.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite3.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite4.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite4.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite4.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite5.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite5.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite5.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite6.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite6.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite6.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite7.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite7.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite7.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite8.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite8.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite8.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite9.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite9.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite9.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite10.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite10.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite10.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite11.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite11.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite11.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    elif rectArchbishopWhite12.collidepoint(event.pos):
+                        archbishopWhiteRect.centerx = rectArchbishopWhite12.centerx
+                        archbishopWhiteRect.centery = rectArchbishopWhite12.centery
+                        counter += 1
+                        archbishopWhitePlaying=False
+                    else:
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        archbishopWhitePlaying=False
+                    if archbishopWhiteRect.colliderect(plagueDoctorWhiteRect):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(cardinalWhiteRect):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(hadesWhiteRect):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(persephoneWhiteRect):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(cardinalWhiteRect1):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(archbishopWhiteRect1):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(plagueDoctorWhiteRect1):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(warriorWhiteRect):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(legionaryWhiteRect):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(warriorWhiteRect1):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(legionaryWhiteRect1):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(warriorWhiteRect2):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(legionaryWhiteRect2):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(warriorWhiteRect3):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
+                    elif archbishopWhiteRect.colliderect(legionaryWhiteRect3):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        counter -= 1
+                        archbishopWhitePlaying=False
 
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
+                      
 
-                        archbishopWhiteRect.centerx = event.pos[0]
-                        archbishopWhiteRect.centery = event.pos[1]
+                        #archbishopWhiteRect.centerx = event.pos[0]
+                        #archbishopWhiteRect.centery = event.pos[1]
 
-                elif cardinalWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or cardinalWhitePlaying==True:
-                        if not cardinalWhitePlaying:
-                            cardinalWhitePlaying=True
-                        for ctverec in rectsCardinalWhite:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
+                if cardinalWhiteRect.collidepoint(event.pos):
+                    if not cardinalWhitePlaying:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                cardinalWhitePlaying=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                cardinalWhitePlaying=True
+                elif cardinalWhitePlaying:
+                    if rectCardinalWhite1.collidepoint(event.pos):
+                        cardinalWhiteRect.centerx = rectCardinalWhite1.centerx
+                        cardinalWhiteRect.centery = rectCardinalWhite1.centery
+                        counter += 1
+                        cardinalWhitePlaying=False
+                    elif rectCardinalWhite2.collidepoint(event.pos):
+                        cardinalWhiteRect.centerx = rectCardinalWhite2.centerx
+                        cardinalWhiteRect.centery = rectCardinalWhite2.centery
+                        counter += 1
+                        cardinalWhitePlaying=False
+                    elif rectCardinalWhite3.collidepoint(event.pos):
+                        cardinalWhiteRect.centerx = rectCardinalWhite3.centerx
+                        cardinalWhiteRect.centery = rectCardinalWhite3.centery
+                        counter += 1
+                        cardinalWhitePlaying=False
+                    elif rectCardinalWhite4.collidepoint(event.pos):
+                        cardinalWhiteRect.centerx = rectCardinalWhite4.centerx
+                        cardinalWhiteRect.centery = rectCardinalWhite4.centery
+                        counter += 1
+                        cardinalWhitePlaying=False
+                    else:
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        cardinalWhitePlaying=False
+                    if cardinalWhiteRect.colliderect(plagueDoctorWhiteRect):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(archbishopWhiteRect):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(hadesWhiteRect):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(persephoneWhiteRect):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(plagueDoctorWhiteRect1):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(cardinalWhiteRect1):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(archbishopWhiteRect1):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(warriorWhiteRect):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(legionaryWhiteRect):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(warriorWhiteRect1):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(legionaryWhiteRect1):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(warriorWhiteRect2):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(legionaryWhiteRect2):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(warriorWhiteRect3):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
+                    elif cardinalWhiteRect.colliderect(legionaryWhiteRect3):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        counter -= 1
+                        cardinalWhitePlaying=False
 
-                        cardinalWhiteRect.centerx = event.pos[0]
-                        cardinalWhiteRect.centery = event.pos[1]
 
-                elif hadesWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or hadesWhitePlaying==True:
-                        if not hadesWhitePlaying:
-                            hadesWhitePlaying=True
-                        for ctverec in rectsHadesWhite:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
+                        #cardinalWhiteRect.centerx = event.pos[0]
+                        #cardinalWhiteRect.centery = event.pos[1]
 
-                        hadesWhiteRect.centerx = event.pos[0]
-                        hadesWhiteRect.centery = event.pos[1]
+                if hadesWhiteRect.collidepoint(event.pos):
+                    if not hadesWhitePlaying:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                hadesWhitePlaying=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                hadesWhitePlaying=True
+                elif hadesWhitePlaying:
+                    if rectHadesWhite1.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite1.centerx
+                        hadesWhiteRect.centery = rectHadesWhite1.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite2.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite2.centerx
+                        hadesWhiteRect.centery = rectHadesWhite2.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite3.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite3.centerx
+                        hadesWhiteRect.centery = rectHadesWhite3.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite4.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite4.centerx
+                        hadesWhiteRect.centery = rectHadesWhite4.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite5.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite5.centerx
+                        hadesWhiteRect.centery = rectHadesWhite5.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite6.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite6.centerx
+                        hadesWhiteRect.centery = rectHadesWhite6.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite7.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite7.centerx
+                        hadesWhiteRect.centery = rectHadesWhite7.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite8.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite8.centerx
+                        hadesWhiteRect.centery = rectHadesWhite8.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite9.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite9.centerx
+                        hadesWhiteRect.centery = rectHadesWhite9.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite10.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite10.centerx
+                        hadesWhiteRect.centery = rectHadesWhite10.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite11.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite11.centerx
+                        hadesWhiteRect.centery = rectHadesWhite11.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite12.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite12.centerx
+                        hadesWhiteRect.centery = rectHadesWhite12.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite13.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite13.centerx
+                        hadesWhiteRect.centery = rectHadesWhite13.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite14.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite14.centerx
+                        hadesWhiteRect.centery = rectHadesWhite14.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite15.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite15.centerx
+                        hadesWhiteRect.centery = rectHadesWhite15.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite16.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite16.centerx
+                        hadesWhiteRect.centery = rectHadesWhite16.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite17.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite17.centerx
+                        hadesWhiteRect.centery = rectHadesWhite17.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite18.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite18.centerx
+                        hadesWhiteRect.centery = rectHadesWhite18.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    elif rectHadesWhite19.collidepoint(event.pos):
+                        hadesWhiteRect.centerx = rectHadesWhite19.centerx
+                        hadesWhiteRect.centery = rectHadesWhite19.centery
+                        counter += 1
+                        hadesWhitePlaying=False
+                    else:
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        hadesWhitePlaying=False
+                    if hadesWhiteRect.colliderect(plagueDoctorWhiteRect):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(archbishopWhiteRect):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(cardinalWhiteRect):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(persephoneWhiteRect):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(plagueDoctorWhiteRect1):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(cardinalWhiteRect1):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(archbishopWhiteRect1):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(warriorWhiteRect):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(legionaryWhiteRect):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(warriorWhiteRect1):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(legionaryWhiteRect1):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(warriorWhiteRect2):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(legionaryWhiteRect2):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(warriorWhiteRect3):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                    elif hadesWhiteRect.colliderect(legionaryWhiteRect3):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        counter -= 1
+                        hadesWhitePlaying=False
+                       
+                if persephoneWhiteRect.collidepoint(event.pos):
+                    if not persephoneWhitePlaying:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                persephoneWhitePlaying=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                persephoneWhitePlaying=True
+                elif persephoneWhitePlaying:
+                    if rectPersephoneWhite1.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite1.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite1.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite2.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite2.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite2.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite3.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite3.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite3.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite4.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite4.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite4.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite5.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite5.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite5.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite6.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite6.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite6.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite7.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite7.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite7.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite8.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite8.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite8.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    elif rectPersephoneWhite9.collidepoint(event.pos):
+                        persephoneWhiteRect.centerx = rectPersephoneWhite9.centerx
+                        persephoneWhiteRect.centery = rectPersephoneWhite9.centery
+                        counter += 1
+                        persephoneWhitePlaying=False
+                    else:
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        persephoneWhitePlaying=False
+                    if persephoneWhiteRect.colliderect(plagueDoctorWhiteRect):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(archbishopWhiteRect):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(cardinalWhiteRect):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(hadesWhiteRect):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(plagueDoctorWhiteRect1):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(cardinalWhiteRect1):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(archbishopWhiteRect1):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(warriorWhiteRect):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(legionaryWhiteRect):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(warriorWhiteRect1):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(legionaryWhiteRect1):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(warriorWhiteRect2):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(legionaryWhiteRect2):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(warriorWhiteRect3):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                    elif persephoneWhiteRect.colliderect(legionaryWhiteRect3):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        counter -= 1
+                        persephoneWhitePlaying=False
+                     
 
-                elif persephoneWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or persephoneWhitePlaying==True:
-                        if not persephoneWhitePlaying:
-                            persephoneWhitePlaying=True
-                        for ctverec in rectsPersephoneWhite:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
+                if cardinalWhiteRect1.collidepoint(event.pos):
+                    if not cardinalWhitePlaying1:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                cardinalWhitePlaying1=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                cardinalWhitePlaying1=True
+                elif cardinalWhitePlaying:
+                    if rectCardinalWhite1.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite1.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite1.centery
+                        counter += 1
+                        cardinalWhitePlaying1=False
+                    elif rectCardinalWhite2.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite2.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite2.centery
+                        counter += 1
+                        cardinalWhitePlaying1=False
+                    elif rectCardinalWhite3.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite3.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite3.centery
+                        counter += 1
+                        cardinalWhitePlaying1=False
+                    elif rectCardinalWhite4.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite4.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite4.centery
+                        counter += 1
+                        cardinalWhitePlaying1=False
+                    else:
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        cardinalWhitePlaying1=False
+                    if cardinalWhiteRect1.colliderect(plagueDoctorWhiteRect):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(archbishopWhiteRect):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(cardinalWhiteRect):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(hadesWhiteRect):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(plagueDoctorWhiteRect1):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(persephoneWhiteRect):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(archbishopWhiteRect1):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(warriorWhiteRect):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(legionaryWhiteRect):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(warriorWhiteRect1):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(legionaryWhiteRect1):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(warriorWhiteRect2):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(legionaryWhiteRect2):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(warriorWhiteRect3):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
+                    elif cardinalWhiteRect1.colliderect(legionaryWhiteRect3):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        counter -= 1
+                        cardinalWhitePlaying1=False
 
-                        persephoneWhiteRect.centerx = event.pos[0]
-                        persephoneWhiteRect.centery = event.pos[1]
+                if archbishopWhiteRect1.collidepoint(event.pos):
+                    if not archibshopWhitePlaying1:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                archibshopWhitePlaying1=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                archibshopWhitePlaying1=True
+                elif archbishopWhitePlaying:
+                    if rectArchbishopWhite1.collidepoint(rectArchbishopWhite1):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite1.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite2.collidepoint(rectArchbishopWhite2):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite2.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite2.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite3.collidepoint(rectArchbishopWhite3):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite3.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite3.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite4.collidepoint(rectArchbishopWhite4):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite4.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite4.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite5.collidepoint(rectArchbishopWhite5):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite5.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite5.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite6.collidepoint(rectArchbishopWhite6):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite6.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite6.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite7.collidepoint(rectArchbishopWhite7):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite7.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite7.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite8.collidepoint(rectArchbishopWhite8):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite8.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite8.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite9.collidepoint(rectArchbishopWhite9):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite9.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite9.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite10.collidepoint(rectArchbishopWhite10):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite10.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite10.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite11.collidepoint(rectArchbishopWhite11):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite11.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite11.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    elif rectArchbishopWhite12.collidepoint(rectArchbishopWhite12):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite12.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite12.centery
+                        counter += 1
+                        archibshopWhitePlaying1=False
+                    else:
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        archibshopWhitePlaying1=False
+                    if archbishopWhiteRect1.colliderect(plagueDoctorWhiteRect):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(archbishopWhiteRect):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(cardinalWhiteRect):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(hadesWhiteRect):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(plagueDoctorWhiteRect1):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(persephoneWhiteRect):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(cardinalWhiteRect1):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(warriorWhiteRect):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(legionaryWhiteRect):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(warriorWhiteRect1):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(legionaryWhiteRect1):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(warriorWhiteRect2):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(legionaryWhiteRect2):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(warriorWhiteRect3):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
+                    elif archbishopWhiteRect1.colliderect(legionaryWhiteRect3):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        counter -= 1
+                        archibshopWhitePlaying1=False
 
-                elif cardinalWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or cardinalWhitePlaying1==True:
-                        if not cardinalWhitePlaying1:
-                            cardinalWhitePlaying1=True
-                        for ctverec in rectsCardinalWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
 
-                        cardinalWhiteRect1.centerx = event.pos[0]
-                        cardinalWhiteRect1.centery = event.pos[1]
+                if plagueDoctorWhiteRect1.collidepoint(event.pos):
+                    if not plagueDoctorWhitePlaying1:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                plagueDoctorWhitePlaying1=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                plagueDoctorWhitePlaying1=True
+                elif plagueDoctorWhitePlaying1:
+                    if rectPlagueWhite1_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite1_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite1_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite2_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite2_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite2_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite3_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite3_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite3_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite4_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite4_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite4_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite5_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite5_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite5_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite6_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite6_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite6_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite7_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite7_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite7_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite8_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite8_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite8_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite9_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite9_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite9_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite10_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite10_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite10_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite11_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite11_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite11_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite12_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite12_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite12_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite13_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite13_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite13_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite14_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite14_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite14_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite15_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite15_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite15_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite16_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite16_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite16_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite17_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite17_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite17_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    elif rectPlagueWhite18_1.collidepoint(event.pos):
+                        plagueDoctorWhiteRect1.centerx = rectPlagueWhite18_1.centerx
+                        plagueDoctorWhiteRect1.centery = rectPlagueWhite18_1.centery
+                        counter += 1
+                        plagueDoctorWhitePlaying1=False
+                    else:
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                    if plagueDoctorWhiteRect1.colliderect(plagueDoctorWhiteRect):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(archbishopWhiteRect):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(cardinalWhiteRect):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(hadesWhiteRect):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(cardinalWhiteRect1):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(persephoneWhiteRect):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(archbishopWhiteRect1):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect1):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect1):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect2):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect2):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect3):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
+                    elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect3):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        counter -= 1
 
-                elif archbishopWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or archbishopWhitePlaying1==True:
-                        if not archbishopWhitePlaying1:
-                            archbishopWhitePlaying1=True
-                        for ctverec in rectsArchbishopWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
 
-                        archbishopWhiteRect1.centerx = event.pos[0]
-                        archbishopWhiteRect1.centery = event.pos[1]
 
-                elif plagueDoctorWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or plagueDoctorWhitePlaying1==True:
-                        if not plagueDoctorWhitePlaying1:
-                            plagueDoctorWhitePlaying1=True
-                        for ctverec in rectsPlagueDoctorWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
 
-                        plagueDoctorWhiteRect1.centerx = event.pos[0]
-                        plagueDoctorWhiteRect1.centery = event.pos[1]
+                if warriorWhiteRect.collidepoint(event.pos):
+                    if not warriorWhitePlaying:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                warriorWhitePlaying=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                warriorWhitePlaying=True
+                elif warriorWhitePlaying:
+                    if rectWarriorWhite1Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect.centerx = rectWarriorWhite1Ability.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite1Ability.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    elif rectWarriorWhite2Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect.centerx = rectWarriorWhite2Ability.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite2Ability.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    elif rectWarriorWhite3Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect.centerx = rectWarriorWhite3Ability.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite3Ability.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    elif rectWarriorWhite4Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect.centerx = rectWarriorWhite4Ability.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite4Ability.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    elif rectWarriorWhite1.collidepoint(event.pos):
+                        warriorWhiteRect.centerx = rectWarriorWhite1.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite1.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    elif rectWarriorWhite2.collidepoint(event.pos):
+                        warriorWhiteRect.centerx = rectWarriorWhite2.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite2.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    elif rectWarriorWhite3.collidepoint(event.pos):
+                        warriorWhiteRect.centerx = rectWarriorWhite3.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite3.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    elif rectWarriorWhite4.collidepoint(event.pos):
+                        warriorWhiteRect.centerx = rectWarriorWhite4.centerx
+                        warriorWhiteRect.centery = rectWarriorWhite4.centery
+                        counter += 1
+                        warriorWhitePlaying=False
+                    else:
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        warriorWhitePlaying=False
+                    if warriorWhiteRect.colliderect(plagueDoctorWhiteRect):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(archbishopWhiteRect):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(cardinalWhiteRect):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(hadesWhiteRect):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(cardinalWhiteRect1):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(persephoneWhiteRect):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(archbishopWhiteRect1):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(plagueDoctorWhiteRect1):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(legionaryWhiteRect):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(warriorWhiteRect1):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(legionaryWhiteRect1):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(warriorWhiteRect2):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(legionaryWhiteRect2):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(warriorWhiteRect3):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                    elif warriorWhiteRect.colliderect(legionaryWhiteRect3):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        counter -= 1
+                        warriorWhitePlaying=False
+                            
 
-                elif warriorWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or warriorWhitePlaying==True:
-                        if not warriorWhitePlaying:
-                            warriorWhitePlaying=True
-                        for ctverec in rectsWarriorWhite:
-=======
-                if not tazeni:
-                    if plagueDoctorWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
 
-                        for ctverec in rectsPlagueDoctorWhite:
 
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-                        if counter % 4 == 0:
-                            for ctverec in rectsWarriorWhiteAbility:
-                                if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                        ctverec.bottom < 850 or ctverec.top > 60):
-                                    pygame.draw.rect(screen, black, ctverec, 5)
+                if legionaryWhiteRect.collidepoint(event.pos):
+                    if not legionaryWhitePlaying:
+                            for x,playing in enumerate(figuresWhitePlaying):
+                                if playing==True:
+                                    playing=False
+                                    legionaryWhitePlaying=True
+                                    break
+                                elif x==len(figuresWhitePlaying)-1:
+                                    legionaryWhitePlaying=True
+                elif legionaryWhitePlaying:
+                    if rectLegionaryWhite1.collidepoint(event.pos):
+                        rectLegionaryWhitex1_1 = legionaryWhitexInit1
+                        rectLegionaryWhitey1_1 = legionaryWhiteyInit1
+                        legionaryWhiteRect1.centerx = rectLegionaryWhite1.centerx
+                        legionaryWhiteRect1.centery = rectLegionaryWhite1.centery
+                        counter += 1
+                        legionaryWhitePlaying=False
+                    elif rectLegionaryWhite2.collidepoint(event.pos):
+                        rectLegionaryWhitex1_1 = legionaryWhitexInit1
+                        rectLegionaryWhitey1_1 = legionaryWhitexInit1
+                        legionaryWhiteRect1.centerx = rectLegionaryWhite2.centerx
+                        legionaryWhiteRect1.centery = rectLegionaryWhite2.centery
+                        counter += 1
+                        legionaryWhitePlaying=False
+                    elif rectLegionaryWhite3.collidepoint(event.pos):
+                        legionar_bily_x_abilita_1 = legionaryWhitexInit1
+                        legionar_bily_y_abilita_1 = legionaryWhiteyInit1
+                        legionaryWhiteRect1.centerx = rectLegionaryWhite3.centerx
+                        legionaryWhiteRect1.centery = rectLegionaryWhite3.centery
+                        counter += 1
+                        legionaryWhitePlaying=False
+                    else:
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        legionaryWhitePlaying=False
+                    if legionaryWhiteRect1.colliderect(plagueDoctorWhiteRect):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(archbishopWhiteRect):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(cardinalWhiteRect):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(hadesWhiteRect):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(cardinalWhiteRect1):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(persephoneWhiteRect):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(archbishopWhiteRect1):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(plagueDoctorWhiteRect1):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(legionaryWhiteRect):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect1):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect2):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(legionaryWhiteRect2):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect3):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                    elif legionaryWhiteRect1.colliderect(legionaryWhiteRect3):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        counter -= 1
+                        legionaryWhitePlaying=False
+                       
 
-<<<<<<< HEAD
-                        warriorWhiteRect.centerx = event.pos[0]
-                        warriorWhiteRect.centery = event.pos[1]
 
-                elif legionaryWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or legionaryWhitePlaying==True:
-                        if not legionaryWhitePlaying:
-                            legionaryWhitePlaying=True
-                        for ctverec in rectsLegionaryWhite:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
+                if warriorWhiteRect1.collidepoint(event.pos):
+                    if not warriorWhitePlaying1:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                warriorWhitePlaying1=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                warriorWhitePlaying1=True
+                elif warriorWhitePlaying1:
+                    if rectWarriorWhite1_1Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect1.centerx = rectWarriorWhite1_1Ability.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite1_1Ability.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    elif rectWarriorWhite2_1Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect1.centerx = rectWarriorWhite2_1Ability.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite2_1Ability.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    elif rectWarriorWhite3_1Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect1.centerx = rectWarriorWhite3_1Ability.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite3_1Ability.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    elif rectWarriorWhite4_1Ability.collidepoint(event.pos) and counter % 4 == 0:
+                        warriorWhiteRect1.centerx = rectWarriorWhite4_1Ability.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite4_1Ability.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    elif rectWarriorWhite1_1.collidepoint(event.pos):
+                        warriorWhiteRect1.centerx = rectWarriorWhite1_1.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite1_1.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    elif rectWarriorWhite2_1.collidepoint(event.pos):
+                        warriorWhiteRect1.centerx = rectWarriorWhite2_1.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite2_1.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    elif rectWarriorWhite3_1.collidepoint(event.pos):
+                        warriorWhiteRect1.centerx = rectWarriorWhite3_1.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite3_1.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    elif rectWarriorWhite4_1.collidepoint(event.pos):
+                        warriorWhiteRect1.centerx = rectWarriorWhite4_1.centerx
+                        warriorWhiteRect1.centery = rectWarriorWhite4_1.centery
+                        counter += 1
+                        warriorWhitePlaying1=False
+                    else:
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        warriorWhitePlaying1=False
+                    if warriorWhiteRect1.colliderect(plagueDoctorWhiteRect):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(archbishopWhiteRect):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(cardinalWhiteRect):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(hadesWhiteRect):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(cardinalWhiteRect1):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(persephoneWhiteRect):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(archbishopWhiteRect1):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(plagueDoctorWhiteRect1):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(warriorWhiteRect):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(legionaryWhiteRect):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(legionaryWhiteRect1):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(warriorWhiteRect2):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(legionaryWhiteRect2):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(warriorWhiteRect3):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
+                    elif warriorWhiteRect1.colliderect(legionaryWhiteRect3):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhiteyInit1
+                        counter -= 1
+                        warriorWhitePlaying1=False
 
-                        legionaryWhiteRect.centerx = event.pos[0]
-                        legionaryWhiteRect.centery = event.pos[1]
 
-                elif warriorWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or warriorWhitePlaying1==True:
-                        if not warriorWhitePlaying1:
-                            warriorWhitePlaying1=True
-                        for ctverec in rectsWarriorWhite_1:
-=======
-                        plagueDoctorWhiteRect.centerx = event.pos[0]
-                        plagueDoctorWhiteRect.centery = event.pos[1]
 
-                    elif archbishopWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsArchbishopWhite:
-
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-                        if counter % 4 == 0:
-                            for ctverec in rectsWarriorWhiteAbility_1:
-                                if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                        ctverec.bottom < 850 or ctverec.top > 60):
-                                    pygame.draw.rect(screen, black, ctverec, 5)
-
-<<<<<<< HEAD
-                        warriorWhiteRect1.centerx = event.pos[0]
-                        warriorWhiteRect1.centery = event.pos[1]
-
-                elif legionaryWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-                    playing=False
-                    for play in figuresWhitePlaying:
-                        if play==True:
-                            playing=True
-                            break
-                    print(playing)
-                    if not playing or legionaryWhitePlaying1==True:
-                        if not legionaryWhitePlaying1:
-                            legionaryWhitePlaying1=True
-                        for ctverec in rectsLegionaryWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        legionaryWhiteRect1.centerx = event.pos[0]
-                        legionaryWhiteRect1.centery = event.pos[1]
+                if legionaryWhiteRect1.collidepoint(event.pos):
+                    if not legionaryWhitePlaying1:
+                        for x,playing in enumerate(figuresWhitePlaying):
+                            if playing==True:
+                                playing=False
+                                legionaryWhitePlaying1=True
+                                break
+                            elif x==len(figuresWhitePlaying)-1:
+                                legionaryWhitePlaying1=True
+                    
 
                 elif warriorWhiteRect2.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4044,14 +5388,6 @@ while run:
                         if not warriorWhitePlaying2:
                             warriorWhitePlaying2=True
                         for ctverec in rectsWarriorWhite_2:
-=======
-                        archbishopWhiteRect.centerx = event.pos[0]
-                        archbishopWhiteRect.centery = event.pos[1]
-
-                    elif cardinalWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsCardinalWhite:
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                             if (ctverec.right < 1440 or ctverec.left > 475) or (
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
@@ -4061,7 +5397,6 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
-<<<<<<< HEAD
                         warriorWhiteRect2.centerx = event.pos[0]
                         warriorWhiteRect2.centery = event.pos[1]
 
@@ -4076,19 +5411,10 @@ while run:
                         if not legionaryWhitePlaying2:
                             legionaryWhitePlaying2=True
                         for ctverec in rectsLegionaryWhite_2:
-=======
-                        cardinalWhiteRect.centerx = event.pos[0]
-                        cardinalWhiteRect.centery = event.pos[1]
-
-                    elif hadesWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsHadesWhite:
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                             if (ctverec.right < 1440 or ctverec.left > 475) or (
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
 
-<<<<<<< HEAD
                         legionaryWhiteRect2.centerx = event.pos[0]
                         legionaryWhiteRect2.centery = event.pos[1]
 
@@ -4130,148 +5456,6 @@ while run:
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
 
-=======
-                        hadesWhiteRect.centerx = event.pos[0]
-                        hadesWhiteRect.centery = event.pos[1]
-
-                    elif persephoneWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsPersephoneWhite:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        persephoneWhiteRect.centerx = event.pos[0]
-                        persephoneWhiteRect.centery = event.pos[1]
-
-                    elif cardinalWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsCardinalWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        cardinalWhiteRect1.centerx = event.pos[0]
-                        cardinalWhiteRect1.centery = event.pos[1]
-
-                    elif archbishopWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsArchbishopWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        archbishopWhiteRect1.centerx = event.pos[0]
-                        archbishopWhiteRect1.centery = event.pos[1]
-
-                    elif plagueDoctorWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsPlagueDoctorWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        plagueDoctorWhiteRect1.centerx = event.pos[0]
-                        plagueDoctorWhiteRect1.centery = event.pos[1]
-
-                    elif warriorWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsWarriorWhite:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-                        if counter % 4 == 0:
-                            for ctverec in rectsWarriorWhiteAbility:
-                                if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                        ctverec.bottom < 850 or ctverec.top > 60):
-                                    pygame.draw.rect(screen, black, ctverec, 5)
-
-                        warriorWhiteRect.centerx = event.pos[0]
-                        warriorWhiteRect.centery = event.pos[1]
-
-                    elif legionaryWhiteRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsLegionaryWhite:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        legionaryWhiteRect.centerx = event.pos[0]
-                        legionaryWhiteRect.centery = event.pos[1]
-
-                    elif warriorWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsWarriorWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-                        if counter % 4 == 0:
-                            for ctverec in rectsWarriorWhiteAbility_1:
-                                if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                        ctverec.bottom < 850 or ctverec.top > 60):
-                                    pygame.draw.rect(screen, black, ctverec, 5)
-
-                        warriorWhiteRect1.centerx = event.pos[0]
-                        warriorWhiteRect1.centery = event.pos[1]
-
-                    elif legionaryWhiteRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsLegionaryWhite_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        legionaryWhiteRect1.centerx = event.pos[0]
-                        legionaryWhiteRect1.centery = event.pos[1]
-
-                    elif warriorWhiteRect2.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsWarriorWhite_2:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-                        if counter % 4 == 0:
-                            for ctverec in rectsWarriorWhiteAbility_2:
-                                if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                        ctverec.bottom < 850 or ctverec.top > 60):
-                                    pygame.draw.rect(screen, black, ctverec, 5)
-
-                        warriorWhiteRect2.centerx = event.pos[0]
-                        warriorWhiteRect2.centery = event.pos[1]
-
-                    elif legionaryWhiteRect2.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsLegionaryWhite_2:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                        legionaryWhiteRect2.centerx = event.pos[0]
-                        legionaryWhiteRect2.centery = event.pos[1]
-
-                    elif warriorWhiteRect3.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsWarriorWhite_3:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-                        if counter % 4 == 0:
-                            for ctverec in rectsWarriorWhiteAbility_3:
-                                if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                        ctverec.bottom < 850 or ctverec.top > 60):
-                                    pygame.draw.rect(screen, black, ctverec, 5)
-
-                        warriorWhiteRect3.centerx = event.pos[0]
-                        warriorWhiteRect3.centery = event.pos[1]
-
-                    elif legionaryWhiteRect3.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-
-                        for ctverec in rectsLegionaryWhite_3:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
                         legionaryWhiteRect3.centerx = event.pos[0]
                         legionaryWhiteRect3.centery = event.pos[1]
 
@@ -4295,7 +5479,7 @@ while run:
                         plagueDoctorBlackRect.centerx = event.pos[0]
                         plagueDoctorBlackRect.centery = event.pos[1]
 
-                elif archbishopBlackRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
+                if archbishopBlackRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
                     for play in figuresBlackPlaying:
                         if play==True:
@@ -4311,6 +5495,7 @@ while run:
 
                         archbishopBlackRect.centerx = event.pos[0]
                         archbishopBlackRect.centery = event.pos[1]
+                
 
                 elif cardinalBlackRect.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4450,22 +5635,8 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
-<<<<<<< HEAD
                         warriorBlackRect.centerx = event.pos[0]
                         warriorBlackRect.centery = event.pos[1]
-=======
-                    for ctverec in rectsWarriorBlack:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen, black, ctverec, 5)
-                    if (counter - 1) % 4 == 0:
-                        for ctverec in rectsWarriorBlackAbility:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                    warriorBlackRect.centerx = event.pos[0]
-                    warriorBlackRect.centery = event.pos[1]
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
 
                 elif warriorBlackRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4486,22 +5657,8 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
-<<<<<<< HEAD
                         warriorBlackRect1.centerx = event.pos[0]
                         warriorBlackRect1.centery = event.pos[1]
-=======
-                    for ctverec in rectsWarriorBlack_1:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen, black, ctverec, 5)
-                    if (counter - 1) % 4 == 0:
-                        for ctverec in rectsWarriorBlackAbility_1:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                    warriorBlackRect1.centerx = event.pos[0]
-                    warriorBlackRect1.centery = event.pos[1]
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
 
                 elif legionaryBlackRect1.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4539,22 +5696,8 @@ while run:
                                         ctverec.bottom < 850 or ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
 
-<<<<<<< HEAD
                         warriorBlackRect2.centerx = event.pos[0]
                         warriorBlackRect2.centery = event.pos[1]
-=======
-                    for ctverec in rectsWarriorBlack_2:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen, black, ctverec, 5)
-                    if (counter - 1) % 4 == 0:
-                        for ctverec in rectsWarriorBlackAbility_2:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
-                                    ctverec.bottom < 850 or ctverec.top > 60):
-                                pygame.draw.rect(screen, black, ctverec, 5)
-
-                    warriorBlackRect2.centerx = event.pos[0]
-                    warriorBlackRect2.centery = event.pos[1]
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
 
                 elif legionaryBlackRect2.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
                     playing=False
@@ -4591,7 +5734,6 @@ while run:
                         legionaryBlackRect3.centery = event.pos[1]
 
                 elif warriorBlackRect3.collidepoint(event.pos) and pygame.MOUSEBUTTONDOWN:
-<<<<<<< HEAD
                     playing=False
                     for play in figuresBlackPlaying:
                         if play==True:
@@ -4612,22 +5754,85 @@ while run:
 
                         warriorBlackRect3.centerx = event.pos[0]
                         warriorBlackRect3.centery = event.pos[1]
-=======
-                    for ctverec in rectsWarriorBlack_3:
-                        if (ctverec.right < 1440 or ctverec.left > 475) or (ctverec.bottom < 850 or ctverec.top > 60):
-                            pygame.draw.rect(screen, black, ctverec, 5)
-                    if (counter - 1) % 4 == 0:
-                        for ctverec in rectsWarriorBlackAbility_3:
-                            if (ctverec.right < 1440 or ctverec.left > 475) or (
+
+
+        if plagueDoctorWhitePlaying:
+            for ctverec in rectsPlagueDoctorWhite:
+                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                        ctverec.bottom < 850 or ctverec.top > 60):
+                    pygame.draw.rect(screen, black, ctverec, 5)
+        if archbishopWhitePlaying:
+            for ctverec in rectsArchbishopWhite:
+                    if (ctverec.right < 1440 or ctverec.left > 475) or (
+                            ctverec.bottom < 850 or ctverec.top > 60):
+                        pygame.draw.rect(screen, black, ctverec, 5)
+        if cardinalWhitePlaying:
+            for ctverec in rectsCardinalWhite:
+                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                        ctverec.bottom < 850 or ctverec.top > 60):
+                    pygame.draw.rect(screen, black, ctverec, 5)
+        if hadesWhitePlaying:
+            for ctverec in rectsHadesWhite:
+                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                        ctverec.bottom < 850 or ctverec.top > 60):
+                    pygame.draw.rect(screen, black, ctverec, 5)
+        if persephoneWhitePlaying:
+            for ctverec in rectsPersephoneWhite:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                        ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen, black, ctverec, 5)
+        if cardinalWhitePlaying1:
+            for ctverec in rectsCardinalWhite_1:
+                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                        ctverec.bottom < 850 or ctverec.top > 60):
+                    pygame.draw.rect(screen, black, ctverec, 5)
+        if archbishopWhitePlaying:
+            for ctverec in rectsArchbishopWhite_1:
+                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                        ctverec.bottom < 850 or ctverec.top > 60):
+                    pygame.draw.rect(screen, black, ctverec, 5)
+        if plagueDoctorWhitePlaying1:
+            for ctverec in rectsPlagueDoctorWhite_1:
+                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                        ctverec.bottom < 850 or ctverec.top > 60):
+                    pygame.draw.rect(screen, black, ctverec, 5)
+        if warriorWhitePlaying:
+            for ctverec in rectsWarriorWhite:
+                    if (ctverec.right < 1440 or ctverec.left > 475) or (
                                     ctverec.bottom < 850 or ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
+                    if counter % 4 == 0:
+                            for ctverec in rectsWarriorWhiteAbility:
+                                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                        ctverec.bottom < 850 or ctverec.top > 60):
+                                    pygame.draw.rect(screen, black, ctverec, 5)
+        if legionaryWhitePlaying:
+            for ctverec in rectsLegionaryWhite:
+                if (ctverec.right < 1440 or ctverec.left > 475) or (
+                        ctverec.bottom < 850 or ctverec.top > 60):
+                    pygame.draw.rect(screen, black, ctverec, 5)    
+        if warriorWhitePlaying1:
+            for ctverec in rectsWarriorWhite_1:
+                    if (ctverec.right < 1440 or ctverec.left > 475) or (
+                            ctverec.bottom < 850 or ctverec.top > 60):
+                        pygame.draw.rect(screen, black, ctverec, 5)
+            if counter % 4 == 0:
+                for ctverec in rectsWarriorWhiteAbility_1:
+                    if (ctverec.right < 1440 or ctverec.left > 475) or (
+                            ctverec.bottom < 850 or ctverec.top > 60):
+                        pygame.draw.rect(screen, black, ctverec, 5)   
+        if legionaryWhitePlaying1:
+            for ctverec in rectsLegionaryWhite_1:
+                        if (ctverec.right < 1440 or ctverec.left > 475) or (
+                                ctverec.bottom < 850 or ctverec.top > 60):
+                            pygame.draw.rect(screen, black, ctverec, 5)
+                    
 
-                    warriorBlackRect3.centerx = event.pos[0]
-                    warriorBlackRect3.centery = event.pos[1]
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
+        
+
 
         if event.type == pygame.MOUSEBUTTONUP:
-
+            mx,my=pygame.mouse.get_pos()
             # Todo: zjistit, jak tento proces zjednodušit pomocí for cyklu
 
             """for i in range(0,len(ctverce_morovy_doktor_bily)): 
@@ -4638,1316 +5843,25 @@ while run:
                 elif i==len(ctverce_morovy_doktor_bily)-1:
                     plagueDoctorWhiteRect.centerx=plagueWhitexInit
                     plagueDoctorWhiteRect.centery=plagueWhiteyInit"""
-            if plagueDoctorWhiteRect.colliderect(rectPlagueWhite1):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite1.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite1.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite2):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite2.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite2.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite3):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite3.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite3.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite4):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite4.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite4.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite5):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite5.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite5.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite6):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite6.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite6.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite7):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite7.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite7.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite8):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite8.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite8.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite9):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite9.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite9.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite10):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite10.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite10.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite11):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite11.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite11.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite12):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite12.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite12.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite13):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite13.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite13.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite14):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite14.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite14.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite15):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite15.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite15.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite16):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite16.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite16.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite17):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite17.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite17.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(rectPlagueWhite18):
-                plagueDoctorWhiteRect.centerx = rectPlagueWhite18.centerx
-                plagueDoctorWhiteRect.centery = rectPlagueWhite18.centery
-                counter += 1
-                plagueDoctorWhitePlaying=False
-            else:
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                plagueDoctorWhitePlaying=False
-            if (plagueDoctorWhiteRect.right > 1440 or plagueDoctorWhiteRect.left < 475) or (
-                    plagueDoctorWhiteRect.bottom > 1020 or plagueDoctorWhiteRect.top < 60):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                plagueDoctorWhitePlaying=False
 
-            if plagueDoctorWhiteRect.colliderect(archbishopWhiteRect):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(cardinalWhiteRect):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(hadesWhiteRect):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(persephoneWhiteRect):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(cardinalWhiteRect1):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(archbishopWhiteRect1):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(plagueDoctorWhiteRect1):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect1):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect1):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect2):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect2):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(warriorWhiteRect3):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
-            elif plagueDoctorWhiteRect.colliderect(legionaryWhiteRect3):
-                plagueDoctorWhiteRect.centerx = plagueWhitexInit
-                plagueDoctorWhiteRect.centery = plagueWhiteyInit
-                counter -= 1
-                plagueDoctorWhitePlaying=False
 
-            if archbishopWhiteRect.colliderect(rectArchbishopWhite1):
-                archbishopWhiteRect.centerx = rectArchbishopWhite1.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite1.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite2):
-                archbishopWhiteRect.centerx = rectArchbishopWhite2.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite2.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite3):
-                archbishopWhiteRect.centerx = rectArchbishopWhite3.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite3.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite4):
-                archbishopWhiteRect.centerx = rectArchbishopWhite4.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite4.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite5):
-                archbishopWhiteRect.centerx = rectArchbishopWhite5.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite5.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite6):
-                archbishopWhiteRect.centerx = rectArchbishopWhite6.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite6.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite7):
-                archbishopWhiteRect.centerx = rectArchbishopWhite7.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite7.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite8):
-                archbishopWhiteRect.centerx = rectArchbishopWhite8.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite8.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite9):
-                archbishopWhiteRect.centerx = rectArchbishopWhite9.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite9.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite10):
-                archbishopWhiteRect.centerx = rectArchbishopWhite10.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite10.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite11):
-                archbishopWhiteRect.centerx = rectArchbishopWhite11.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite11.centery
-                counter += 1
-            elif archbishopWhiteRect.colliderect(rectArchbishopWhite12):
-                archbishopWhiteRect.centerx = rectArchbishopWhite12.centerx
-                archbishopWhiteRect.centery = rectArchbishopWhite12.centery
-                counter += 1
-            else:
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
+                
 
-            if (archbishopWhiteRect.right > 1440 or archbishopWhiteRect.left < 475) or (
-                    archbishopWhiteRect.bottom > 1020 or archbishopWhiteRect.top < 60):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-            if archbishopWhiteRect.colliderect(plagueDoctorWhiteRect):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(cardinalWhiteRect):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(hadesWhiteRect):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(persephoneWhiteRect):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(cardinalWhiteRect1):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(archbishopWhiteRect1):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(plagueDoctorWhiteRect1):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(warriorWhiteRect):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(legionaryWhiteRect):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(warriorWhiteRect1):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(legionaryWhiteRect1):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(warriorWhiteRect2):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(legionaryWhiteRect2):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(warriorWhiteRect3):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
-            elif archbishopWhiteRect.colliderect(legionaryWhiteRect3):
-                archbishopWhiteRect.centerx = archbishopWhitexInit
-                archbishopWhiteRect.centery = archbishopWhiteyInit
-                counter -= 1
+           
+         
 
-            if cardinalWhiteRect.colliderect(rectCardinalWhite1):
-                cardinalWhiteRect.centerx = rectCardinalWhite1.centerx
-                cardinalWhiteRect.centery = rectCardinalWhite1.centery
-                counter += 1
-            elif cardinalWhiteRect.colliderect(rectCardinalWhite2):
-                cardinalWhiteRect.centerx = rectCardinalWhite2.centerx
-                cardinalWhiteRect.centery = rectCardinalWhite2.centery
-                counter += 1
-            elif cardinalWhiteRect.colliderect(rectCardinalWhite3):
-                cardinalWhiteRect.centerx = rectCardinalWhite3.centerx
-                cardinalWhiteRect.centery = rectCardinalWhite3.centery
-                counter += 1
-            elif cardinalWhiteRect.colliderect(rectCardinalWhite4):
-                cardinalWhiteRect.centerx = rectCardinalWhite4.centerx
-                cardinalWhiteRect.centery = rectCardinalWhite4.centery
-                counter += 1
-            else:
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-            if (cardinalWhiteRect.right > 1440 or cardinalWhiteRect.left < 475) or (
-                    cardinalWhiteRect.bottom > 1020 or cardinalWhiteRect.top < 60):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-            if cardinalWhiteRect.colliderect(plagueDoctorWhiteRect):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(archbishopWhiteRect):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(hadesWhiteRect):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(persephoneWhiteRect):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(plagueDoctorWhiteRect1):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(cardinalWhiteRect1):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(archbishopWhiteRect1):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(warriorWhiteRect):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(legionaryWhiteRect):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(warriorWhiteRect1):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(legionaryWhiteRect1):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(warriorWhiteRect2):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(legionaryWhiteRect2):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(warriorWhiteRect3):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
-            elif cardinalWhiteRect.colliderect(legionaryWhiteRect3):
-                cardinalWhiteRect.centerx = cardinalWhitexInit
-                cardinalWhiteRect.centery = cardinalWhiteyInit
-                counter -= 1
 
-            if hadesWhiteRect.colliderect(rectHadesWhite1):
-                hadesWhiteRect.centerx = rectHadesWhite1.centerx
-                hadesWhiteRect.centery = rectHadesWhite1.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite2):
-                hadesWhiteRect.centerx = rectHadesWhite2.centerx
-                hadesWhiteRect.centery = rectHadesWhite2.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite3):
-                hadesWhiteRect.centerx = rectHadesWhite3.centerx
-                hadesWhiteRect.centery = rectHadesWhite3.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite4):
-                hadesWhiteRect.centerx = rectHadesWhite4.centerx
-                hadesWhiteRect.centery = rectHadesWhite4.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite5):
-                hadesWhiteRect.centerx = rectHadesWhite5.centerx
-                hadesWhiteRect.centery = rectHadesWhite5.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite6):
-                hadesWhiteRect.centerx = rectHadesWhite6.centerx
-                hadesWhiteRect.centery = rectHadesWhite6.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite7):
-                hadesWhiteRect.centerx = rectHadesWhite7.centerx
-                hadesWhiteRect.centery = rectHadesWhite7.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite8):
-                hadesWhiteRect.centerx = rectHadesWhite8.centerx
-                hadesWhiteRect.centery = rectHadesWhite8.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite9):
-                hadesWhiteRect.centerx = rectHadesWhite9.centerx
-                hadesWhiteRect.centery = rectHadesWhite9.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite10):
-                hadesWhiteRect.centerx = rectHadesWhite10.centerx
-                hadesWhiteRect.centery = rectHadesWhite10.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite11):
-                hadesWhiteRect.centerx = rectHadesWhite11.centerx
-                hadesWhiteRect.centery = rectHadesWhite11.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite12):
-                hadesWhiteRect.centerx = rectHadesWhite12.centerx
-                hadesWhiteRect.centery = rectHadesWhite12.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite13):
-                hadesWhiteRect.centerx = rectHadesWhite13.centerx
-                hadesWhiteRect.centery = rectHadesWhite13.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite14):
-                hadesWhiteRect.centerx = rectHadesWhite14.centerx
-                hadesWhiteRect.centery = rectHadesWhite14.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite15):
-                hadesWhiteRect.centerx = rectHadesWhite15.centerx
-                hadesWhiteRect.centery = rectHadesWhite15.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite16):
-                hadesWhiteRect.centerx = rectHadesWhite16.centerx
-                hadesWhiteRect.centery = rectHadesWhite16.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite17):
-                hadesWhiteRect.centerx = rectHadesWhite17.centerx
-                hadesWhiteRect.centery = rectHadesWhite17.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite18):
-                hadesWhiteRect.centerx = rectHadesWhite18.centerx
-                hadesWhiteRect.centery = rectHadesWhite18.centery
-                counter += 1
-            elif hadesWhiteRect.colliderect(rectHadesWhite19):
-                hadesWhiteRect.centerx = rectHadesWhite19.centerx
-                hadesWhiteRect.centery = rectHadesWhite19.centery
-                counter += 1
-            else:
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-            if (hadesWhiteRect.right > 1440 or hadesWhiteRect.left < 475) or (
-                    hadesWhiteRect.bottom > 1020 or hadesWhiteRect.top < 60):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-            if hadesWhiteRect.colliderect(plagueDoctorWhiteRect):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(archbishopWhiteRect):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(cardinalWhiteRect):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(persephoneWhiteRect):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(plagueDoctorWhiteRect1):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(cardinalWhiteRect1):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(archbishopWhiteRect1):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(warriorWhiteRect):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(legionaryWhiteRect):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(warriorWhiteRect1):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(legionaryWhiteRect1):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(warriorWhiteRect2):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(legionaryWhiteRect2):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(warriorWhiteRect3):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
-            elif hadesWhiteRect.colliderect(legionaryWhiteRect3):
-                hadesWhiteRect.centerx = hadesWhitexInit
-                hadesWhiteRect.centery = hadesWhiteyInit
-                counter -= 1
+          
 
-            if persephoneWhiteRect.colliderect(rectPersephoneWhite1):
-                persephoneWhiteRect.centerx = rectPersephoneWhite1.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite1.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite2):
-                persephoneWhiteRect.centerx = rectPersephoneWhite2.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite2.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite3):
-                persephoneWhiteRect.centerx = rectPersephoneWhite3.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite3.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite4):
-                persephoneWhiteRect.centerx = rectPersephoneWhite4.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite4.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite5):
-                persephoneWhiteRect.centerx = rectPersephoneWhite5.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite5.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite6):
-                persephoneWhiteRect.centerx = rectPersephoneWhite6.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite6.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite7):
-                persephoneWhiteRect.centerx = rectPersephoneWhite7.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite7.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite8):
-                persephoneWhiteRect.centerx = rectPersephoneWhite8.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite8.centery
-                counter += 1
-            elif persephoneWhiteRect.colliderect(rectPersephoneWhite9):
-                persephoneWhiteRect.centerx = rectPersephoneWhite9.centerx
-                persephoneWhiteRect.centery = rectPersephoneWhite9.centery
-                counter += 1
-            else:
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-            if (persephoneWhiteRect.right > 1440 or persephoneWhiteRect.left < 475) or (
-                    persephoneWhiteRect.bottom > 1020 or persephoneWhiteRect.top < 60):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-            if persephoneWhiteRect.colliderect(plagueDoctorWhiteRect):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(archbishopWhiteRect):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(cardinalWhiteRect):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(hadesWhiteRect):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(plagueDoctorWhiteRect1):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(cardinalWhiteRect1):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(archbishopWhiteRect1):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(warriorWhiteRect):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(legionaryWhiteRect):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(warriorWhiteRect1):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(legionaryWhiteRect1):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(warriorWhiteRect2):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(legionaryWhiteRect2):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(warriorWhiteRect3):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
-            elif persephoneWhiteRect.colliderect(legionaryWhiteRect3):
-                persephoneWhiteRect.centerx = persephoneWhitexInit
-                persephoneWhiteRect.centery = persephoneWhiteyInit
-                counter -= 1
+          
 
-            if cardinalWhiteRect1.colliderect(rectCardinalWhite1):
-                cardinalWhiteRect1.centerx = rectCardinalWhite1.centerx
-                cardinalWhiteRect1.centery = rectCardinalWhite1.centery
-                counter += 1
-            elif cardinalWhiteRect1.colliderect(rectCardinalWhite2):
-                cardinalWhiteRect1.centerx = rectCardinalWhite2.centerx
-                cardinalWhiteRect1.centery = rectCardinalWhite2.centery
-                counter += 1
-            elif cardinalWhiteRect1.colliderect(rectCardinalWhite3):
-                cardinalWhiteRect1.centerx = rectCardinalWhite3.centerx
-                cardinalWhiteRect1.centery = rectCardinalWhite3.centery
-                counter += 1
-            elif cardinalWhiteRect1.colliderect(rectCardinalWhite4):
-                cardinalWhiteRect1.centerx = rectCardinalWhite4.centerx
-                cardinalWhiteRect1.centery = rectCardinalWhite4.centery
-                counter += 1
-            else:
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-            if (cardinalWhiteRect1.right > 1440 or cardinalWhiteRect1.left < 475) or (
-                    cardinalWhiteRect1.bottom > 1020 or cardinalWhiteRect1.top < 60):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-            if cardinalWhiteRect1.colliderect(plagueDoctorWhiteRect):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(archbishopWhiteRect):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(cardinalWhiteRect):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(hadesWhiteRect):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(plagueDoctorWhiteRect1):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(persephoneWhiteRect):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(archbishopWhiteRect1):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(warriorWhiteRect):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(legionaryWhiteRect):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(warriorWhiteRect1):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(legionaryWhiteRect1):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(warriorWhiteRect2):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(legionaryWhiteRect2):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(warriorWhiteRect3):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
-            elif cardinalWhiteRect1.colliderect(legionaryWhiteRect3):
-                cardinalWhiteRect1.centerx = cardinalWhitexInit1
-                cardinalWhiteRect1.centery = cardinalWhiteyInit1
-                counter -= 1
 
-            if archbishopWhiteRect1.colliderect(rectArchbishopWhite1):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite1.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite1.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite2):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite2.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite2.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite3):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite3.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite3.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite4):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite4.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite4.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite5):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite5.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite5.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite6):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite6.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite6.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite7):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite7.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite7.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite8):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite8.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite8.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite9):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite9.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite9.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite10):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite10.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite10.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite11):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite11.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite11.centery
-                counter += 1
-            elif archbishopWhiteRect1.colliderect(rectArchbishopWhite12):
-                archbishopWhiteRect1.centerx = rectArchbishopWhite12.centerx
-                archbishopWhiteRect1.centery = rectArchbishopWhite12.centery
-                counter += 1
-            else:
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-            if (archbishopWhiteRect1.right > 1440 or archbishopWhiteRect1.left < 475) or (
-                    archbishopWhiteRect1.bottom > 1020 or archbishopWhiteRect1.top < 60):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-            if archbishopWhiteRect1.colliderect(plagueDoctorWhiteRect):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(archbishopWhiteRect):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(cardinalWhiteRect):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(hadesWhiteRect):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(plagueDoctorWhiteRect1):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(persephoneWhiteRect):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(cardinalWhiteRect1):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(warriorWhiteRect):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(legionaryWhiteRect):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(warriorWhiteRect1):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(legionaryWhiteRect1):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(warriorWhiteRect2):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(legionaryWhiteRect2):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(warriorWhiteRect3):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
-            elif archbishopWhiteRect1.colliderect(legionaryWhiteRect3):
-                archbishopWhiteRect1.centerx = archbishopWhitexInit1
-                archbishopWhiteRect1.centery = archbishopWhiteyInit1
-                counter -= 1
 
-            if plagueDoctorWhiteRect1.colliderect(rectPlagueWhite1_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite1_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite1_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite2_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite2_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite2_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite3_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite3_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite3_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite4_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite4_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite4_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite5_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite5_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite5_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite6_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite6_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite6_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite7_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite7_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite7_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite8_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite8_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite8_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite9_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite9_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite9_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite10_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite10_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite10_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite11_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite11_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite11_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite12_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite12_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite12_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite13_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite13_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite13_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite14_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite14_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite14_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite15_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite15_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite15_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite16_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite16_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite16_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite17_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite17_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite17_1.centery
-                counter += 1
-            elif plagueDoctorWhiteRect1.colliderect(rectPlagueWhite18_1):
-                plagueDoctorWhiteRect1.centerx = rectPlagueWhite18_1.centerx
-                plagueDoctorWhiteRect1.centery = rectPlagueWhite18_1.centery
-                counter += 1
-            else:
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-            if (plagueDoctorWhiteRect1.right > 1440 or plagueDoctorWhiteRect1.left < 475) or (
-                    plagueDoctorWhiteRect1.bottom > 1020 or plagueDoctorWhiteRect1.top < 60):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-            if plagueDoctorWhiteRect1.colliderect(plagueDoctorWhiteRect):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(archbishopWhiteRect):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(cardinalWhiteRect):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(hadesWhiteRect):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(cardinalWhiteRect1):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(persephoneWhiteRect):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(archbishopWhiteRect1):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect1):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect1):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect2):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect2):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect3):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
-            elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect3):
-                plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
-                plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
-                counter -= 1
+         
 
-            if warriorWhiteRect.colliderect(rectWarriorWhite1Ability) and counter % 4 == 0:
-                warriorWhiteRect.centerx = rectWarriorWhite1Ability.centerx
-                warriorWhiteRect.centery = rectWarriorWhite1Ability.centery
-                counter += 1
-<<<<<<< HEAD
-                warriorWhitePlaying=False
-=======
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
-            elif warriorWhiteRect.colliderect(rectWarriorWhite2Ability) and counter % 4 == 0:
-                warriorWhiteRect.centerx = rectWarriorWhite2Ability.centerx
-                warriorWhiteRect.centery = rectWarriorWhite2Ability.centery
-                counter += 1
-<<<<<<< HEAD
-                warriorWhitePlaying=False
-=======
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
-            elif warriorWhiteRect.colliderect(rectWarriorWhite3Ability) and counter % 4 == 0:
-                warriorWhiteRect.centerx = rectWarriorWhite3Ability.centerx
-                warriorWhiteRect.centery = rectWarriorWhite3Ability.centery
-                counter += 1
-<<<<<<< HEAD
-                warriorWhitePlaying=False
-=======
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
-            elif warriorWhiteRect.colliderect(rectWarriorWhite4Ability) and counter % 4 == 0:
-                warriorWhiteRect.centerx = rectWarriorWhite4Ability.centerx
-                warriorWhiteRect.centery = rectWarriorWhite4Ability.centery
-                counter += 1
-<<<<<<< HEAD
-                warriorWhitePlaying=False
-=======
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
-            elif warriorWhiteRect.colliderect(rectWarriorWhite1):
-                warriorWhiteRect.centerx = rectWarriorWhite1.centerx
-                warriorWhiteRect.centery = rectWarriorWhite1.centery
-                counter += 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(rectWarriorWhite2):
-                warriorWhiteRect.centerx = rectWarriorWhite2.centerx
-                warriorWhiteRect.centery = rectWarriorWhite2.centery
-                counter += 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(rectWarriorWhite3):
-                warriorWhiteRect.centerx = rectWarriorWhite3.centerx
-                warriorWhiteRect.centery = rectWarriorWhite3.centery
-                counter += 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(rectWarriorWhite4):
-                warriorWhiteRect.centerx = rectWarriorWhite4.centerx
-                warriorWhiteRect.centery = rectWarriorWhite4.centery
-                counter += 1
-                warriorWhitePlaying=False
-            else:
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                warriorWhitePlaying=False
-            if (warriorWhiteRect.right > 1440 or warriorWhiteRect.left < 475) or (
-                    warriorWhiteRect.bottom > 1020 or warriorWhiteRect.top < 60):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                warriorWhitePlaying=False
-            if warriorWhiteRect.colliderect(plagueDoctorWhiteRect):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(archbishopWhiteRect):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(cardinalWhiteRect):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(hadesWhiteRect):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(cardinalWhiteRect1):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(persephoneWhiteRect):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(archbishopWhiteRect1):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(plagueDoctorWhiteRect1):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(legionaryWhiteRect):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(warriorWhiteRect1):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(legionaryWhiteRect1):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(warriorWhiteRect2):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(legionaryWhiteRect2):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(warriorWhiteRect3):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
-            elif warriorWhiteRect.colliderect(legionaryWhiteRect3):
-                warriorWhiteRect.centerx = warriorWhitexInit
-                warriorWhiteRect.centery = warriorWhiteyInit
-                counter -= 1
-                warriorWhitePlaying=False
+        
 
-            if legionaryWhiteRect.colliderect(rectLegionaryWhite1):
-                legionar_bily_x_abilita = legionaryWhitexInit
-                legionar_bily_y_abilita = legionaryWhiteyInit
-                legionaryWhiteRect.centerx = rectLegionaryWhite1.centerx
-                legionaryWhiteRect.centery = rectLegionaryWhite1.centery
-                counter += 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(rectLegionaryWhite2):
-                legionar_bily_x_abilita = legionaryWhitexInit
-                legionar_bily_y_abilita = legionaryWhiteyInit
-                legionaryWhiteRect.centerx = rectLegionaryWhite2.centerx
-                legionaryWhiteRect.centery = rectLegionaryWhite2.centery
-                counter += 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(rectLegionaryWhite3):
-                legionar_bily_x_abilita = legionaryWhitexInit
-                legionar_bily_y_abilita = legionaryWhiteyInit
-                legionaryWhiteRect.centerx = rectLegionaryWhite3.centerx
-                legionaryWhiteRect.centery = rectLegionaryWhite3.centery
-                counter += 1
-<<<<<<< HEAD
-                legionaryWhitePlaying=False
-=======
->>>>>>> 05ec0cabfb14b9ae61b0ea25694294bad3b45fd1
-            else:
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                legionaryWhitePlaying=False
-            if (legionaryWhiteRect.right > 1440 or legionaryWhiteRect.left < 475) or (
-                    legionaryWhiteRect.bottom > 1020 or legionaryWhiteRect.top < 60):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                legionaryWhitePlaying=False
-            if legionaryWhiteRect.colliderect(plagueDoctorWhiteRect):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(archbishopWhiteRect):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(cardinalWhiteRect):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(hadesWhiteRect):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(cardinalWhiteRect1):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(persephoneWhiteRect):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(archbishopWhiteRect1):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(plagueDoctorWhiteRect1):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(warriorWhiteRect):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(warriorWhiteRect1):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(legionaryWhiteRect1):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(warriorWhiteRect2):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(legionaryWhiteRect2):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(warriorWhiteRect3):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-            elif legionaryWhiteRect.colliderect(legionaryWhiteRect3):
-                legionaryWhiteRect.centerx = legionaryWhitexInit
-                legionaryWhiteRect.centery = legionaryWhiteyInit
-                counter -= 1
-                legionaryWhitePlaying=False
-
-            if warriorWhiteRect1.colliderect(rectWarriorWhite1_1Ability) and counter % 4 == 0:
-                warriorWhiteRect1.centerx = rectWarriorWhite1_1Ability.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite1_1Ability.centery
-                counter += 1
-            elif warriorWhiteRect1.colliderect(rectWarriorWhite2_1Ability) and counter % 4 == 0:
-                warriorWhiteRect1.centerx = rectWarriorWhite2_1Ability.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite2_1Ability.centery
-                counter += 1
-            elif warriorWhiteRect1.colliderect(rectWarriorWhite3_1Ability) and counter % 4 == 0:
-                warriorWhiteRect1.centerx = rectWarriorWhite3_1Ability.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite3_1Ability.centery
-                counter += 1
-            elif warriorWhiteRect1.colliderect(rectWarriorWhite4_1Ability) and counter % 4 == 0:
-                warriorWhiteRect1.centerx = rectWarriorWhite4_1Ability.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite4_1Ability.centery
-                counter += 1
-            elif warriorWhiteRect1.colliderect(rectWarriorWhite1_1):
-                warriorWhiteRect1.centerx = rectWarriorWhite1_1.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite1_1.centery
-                counter += 1
-            elif warriorWhiteRect1.colliderect(rectWarriorWhite2_1):
-                warriorWhiteRect1.centerx = rectWarriorWhite2_1.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite2_1.centery
-                counter += 1
-            elif warriorWhiteRect1.colliderect(rectWarriorWhite3_1):
-                warriorWhiteRect1.centerx = rectWarriorWhite3_1.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite3_1.centery
-                counter += 1
-            elif warriorWhiteRect1.colliderect(rectWarriorWhite4_1):
-                warriorWhiteRect1.centerx = rectWarriorWhite4_1.centerx
-                warriorWhiteRect1.centery = rectWarriorWhite4_1.centery
-                counter += 1
-            else:
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-            if (warriorWhiteRect1.right > 1440 or warriorWhiteRect1.left < 475) or (
-                    warriorWhiteRect1.bottom > 1020 or warriorWhiteRect1.top < 60):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-            if warriorWhiteRect1.colliderect(plagueDoctorWhiteRect):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(archbishopWhiteRect):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(cardinalWhiteRect):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(hadesWhiteRect):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(cardinalWhiteRect1):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(persephoneWhiteRect):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(archbishopWhiteRect1):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(plagueDoctorWhiteRect1):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(warriorWhiteRect):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(legionaryWhiteRect):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(legionaryWhiteRect1):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(warriorWhiteRect2):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(legionaryWhiteRect2):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(warriorWhiteRect3):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
-            elif warriorWhiteRect1.colliderect(legionaryWhiteRect3):
-                warriorWhiteRect1.centerx = warriorWhitexInit1
-                warriorWhiteRect1.centery = warriorWhiteyInit1
-                counter -= 1
+     
 
             if legionaryWhiteRect1.colliderect(rectLegionaryWhite1_1):
                 rectLegionaryWhitex1_1 = legionaryWhitexInit1
