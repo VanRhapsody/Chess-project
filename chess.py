@@ -280,1537 +280,7 @@ pygame.mixer.music.set_endevent(music_end)
 
 step = 120
 
-# Morový doktor bílý
-rectsPlagueDoctorWhite = []
 
-rectPlagueWhitex1 = plagueDoctorWhiteRect.centerx + step
-rectPlagueWhitey1 = plagueDoctorWhiteRect.centery
-rectPlagueWhite1 = pygame.Rect(rectPlagueWhitex1 - 30, rectPlagueWhitey1 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite1)
-
-rectPlagueWhitex2 = plagueDoctorWhiteRect.centerx + step * 2
-rectPlagueWhitey2 = plagueDoctorWhiteRect.centery
-rectPlagueWhite2 = pygame.Rect(rectPlagueWhitex2 - 30, rectPlagueWhitey2 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite2)
-
-rectPlagueWhitex3 = plagueDoctorWhiteRect.centerx - step
-rectPlagueWhitey3 = plagueDoctorWhiteRect.centery
-rectPlagueWhite3 = pygame.Rect(rectPlagueWhitex3 - 30, rectPlagueWhitey3 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite3)
-
-rectPlagueWhitex4 = plagueDoctorWhiteRect.centerx - 2 * step
-rectPlagueWhitey4 = plagueDoctorWhiteRect.centery
-rectPlagueWhite4 = pygame.Rect(rectPlagueWhitex4 - 30, rectPlagueWhitey4 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite4)
-
-rectPlagueWhitex5 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey5 = plagueDoctorWhiteRect.centery + step
-rectPlagueWhite5 = pygame.Rect(rectPlagueWhitex5 - 30, rectPlagueWhitey5 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite5)
-
-rectPlagueWhitex6 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey6 = plagueDoctorWhiteRect.centery + step * 2
-rectPlagueWhite6 = pygame.Rect(rectPlagueWhitex6 - 30, rectPlagueWhitey6 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite6)
-
-rectPlagueWhitex7 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey7 = plagueDoctorWhiteRect.centery + step * 3
-rectPlagueWhite7 = pygame.Rect(rectPlagueWhitex7 - 30, rectPlagueWhitey7 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite7)
-
-rectPlagueWhitex8 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey8 = plagueDoctorWhiteRect.centery + step * 4
-rectPlagueWhite8 = pygame.Rect(rectPlagueWhitex8 - 30, rectPlagueWhitey8 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite8)
-
-rectPlagueWhitex9 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey9 = plagueDoctorWhiteRect.centery + step * 5
-rectPlagueWhite9 = pygame.Rect(rectPlagueWhitex9 - 30, rectPlagueWhitey9 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite9)
-
-rectPlagueWhitex10 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey10 = plagueDoctorWhiteRect.centery + step * 6
-rectPlagueWhite10 = pygame.Rect(rectPlagueWhitex10 - 30, rectPlagueWhitey10 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite10)
-
-rectPlagueWhitex11 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey11 = plagueDoctorWhiteRect.centery + step * 7
-rectPlagueWhite11 = pygame.Rect(rectPlagueWhitex11 - 30, rectPlagueWhitey11 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite11)
-
-rectPlagueWhitex12 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey12 = plagueDoctorWhiteRect.centery - step
-rectPlagueWhite12 = pygame.Rect(rectPlagueWhitex12 - 30, rectPlagueWhitey12 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite12)
-
-rectPlagueWhitex13 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey13 = plagueDoctorWhiteRect.centery - step * 2
-rectPlagueWhite13 = pygame.Rect(rectPlagueWhitex13 - 30, rectPlagueWhitey13 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite13)
-
-rectPlagueWhitex14 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey14 = plagueDoctorWhiteRect.centery - step * 3
-rectPlagueWhite14 = pygame.Rect(rectPlagueWhitex14 - 30, rectPlagueWhitey14 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite14)
-
-rectPlagueWhitex15 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey15 = plagueDoctorWhiteRect.centery - step * 4
-rectPlagueWhite15 = pygame.Rect(rectPlagueWhitex15 - 30, rectPlagueWhitey15 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite15)
-
-rectPlagueWhitex16 = plagueDoctorWhiteRect.centerx
-rectPlagueyWhite16 = plagueDoctorWhiteRect.centery - step * 5
-rectPlagueWhite16 = pygame.Rect(rectPlagueWhitex16 - 30, rectPlagueyWhite16 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite16)
-
-rectPlagueWhitex17 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey17 = plagueDoctorWhiteRect.centery - step * 6
-rectPlagueWhite17 = pygame.Rect(rectPlagueWhitex17 - 30, rectPlagueWhitey17 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite17)
-
-rectPlagueWhitex18 = plagueDoctorWhiteRect.centerx
-rectPlagueWhitey18 = plagueDoctorWhiteRect.centery - step * 7
-rectPlagueWhite18 = pygame.Rect(rectPlagueWhitex18 - 30, rectPlagueWhitey18 - 30, 60, 60)
-rectsPlagueDoctorWhite.append(rectPlagueWhite18)
-
-# Arcibiskup bílý
-rectsArchbishopWhite = []
-
-rectArchbishopWhitex1 = archbishopWhiteRect.centerx + step * 2
-rectArchbishopWhitey1 = archbishopWhiteRect.centery
-rectArchbishopWhite1 = pygame.Rect(rectArchbishopWhitex1 - 30, rectArchbishopWhitey1 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite1)
-
-rectArchbishopWhitex2 = archbishopWhiteRect.centerx + step * 2
-rectArchbishopWhitey2 = archbishopWhiteRect.centery + step
-rectArchbishopWhite2 = pygame.Rect(rectArchbishopWhitex2 - 30, rectArchbishopWhitey2 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite2)
-
-rectArchbishopWhitex3 = archbishopWhiteRect.centerx + step * 2
-rectArchbishopWhitey3 = archbishopWhiteRect.centery - step
-rectArchbishopWhite3 = pygame.Rect(rectArchbishopWhitex3 - 30, rectArchbishopWhitey3 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite3)
-
-rectArchbishopWhitex4 = archbishopWhiteRect.centerx - step * 2
-rectArchbishopWhitey4 = archbishopWhiteRect.centery
-rectArchbishopWhite4 = pygame.Rect(rectArchbishopWhitex4 - 30, rectArchbishopWhitey4 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite4)
-
-rectArchbishopWhitex5 = archbishopWhiteRect.centerx - step * 2
-rectArchbishopWhitey5 = archbishopWhiteRect.centery + step
-rectArchbishopWhite5 = pygame.Rect(rectArchbishopWhitex5 - 30, rectArchbishopWhitey5 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite5)
-
-rectArchbishopWhitex6 = archbishopWhiteRect.centerx - step * 2
-rectArchbishopWhitey6 = archbishopWhiteRect.centery - step
-rectArchbishopWhite6 = pygame.Rect(rectArchbishopWhitex6 - 30, rectArchbishopWhitey6 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite6)
-
-rectArchbishopWhitex7 = archbishopWhiteRect.centerx
-rectArchbishopWhitey7 = archbishopWhiteRect.centery + step * 2
-rectArchbishopWhite7 = pygame.Rect(rectArchbishopWhitex7 - 30, rectArchbishopWhitey7 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite7)
-
-rectArchbishopWhitex8 = archbishopWhiteRect.centerx + step
-rectArchbishopWhitey8 = archbishopWhiteRect.centery + step * 2
-rectArchbishopWhite8 = pygame.Rect(rectArchbishopWhitex8 - 30, rectArchbishopWhitey8 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite8)
-
-rectArchbishopWhitex9 = archbishopWhiteRect.centerx - step
-rectArchbishopWhitey9 = archbishopWhiteRect.centery + step * 2
-rectArchbishopWhite9 = pygame.Rect(rectArchbishopWhitex9 - 30, rectArchbishopWhitey9 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite9)
-
-rectArchbishopWhitex10 = archbishopWhiteRect.centerx
-rectArchbishopWhitey10 = archbishopWhiteRect.centery - step * 2
-rectArchbishopWhite10 = pygame.Rect(rectArchbishopWhitex10 - 30, rectArchbishopWhitey10 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite10)
-
-rectArchbishopWhitex11 = archbishopWhiteRect.centerx + step
-rectArchbishopWhitey11 = archbishopWhiteRect.centery - step * 2
-rectArchbishopWhite11 = pygame.Rect(rectArchbishopWhitex11 - 30, rectArchbishopWhitey11 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite11)
-
-rectArchbishopWhitex12 = archbishopWhiteRect.centerx - step
-rectArchbishopWhitey12 = archbishopWhiteRect.centery - step * 2
-rectArchbishopWhite12 = pygame.Rect(rectArchbishopWhitex12 - 30, rectArchbishopWhitey12 - 30, 60, 60)
-rectsArchbishopWhite.append(rectArchbishopWhite12)
-
-# Kardinál bílý
-rectsCardinalWhite = []
-
-rectCardinalWhitex1 = cardinalWhiteRect.centerx + step
-rectCardinalWhitey1 = cardinalWhiteRect.centery - step
-rectCardinalWhite1 = pygame.Rect(rectCardinalWhitex1 - 30, rectCardinalWhitey1 - 30, 60, 60)
-rectsCardinalWhite.append(rectCardinalWhite1)
-
-rectCardinalWhitex2 = cardinalWhiteRect.centerx - step
-rectCardinalWhitey2 = cardinalWhiteRect.centery - step
-rectCardinalWhite2 = pygame.Rect(rectCardinalWhitex2 - 30, rectCardinalWhitey2 - 30, 60, 60)
-rectsCardinalWhite.append(rectCardinalWhite2)
-
-rectCardinalWhitex3 = cardinalWhiteRect.centerx + step
-rectCardinalWhitey3 = cardinalWhiteRect.centery + step
-rectCardinalWhite3 = pygame.Rect(rectCardinalWhitex3 - 30, rectCardinalWhitey3 - 30, 60, 60)
-rectsCardinalWhite.append(rectCardinalWhite3)
-
-rectCardinalWhitex4 = cardinalWhiteRect.centerx - step
-rectCardinalWhitey4 = cardinalWhiteRect.centery + step
-rectCardinalWhite4 = pygame.Rect(rectCardinalWhitex4 - 30, rectCardinalWhitey4 - 30, 60, 60)
-rectsCardinalWhite.append(rectCardinalWhite4)
-
-# Hádes bílý
-rectsHadesWhite = []
-
-rectHadesWhitex1 = hadesWhiteRect.centerx
-rectHadesWhitey1 = hadesWhiteRect.centery - step
-rectHadesWhite1 = pygame.Rect(rectHadesWhitex1 - 30, rectHadesWhitey1 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite1)
-
-rectHadesWhitex2 = hadesWhiteRect.centerx
-rectHadesWhitey2 = hadesWhiteRect.centery - step * 2
-rectHadesWhite2 = pygame.Rect(rectHadesWhitex2 - 30, rectHadesWhitey2 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite2)
-
-rectHadesWhitex3 = hadesWhiteRect.centerx
-rectHadesWhitey3 = hadesWhiteRect.centery - step * 3
-rectHadesWhite3 = pygame.Rect(rectHadesWhitex3 - 30, rectHadesWhitey3 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite3)
-
-rectHadesWhitex4 = hadesWhiteRect.centerx + step
-rectHadesWhitey4 = hadesWhiteRect.centery - step
-rectHadesWhite4 = pygame.Rect(rectHadesWhitex4 - 30, rectHadesWhitey4 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite4)
-
-rectHadesWhitex5 = hadesWhiteRect.centerx + step * 2
-rectHadesWhitey5 = hadesWhiteRect.centery - step * 2
-rectHadesWhite5 = pygame.Rect(rectHadesWhitex5 - 30, rectHadesWhitey5 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite5)
-
-rectHadesWhitex6 = hadesWhiteRect.centerx + step * 3
-rectHadesWhitey6 = hadesWhiteRect.centery - step * 3
-rectHadesWhite6 = pygame.Rect(rectHadesWhitex6 - 30, rectHadesWhitey6 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite6)
-
-rectHadesWhitex7 = hadesWhiteRect.centerx + step
-rectHadesWhitey7 = hadesWhiteRect.centery
-rectHadesWhite7 = pygame.Rect(rectHadesWhitex7 - 30, rectHadesWhitey7 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite7)
-
-rectHadesWhitex8 = hadesWhiteRect.centerx + step * 2
-rectHadesWhitey8 = hadesWhiteRect.centery
-rectHadesWhite8 = pygame.Rect(rectHadesWhitex8 - 30, rectHadesWhitey8 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite8)
-
-rectHadesWhitex9 = hadesWhiteRect.centerx + step * 3
-rectHadesWhitey9 = hadesWhiteRect.centery
-rectHadesWhite9 = pygame.Rect(rectHadesWhitex9 - 30, rectHadesWhitey9 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite9)
-
-rectHadesWhitex10 = hadesWhiteRect.centerx + step
-rectHadesWhitey10 = hadesWhiteRect.centery + step
-rectHadesWhite10 = pygame.Rect(rectHadesWhitex10 - 30, rectHadesWhitey10 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite10)
-
-rectHadesWhitex11 = hadesWhiteRect.centerx + step * 2
-rectHadesWhitey11 = hadesWhiteRect.centery + step * 2
-rectHadesWhite11 = pygame.Rect(rectHadesWhitex11 - 30, rectHadesWhitey11 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite11)
-
-rectHadesWhitex12 = hadesWhiteRect.centerx - step
-rectHadesWhitey12 = hadesWhiteRect.centery - step
-rectHadesWhite12 = pygame.Rect(rectHadesWhitex12 - 30, rectHadesWhitey12 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite12)
-
-rectHadesWhitex13 = hadesWhiteRect.centerx - step * 2
-rectHadesWhitey13 = hadesWhiteRect.centery - step * 2
-rectHadesWhite13 = pygame.Rect(rectHadesWhitex13 - 30, rectHadesWhitey13 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite13)
-
-rectHadesWhitex14 = hadesWhiteRect.centerx - step * 3
-rectHadesWhitey14 = hadesWhiteRect.centery - step * 3
-rectHadesWhite14 = pygame.Rect(rectHadesWhitex14 - 30, rectHadesWhitey14 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite14)
-
-rectHadesWhitex15 = hadesWhiteRect.centerx - step
-rectHadesWhitey15 = hadesWhiteRect.centery
-rectHadesWhite15 = pygame.Rect(rectHadesWhitex15 - 30, rectHadesWhitey15 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite15)
-
-rectHadesWhitex16 = hadesWhiteRect.centerx - step * 2
-rectHadesWhitey16 = hadesWhiteRect.centery
-rectHadesWhite16 = pygame.Rect(rectHadesWhitex16 - 30, rectHadesWhitey16 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite16)
-
-rectHadesWhitex17 = hadesWhiteRect.centerx - step * 3
-rectHadesWhitey17 = hadesWhiteRect.centery
-rectHadesWhite17 = pygame.Rect(rectHadesWhitex17 - 30, rectHadesWhitey17 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite17)
-
-rectHadesWhitex18 = hadesWhiteRect.centerx - step
-rectHadesWhitey18 = hadesWhiteRect.centery + step
-rectHadesWhite18 = pygame.Rect(rectHadesWhitex18 - 30, rectHadesWhitey18 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite18)
-
-rectHadesWhitex19 = hadesWhiteRect.centerx - step * 2
-rectHadesWhitey19 = hadesWhiteRect.centery + step * 2
-rectHadesWhite19 = pygame.Rect(rectHadesWhitex19 - 30, rectHadesWhitey19 - 30, 60, 60)
-rectsHadesWhite.append(rectHadesWhite19)
-
-# Persefona bílá
-rectsPersephoneWhite = []
-
-rectPersephoneWhitex1 = persephoneWhiteRect.centerx + step
-rectPersephoneWhitey1 = persephoneWhiteRect.centery
-rectPersephoneWhite1 = pygame.Rect(rectPersephoneWhitex1 - 30, rectPersephoneWhitey1 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite1)
-
-rectPersephoneWhitex2 = persephoneWhiteRect.centerx + step
-rectPersephoneWhitey2 = persephoneWhiteRect.centery - step
-rectPersephoneWhite2 = pygame.Rect(rectPersephoneWhitex2 - 30, rectPersephoneWhitey2 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite2)
-
-rectPersephoneWhitex3 = persephoneWhiteRect.centerx
-rectPersephoneWhitey3 = persephoneWhiteRect.centery - step
-rectPersephoneWhite3 = pygame.Rect(rectPersephoneWhitex3 - 30, rectPersephoneWhitey3 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite3)
-
-rectPersephoneWhitex4 = persephoneWhiteRect.centerx - step
-rectPersephoneWhitey4 = persephoneWhiteRect.centery - step
-rectPersephoneWhite4 = pygame.Rect(rectPersephoneWhitex4 - 30, rectPersephoneWhitey4 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite4)
-
-rectPersephoneWhitex5 = persephoneWhiteRect.centerx - step
-rectPersephoneWhitey5 = persephoneWhiteRect.centery
-rectPersephoneWhite5 = pygame.Rect(rectPersephoneWhitex5 - 30, rectPersephoneWhitey5 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite5)
-
-rectPersephoneWhitex6 = persephoneWhiteRect.centerx - step
-rectPersephoneWhitey6 = persephoneWhiteRect.centery + step
-rectPersephoneWhite6 = pygame.Rect(rectPersephoneWhitex6 - 30, rectPersephoneWhitey6 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite6)
-
-rectPersephoneWhitex7 = persephoneWhiteRect.centerx
-rectPersephoneWhitey7 = persephoneWhiteRect.centery + step
-rectPersephoneWhite7 = pygame.Rect(rectPersephoneWhitex7 - 30, rectPersephoneWhitey7 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite7)
-
-rectPersephoneWhitex8 = persephoneWhiteRect.centerx
-rectPersephoneWhitey8 = persephoneWhiteRect.centery + step
-rectPersephoneWhite8 = pygame.Rect(rectPersephoneWhitex8 - 30, rectPersephoneWhitey8 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite8)
-
-rectPersephoneWhitex9 = persephoneWhiteRect.centerx + step
-rectPersephoneWhitey9 = persephoneWhiteRect.centery + step
-rectPersephoneWhite9 = pygame.Rect(rectPersephoneWhitex9 - 30, rectPersephoneWhitey9 - 30, 60, 60)
-rectsPersephoneWhite.append(rectPersephoneWhite9)
-
-# Kardinál bílý 1
-rectsCardinalWhite_1 = []
-
-rectCardinalWhitex1_1 = cardinalWhiteRect1.centerx + step
-rectCardinalWhitey1_1 = cardinalWhiteRect1.centery - step
-rectCardinalWhite1_1 = pygame.Rect(rectCardinalWhitex1_1 - 30, rectCardinalWhitey1_1 - 30, 60, 60)
-rectsCardinalWhite_1.append(rectCardinalWhite1_1)
-
-rectCardinalWhitex2_1 = cardinalWhiteRect1.centerx + step
-rectCardinalWhitey2_1 = cardinalWhiteRect1.centery + step
-rectCardinalWhite2_1 = pygame.Rect(rectCardinalWhitex2_1 - 30, rectCardinalWhitey2_1 - 30, 60, 60)
-rectsCardinalWhite_1.append(rectCardinalWhite2_1)
-
-rectCardinalWhitex3_1 = cardinalWhiteRect1.centerx - step
-rectCardinalWhitey3_1 = cardinalWhiteRect1.centery - step
-rectCardinalWhite3_1 = pygame.Rect(rectCardinalWhitex3_1 - 30, rectCardinalWhitey3_1 - 30, 60, 60)
-rectsCardinalWhite_1.append(rectCardinalWhite3_1)
-
-rectCardinalWhitex4_1 = cardinalWhiteRect1.centerx - step
-rectCardinalWhitey4_1 = cardinalWhiteRect1.centery + step
-rectCardinalWhite4_1 = pygame.Rect(rectCardinalWhitex4_1 - 30, rectCardinalWhitey3_1 - 30, 60, 60)
-rectsCardinalWhite_1.append(rectCardinalWhite4_1)
-
-# Arcibiskup bílý 1
-rectsArchbishopWhite_1 = []
-
-rectArchbishopWhitex1_1 = archbishopWhiteRect1.centerx + step * 2
-rectArchbishopWhitey1_1 = archbishopWhiteRect1.centery
-rectArchbishopWhite1_1 = pygame.Rect(rectArchbishopWhitex1_1 - 30, rectArchbishopWhitey1_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite1_1)
-
-rectArchbishopWhitex2_1 = archbishopWhiteRect1.centerx + step * 2
-rectArchbishopWhitey2_1 = archbishopWhiteRect1.centery - step
-rectArchbishopWhite2_1 = pygame.Rect(rectArchbishopWhitex2_1 - 30, rectArchbishopWhitey2_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite2_1)
-
-rectArchbishopWhitex3_1 = archbishopWhiteRect1.centerx + step * 2
-rectArchbishopWhitey3_1 = archbishopWhiteRect1.centery + step
-rectArchbishopWhite3_1 = pygame.Rect(rectArchbishopWhitex3_1 - 30, rectArchbishopWhitey3_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite3_1)
-
-rectArchbishopWhitex4_1 = archbishopWhiteRect1.centerx
-rectArchbishopWhitey4_1 = archbishopWhiteRect1.centery + step * 2
-rectArchbishopWhite4_1 = pygame.Rect(rectArchbishopWhitex4_1 - 30, rectArchbishopWhitey4_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite4_1)
-
-rectArchbishopWhitex5_1 = archbishopWhiteRect1.centerx + step
-rectArchbishopWhitey5_1 = archbishopWhiteRect1.centery + step * 2
-rectArchbishopWhite5_1 = pygame.Rect(rectArchbishopWhitex5_1 - 30, rectArchbishopWhitey5_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite5_1)
-
-rectArchbishopWhitex6_1 = archbishopWhiteRect1.centerx - step
-rectArchbishopWhitey6_1 = archbishopWhiteRect1.centery + step * 2
-rectArchbishopWhite6_1 = pygame.Rect(rectArchbishopWhitex6_1 - 30, rectArchbishopWhitey6_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite6_1)
-
-rectArchbishopWhitex7_1 = archbishopWhiteRect1.centerx - step * 2
-rectArchbishopWhitey7_1 = archbishopWhiteRect1.centery
-rectArchbishopWhite7_1 = pygame.Rect(rectArchbishopWhitex7_1 - 30, rectArchbishopWhitey7_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite7_1)
-
-rectArchbishopWhitex8_1 = archbishopWhiteRect1.centerx - step * 2
-rectArchbishopWhitey8_1 = archbishopWhiteRect1.centery - step
-rectArchbishopWhite8_1 = pygame.Rect(rectArchbishopWhitex8_1 - 30, rectArchbishopWhitey8_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite8_1)
-
-rectArchbishopWhitex9_1 = archbishopWhiteRect1.centerx - step * 2
-rectArchbishopWhitey9_1 = archbishopWhiteRect1.centery + step
-rectArchbishopWhite9_1 = pygame.Rect(rectArchbishopWhitex9_1 - 30, rectArchbishopWhitey9_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite9_1)
-
-rectArchbishopWhitex10_1 = archbishopWhiteRect1.centerx
-rectArchbishopWhitey10_1 = archbishopWhiteRect1.centery - step * 2
-rectArchbishopWhite10_1 = pygame.Rect(rectArchbishopWhitex10_1 - 30, rectArchbishopWhitey10_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite10_1)
-
-rectArchbishopWhitex11_1 = archbishopWhiteRect1.centerx + step
-rectArchbishopWhitey11_1 = archbishopWhiteRect1.centery - step * 2
-rectArchbishopWhite11_1 = pygame.Rect(rectArchbishopWhitex11_1 - 30, rectArchbishopWhitey11_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite11_1)
-
-rectArchbishopWhitex12_1 = archbishopWhiteRect1.centerx - step
-rectArchbishopWhitey12_1 = archbishopWhiteRect1.centery - step * 2
-rectArchbishopWhite12_1 = pygame.Rect(rectArchbishopWhitex12_1 - 30, rectArchbishopWhitey12_1 - 30, 60, 60)
-rectsArchbishopWhite_1.append(rectArchbishopWhite12_1)
-
-# Morový doktor bílý 1
-rectsPlagueDoctorWhite_1 = []
-
-rectPlagueWhitex1_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey1_1 = plagueDoctorWhiteRect1.centery + step
-rectPlagueWhite1_1 = pygame.Rect(rectPlagueWhitex1_1 - 30, rectPlagueWhitey1_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite1_1)
-
-rectPlagueWhitex2_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey2_1 = plagueDoctorWhiteRect1.centery + step * 2
-rectPlagueWhite2_1 = pygame.Rect(rectPlagueWhitex2_1 - 30, rectPlagueWhitey2_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite2_1)
-
-rectPlagueWhitex3_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey3_1 = plagueDoctorWhiteRect1.centery + step * 3
-rectPlagueWhite3_1 = pygame.Rect(rectPlagueWhitex3_1 - 30, rectPlagueWhitey3_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite3_1)
-
-rectPlagueWhitex4_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey4_1 = plagueDoctorWhiteRect1.centery + step * 4
-rectPlagueWhite4_1 = pygame.Rect(rectPlagueWhitex4_1 - 30, rectPlagueWhitey4_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite4_1)
-
-rectPlagueWhitex5_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey5_1 = plagueDoctorWhiteRect1.centery + step * 5
-rectPlagueWhite5_1 = pygame.Rect(rectPlagueWhitex5_1 - 30, rectPlagueWhitey5_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite5_1)
-
-rectPlagueWhitex6_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey6_1 = plagueDoctorWhiteRect1.centery + step * 6
-rectPlagueWhite6_1 = pygame.Rect(rectPlagueWhitex6_1 - 30, rectPlagueWhitey6_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite6_1)
-
-rectPlagueWhitex7_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey7_1 = plagueDoctorWhiteRect1.centery + step * 7
-rectPlagueWhite7_1 = pygame.Rect(rectPlagueWhitex7_1 - 30, rectPlagueWhitey7_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite7_1)
-
-rectPlagueWhitex8_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey8_1 = plagueDoctorWhiteRect1.centery - step
-rectPlagueWhite8_1 = pygame.Rect(rectPlagueWhitex8_1 - 30, rectPlagueWhitey8_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite8_1)
-
-rectPlagueWhitex9_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey9_1 = plagueDoctorWhiteRect1.centery - step * 2
-rectPlagueWhite9_1 = pygame.Rect(rectPlagueWhitex9_1 - 30, rectPlagueWhitey9_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite9_1)
-
-rectPlagueWhitex10_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey10_1 = plagueDoctorWhiteRect1.centery - step * 3
-rectPlagueWhite10_1 = pygame.Rect(rectPlagueWhitex10_1 - 30, rectPlagueWhitey10_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite10_1)
-
-rectPlagueWhitex11_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey11_1 = plagueDoctorWhiteRect1.centery - step * 4
-rectPlagueWhite11_1 = pygame.Rect(rectPlagueWhitex11_1 - 30, rectPlagueWhitey11_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite11_1)
-
-rectPlagueWhitex12_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey12_1 = plagueDoctorWhiteRect1.centery - step * 5
-rectPlagueWhite12_1 = pygame.Rect(rectPlagueWhitex12_1 - 30, rectPlagueWhitey12_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite12_1)
-
-rectPlagueWhitex13_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey13_1 = plagueDoctorWhiteRect1.centery - step * 6
-rectPlagueWhite13_1 = pygame.Rect(rectPlagueWhitex13_1 - 30, rectPlagueWhitey13_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite13_1)
-
-rectPlagueWhitex14_1 = plagueDoctorWhiteRect1.centerx
-rectPlagueWhitey14_1 = plagueDoctorWhiteRect1.centery - step * 7
-rectPlagueWhite14_1 = pygame.Rect(rectPlagueWhitex14_1 - 30, rectPlagueWhitey14_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite14_1)
-
-rectPlagueWhitex15_1 = plagueDoctorWhiteRect1.centerx + step
-rectPlagueWhitey15_1 = plagueDoctorWhiteRect1.centery
-rectPlagueWhite15_1 = pygame.Rect(rectPlagueWhitex15_1 - 30, rectPlagueWhitey15_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite15_1)
-
-rectPlagueWhitex16_1 = plagueDoctorWhiteRect1.centerx + step * 2
-rectPlagueWhitey16_1 = plagueDoctorWhiteRect1.centery
-rectPlagueWhite16_1 = pygame.Rect(rectPlagueWhitex16_1 - 30, rectPlagueWhitey16_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite16_1)
-
-rectPlagueWhitex17_1 = plagueDoctorWhiteRect1.centerx - step
-rectPlagueWhitey17_1 = plagueDoctorWhiteRect1.centery
-rectPlagueWhite17_1 = pygame.Rect(rectPlagueWhitex17_1 - 30, rectPlagueWhitey17_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite17_1)
-
-rectPlagueWhitex18_1 = plagueDoctorWhiteRect1.centerx - step * 2
-rectPlagueWhitey18_1 = plagueDoctorWhiteRect1.centery
-rectPlagueWhite18_1 = pygame.Rect(rectPlagueWhitex18_1 - 30, rectPlagueWhitey18_1 - 30, 60, 60)
-rectsPlagueDoctorWhite_1.append(rectPlagueWhite18_1)
-
-# Válečník bílý 1
-rectsWarriorWhite = []
-
-rectWarriorWhitex1 = warriorWhiteRect.centerx + step
-rectWarriorWhitey1 = warriorWhiteRect.centery
-rectWarriorWhite1 = pygame.Rect(rectWarriorWhitex1 - 30, rectWarriorWhitey1 - 30, 60, 60)
-rectsWarriorWhite.append(rectWarriorWhite1)
-
-rectWarriorWhitex2 = warriorWhiteRect.centerx - step
-rectWarriorWhitey2 = warriorWhiteRect.centery
-rectWarriorWhite2 = pygame.Rect(rectWarriorWhitex2 - 30, rectWarriorWhitey2 - 30, 60, 60)
-rectsWarriorWhite.append(rectWarriorWhite2)
-
-rectWarriorWhitex3 = warriorWhiteRect.centerx
-rectWarriorWhitey3 = warriorWhiteRect.centery + step
-rectWarriorWhite3 = pygame.Rect(rectWarriorWhitex3 - 30, rectWarriorWhitey3 - 30, 60, 60)
-rectsWarriorWhite.append(rectWarriorWhite3)
-
-rectWarriorWhitex4 = warriorWhiteRect.centerx
-rectWarriorWhitey4 = warriorWhiteRect.centery - step
-rectWarriorWhite4 = pygame.Rect(rectWarriorWhitex4 - 30, rectWarriorWhitey4 - 30, 60, 60)
-rectsWarriorWhite.append(rectWarriorWhite4)
-
-# Válečník bílý 1 abilita
-rectsWarriorWhiteAbility = []
-
-rectWarriorWhitex1Ability = warriorWhiteRect.centerx + step * 2
-rectWarriorWhitey1Ability = warriorWhiteRect.centery
-rectWarriorWhite1Ability = pygame.Rect(rectWarriorWhitex1Ability - 30, rectWarriorWhitey1Ability - 30, 60, 60)
-rectsWarriorWhiteAbility.append(rectWarriorWhite1Ability)
-
-rectWarriorWhitex2Ability = warriorWhiteRect.centerx - step * 2
-rectWarriorWhitey2Ability = warriorWhiteRect.centery
-rectWarriorWhite2Ability = pygame.Rect(rectWarriorWhitex2Ability - 30, rectWarriorWhitey2Ability - 30, 60, 60)
-rectsWarriorWhiteAbility.append(rectWarriorWhite2Ability)
-
-rectWarriorWhitex3Ability = warriorWhiteRect.centerx
-rectWarriorWhitey3Ability = warriorWhiteRect.centery - step * 2
-rectWarriorWhite3Ability = pygame.Rect(rectWarriorWhitex3Ability - 30, rectWarriorWhitey3Ability - 30, 60, 60)
-rectsWarriorWhiteAbility.append(rectWarriorWhite3Ability)
-
-rectWarriorWhitex4Ability = warriorWhiteRect.centerx
-rectWarriorWhitey4Ability = warriorWhiteRect.centery + step * 2
-rectWarriorWhite4Ability = pygame.Rect(rectWarriorWhitex4Ability - 30, rectWarriorWhitey4Ability - 30, 60, 60)
-rectsWarriorWhiteAbility.append(rectWarriorWhite4Ability)
-
-# Legionář bílý 1
-rectsLegionaryWhite = []
-
-rectLegionaryWhitex1 = legionaryWhiteRect.centerx + step
-rectLegionaryWhitey1 = legionaryWhiteRect.centery + step
-rectLegionaryWhite1 = pygame.Rect(rectLegionaryWhitex1 - 30, rectLegionaryWhitey1 - 30, 60, 60)
-rectsLegionaryWhite.append(rectLegionaryWhite1)
-
-rectLegionaryWhitex2 = legionaryWhiteRect.centerx
-rectLegionaryWhitey2 = legionaryWhiteRect.centery + step
-rectLegionaryWhite2 = pygame.Rect(rectLegionaryWhitex2 - 30, rectLegionaryWhitey2 - 30, 60, 60)
-rectsLegionaryWhite.append(rectLegionaryWhite2)
-
-rectLegionaryWhitex3 = legionaryWhiteRect.centerx - step
-rectLegionaryWhitey3 = legionaryWhiteRect.centery + step
-rectLegionaryWhite3 = pygame.Rect(rectLegionaryWhitex3 - 30, rectLegionaryWhitey3 - 30, 60, 60)
-rectsLegionaryWhite.append(rectLegionaryWhite3)
-
-# Válečník bílý 2
-rectsWarriorWhite_1 = []
-
-rectWarriorWhitex1_1 = warriorWhiteRect1.centerx + step
-rectWarriorWhitey1_1 = warriorWhiteRect1.centery
-rectWarriorWhite1_1 = pygame.Rect(rectWarriorWhitex1_1 - 30, rectWarriorWhitey1_1 - 30, 60, 60)
-rectsWarriorWhite_1.append(rectWarriorWhite1_1)
-
-rectWarriorWhitex2_1 = warriorWhiteRect1.centerx - step
-rectWarriorWhitey2_1 = warriorWhiteRect1.centery
-rectWarriorWhite2_1 = pygame.Rect(rectWarriorWhitex2_1 - 30, rectWarriorWhitey2_1 - 30, 60, 60)
-rectsWarriorWhite_1.append(rectWarriorWhite2_1)
-
-rectWarriorWhitex3_1 = warriorWhiteRect1.centerx
-rectWarriorWhitey3_1 = warriorWhiteRect1.centery + step
-rectWarriorWhite3_1 = pygame.Rect(rectWarriorWhitex3_1 - 30, rectWarriorWhitey3_1 - 30, 60, 60)
-rectsWarriorWhite_1.append(rectWarriorWhite3_1)
-
-rectWarriorWhitex4_1 = warriorWhiteRect1.centerx
-rectWarriorWhitey4_1 = warriorWhiteRect1.centery - step
-rectWarriorWhite4_1 = pygame.Rect(rectWarriorWhitex4_1 - 30, rectWarriorWhitey4_1 - 30, 60, 60)
-rectsWarriorWhite_1.append(rectWarriorWhite4_1)
-
-# Válečník bílý 2 abilita
-rectsWarriorWhiteAbility_1 = []
-
-rectWarriorWhitex1_1Ability = warriorWhiteRect1.centerx + step * 2
-rectWarriorWhitey1_1Ability = warriorWhiteRect1.centery
-rectWarriorWhite1_1Ability = pygame.Rect(rectWarriorWhitex1_1Ability - 30, rectWarriorWhitey1_1Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_1.append(rectWarriorWhite1_1Ability)
-
-rectWarriorWhitex2_1Ability = warriorWhiteRect1.centerx - step * 2
-rectWarriorWhitey2_1Ability = warriorWhiteRect1.centery
-rectWarriorWhite2_1Ability = pygame.Rect(rectWarriorWhitex2_1Ability - 30, rectWarriorWhitey2_1Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_1.append(rectWarriorWhite2_1Ability)
-
-rectWarriorWhitex3_1Ability = warriorWhiteRect1.centerx
-rectWarriorWhitey3_1Ability = warriorWhiteRect1.centery - step * 2
-rectWarriorWhite3_1Ability = pygame.Rect(rectWarriorWhitex3_1Ability - 30, rectWarriorWhitey3_1Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_1.append(rectWarriorWhite3_1Ability)
-
-rectWarriorWhitex4_1Ability = warriorWhiteRect1.centerx
-rectWarriorWhitey4_1Ability = warriorWhiteRect1.centery + step * 2
-rectWarriorWhite4_1Ability = pygame.Rect(rectWarriorWhitex4_1Ability - 30, rectWarriorWhitey4_1Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_1.append(rectWarriorWhite4_1Ability)
-
-# Legionář bílý 2
-rectsLegionaryWhite_1 = []
-
-rectLegionaryWhitex1_1 = legionaryWhiteRect1.centerx + step
-rectLegionaryWhitey1_1 = legionaryWhiteRect1.centery + step
-rectLegionaryWhite1_1 = pygame.Rect(rectLegionaryWhitex1_1 - 30, rectLegionaryWhitey1_1 - 30, 60, 60)
-rectsLegionaryWhite_1.append(rectLegionaryWhite1_1)
-
-rectLegionaryWhitex2_1 = legionaryWhiteRect1.centerx
-rectLegionaryWhitey2_1 = legionaryWhiteRect1.centery + step
-rectLegionaryWhite2_1 = pygame.Rect(rectLegionaryWhitex2_1 - 30, rectLegionaryWhitey2_1 - 30, 60, 60)
-rectsLegionaryWhite_1.append(rectLegionaryWhite2_1)
-
-rectLegionaryWhitex3_1 = legionaryWhiteRect1.centerx - step
-rectLegionaryWhitey3_1 = legionaryWhiteRect1.centery + step
-rectLegionaryWhite3_1 = pygame.Rect(rectLegionaryWhitex3_1 - 30, rectLegionaryWhitey3_1 - 30, 60, 60)
-rectsLegionaryWhite_1.append(rectLegionaryWhite3_1)
-
-#
-
-rectsWarriorWhite_2 = []
-
-rectWarriorWhitex1_2 = warriorWhiteRect2.centerx + step
-rectWarriorWhitey1_2 = warriorWhiteRect2.centery
-rectWarriorWhite1_2 = pygame.Rect(rectWarriorWhitex1_2 - 30, rectWarriorWhitey1_2 - 30, 60, 60)
-rectsWarriorWhite_2.append(rectWarriorWhite1_2)
-
-rectWarriorWhitex2_2 = warriorWhiteRect2.centerx - step
-rectWarriorWhitey2_2 = warriorWhiteRect2.centery
-rectWarriorWhite2_2 = pygame.Rect(rectWarriorWhitex2_2 - 30, rectWarriorWhitey2_2 - 30, 60, 60)
-rectsWarriorWhite_2.append(rectWarriorWhite2_2)
-
-rectWarriorWhitex3_2 = warriorWhiteRect2.centerx
-rectWarriorWhitey3_2 = warriorWhiteRect2.centery + step
-rectWarriorWhite3_2 = pygame.Rect(rectWarriorWhitex3_2 - 30, rectWarriorWhitey3_2 - 30, 60, 60)
-rectsWarriorWhite_2.append(rectWarriorWhite3_2)
-
-rectWarriorWhitex4_2 = warriorWhiteRect2.centerx
-rectWarriorWhitey4_2 = warriorWhiteRect2.centery - step
-rectWarriorWhite4_2 = pygame.Rect(rectWarriorWhitex4_2 - 30, rectWarriorWhitey4_2 - 30, 60, 60)
-rectsWarriorWhite_2.append(rectWarriorWhite4_2)
-
-# Válečník bílý 3 abilita
-rectsWarriorWhiteAbility_2 = []
-
-rectWarriorWhitex1_2Ability = warriorWhiteRect2.centerx + step * 2
-rectWarriorWhitey1_2Ability = warriorWhiteRect2.centery
-rectWarriorWhite1_2Ability = pygame.Rect(rectWarriorWhitex1_2Ability - 30, rectWarriorWhitey1_2Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_2.append(rectWarriorWhite1_2Ability)
-
-rectWarriorWhitex2_2Ability = warriorWhiteRect2.centerx - step * 2
-rectWarriorWhitey2_2Ability = warriorWhiteRect2.centery
-rectWarriorWhite2_2Ability = pygame.Rect(rectWarriorWhitex2_2Ability - 30, rectWarriorWhitey2_2Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_2.append(rectWarriorWhite2_2Ability)
-
-rectWarriorWhitex3_2Ability = warriorWhiteRect2.centerx
-rectWarriorWhitey3_2Ability = warriorWhiteRect2.centery - step * 2
-rectWarriorWhite3_2Ability = pygame.Rect(rectWarriorWhitex3_2Ability - 30, rectWarriorWhitey3_2Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_2.append(rectWarriorWhite3_2Ability)
-
-rectWarriorWhitex4_2Ability = warriorWhiteRect2.centerx
-rectWarriorWhitey4_2Ability = warriorWhiteRect2.centery + step * 2
-rectWarriorWhite4_2Ability = pygame.Rect(rectWarriorWhitex4_2Ability - 30, rectWarriorWhitey4_2Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_2.append(rectWarriorWhite4_2Ability)
-
-# Legionář bílý 3
-rectsLegionaryWhite_2 = []
-
-rectLegionaryWhitex1_2 = legionaryWhiteRect2.centerx + step
-rectLegionaryWhitey1_2 = legionaryWhiteRect2.centery + step
-rectLegionaryWhite1_2 = pygame.Rect(rectLegionaryWhitex1_2 - 30, rectLegionaryWhitey1_2 - 30, 60, 60)
-rectsLegionaryWhite_2.append(rectLegionaryWhite1_2)
-
-rectLegionaryWhitex2_2 = legionaryWhiteRect2.centerx
-rectLegionaryWhitey2_2 = legionaryWhiteRect2.centery + step
-rectLegionaryWhite2_2 = pygame.Rect(rectLegionaryWhitex2_2 - 30, rectLegionaryWhitey2_2 - 30, 60, 60)
-rectsLegionaryWhite_2.append(rectLegionaryWhite2_2)
-
-rectLegionaryWhitex3_2 = legionaryWhiteRect2.centerx - step
-rectLegionaryWhitey3_2 = legionaryWhiteRect2.centery + step
-rectLegionaryWhite3_2 = pygame.Rect(rectLegionaryWhitex3_2 - 30, rectLegionaryWhitey3_2 - 30, 60, 60)
-rectsLegionaryWhite_2.append(rectLegionaryWhite3_2)
-
-# Válečník bílý 4
-rectsWarriorWhite_3 = []
-
-rectWarriorWhitex1_3 = warriorWhiteRect3.centerx + step
-rectWarriorWhitey1_3 = warriorWhiteRect3.centery
-rectWarriorWhite1_3 = pygame.Rect(rectWarriorWhitex1_3 - 30, rectWarriorWhitey1_3 - 30, 60, 60)
-rectsWarriorWhite_3.append(rectWarriorWhite1_3)
-
-rectWarriorWhitex2_3 = warriorWhiteRect3.centerx - step
-rectWarriorWhitey2_3 = warriorWhiteRect3.centery
-rectWarriorWhite2_3 = pygame.Rect(rectWarriorWhitex2_3 - 30, rectWarriorWhitey2_3 - 30, 60, 60)
-rectsWarriorWhite_3.append(rectWarriorWhite2_3)
-
-rectWarriorWhitex3_3 = warriorWhiteRect3.centerx
-rectWarriorWhitey3_3 = warriorWhiteRect3.centery + step
-rectWarriorWhite3_3 = pygame.Rect(rectWarriorWhitex3_3 - 30, rectWarriorWhitey3_3 - 30, 60, 60)
-rectsWarriorWhite_3.append(rectWarriorWhite3_3)
-
-rectWarriorWhitex4_3 = warriorWhiteRect3.centerx
-rectWarriorWhitey4_3 = warriorWhiteRect3.centery - step
-rectWarriorWhite4_3 = pygame.Rect(rectWarriorWhitex4_3 - 30, rectWarriorWhitey4_3 - 30, 60, 60)
-rectsWarriorWhite_3.append(rectWarriorWhite4_3)
-
-# Válečník bílý 4 abilita
-rectsWarriorWhiteAbility_3 = []
-
-rectWarriorWhitex1_3Ability = warriorWhiteRect3.centerx + step * 2
-rectWarriorWhitey1_3Ability = warriorWhiteRect3.centery
-rectWarriorWhite1_3Ability = pygame.Rect(rectWarriorWhitex1_3Ability - 30, rectWarriorWhitey1_3Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_3.append(rectWarriorWhite1_3Ability)
-
-rectWarriorWhitex2_3Ability = warriorWhiteRect3.centerx - step * 2
-rectWarriorWhitey2_3Ability = warriorWhiteRect3.centery
-rectWarriorWhite2_3Ability = pygame.Rect(rectWarriorWhitex2_3Ability - 30, rectWarriorWhitey2_3Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_3.append(rectWarriorWhite2_3Ability)
-
-rectWarriorWhitex3_3Ability = warriorWhiteRect3.centerx
-rectWarriorWhitey3_3Ability = warriorWhiteRect3.centery - step * 2
-rectWarriorWhite3_3Ability = pygame.Rect(rectWarriorWhitex3_3Ability - 30, rectWarriorWhitey3_3Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_3.append(rectWarriorWhite3_3Ability)
-
-rectWarriorWhitex4_3Ability = warriorWhiteRect3.centerx
-rectWarriorWhitey4_3Ability = warriorWhiteRect3.centery + step * 2
-rectWarriorWhite4_3Ability = pygame.Rect(rectWarriorWhitex4_3Ability - 30, rectWarriorWhitey4_3Ability - 30, 60, 60)
-rectsWarriorWhiteAbility_3.append(rectWarriorWhite4_3Ability)
-
-# Legionář bílý 4
-rectsLegionaryWhite_3 = []
-
-rectLegionaryWhitex1_3 = legionaryWhiteRect3.centerx + step
-rectLegionaryWhitey1_3 = legionaryWhiteRect3.centery + step
-rectLegionaryWhite1_3 = pygame.Rect(rectLegionaryWhitex1_3 - 30, rectLegionaryWhitey1_3 - 30, 60, 60)
-rectsLegionaryWhite_3.append(rectLegionaryWhite1_3)
-
-rectLegionaryWhitex2_3 = legionaryWhiteRect3.centerx
-rectLegionaryWhitey2_3 = legionaryWhiteRect3.centery + step
-rectLegionaryWhite2_3 = pygame.Rect(rectLegionaryWhitex2_3 - 30, rectLegionaryWhitey2_3 - 30, 60, 60)
-rectsLegionaryWhite_3.append(rectLegionaryWhite2_3)
-
-rectLegionaryWhitex3_3 = legionaryWhiteRect3.centerx - step
-rectLegionaryWhitey3_3 = legionaryWhiteRect3.centery + step
-rectLegionaryWhite3_3 = pygame.Rect(rectLegionaryWhitex3_3 - 30, rectLegionaryWhitey3_3 - 30, 60, 60)
-rectsLegionaryWhite_3.append(rectLegionaryWhite3_3)
-
-# Morový doktor černý 1
-rectsPlagueDoctorBlack = []
-
-rectPlagueBlackx1 = plagueDoctorBlackRect.centerx + step
-rectPlagueBlacky1 = plagueDoctorBlackRect.centery
-rectPlagueBlack1 = pygame.Rect(rectPlagueBlackx1 - 30, rectPlagueBlacky1 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack1)
-
-rectPlagueBlackx2 = plagueDoctorBlackRect.centerx + step * 2
-rectPlagueBlacky2 = plagueDoctorBlackRect.centery
-rectPlagueBlack2 = pygame.Rect(rectPlagueBlackx2 - 30, rectPlagueBlacky2 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack2)
-
-rectPlagueBlackx3 = plagueDoctorBlackRect.centerx - step
-rectPlagueBlacky3 = plagueDoctorBlackRect.centery
-rectPlagueBlack3 = pygame.Rect(rectPlagueBlackx3 - 30, rectPlagueBlacky3 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack3)
-
-rectPlagueBlackx4 = plagueDoctorBlackRect.centerx - step * 2
-rectPlagueBlacky4 = plagueDoctorBlackRect.centery
-rectPlagueBlack4 = pygame.Rect(rectPlagueBlackx4 - 30, rectPlagueBlacky4 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack4)
-
-rectPlagueBlackx5 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky5 = plagueDoctorBlackRect.centery + step
-rectPlagueBlack5 = pygame.Rect(rectPlagueBlackx5 - 30, rectPlagueBlacky5 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack5)
-
-rectPlagueBlackx6 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky6 = plagueDoctorBlackRect.centery + step * 2
-rectPlagueBlack6 = pygame.Rect(rectPlagueBlackx6 - 30, rectPlagueBlacky6 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack6)
-
-rectPlagueBlackx7 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky7 = plagueDoctorBlackRect.centery + step * 3
-rectPlagueBlack7 = pygame.Rect(rectPlagueBlackx7 - 30, rectPlagueBlacky7 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack7)
-
-rectPlagueBlackx8 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky8 = plagueDoctorBlackRect.centery + step * 4
-rectPlagueBlack8 = pygame.Rect(rectPlagueBlackx8 - 30, rectPlagueBlacky8 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack8)
-
-rectPlagueBlackx9 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky9 = plagueDoctorBlackRect.centery + step * 5
-rectPlagueBlack9 = pygame.Rect(rectPlagueBlackx9 - 30, rectPlagueBlacky9 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack9)
-
-rectPlagueBlackx10 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky10 = plagueDoctorBlackRect.centery + step * 6
-rectPlagueBlack10 = pygame.Rect(rectPlagueBlackx10 - 30, rectPlagueBlacky10 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack10)
-
-rectPlagueBlackx11 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky11 = plagueDoctorBlackRect.centery + step * 7
-rectPlagueBlack11 = pygame.Rect(rectPlagueBlackx11 - 30, rectPlagueBlacky11 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack11)
-
-rectPlagueBlackx12 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky12 = plagueDoctorBlackRect.centery - step
-rectPlagueBlack12 = pygame.Rect(rectPlagueBlackx12 - 30, rectPlagueBlacky12 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack12)
-
-rectPlagueBlackx13 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky13 = plagueDoctorBlackRect.centery - step * 2
-rectPlagueBlack13 = pygame.Rect(rectPlagueBlackx13 - 30, rectPlagueBlacky13 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack13)
-
-rectPlagueBlackx14 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky14 = plagueDoctorBlackRect.centery - step * 3
-rectPlagueBlack14 = pygame.Rect(rectPlagueBlackx14 - 30, rectPlagueBlacky14 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack14)
-
-rectPlagueBlackx15 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky15 = plagueDoctorBlackRect.centery - step * 4
-rectPlagueBlack15 = pygame.Rect(rectPlagueBlackx15 - 30, rectPlagueBlacky15 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack15)
-
-rectPlagueBlackx16 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky16 = plagueDoctorBlackRect.centery - step * 5
-rectPlagueBlack16 = pygame.Rect(rectPlagueBlackx16 - 30, rectPlagueBlacky16 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack16)
-
-rectPlagueBlackx17 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky17 = plagueDoctorBlackRect.centery - step * 6
-rectPlagueBlack17 = pygame.Rect(rectPlagueBlackx17 - 30, rectPlagueBlacky17 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack17)
-
-rectPlagueBlackx18 = plagueDoctorBlackRect.centerx
-rectPlagueBlacky18 = plagueDoctorBlackRect.centery - step * 7
-rectPlagueBlack18 = pygame.Rect(rectPlagueBlackx18 - 30, rectPlagueBlacky18 - 30, 60, 60)
-rectsPlagueDoctorBlack.append(rectPlagueBlack18)
-
-# Arcibiskup černý 1
-rectsArchbishopBlack = []
-
-rectArchbishopBlackx1 = archbishopBlackRect.centerx + step * 2
-rectArchbishopBlacky1 = archbishopBlackRect.centery
-rectArchbishopBlack1 = pygame.Rect(rectArchbishopBlackx1 - 30, rectArchbishopBlacky1 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack1)
-
-rectArchbishopBlackx2 = archbishopBlackRect.centerx + step * 2
-rectArchbishopBlacky2 = archbishopBlackRect.centery + step
-rectArchbishopBlack2 = pygame.Rect(rectArchbishopBlackx2 - 30, rectArchbishopBlacky2 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack2)
-
-rectArchbishopBlackx3 = archbishopBlackRect.centerx + step * 2
-rectArchbishopBlacky3 = archbishopBlackRect.centery - step
-rectArchbishopBlack3 = pygame.Rect(rectArchbishopBlackx3 - 30, rectArchbishopBlacky3 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack3)
-
-rectArchbishopBlackx4 = archbishopBlackRect.centerx
-rectArchbishopBlacky4 = archbishopBlackRect.centery + step * 2
-rectArchbishopBlack4 = pygame.Rect(rectArchbishopBlackx4 - 30, rectArchbishopBlacky4 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack4)
-
-rectArchbishopBlackx5 = archbishopBlackRect.centerx + step
-rectArchbishopBlacky5 = archbishopBlackRect.centery + step * 2
-rectArchbishopBlack5 = pygame.Rect(rectArchbishopBlackx5 - 30, rectArchbishopBlacky5 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack5)
-
-rectArchbishopBlackx6 = archbishopBlackRect.centerx - step
-rectArchbishopBlacky6 = archbishopBlackRect.centery + step * 2
-rectArchbishopBlack6 = pygame.Rect(rectArchbishopBlackx6 - 30, rectArchbishopBlacky6 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack6)
-
-rectArchbishopBlackx7 = archbishopBlackRect.centerx - step * 2
-rectArchbishopBlacky7 = archbishopBlackRect.centery
-rectArchbishopBlack7 = pygame.Rect(rectArchbishopBlackx7 - 30, rectArchbishopBlacky7 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack7)
-
-rectArchbishopBlackx8 = archbishopBlackRect.centerx - step * 2
-rectArchbishopBlacky8 = archbishopBlackRect.centery + step
-rectArchbishopBlack8 = pygame.Rect(rectArchbishopBlackx8 - 30, rectArchbishopBlacky8 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack8)
-
-rectArchbishopBlackx9 = archbishopBlackRect.centerx - step * 2
-rectArchbishopBlacky9 = archbishopBlackRect.centery - step
-rectArchbishopBlack9 = pygame.Rect(rectArchbishopBlackx9 - 30, rectArchbishopBlacky9 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack9)
-
-rectArchbishopBlackx10 = archbishopBlackRect.centerx
-rectArchbishopBlacky10 = archbishopBlackRect.centery - step * 2
-rectArchbishopBlack10 = pygame.Rect(rectArchbishopBlackx10 - 30, rectArchbishopBlacky10 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack10)
-
-rectArchbishopBlackx11 = archbishopBlackRect.centerx + step
-rectArchbishopBlacky11 = archbishopBlackRect.centery - step * 2
-rectArchbishopBlack11 = pygame.Rect(rectArchbishopBlackx11 - 30, rectArchbishopBlacky11 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack11)
-
-rectArchbishopBlackx12 = archbishopBlackRect.centerx - step
-rectArchbishopBlacky12 = archbishopBlackRect.centery - step * 2
-rectArchbishopBlack12 = pygame.Rect(rectArchbishopBlackx12 - 30, rectArchbishopBlacky12 - 30, 60, 60)
-rectsArchbishopBlack.append(rectArchbishopBlack12)
-
-# Kardinál černý 1
-rectsCardinalBlack = []
-
-rectCardinalBlackx1 = cardinalBlackRect.centerx + step
-rectCardinalBlacky1 = cardinalBlackRect.centery - step
-rectCardinalBlack1 = pygame.Rect(rectCardinalBlackx1 - 30, rectCardinalBlacky1 - 30, 60, 60)
-rectsCardinalBlack.append(rectCardinalBlack1)
-
-rectCardinalBlackx2 = cardinalBlackRect.centerx - step
-rectCardinalBlacky2 = cardinalBlackRect.centery - step
-rectCardinalBlack2 = pygame.Rect(rectCardinalBlackx2 - 30, rectCardinalBlacky2 - 30, 60, 60)
-rectsCardinalBlack.append(rectCardinalBlack2)
-
-rectCardinalBlackx3 = cardinalBlackRect.centerx + step
-rectCardinalBlacky3 = cardinalBlackRect.centery + step
-rectCardinalBlack3 = pygame.Rect(rectCardinalBlackx3 - 30, rectCardinalBlacky3 - 30, 60, 60)
-rectsCardinalBlack.append(rectCardinalBlack3)
-
-rectCardinalBlackx4 = cardinalBlackRect.centerx - step
-rectCardinalBlacky4 = cardinalBlackRect.centery + step
-rectCardinalBlack4 = pygame.Rect(rectCardinalBlackx4 - 30, rectCardinalBlacky4 - 30, 60, 60)
-rectsCardinalBlack.append(rectCardinalBlack4)
-
-# Hádes černý
-rectsHadesBlack = []
-
-rectHadesBlackx1 = hadesBlackRect.centerx + step
-rectHadesBlacky1 = hadesBlackRect.centery
-rectHadesBlack1 = pygame.Rect(rectHadesBlackx1 - 30, rectHadesBlacky1 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack1)
-
-rectHadesBlackx2 = hadesBlackRect.centerx + step * 2
-rectHadesBlacky2 = hadesBlackRect.centery
-rectHadesBlack2 = pygame.Rect(rectHadesBlackx2 - 30, rectHadesBlacky2 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack2)
-
-rectHadesBlackx3 = hadesBlackRect.centerx + step * 3
-rectHadesBlacky3 = hadesBlackRect.centery
-rectHadesBlack3 = pygame.Rect(rectHadesBlackx3 - 30, rectHadesBlacky3 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack3)
-
-rectHadesBlackx4 = hadesBlackRect.centerx - step
-rectHadesBlacky4 = hadesBlackRect.centery
-rectHadesBlack4 = pygame.Rect(rectHadesBlackx4 - 30, rectHadesBlacky4 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack4)
-
-rectHadesBlackx5 = hadesBlackRect.centerx - step * 2
-rectHadesBlacky5 = hadesBlackRect.centery
-rectHadesBlack5 = pygame.Rect(rectHadesBlackx5 - 30, rectHadesBlacky5 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack5)
-
-rectHadesBlackx6 = hadesBlackRect.centerx - step * 3
-rectHadesBlacky6 = hadesBlackRect.centery
-rectHadesBlack6 = pygame.Rect(rectHadesBlackx6 - 30, rectHadesBlacky6 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack6)
-
-rectHadesBlackx7 = hadesBlackRect.centerx
-rectHadesBlacky7 = hadesBlackRect.centery - step
-rectHadesBlack7 = pygame.Rect(rectHadesBlackx7 - 30, rectHadesBlacky7 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack7)
-
-rectHadesBlackx8 = hadesBlackRect.centerx
-rectHadesBlacky8 = hadesBlackRect.centery - step * 2
-rectHadesBlack8 = pygame.Rect(rectHadesBlackx8 - 30, rectHadesBlacky8 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack8)
-
-rectHadesBlackx9 = hadesBlackRect.centerx
-rectHadesBlacky9 = hadesBlackRect.centery - step * 3
-rectHadesBlack9 = pygame.Rect(rectHadesBlackx9 - 30, rectHadesBlacky9 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack9)
-
-rectHadesBlackx10 = hadesBlackRect.centerx + step
-rectHadesBlacky10 = hadesBlackRect.centery - step
-rectHadesBlack10 = pygame.Rect(rectHadesBlackx10 - 30, rectHadesBlacky10 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack10)
-
-rectHadesBlackx11 = hadesBlackRect.centerx + step * 2
-rectHadesBlacky11 = hadesBlackRect.centery - step * 2
-rectHadesBlack11 = pygame.Rect(rectHadesBlackx11 - 30, rectHadesBlacky11 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack11)
-
-rectHadesBlackx12 = hadesBlackRect.centerx + step * 3
-rectHadesBlacky12 = hadesBlackRect.centery - step * 3
-rectHadesBlack12 = pygame.Rect(rectHadesBlackx12 - 30, rectHadesBlacky12 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack12)
-
-rectHadesBlackx13 = hadesBlackRect.centerx - step
-rectHadesBlacky13 = hadesBlackRect.centery - step
-rectHadesBlack13 = pygame.Rect(rectHadesBlackx13 - 30, rectHadesBlacky13 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack13)
-
-rectHadesBlackx14 = hadesBlackRect.centerx - step * 2
-rectHadesBlacky14 = hadesBlackRect.centery - step * 2
-rectHadesBlack14 = pygame.Rect(rectHadesBlackx14 - 30, rectHadesBlacky14 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack14)
-
-rectHadesBlackx15 = hadesBlackRect.centerx - step * 3
-rectHadesBlacky15 = hadesBlackRect.centery - step * 3
-rectHadesBlack15 = pygame.Rect(rectHadesBlackx15 - 30, rectHadesBlacky15 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack15)
-
-rectHadesBlackx16 = hadesBlackRect.centerx + step
-rectHadesBlacky16 = hadesBlackRect.centery + step
-rectHadesBlacky16 = pygame.Rect(rectHadesBlackx16 - 30, rectHadesBlacky16 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlacky16)
-
-rectHadesBlackx17 = hadesBlackRect.centerx + step * 2
-rectHadesBlacky17 = hadesBlackRect.centery + step * 2
-rectHadesBlack17 = pygame.Rect(rectHadesBlackx17 - 30, rectHadesBlacky17 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack17)
-
-rectHadesBlackx18 = hadesBlackRect.centerx - step
-rectHadesBlacky18 = hadesBlackRect.centery + step
-rectHadesBlack18 = pygame.Rect(rectHadesBlackx18 - 30, rectHadesBlacky18 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack18)
-
-rectHadesBlackx19 = hadesBlackRect.centerx - step * 2
-rectHadesBlacky19 = hadesBlackRect.centery + step * 2
-rectHadesBlack19 = pygame.Rect(rectHadesBlackx19 - 30, rectHadesBlacky19 - 30, 60, 60)
-rectsHadesBlack.append(rectHadesBlack19)
-
-# Persefona černá
-rectsPersephoneBlack = []
-
-rectPersephoneBlackx1 = persephoneBlackRect.centerx + step
-rectPersephoneBlacky1 = persephoneBlackRect.centery - step
-rectPersephoneBlack1 = pygame.Rect(rectPersephoneBlackx1 - 30, rectPersephoneBlacky1 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack1)
-
-rectPersephoneBlackx2 = persephoneBlackRect.centerx + step
-rectPersephoneBlacky2 = persephoneBlackRect.centery
-rectPersephoneBlack2 = pygame.Rect(rectPersephoneBlackx2 - 30, rectPersephoneBlacky2 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack2)
-
-rectPersephoneBlackx3 = persephoneBlackRect.centerx + step
-rectPersephoneBlacky3 = persephoneBlackRect.centery + step
-rectPersephoneBlack3 = pygame.Rect(rectPersephoneBlackx3 - 30, rectPersephoneBlacky3 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack3)
-
-rectPersephoneBlackx4 = persephoneBlackRect.centerx
-rectPersephoneBlacky4 = persephoneBlackRect.centery + step
-rectPersephoneBlack4 = pygame.Rect(rectPersephoneBlackx4 - 30, rectPersephoneBlacky4 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack4)
-
-rectPersephoneBlackx5 = persephoneBlackRect.centerx
-rectPersephoneBlacky5 = persephoneBlackRect.centery - step
-rectPersephoneBlack5 = pygame.Rect(rectPersephoneBlackx5 - 30, rectPersephoneBlacky5 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack5)
-
-rectPersephoneBlackx6 = persephoneBlackRect.centerx - step
-rectPersephoneBlacky6 = persephoneBlackRect.centery - step
-rectPersephoneBlack6 = pygame.Rect(rectPersephoneBlackx6 - 30, rectPersephoneBlacky6 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack6)
-
-rectPersephoneBlackx7 = persephoneBlackRect.centerx - step
-rectPersephoneBlacky7 = persephoneBlackRect.centery
-rectPersephoneBlack7 = pygame.Rect(rectPersephoneBlackx7 - 30, rectPersephoneBlacky7 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack7)
-
-rectPersephoneBlackx8 = persephoneBlackRect.centerx - step
-rectPersephoneBlacky8 = persephoneBlackRect.centery + step
-rectPersephoneBlack8 = pygame.Rect(rectPersephoneBlackx8 - 30, rectPersephoneBlacky8 - 30, 60, 60)
-rectsPersephoneBlack.append(rectPersephoneBlack8)
-
-# Kardinál černý 1
-rectsCardinalBlack_1 = []
-
-rectCardinalBlackx1_1 = cardinalBlackRect1.centerx + step
-rectCardinalBlacky1_1 = cardinalBlackRect1.centery - step
-rectCardinalBlack1_1 = pygame.Rect(rectCardinalBlackx1_1 - 30, rectCardinalBlacky1_1 - 30, 60, 60)
-rectsCardinalBlack_1.append(rectCardinalBlack1_1)
-
-rectCardinalBlackx2_1 = cardinalBlackRect1.centerx + step
-rectCardinalBlacky2_1 = cardinalBlackRect1.centery + step
-rectCardinalBlack2_1 = pygame.Rect(rectCardinalBlackx2_1 - 30, rectCardinalBlacky2_1 - 30, 60, 60)
-rectsCardinalBlack_1.append(rectCardinalBlack2_1)
-
-rectCardinalBlackx3_1 = cardinalBlackRect1.centerx - step
-rectCardinalBlacky3_1 = cardinalBlackRect1.centery - step
-rectCardinalBlack3_1 = pygame.Rect(rectCardinalBlackx3_1 - 30, rectCardinalBlacky3_1 - 30, 60, 60)
-rectsCardinalBlack_1.append(rectCardinalBlack3_1)
-
-rectCardinalBlackx4_1 = cardinalBlackRect1.centerx - step
-rectCardinalBlacky4_1 = cardinalBlackRect1.centery + step
-rectCardinalBlack4_1 = pygame.Rect(rectCardinalBlackx4_1 - 30, rectCardinalBlacky4_1 - 30, 60, 60)
-rectsCardinalBlack_1.append(rectCardinalBlack4_1)
-
-# Arcibiskup černý 1
-rectsArchbishopBlack_1 = []
-
-rectArchbishopBlackx1_1 = archbishopBlackRect1.centerx + step * 2
-rectArchbishopBlacky1_1 = archbishopBlackRect1.centery
-rectArchbishopBlack1_1 = pygame.Rect(rectArchbishopBlackx1_1 - 30, rectArchbishopBlacky1_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack1_1)
-
-rectArchbishopBlackx2_1 = archbishopBlackRect1.centerx + step * 2
-rectArchbishopBlacky2_1 = archbishopBlackRect1.centery - step
-rectArchbishopBlack2_1 = pygame.Rect(rectArchbishopBlackx2_1 - 30, rectArchbishopBlacky2_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack2_1)
-
-rectArchbishopBlackx3_1 = archbishopBlackRect1.centerx + step * 2
-rectArchbishopBlacky3_1 = archbishopBlackRect1.centery + step
-rectArchbishopBlack3_1 = pygame.Rect(rectArchbishopBlackx3_1 - 30, rectArchbishopBlacky3_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack3_1)
-
-rectArchbishopBlackx4_1 = archbishopBlackRect1.centerx - step * 2
-rectArchbishopBlacky4_1 = archbishopBlackRect1.centery
-rectArchbishopBlack4_1 = pygame.Rect(rectArchbishopBlackx4_1 - 30, rectArchbishopBlacky4_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack4_1)
-
-rectArchbishopBlackx5_1 = archbishopBlackRect1.centerx - step * 2
-rectArchbishopBlacky5_1 = archbishopBlackRect1.centery - step
-rectArchbishopBlack5_1 = pygame.Rect(rectArchbishopBlackx5_1 - 30, rectArchbishopBlacky5_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack5_1)
-
-rectArchbishopBlackx6_1 = archbishopBlackRect1.centerx - step * 2
-rectArchbishopBlacky6_1 = archbishopBlackRect1.centery + step
-rectArchbishopBlack6_1 = pygame.Rect(rectArchbishopBlackx6_1 - 30, rectArchbishopBlacky6_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack6_1)
-
-rectArchbishopBlackx7_1 = archbishopBlackRect1.centerx
-rectArchbishopBlacky7_1 = archbishopBlackRect1.centery + step * 2
-rectArchbishopBlack7_1 = pygame.Rect(rectArchbishopBlackx7_1 - 30, rectArchbishopBlacky7_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack7_1)
-
-rectArchbishopBlackx8_1 = archbishopBlackRect1.centerx - step
-rectArchbishopBlacky8_1 = archbishopBlackRect1.centery + step * 2
-rectArchbishopBlack8_1 = pygame.Rect(rectArchbishopBlackx8_1 - 30, rectArchbishopBlacky8_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack8_1)
-
-rectArchbishopBlackx9_1 = archbishopBlackRect1.centerx + step
-rectArchbishopBlacky9_1 = archbishopBlackRect1.centery + step * 2
-rectArchbishopBlack9_1 = pygame.Rect(rectArchbishopBlackx9_1 - 30, rectArchbishopBlacky9_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack9_1)
-
-rectArchbishopBlackx10_1 = archbishopBlackRect1.centerx
-rectArchbishopBlacky10_1 = archbishopBlackRect1.centery - step * 2
-rectArchbishopBlack10_1 = pygame.Rect(rectArchbishopBlackx10_1 - 30, rectArchbishopBlacky10_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack10_1)
-
-rectArchbishopBlackx11_1 = archbishopBlackRect1.centerx - step
-rectArchbishopBlacky11_1 = archbishopBlackRect1.centery - step * 2
-rectArchbishopBlack11_1 = pygame.Rect(rectArchbishopBlackx11_1 - 30, rectArchbishopBlacky11_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack11_1)
-
-rectArchbishopBlackx12_1 = archbishopBlackRect1.centerx + step
-rectArchbishopBlacky12_1 = archbishopBlackRect1.centery - step * 2
-rectArchbishopBlack12_1 = pygame.Rect(rectArchbishopBlackx12_1 - 30, rectArchbishopBlacky12_1 - 30, 60, 60)
-rectsArchbishopBlack_1.append(rectArchbishopBlack12_1)
-
-# Morový doktor černý 1
-rectsPlagueDoctorBlack_1 = []
-
-rectPlagueBlackx1_1 = plagueDoctorBlackRect1.centerx + step
-rectPlagueBlacky1_1 = plagueDoctorBlackRect1.centery
-rectPlagueBlack1_1 = pygame.Rect(rectPlagueBlackx1_1 - 30, rectPlagueBlacky1_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack1_1)
-
-rectPlagueBlackx2_1 = plagueDoctorBlackRect1.centerx + step * 2
-rectPlagueBlacky2_1 = plagueDoctorBlackRect1.centery
-rectPlagueBlack2_1 = pygame.Rect(rectPlagueBlackx2_1 - 30, rectPlagueBlacky2_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack2_1)
-
-rectPlagueBlackx3_1 = plagueDoctorBlackRect1.centerx - step
-rectPlagueBlacky3_1 = plagueDoctorBlackRect1.centery
-rectPlagueBlack3_1 = pygame.Rect(rectPlagueBlackx3_1 - 30, rectPlagueBlacky3_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack3_1)
-
-rectPlagueBlackx4_1 = plagueDoctorBlackRect1.centerx - step * 2
-rectPlagueBlacky4_1 = plagueDoctorBlackRect1.centery
-rectPlagueBlack4_1 = pygame.Rect(rectPlagueBlackx4_1 - 30, rectPlagueBlacky4_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack4_1)
-
-rectPlagueBlackx5_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky5_1 = plagueDoctorBlackRect1.centery + step
-rectPlagueBlack5_1 = pygame.Rect(rectPlagueBlackx5_1 - 30, rectPlagueBlacky5_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack5_1)
-
-rectPlagueBlackx6_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky6_1 = plagueDoctorBlackRect1.centery + step * 2
-rectPlagueBlack6_1 = pygame.Rect(rectPlagueBlackx6_1 - 30, rectPlagueBlacky6_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack6_1)
-
-rectPlagueBlackx7_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky7_1 = plagueDoctorBlackRect1.centery + step * 3
-rectPlagueBlack7_1 = pygame.Rect(rectPlagueBlackx7_1 - 30, rectPlagueBlacky7_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack7_1)
-
-rectPlagueBlackx8_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky8_1 = plagueDoctorBlackRect1.centery + step * 4
-rectPlagueBlack8_1 = pygame.Rect(rectPlagueBlackx8_1 - 30, rectPlagueBlacky8_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack8_1)
-
-rectPlagueBlackx9_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky9_1 = plagueDoctorBlackRect1.centery + step * 5
-rectPlagueBlack9_1 = pygame.Rect(rectPlagueBlackx9_1 - 30, rectPlagueBlacky9_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack9_1)
-
-rectPlagueBlackx10_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky10_1 = plagueDoctorBlackRect1.centery + step * 6
-rectPlagueBlack10_1 = pygame.Rect(rectPlagueBlackx10_1 - 30, rectPlagueBlacky10_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack10_1)
-
-rectPlagueBlackx11_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky11_1 = plagueDoctorBlackRect1.centery + step * 7
-rectPlagueBlack11_1 = pygame.Rect(rectPlagueBlackx11_1 - 30, rectPlagueBlacky11_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack11_1)
-
-rectPlagueBlackx12_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky12_1 = plagueDoctorBlackRect1.centery - step
-rectPlagueBlack12_1 = pygame.Rect(rectPlagueBlackx12_1 - 30, rectPlagueBlacky12_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack12_1)
-
-rectPlagueBlackx13_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky13_1 = plagueDoctorBlackRect1.centery - step * 2
-rectPlagueBlack13_1 = pygame.Rect(rectPlagueBlackx13_1 - 30, rectPlagueBlacky13_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack13_1)
-
-rectPlagueBlackx14_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky14_1 = plagueDoctorBlackRect1.centery - step * 3
-rectPlagueBlack14_1 = pygame.Rect(rectPlagueBlackx14_1 - 30, rectPlagueBlacky14_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack14_1)
-
-rectPlagueBlackx15_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky15_1 = plagueDoctorBlackRect1.centery - step * 4
-rectPlagueBlack15_1 = pygame.Rect(rectPlagueBlackx15_1 - 30, rectPlagueBlacky15_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack15_1)
-
-rectPlagueBlackx16_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky16_1 = plagueDoctorBlackRect1.centery - step * 5
-rectPlagueBlack16_1 = pygame.Rect(rectPlagueBlackx16_1 - 30, rectPlagueBlackx16_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack16_1)
-
-rectPlagueBlackx17_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky17_1 = plagueDoctorBlackRect1.centery - step * 6
-rectPlagueBlack17_1 = pygame.Rect(rectPlagueBlackx17_1 - 30, rectPlagueBlacky17_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack17_1)
-
-rectPlagueBlackx18_1 = plagueDoctorBlackRect1.centerx
-rectPlagueBlacky18_1 = plagueDoctorBlackRect1.centery - step * 7
-rectPlagueBlack18_1 = pygame.Rect(rectPlagueBlackx18_1 - 30, rectPlagueBlacky18_1 - 30, 60, 60)
-rectsPlagueDoctorBlack_1.append(rectPlagueBlack18_1)
-
-# Legionář černý
-rectsLegionaryBlack = []
-
-rectLegionaryBlackx1 = legionaryBlackRect.centerx + step
-rectLegionaryBlacky1 = legionaryBlackRect.centery - step
-rectLegionaryBlack1 = pygame.Rect(rectLegionaryBlackx1 - 30, rectLegionaryBlacky1 - 30, 60, 60)
-rectsLegionaryBlack.append(rectLegionaryBlack1)
-
-rectLegionaryBlackx2 = legionaryBlackRect.centerx
-rectLegionaryBlacky2 = legionaryBlackRect.centery - step
-rectLegionaryBlack2 = pygame.Rect(rectLegionaryBlackx2 - 30, rectLegionaryBlacky2 - 30, 60, 60)
-rectsLegionaryBlack.append(rectLegionaryBlack2)
-
-rectLegionaryBlackx3 = legionaryBlackRect.centerx - step
-rectLegionaryBlacky3 = legionaryBlackRect.centery - step
-rectLegionaryBlack3 = pygame.Rect(rectLegionaryBlackx3 - 30, rectLegionaryBlacky3 - 30, 60, 60)
-rectsLegionaryBlack.append(rectLegionaryBlack3)
-
-# Válečník černý
-rectsWarriorBlack = []
-
-rectWarriorBlackx1 = warriorBlackRect.centerx + step
-rectWarriorBlacky1 = warriorBlackRect.centery
-rectWarriorBlack1 = pygame.Rect(rectWarriorBlackx1 - 30, rectWarriorBlacky1 - 30, 60, 60)
-rectsWarriorBlack.append(rectWarriorBlack1)
-
-rectWarriorBlackx2 = warriorBlackRect.centerx
-rectWarriorBlacky2 = warriorBlackRect.centery + step
-rectWarriorBlack2 = pygame.Rect(rectWarriorBlackx2 - 30, rectWarriorBlacky2 - 30, 60, 60)
-rectsWarriorBlack.append(rectWarriorBlack2)
-
-rectWarriorBlackx3 = warriorBlackRect.centerx - step
-rectWarriorBlacky3 = warriorBlackRect.centery
-rectWarriorBlack3 = pygame.Rect(rectWarriorBlackx3 - 30, rectWarriorBlacky3 - 30, 60, 60)
-rectsWarriorBlack.append(rectWarriorBlack3)
-
-rectWarriorBlackx4 = warriorBlackRect.centerx
-rectWarriorBlacky4 = warriorBlackRect.centery - step
-rectWarriorBlack4 = pygame.Rect(rectWarriorBlackx4 - 30, rectWarriorBlacky4 - 30, 60, 60)
-rectsWarriorBlack.append(rectWarriorBlack4)
-
-# Válečník černý abilita
-rectsWarriorBlackAbility = []
-
-rectWarriorBlackx1Ability = warriorBlackRect.centerx + step * 2
-rectWarriorBlack1Ability = warriorBlackRect.centery
-rectWarriorBlack1Ability = pygame.Rect(rectWarriorBlackx1Ability - 30, rectWarriorBlack1Ability - 30,
-                                       60, 60)
-rectsWarriorBlackAbility.append(rectWarriorBlack1Ability)
-
-rectWarriorBlackx2Ability = warriorBlackRect.centerx - step * 2
-rectWarriorBlacky2Ability = warriorBlackRect.centery
-rectWarriorBlack2Ability = pygame.Rect(rectWarriorBlackx2Ability - 30, rectWarriorBlacky2Ability - 30,
-                                       60, 60)
-rectsWarriorBlackAbility.append(rectWarriorBlack2Ability)
-
-rectWarriorBlackx3Ability = warriorBlackRect.centerx
-rectWarriorBlacky3Ability = warriorBlackRect.centery - step * 2
-rectWarriorBlack3Ability = pygame.Rect(rectWarriorBlackx3Ability - 30, rectWarriorBlacky3Ability - 30,
-                                       60, 60)
-rectsWarriorBlackAbility.append(rectWarriorWhite3Ability)
-
-rectWarriorBlackx4Ability = warriorBlackRect.centerx
-rectWarriorBlacky4Ability = warriorBlackRect.centery + step * 2
-rectWarriorBlack4Ability = pygame.Rect(rectWarriorBlackx4Ability - 30, rectWarriorBlacky4Ability - 30,
-                                       60, 60)
-rectsWarriorBlackAbility.append(rectWarriorBlack4Ability)
-
-# Legionář černý 1
-rectsLegionaryBlack_1 = []
-
-rectLegionaryBlackx1_1 = legionaryBlackRect1.centerx + step
-rectLegionaryBlacky1_1 = legionaryBlackRect1.centery - step
-rectLegionaryBlack1_1 = pygame.Rect(rectLegionaryBlackx1_1 - 30, rectLegionaryBlacky1_1 - 30, 60, 60)
-rectsLegionaryBlack_1.append(rectLegionaryBlack1_1)
-
-rectLegionaryBlackx2_1 = legionaryBlackRect1.centerx
-rectLegionaryBlacky2_1 = legionaryBlackRect1.centery - step
-rectLegionaryBlack2_1 = pygame.Rect(rectLegionaryBlackx2_1 - 30, rectLegionaryBlacky2_1 - 30, 60, 60)
-rectsLegionaryBlack_1.append(rectLegionaryBlack2_1)
-
-rectLegionaryBlackx3_1 = legionaryBlackRect1.centerx - step
-rectLegionaryBlacky3_1 = legionaryBlackRect1.centery - step
-rectLegionaryBlack3_1 = pygame.Rect(rectLegionaryBlackx3_1 - 30, rectLegionaryBlacky3_1 - 30, 60, 60)
-rectsLegionaryBlack_1.append(rectLegionaryBlack3_1)
-
-# Válečník černý 1
-rectsWarriorBlack_1 = []
-
-rectWarriorBlackx1_1 = warriorBlackRect1.centerx + step
-rectWarriorBlacky1_1 = warriorBlackRect1.centery
-rectWarriorBlack1_1 = pygame.Rect(rectWarriorBlackx1_1 - 30, rectWarriorBlacky1_1 - 30, 60, 60)
-rectsWarriorBlack_1.append(rectWarriorBlack1_1)
-
-rectWarriorBlackx2_1 = warriorBlackRect1.centerx
-rectWarriorBlacky2_1 = warriorBlackRect1.centery + step
-rectWarriorBlack2_1 = pygame.Rect(rectWarriorBlackx2_1 - 30, rectWarriorBlacky2_1 - 30, 60, 60)
-rectsWarriorBlack_1.append(rectWarriorBlack2_1)
-
-rectWarriorBlackx3_1 = warriorBlackRect1.centerx
-rectWarriorBlacky3_1 = warriorBlackRect1.centery - step
-rectWarriorBlack3_1 = pygame.Rect(rectWarriorBlackx3_1 - 30, rectWarriorBlacky3_1 - 30, 60, 60)
-rectsWarriorBlack_1.append(rectWarriorBlack3_1)
-
-rectWarriorBlackx4_1 = warriorBlackRect1.centerx - step
-rectWarriorBlacky4_1 = warriorBlackRect1.centery
-rectWarriorBlack4_1 = pygame.Rect(rectWarriorBlackx4_1 - 30, rectWarriorBlacky4_1 - 30, 60, 60)
-rectsWarriorBlack_1.append(rectWarriorBlack4_1)
-
-# Válečník černý 1 abilita
-rectsWarriorBlackAbility_1 = []
-
-rectWarriorBlackx1_1Ability = warriorBlackRect1.centerx + step * 2
-rectWarriorBlacky1_1Ability = warriorBlackRect1.centery
-rectWarriorBlack1_1Ability = pygame.Rect(rectWarriorBlackx1_1Ability - 30, rectWarriorBlacky1_1Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_1.append(rectWarriorBlack1_1Ability)
-
-rectWarriorBlackx2_1Ability = warriorBlackRect1.centerx - step * 2
-rectWarriorBlacky2_1Ability = warriorBlackRect1.centery
-rectWarriorBlack2_1Ability = pygame.Rect(rectWarriorBlackx2_1Ability - 30, rectWarriorBlacky2_1Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_1.append(rectWarriorBlack2_1Ability)
-
-rectWarriorBlackx3_1Ability = warriorBlackRect1.centerx
-rectWarriorBlacky3_1Ability = warriorBlackRect1.centery - step * 2
-rectWarriorBlack3_1Ability = pygame.Rect(rectWarriorBlackx3_1Ability - 30, rectWarriorBlacky3_1Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_1.append(rectWarriorBlack3_1Ability)
-
-rectWarriorBlackx4_1Ability = warriorBlackRect1.centerx
-rectWarriorBlacky4_1Ability = warriorBlackRect1.centery + step * 2
-rectWarriorBlack4_1Ability = pygame.Rect(rectWarriorBlackx4_1Ability - 30, rectWarriorBlacky4_1Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_1.append(rectWarriorBlack4_1Ability)
-
-# Legionář černý 2
-rectsLegionaryBlack_2 = []
-
-rectLegionaryBlackx1_2 = legionaryBlackRect2.centerx + step
-rectLegionaryBlacky1_2 = legionaryBlackRect2.centery - step
-rectLegionaryBlack1_2 = pygame.Rect(rectLegionaryBlackx1_2 - 30, rectLegionaryBlacky1_2 - 30, 60, 60)
-rectsLegionaryBlack_2.append(rectLegionaryBlack1_2)
-
-rectLegionaryBlackx2_2 = legionaryBlackRect2.centerx
-rectLegionaryBlacky2_2 = legionaryBlackRect2.centery - step
-rectLegionaryBlack2_2 = pygame.Rect(rectLegionaryBlackx2_2 - 30, rectLegionaryBlacky2_2 - 30, 60, 60)
-rectsLegionaryBlack_2.append(rectLegionaryBlack2_2)
-
-rectLegionaryBlackx3_2 = legionaryBlackRect2.centerx - step
-rectLegionaryBlacky3_2 = legionaryBlackRect2.centery - step
-rectLegionaryBlack3_2 = pygame.Rect(rectLegionaryBlackx3_2 - 30, rectLegionaryBlacky3_2 - 30, 60, 60)
-rectsLegionaryBlack_2.append(rectLegionaryBlack3_2)
-
-# Válečník černý 2
-rectsWarriorBlack_2 = []
-
-rectWarriorBlackx1_2 = warriorBlackRect2.centerx + step
-rectWarriorBlacky1_2 = warriorBlackRect2.centery
-rectWarriorBlack1_2 = pygame.Rect(rectWarriorBlackx1_2 - 30, rectWarriorBlacky1_2 - 30, 60, 60)
-rectsWarriorBlack_2.append(rectWarriorBlack1_2)
-
-rectWarriorBlackx2_2 = warriorBlackRect2.centerx
-rectWarriorBlacky2_2 = warriorBlackRect2.centery + step
-rectWarriorBlack2_2 = pygame.Rect(rectWarriorBlackx2_2 - 30, rectWarriorBlacky2_2 - 30, 60, 60)
-rectsWarriorBlack_2.append(rectWarriorBlack2_2)
-
-rectWarriorBlackx3_2 = warriorBlackRect2.centerx - step
-rectWarriorBlacky3_2 = warriorBlackRect2.centery
-rectWarriorBlack3_2 = pygame.Rect(rectWarriorBlackx3_2 - 30, rectWarriorBlacky3_2 - 30, 60, 60)
-rectsWarriorBlack_2.append(rectWarriorBlack3_2)
-
-rectWarriorBlackx4_2 = warriorBlackRect2.centerx
-rectWarriorBlacky4_2 = warriorBlackRect2.centery - step
-rectWarriorBlack4_2 = pygame.Rect(rectWarriorBlackx4_2 - 30, rectWarriorBlacky4_2 - 30, 60, 60)
-rectsWarriorBlack_2.append(rectWarriorBlack4_2)
-
-# Válečník černý 2 abilita
-rectsWarriorBlackAbility_2 = []
-
-rectWarriorBlackx1_2Ability = warriorBlackRect2.centerx + step * 2
-rectWarriorBlacky1_2Ability = warriorBlackRect2.centery
-rectWarriorBlack1_2Ability = pygame.Rect(rectWarriorBlackx1_2Ability - 30, rectWarriorBlacky1_2Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_2.append(rectWarriorBlack1_2Ability)
-
-rectWarriorBlackx2_2Ability = warriorBlackRect2.centerx - step * 2
-rectWarriorBlacky2_2Ability = warriorBlackRect2.centery
-rectWarriorBlack2_2Ability = pygame.Rect(rectWarriorBlackx2_2Ability - 30, rectWarriorBlacky2_2Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_2.append(rectWarriorBlack2_2Ability)
-
-rectWarriorBlackx3_2Ability = warriorBlackRect2.centerx
-rectWarriorBlacky3_2Ability = warriorBlackRect2.centery - step * 2
-rectWarriorBlack3_2Ability = pygame.Rect(rectWarriorBlackx3_2Ability - 30, rectWarriorBlacky3_2Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_2.append(rectWarriorBlack3_2Ability)
-
-rectWarriorBlackx4_2Ability = warriorBlackRect2.centerx
-rectWarriorBlacky4_2Ability = warriorBlackRect2.centery + step * 2
-rectWarriorBlack4_2Ability = pygame.Rect(rectWarriorBlackx4_2Ability - 30, rectWarriorBlacky4_2Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_2.append(rectWarriorBlack4_2Ability)
-
-# Legionář černý 3
-rectsLegionaryBlack_3 = []
-
-rectLegionaryBlackx1_3 = legionaryBlackRect3.centerx + step
-rectLegionaryBlacky1_3 = legionaryBlackRect3.centery - step
-rectLegionaryBlack1_3 = pygame.Rect(rectLegionaryBlackx1_3 - 30, rectLegionaryBlacky1_3 - 30, 60, 60)
-rectsLegionaryBlack_3.append(rectLegionaryBlack1_3)
-
-rectLegionaryBlackx2_3 = legionaryBlackRect3.centerx
-rectLegionaryBlacky2_3 = legionaryBlackRect3.centery - step
-rectLegionaryBlack2_3 = pygame.Rect(rectLegionaryBlackx2_3 - 30, rectLegionaryBlacky2_3 - 30, 60, 60)
-rectsLegionaryBlack_3.append(rectLegionaryBlack2_3)
-
-rectLegionaryBlackx3_3 = legionaryBlackRect3.centerx - step
-rectLegionaryBlacky3_3 = legionaryBlackRect3.centery - step
-rectLegionaryBlack3_3 = pygame.Rect(rectLegionaryBlackx3_3 - 30, rectLegionaryBlacky3_3 - 30, 60, 60)
-rectsLegionaryBlack_3.append(rectLegionaryBlack3_3)
-
-# Válečník černý 3
-rectsWarriorBlack_3 = []
-
-rectWarriorBlackx1_3 = warriorBlackRect3.centerx
-rectWarriorBlacky1_3 = warriorBlackRect3.centery + step
-rectWarriorBlack1_3 = pygame.Rect(rectWarriorBlackx1_3 - 30, rectWarriorBlacky1_3 - 30, 60, 60)
-rectsWarriorBlack_3.append(rectWarriorBlack1_3)
-
-rectWarriorBlackx2_3 = warriorBlackRect3.centerx - step
-rectWarriorBlacky2_3 = warriorBlackRect3.centery
-rectWarriorBlack2_3 = pygame.Rect(rectWarriorBlackx2_3 - 30, rectWarriorBlacky2_3 - 30, 60, 60)
-rectsWarriorBlack_3.append(rectWarriorBlack2_3)
-
-rectWarriorBlackx3_3 = warriorBlackRect3.centerx
-rectWarriorBlacky3_3 = warriorBlackRect3.centery - step
-rectWarriorBlack3_3 = pygame.Rect(rectWarriorBlackx3_3 - 30, rectWarriorBlacky3_3 - 30, 60, 60)
-rectsWarriorBlack_3.append(rectWarriorBlack3_3)
-
-rectWarriorBlackx4_3 = warriorBlackRect3.centerx + step
-rectWarriorBlacky4_3 = warriorBlackRect3.centery
-rectWarriorBlack4_3 = pygame.Rect(rectWarriorBlackx4_3 - 30, rectWarriorBlacky4_3 - 30, 60, 60)
-rectsWarriorBlack_3.append(rectWarriorBlack4_3)
-
-# Válečník černý 3 abilita
-rectsWarriorBlackAbility_3 = []
-
-rectWarriorBlackx1_3Ability = warriorBlackRect3.centerx + step * 2
-rectWarriorBlacky1_3Ability = warriorBlackRect3.centery
-rectWarriorBlack1_3Ability = pygame.Rect(rectWarriorBlackx1_3Ability - 30, rectWarriorBlacky1_3Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_3.append(rectWarriorBlack1_3Ability)
-
-rectWarriorBlackx2_3Ability = warriorBlackRect3.centerx - step * 2
-rectWarriorBlacky2_3Ability = warriorBlackRect3.centery
-rectWarriorBlack2_3Ability = pygame.Rect(rectWarriorBlackx2_3Ability - 30, rectWarriorBlacky2_3Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_3.append(rectWarriorBlack2_3Ability)
-
-rectWarriorBlackx3_3Ability = warriorBlackRect3.centerx
-rectWarriorBlacky3_3Ability = warriorBlackRect3.centery - step * 2
-rectWarriorBlack3_3Ability = pygame.Rect(rectWarriorBlackx3_3Ability - 30, rectWarriorBlacky3_3Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_3.append(rectWarriorBlack3_3Ability)
-
-rectWarriorBlackx4_3Ability = warriorBlackRect3.centerx
-rectWarriorBlacky4_3Ability = warriorBlackRect3.centery + step * 2
-rectWarriorBlack4_3Ability = pygame.Rect(rectWarriorBlackx4_3Ability - 30, rectWarriorBlacky4_3Ability - 30,
-                                         60, 60)
-rectsWarriorBlackAbility_3.append(rectWarriorBlack4_3Ability)
 
 # endregion
 
@@ -2111,10 +581,2091 @@ while run:
         if warriorBlackRect3 in figuresBlack:
             screen.blit(warriorBlack, warriorBlackRect3)
 
+        if counter % 2 != 0:
+            if plagueDoctorWhiteRect.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+                plagueDoctorBlackRect=False
+            if plagueDoctorWhiteRect.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if plagueDoctorWhiteRect.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if plagueDoctorWhiteRect.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if plagueDoctorWhiteRect.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if plagueDoctorWhiteRect.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if plagueDoctorWhiteRect.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if plagueDoctorWhiteRect.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if plagueDoctorWhiteRect.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if plagueDoctorWhiteRect.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if plagueDoctorWhiteRect.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if plagueDoctorWhiteRect.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if plagueDoctorWhiteRect.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if plagueDoctorWhiteRect.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if plagueDoctorWhiteRect.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if plagueDoctorWhiteRect.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if archbishopWhiteRect.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if archbishopWhiteRect.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if archbishopWhiteRect.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if archbishopWhiteRect.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if archbishopWhiteRect.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if archbishopWhiteRect.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if archbishopWhiteRect.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if archbishopWhiteRect.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if archbishopWhiteRect.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if archbishopWhiteRect.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if archbishopWhiteRect.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if archbishopWhiteRect.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if archbishopWhiteRect.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if archbishopWhiteRect.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if archbishopWhiteRect.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if archbishopWhiteRect.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if cardinalWhiteRect.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if cardinalWhiteRect.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if cardinalWhiteRect.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if cardinalWhiteRect.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if cardinalWhiteRect.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if cardinalWhiteRect.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if cardinalWhiteRect.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if cardinalWhiteRect.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if cardinalWhiteRect.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if cardinalWhiteRect.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if cardinalWhiteRect.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if cardinalWhiteRect.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if cardinalWhiteRect.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if cardinalWhiteRect.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if cardinalWhiteRect.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if cardinalWhiteRect.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if hadesWhiteRect.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if hadesWhiteRect.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if hadesWhiteRect.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if hadesWhiteRect.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if hadesWhiteRect.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if hadesWhiteRect.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if hadesWhiteRect.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if hadesWhiteRect.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if hadesWhiteRect.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if hadesWhiteRect.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if hadesWhiteRect.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if hadesWhiteRect.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if hadesWhiteRect.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if hadesWhiteRect.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if hadesWhiteRect.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if hadesWhiteRect.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if persephoneWhiteRect.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if persephoneWhiteRect.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if persephoneWhiteRect.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if persephoneWhiteRect.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if persephoneWhiteRect.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if persephoneWhiteRect.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if persephoneWhiteRect.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if persephoneWhiteRect.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if persephoneWhiteRect.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if persephoneWhiteRect.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if persephoneWhiteRect.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if persephoneWhiteRect.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if persephoneWhiteRect.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if persephoneWhiteRect.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if persephoneWhiteRect.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if persephoneWhiteRect.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if cardinalWhiteRect1.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if cardinalWhiteRect1.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if cardinalWhiteRect1.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if cardinalWhiteRect1.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if cardinalWhiteRect1.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if cardinalWhiteRect1.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if cardinalWhiteRect1.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if cardinalWhiteRect1.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if cardinalWhiteRect1.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if cardinalWhiteRect1.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if cardinalWhiteRect1.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if cardinalWhiteRect1.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if cardinalWhiteRect1.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if cardinalWhiteRect1.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if cardinalWhiteRect1.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if cardinalWhiteRect1.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+            if archbishopWhiteRect1.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if archbishopWhiteRect1.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if archbishopWhiteRect1.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if archbishopWhiteRect1.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if archbishopWhiteRect1.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if archbishopWhiteRect1.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if archbishopWhiteRect1.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if archbishopWhiteRect1.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if archbishopWhiteRect1.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if archbishopWhiteRect1.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if archbishopWhiteRect1.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if archbishopWhiteRect1.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if archbishopWhiteRect1.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if archbishopWhiteRect1.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if archbishopWhiteRect1.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if archbishopWhiteRect1.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if plagueDoctorWhiteRect1.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if legionaryWhiteRect.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if legionaryWhiteRect.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if legionaryWhiteRect.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if legionaryWhiteRect.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if legionaryWhiteRect.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if legionaryWhiteRect.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if legionaryWhiteRect.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if legionaryWhiteRect.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if legionaryWhiteRect.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if legionaryWhiteRect.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if legionaryWhiteRect.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if legionaryWhiteRect.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if legionaryWhiteRect.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if legionaryWhiteRect.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if legionaryWhiteRect.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if legionaryWhiteRect.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if warriorWhiteRect.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if warriorWhiteRect.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if warriorWhiteRect.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if warriorWhiteRect.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if warriorWhiteRect.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if warriorWhiteRect.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if warriorWhiteRect.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if warriorWhiteRect.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if warriorWhiteRect.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if warriorWhiteRect.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if warriorWhiteRect.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if warriorWhiteRect.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if warriorWhiteRect.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if warriorWhiteRect.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if warriorWhiteRect.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if warriorWhiteRect.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if legionaryWhiteRect1.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if legionaryWhiteRect1.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if legionaryWhiteRect1.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if legionaryWhiteRect1.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if legionaryWhiteRect1.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if legionaryWhiteRect1.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if legionaryWhiteRect1.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if legionaryWhiteRect1.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if legionaryWhiteRect1.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if legionaryWhiteRect1.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if legionaryWhiteRect1.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if legionaryWhiteRect1.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if legionaryWhiteRect1.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if legionaryWhiteRect1.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if legionaryWhiteRect1.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if legionaryWhiteRect1.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if warriorWhiteRect1.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if warriorWhiteRect1.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if warriorWhiteRect1.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if warriorWhiteRect1.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if warriorWhiteRect1.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if warriorWhiteRect1.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if warriorWhiteRect1.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if warriorWhiteRect1.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if warriorWhiteRect1.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if warriorWhiteRect1.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if warriorWhiteRect1.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if warriorWhiteRect1.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if warriorWhiteRect1.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if warriorWhiteRect1.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if warriorWhiteRect1.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if warriorWhiteRect1.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if legionaryWhiteRect2.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if legionaryWhiteRect2.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if legionaryWhiteRect2.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if legionaryWhiteRect2.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if legionaryWhiteRect2.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if legionaryWhiteRect2.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if legionaryWhiteRect2.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if legionaryWhiteRect2.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if legionaryWhiteRect2.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if legionaryWhiteRect2.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if legionaryWhiteRect2.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if legionaryWhiteRect2.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if legionaryWhiteRect2.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if legionaryWhiteRect2.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if legionaryWhiteRect2.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if legionaryWhiteRect2.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if warriorWhiteRect2.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if warriorWhiteRect2.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if warriorWhiteRect2.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if warriorWhiteRect2.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if warriorWhiteRect2.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if warriorWhiteRect2.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if warriorWhiteRect2.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if warriorWhiteRect2.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if warriorWhiteRect2.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if warriorWhiteRect2.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if warriorWhiteRect2.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if warriorWhiteRect2.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if warriorWhiteRect2.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if warriorWhiteRect2.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if warriorWhiteRect2.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if warriorWhiteRect2.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if legionaryWhiteRect3.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if legionaryWhiteRect3.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if legionaryWhiteRect3.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if legionaryWhiteRect3.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if legionaryWhiteRect3.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if legionaryWhiteRect3.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if legionaryWhiteRect3.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if legionaryWhiteRect3.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if legionaryWhiteRect3.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if legionaryWhiteRect3.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if legionaryWhiteRect3.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if legionaryWhiteRect3.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if legionaryWhiteRect3.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if legionaryWhiteRect3.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if legionaryWhiteRect3.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if legionaryWhiteRect3.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+            if warriorWhiteRect3.colliderect(plagueDoctorBlackRect):
+                figuresBlack[0] = ""
+                plagueDoctorBlackRect.centerx = -60
+                plagueDoctorBlackRect.centery = -60
+            if warriorWhiteRect3.colliderect(archbishopBlackRect):
+                figuresBlack[1] = ""
+                archbishopBlackRect.centerx = -60
+                archbishopBlackRect.centery = -60
+            if warriorWhiteRect3.colliderect(cardinalBlackRect):
+                figuresBlack[2] = ""
+                cardinalBlackRect.centerx = -60
+                cardinalBlackRect.centery = -60
+            if warriorWhiteRect3.colliderect(hadesBlackRect):
+                figuresBlack[3] = ""
+                hadesBlackRect.centerx = -60
+                hadesBlackRect.centery = -60
+            if warriorWhiteRect3.colliderect(persephoneBlackRect):
+                figuresBlack[4] = ""
+                persephoneBlackRect.centerx = -60
+                persephoneBlackRect.centery = -60
+            if warriorWhiteRect3.colliderect(cardinalBlackRect1):
+                figuresBlack[5] = ""
+                cardinalBlackRect1.centerx = -60
+                cardinalBlackRect1.centery = -60
+            if warriorWhiteRect3.colliderect(archbishopBlackRect1):
+                figuresBlack[6] = ""
+                archbishopBlackRect1.centerx = -60
+                archbishopBlackRect1.centery = -60
+            if warriorWhiteRect3.colliderect(plagueDoctorBlackRect1):
+                figuresBlack[7] = ""
+                plagueDoctorBlackRect1.centerx = -60
+                plagueDoctorBlackRect1.centery = -60
+            if warriorWhiteRect3.colliderect(legionaryBlackRect):
+                figuresBlack[8] = ""
+                legionaryBlackRect.centerx = -60
+                legionaryBlackRect.centery = -60
+            if warriorWhiteRect3.colliderect(warriorBlackRect):
+                figuresBlack[9] = ""
+                warriorBlackRect.centerx = -60
+                warriorBlackRect.centery = -60
+            if warriorWhiteRect3.colliderect(legionaryBlackRect1):
+                figuresBlack[10] = ""
+                legionaryBlackRect1.centerx = -60
+                legionaryBlackRect1.centery = -60
+            if warriorWhiteRect3.colliderect(warriorBlackRect1):
+                figuresBlack[11] = ""
+                warriorBlackRect1.centerx = -60
+                warriorBlackRect1.centery = -60
+            if warriorWhiteRect3.colliderect(legionaryBlackRect2):
+                figuresBlack[12] = ""
+                legionaryBlackRect2.centerx = -60
+                legionaryBlackRect2.centery = -60
+            if warriorWhiteRect3.colliderect(warriorBlackRect2):
+                figuresBlack[13] = ""
+                warriorBlackRect2.centerx = -60
+                warriorBlackRect2.centery = -60
+            if warriorWhiteRect3.colliderect(legionaryBlackRect3):
+                figuresBlack[14] = ""
+                legionaryBlackRect3.centerx = -60
+                legionaryBlackRect3.centery = -60
+            if warriorWhiteRect3.colliderect(warriorBlackRect3):
+                figuresBlack[15] = ""
+                warriorBlackRect3.centerx = -60
+                warriorBlackRect3.centery = -60
+
+        else:
+            if plagueDoctorBlackRect.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if plagueDoctorBlackRect.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if plagueDoctorBlackRect.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if plagueDoctorBlackRect.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if plagueDoctorBlackRect.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if plagueDoctorBlackRect.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if plagueDoctorBlackRect.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if plagueDoctorBlackRect.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if plagueDoctorBlackRect.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if plagueDoctorBlackRect.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if plagueDoctorBlackRect.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if plagueDoctorBlackRect.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if plagueDoctorBlackRect.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if plagueDoctorBlackRect.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if plagueDoctorBlackRect.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if plagueDoctorBlackRect.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if archbishopBlackRect.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if archbishopBlackRect.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if archbishopBlackRect.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if archbishopBlackRect.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if archbishopBlackRect.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if archbishopBlackRect.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if archbishopBlackRect.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if archbishopBlackRect.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if archbishopBlackRect.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if archbishopBlackRect.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if archbishopBlackRect.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if archbishopBlackRect.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if archbishopBlackRect.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if archbishopBlackRect.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if archbishopBlackRect.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if archbishopBlackRect.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if cardinalBlackRect.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if cardinalBlackRect.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if cardinalBlackRect.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if cardinalBlackRect.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if cardinalBlackRect.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if cardinalBlackRect.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if cardinalBlackRect.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if cardinalBlackRect.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if cardinalBlackRect.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if cardinalBlackRect.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if cardinalBlackRect.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if cardinalBlackRect.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if cardinalBlackRect.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if cardinalBlackRect.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if cardinalBlackRect.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if cardinalBlackRect.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if hadesBlackRect.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if hadesBlackRect.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if hadesBlackRect.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if hadesBlackRect.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if hadesBlackRect.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if hadesBlackRect.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if hadesBlackRect.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if hadesBlackRect.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if hadesBlackRect.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if hadesBlackRect.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if hadesBlackRect.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if hadesBlackRect.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if hadesBlackRect.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if hadesBlackRect.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if hadesBlackRect.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if hadesBlackRect.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if persephoneBlackRect.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if persephoneBlackRect.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if persephoneBlackRect.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if persephoneBlackRect.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if persephoneBlackRect.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if persephoneBlackRect.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if persephoneBlackRect.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if persephoneBlackRect.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if persephoneBlackRect.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if persephoneBlackRect.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if persephoneBlackRect.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if persephoneBlackRect.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if persephoneBlackRect.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if persephoneBlackRect.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if persephoneBlackRect.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if persephoneBlackRect.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if cardinalBlackRect1.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if cardinalBlackRect1.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if cardinalBlackRect1.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if cardinalBlackRect1.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if cardinalBlackRect1.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if cardinalBlackRect1.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if cardinalBlackRect1.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if cardinalBlackRect1.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if cardinalBlackRect1.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if cardinalBlackRect1.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if cardinalBlackRect1.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if cardinalBlackRect1.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if cardinalBlackRect1.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if cardinalBlackRect1.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if cardinalBlackRect1.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if cardinalBlackRect1.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if archbishopBlackRect1.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if archbishopBlackRect1.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if archbishopBlackRect1.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if archbishopBlackRect1.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if archbishopBlackRect1.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if archbishopBlackRect1.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if archbishopBlackRect1.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if archbishopBlackRect1.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if archbishopBlackRect1.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if archbishopBlackRect1.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if archbishopBlackRect1.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if archbishopBlackRect1.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if archbishopBlackRect1.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if archbishopBlackRect1.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if archbishopBlackRect1.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if archbishopBlackRect1.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if plagueDoctorBlackRect1.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if plagueDoctorBlackRect1.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if plagueDoctorBlackRect1.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if plagueDoctorBlackRect1.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if plagueDoctorBlackRect1.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if plagueDoctorBlackRect1.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if plagueDoctorBlackRect1.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if plagueDoctorBlackRect1.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if plagueDoctorBlackRect1.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if plagueDoctorBlackRect1.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if plagueDoctorBlackRect1.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if plagueDoctorBlackRect1.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if legionaryBlackRect.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if legionaryBlackRect.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if legionaryBlackRect.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if legionaryBlackRect.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if legionaryBlackRect.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if legionaryBlackRect.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if legionaryBlackRect.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if legionaryBlackRect.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if legionaryBlackRect.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if legionaryBlackRect.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if legionaryBlackRect.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if legionaryBlackRect.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if warriorBlackRect.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+                plagueDoctorWhitePlaying=False
+            if warriorBlackRect.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if warriorBlackRect.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if warriorBlackRect.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if warriorBlackRect.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if warriorBlackRect.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if warriorBlackRect.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if warriorBlackRect.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if warriorBlackRect.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if warriorBlackRect.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if warriorBlackRect.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if warriorBlackRect.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if warriorBlackRect.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if warriorBlackRect.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if legionaryBlackRect1.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect1.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect1.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect1.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if legionaryBlackRect1.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect1.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if legionaryBlackRect1.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if legionaryBlackRect1.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if legionaryBlackRect1.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if legionaryBlackRect1.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if legionaryBlackRect1.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if legionaryBlackRect1.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if legionaryBlackRect1.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if legionaryBlackRect1.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if legionaryBlackRect1.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if legionaryBlackRect1.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if warriorBlackRect1.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if warriorBlackRect1.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if warriorBlackRect1.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect1.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if warriorBlackRect1.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect1.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if warriorBlackRect1.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if warriorBlackRect1.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if warriorBlackRect1.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if warriorBlackRect1.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if warriorBlackRect1.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if warriorBlackRect1.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if warriorBlackRect1.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if warriorBlackRect1.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if warriorBlackRect1.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if warriorBlackRect1.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if legionaryBlackRect2.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect2.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect2.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect2.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if legionaryBlackRect2.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect2.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if legionaryBlackRect2.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if legionaryBlackRect2.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if legionaryBlackRect2.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if legionaryBlackRect2.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if legionaryBlackRect2.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if legionaryBlackRect2.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if legionaryBlackRect2.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if legionaryBlackRect2.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if legionaryBlackRect2.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if legionaryBlackRect2.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if warriorBlackRect2.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if warriorBlackRect2.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if warriorBlackRect2.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect2.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if warriorBlackRect2.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect2.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if warriorBlackRect2.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if warriorBlackRect2.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if warriorBlackRect2.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if warriorBlackRect2.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if warriorBlackRect2.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if warriorBlackRect2.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if warriorBlackRect2.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if warriorBlackRect2.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if warriorBlackRect2.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if warriorBlackRect2.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if legionaryBlackRect3.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect3.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if legionaryBlackRect3.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect3.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if legionaryBlackRect3.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if legionaryBlackRect3.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if legionaryBlackRect3.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if legionaryBlackRect3.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if legionaryBlackRect3.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if legionaryBlackRect3.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if legionaryBlackRect3.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if legionaryBlackRect3.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if legionaryBlackRect3.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if legionaryBlackRect3.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if legionaryBlackRect3.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if legionaryBlackRect3.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
+
+            if warriorBlackRect3.colliderect(plagueDoctorWhiteRect):
+                figuresWhite[0] = ""
+                plagueDoctorWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if warriorBlackRect3.colliderect(archbishopWhiteRect):
+                figuresWhite[1] = ""
+                archbishopWhiteRect.centerx = -120
+                plagueDoctorWhiteRect.centery = -120
+            if warriorBlackRect3.colliderect(cardinalWhiteRect):
+                figuresWhite[2] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect3.colliderect(hadesWhiteRect):
+                figuresWhite[3] = ""
+                hadesWhiteRect.centerx = -120
+                hadesWhiteRect.centery = -120
+            if warriorBlackRect3.colliderect(persephoneWhiteRect):
+                figuresWhite[4] = ""
+                cardinalBlackRect.centerx = -120
+                cardinalBlackRect.centery = -120
+            if warriorBlackRect3.colliderect(cardinalWhiteRect1):
+                figuresWhite[5] = ""
+                cardinalWhiteRect1.centerx = -120
+                cardinalWhiteRect1.centery = -120
+            if warriorBlackRect3.colliderect(archbishopWhiteRect1):
+                figuresWhite[6] = ""
+                archbishopWhiteRect1.centerx = -120
+                archbishopWhiteRect1.centery = -120
+            if warriorBlackRect3.colliderect(plagueDoctorWhiteRect1):
+                figuresWhite[7] = ""
+                plagueDoctorWhiteRect1.centerx = -120
+                plagueDoctorWhiteRect1.centery = -120
+            if warriorBlackRect3.colliderect(legionaryWhiteRect):
+                figuresWhite[8] = ""
+                legionaryWhiteRect.centerx = -120
+                legionaryWhiteRect.centery = -120
+            if warriorBlackRect3.colliderect(warriorWhiteRect):
+                figuresWhite[9] = ""
+                warriorWhiteRect.centerx = -120
+                warriorWhiteRect.centery = -120
+            if warriorBlackRect3.colliderect(legionaryWhiteRect1):
+                figuresWhite[10] = ""
+                legionaryWhiteRect1.centerx = -120
+                legionaryWhiteRect1.centery = -120
+            if warriorBlackRect3.colliderect(warriorWhiteRect1):
+                figuresWhite[11] = ""
+                warriorWhiteRect1.centerx = -120
+                warriorWhiteRect1.centery = -120
+            if warriorBlackRect3.colliderect(legionaryWhiteRect2):
+                figuresWhite[12] = ""
+                legionaryWhiteRect2.centerx = -120
+                legionaryWhiteRect2.centery = -120
+            if warriorBlackRect3.colliderect(warriorWhiteRect2):
+                figuresWhite[13] = ""
+                warriorWhiteRect2.centerx = -120
+                warriorWhiteRect2.centery = -120
+            if warriorBlackRect3.colliderect(legionaryWhiteRect3):
+                figuresWhite[14] = ""
+                legionaryWhiteRect3.centerx = -120
+                legionaryWhiteRect3.centery = -120
+            if warriorBlackRect3.colliderect(warriorWhiteRect3):
+                figuresWhite[15] = ""
+                warriorWhiteRect3.centerx = -120
+                warriorWhiteRect3.centery = -120
         # Tažení figurek
 
-        # Opětovné deklarování pozic čtverců pro pohyb figurek, aby zůstaly na místě a nepohybovaly se společně s figurkou při jejím pohybu
-        if not pohyb:
+        #Opětovné deklarování pozic čtverců pro pohyb figurek, aby zůstaly na místě a nepohybovaly se společně s figurkou při jejím pohybu
+        """if not pohyb:
             plagueWhitexInit = plagueDoctorWhiteRect.centerx
             plagueWhiteyInit = plagueDoctorWhiteRect.centery
 
@@ -2156,7 +2707,7 @@ while run:
 
             rectPlagueWhitex10 = plagueDoctorWhiteRect.centerx
             rectPlagueWhitey10 = plagueDoctorWhiteRect.centery + step * 6
-            rectPlague10 = pygame.Rect(rectPlagueWhitex10 - 30, rectPlagueWhitey10 - 30, 60, 60)
+            rectPlagueWhite10 = pygame.Rect(rectPlagueWhitex10 - 30, rectPlagueWhitey10 - 30, 60, 60)
 
             rectPlagueWhitex11 = plagueDoctorWhiteRect.centerx
             rectPlagueWhitey11 = plagueDoctorWhiteRect.centery + step * 7
@@ -2443,7 +2994,7 @@ while run:
 
             rectCardinalWhitex4_1 = cardinalWhiteRect1.centerx - step
             rectCardinalWhitey4_1 = cardinalWhiteRect1.centery + step
-            rectCardinalWhite4_1 = pygame.Rect(rectCardinalWhitex4_1 - 30, rectCardinalWhitey3_1 - 30, 60, 60)
+            rectCardinalWhite4_1 = pygame.Rect(rectCardinalWhitex4_1 - 30, rectCardinalWhitey4_1 - 30, 60, 60)
             rectsCardinalWhite_1.append(rectCardinalWhite4_1)
 
             # Arcibiskup bílý 1
@@ -3414,7 +3965,7 @@ while run:
 
             rectPlagueBlackx16_1 = plagueDoctorBlackRect1.centerx
             rectPlagueBlacky16_1 = plagueDoctorBlackRect1.centery - step * 5
-            rectPlagueBlack16_1 = pygame.Rect(rectPlagueBlackx16_1 - 30, rectPlagueBlackx16_1 - 30, 60, 60)
+            rectPlagueBlack16_1 = pygame.Rect(rectPlagueBlackx16_1 - 30, rectPlagueBlacky16_1 - 30, 60, 60)
             rectsPlagueDoctorBlack_1.append(rectPlagueBlack16_1)
 
             rectPlagueBlackx17_1 = plagueDoctorBlackRect1.centerx
@@ -3770,7 +4321,1537 @@ while run:
                     if event.key == pygame.K_F9:
                         legionaryBlackRect3.centerx = legionar_cerny_x_abilita_3
                         legionaryBlackRect3.centery = legionar_cerny_y_abilita_3
-                        counter += 1
+                        counter += 1"""
+        rectsPlagueDoctorWhite = []
+
+        rectPlagueWhitex1 = plagueDoctorWhiteRect.centerx + step
+        rectPlagueWhitey1 = plagueDoctorWhiteRect.centery
+        rectPlagueWhite1 = pygame.Rect(rectPlagueWhitex1 - 30, rectPlagueWhitey1 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite1)
+
+        rectPlagueWhitex2 = plagueDoctorWhiteRect.centerx + step * 2
+        rectPlagueWhitey2 = plagueDoctorWhiteRect.centery
+        rectPlagueWhite2 = pygame.Rect(rectPlagueWhitex2 - 30, rectPlagueWhitey2 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite2)
+
+        rectPlagueWhitex3 = plagueDoctorWhiteRect.centerx - step
+        rectPlagueWhitey3 = plagueDoctorWhiteRect.centery
+        rectPlagueWhite3 = pygame.Rect(rectPlagueWhitex3 - 30, rectPlagueWhitey3 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite3)
+
+        rectPlagueWhitex4 = plagueDoctorWhiteRect.centerx - 2 * step
+        rectPlagueWhitey4 = plagueDoctorWhiteRect.centery
+        rectPlagueWhite4 = pygame.Rect(rectPlagueWhitex4 - 30, rectPlagueWhitey4 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite4)
+
+        rectPlagueWhitex5 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey5 = plagueDoctorWhiteRect.centery + step
+        rectPlagueWhite5 = pygame.Rect(rectPlagueWhitex5 - 30, rectPlagueWhitey5 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite5)
+
+        rectPlagueWhitex6 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey6 = plagueDoctorWhiteRect.centery + step * 2
+        rectPlagueWhite6 = pygame.Rect(rectPlagueWhitex6 - 30, rectPlagueWhitey6 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite6)
+
+        rectPlagueWhitex7 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey7 = plagueDoctorWhiteRect.centery + step * 3
+        rectPlagueWhite7 = pygame.Rect(rectPlagueWhitex7 - 30, rectPlagueWhitey7 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite7)
+
+        rectPlagueWhitex8 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey8 = plagueDoctorWhiteRect.centery + step * 4
+        rectPlagueWhite8 = pygame.Rect(rectPlagueWhitex8 - 30, rectPlagueWhitey8 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite8)
+
+        rectPlagueWhitex9 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey9 = plagueDoctorWhiteRect.centery + step * 5
+        rectPlagueWhite9 = pygame.Rect(rectPlagueWhitex9 - 30, rectPlagueWhitey9 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite9)
+
+        rectPlagueWhitex10 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey10 = plagueDoctorWhiteRect.centery + step * 6
+        rectPlagueWhite10 = pygame.Rect(rectPlagueWhitex10 - 30, rectPlagueWhitey10 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite10)
+
+        rectPlagueWhitex11 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey11 = plagueDoctorWhiteRect.centery + step * 7
+        rectPlagueWhite11 = pygame.Rect(rectPlagueWhitex11 - 30, rectPlagueWhitey11 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite11)
+
+        rectPlagueWhitex12 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey12 = plagueDoctorWhiteRect.centery - step
+        rectPlagueWhite12 = pygame.Rect(rectPlagueWhitex12 - 30, rectPlagueWhitey12 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite12)
+
+        rectPlagueWhitex13 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey13 = plagueDoctorWhiteRect.centery - step * 2
+        rectPlagueWhite13 = pygame.Rect(rectPlagueWhitex13 - 30, rectPlagueWhitey13 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite13)
+
+        rectPlagueWhitex14 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey14 = plagueDoctorWhiteRect.centery - step * 3
+        rectPlagueWhite14 = pygame.Rect(rectPlagueWhitex14 - 30, rectPlagueWhitey14 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite14)
+
+        rectPlagueWhitex15 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey15 = plagueDoctorWhiteRect.centery - step * 4
+        rectPlagueWhite15 = pygame.Rect(rectPlagueWhitex15 - 30, rectPlagueWhitey15 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite15)
+
+        rectPlagueWhitex16 = plagueDoctorWhiteRect.centerx
+        rectPlagueyWhite16 = plagueDoctorWhiteRect.centery - step * 5
+        rectPlagueWhite16 = pygame.Rect(rectPlagueWhitex16 - 30, rectPlagueyWhite16 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite16)
+
+        rectPlagueWhitex17 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey17 = plagueDoctorWhiteRect.centery - step * 6
+        rectPlagueWhite17 = pygame.Rect(rectPlagueWhitex17 - 30, rectPlagueWhitey17 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite17)
+
+        rectPlagueWhitex18 = plagueDoctorWhiteRect.centerx
+        rectPlagueWhitey18 = plagueDoctorWhiteRect.centery - step * 7
+        rectPlagueWhite18 = pygame.Rect(rectPlagueWhitex18 - 30, rectPlagueWhitey18 - 30, 60, 60)
+        rectsPlagueDoctorWhite.append(rectPlagueWhite18)
+
+        # Arcibiskup bílý
+        rectsArchbishopWhite = []
+
+        rectArchbishopWhitex1 = archbishopWhiteRect.centerx + step * 2
+        rectArchbishopWhitey1 = archbishopWhiteRect.centery
+        rectArchbishopWhite1 = pygame.Rect(rectArchbishopWhitex1 - 30, rectArchbishopWhitey1 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite1)
+
+        rectArchbishopWhitex2 = archbishopWhiteRect.centerx + step * 2
+        rectArchbishopWhitey2 = archbishopWhiteRect.centery + step
+        rectArchbishopWhite2 = pygame.Rect(rectArchbishopWhitex2 - 30, rectArchbishopWhitey2 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite2)
+
+        rectArchbishopWhitex3 = archbishopWhiteRect.centerx + step * 2
+        rectArchbishopWhitey3 = archbishopWhiteRect.centery - step
+        rectArchbishopWhite3 = pygame.Rect(rectArchbishopWhitex3 - 30, rectArchbishopWhitey3 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite3)
+
+        rectArchbishopWhitex4 = archbishopWhiteRect.centerx - step * 2
+        rectArchbishopWhitey4 = archbishopWhiteRect.centery
+        rectArchbishopWhite4 = pygame.Rect(rectArchbishopWhitex4 - 30, rectArchbishopWhitey4 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite4)
+
+        rectArchbishopWhitex5 = archbishopWhiteRect.centerx - step * 2
+        rectArchbishopWhitey5 = archbishopWhiteRect.centery + step
+        rectArchbishopWhite5 = pygame.Rect(rectArchbishopWhitex5 - 30, rectArchbishopWhitey5 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite5)
+
+        rectArchbishopWhitex6 = archbishopWhiteRect.centerx - step * 2
+        rectArchbishopWhitey6 = archbishopWhiteRect.centery - step
+        rectArchbishopWhite6 = pygame.Rect(rectArchbishopWhitex6 - 30, rectArchbishopWhitey6 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite6)
+
+        rectArchbishopWhitex7 = archbishopWhiteRect.centerx
+        rectArchbishopWhitey7 = archbishopWhiteRect.centery + step * 2
+        rectArchbishopWhite7 = pygame.Rect(rectArchbishopWhitex7 - 30, rectArchbishopWhitey7 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite7)
+
+        rectArchbishopWhitex8 = archbishopWhiteRect.centerx + step
+        rectArchbishopWhitey8 = archbishopWhiteRect.centery + step * 2
+        rectArchbishopWhite8 = pygame.Rect(rectArchbishopWhitex8 - 30, rectArchbishopWhitey8 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite8)
+
+        rectArchbishopWhitex9 = archbishopWhiteRect.centerx - step
+        rectArchbishopWhitey9 = archbishopWhiteRect.centery + step * 2
+        rectArchbishopWhite9 = pygame.Rect(rectArchbishopWhitex9 - 30, rectArchbishopWhitey9 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite9)
+
+        rectArchbishopWhitex10 = archbishopWhiteRect.centerx
+        rectArchbishopWhitey10 = archbishopWhiteRect.centery - step * 2
+        rectArchbishopWhite10 = pygame.Rect(rectArchbishopWhitex10 - 30, rectArchbishopWhitey10 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite10)
+
+        rectArchbishopWhitex11 = archbishopWhiteRect.centerx + step
+        rectArchbishopWhitey11 = archbishopWhiteRect.centery - step * 2
+        rectArchbishopWhite11 = pygame.Rect(rectArchbishopWhitex11 - 30, rectArchbishopWhitey11 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite11)
+
+        rectArchbishopWhitex12 = archbishopWhiteRect.centerx - step
+        rectArchbishopWhitey12 = archbishopWhiteRect.centery - step * 2
+        rectArchbishopWhite12 = pygame.Rect(rectArchbishopWhitex12 - 30, rectArchbishopWhitey12 - 30, 60, 60)
+        rectsArchbishopWhite.append(rectArchbishopWhite12)
+
+        # Kardinál bílý
+        rectsCardinalWhite = []
+
+        rectCardinalWhitex1 = cardinalWhiteRect.centerx + step
+        rectCardinalWhitey1 = cardinalWhiteRect.centery - step
+        rectCardinalWhite1 = pygame.Rect(rectCardinalWhitex1 - 30, rectCardinalWhitey1 - 30, 60, 60)
+        rectsCardinalWhite.append(rectCardinalWhite1)
+
+        rectCardinalWhitex2 = cardinalWhiteRect.centerx - step
+        rectCardinalWhitey2 = cardinalWhiteRect.centery - step
+        rectCardinalWhite2 = pygame.Rect(rectCardinalWhitex2 - 30, rectCardinalWhitey2 - 30, 60, 60)
+        rectsCardinalWhite.append(rectCardinalWhite2)
+
+        rectCardinalWhitex3 = cardinalWhiteRect.centerx + step
+        rectCardinalWhitey3 = cardinalWhiteRect.centery + step
+        rectCardinalWhite3 = pygame.Rect(rectCardinalWhitex3 - 30, rectCardinalWhitey3 - 30, 60, 60)
+        rectsCardinalWhite.append(rectCardinalWhite3)
+
+        rectCardinalWhitex4 = cardinalWhiteRect.centerx - step
+        rectCardinalWhitey4 = cardinalWhiteRect.centery + step
+        rectCardinalWhite4 = pygame.Rect(rectCardinalWhitex4 - 30, rectCardinalWhitey4 - 30, 60, 60)
+        rectsCardinalWhite.append(rectCardinalWhite4)
+
+        # Hádes bílý
+        rectsHadesWhite = []
+
+        rectHadesWhitex1 = hadesWhiteRect.centerx
+        rectHadesWhitey1 = hadesWhiteRect.centery - step
+        rectHadesWhite1 = pygame.Rect(rectHadesWhitex1 - 30, rectHadesWhitey1 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite1)
+
+        rectHadesWhitex2 = hadesWhiteRect.centerx
+        rectHadesWhitey2 = hadesWhiteRect.centery - step * 2
+        rectHadesWhite2 = pygame.Rect(rectHadesWhitex2 - 30, rectHadesWhitey2 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite2)
+
+        rectHadesWhitex3 = hadesWhiteRect.centerx
+        rectHadesWhitey3 = hadesWhiteRect.centery - step * 3
+        rectHadesWhite3 = pygame.Rect(rectHadesWhitex3 - 30, rectHadesWhitey3 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite3)
+
+        rectHadesWhitex4 = hadesWhiteRect.centerx + step
+        rectHadesWhitey4 = hadesWhiteRect.centery - step
+        rectHadesWhite4 = pygame.Rect(rectHadesWhitex4 - 30, rectHadesWhitey4 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite4)
+
+        rectHadesWhitex5 = hadesWhiteRect.centerx + step * 2
+        rectHadesWhitey5 = hadesWhiteRect.centery - step * 2
+        rectHadesWhite5 = pygame.Rect(rectHadesWhitex5 - 30, rectHadesWhitey5 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite5)
+
+        rectHadesWhitex6 = hadesWhiteRect.centerx + step * 3
+        rectHadesWhitey6 = hadesWhiteRect.centery - step * 3
+        rectHadesWhite6 = pygame.Rect(rectHadesWhitex6 - 30, rectHadesWhitey6 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite6)
+
+        rectHadesWhitex7 = hadesWhiteRect.centerx + step
+        rectHadesWhitey7 = hadesWhiteRect.centery
+        rectHadesWhite7 = pygame.Rect(rectHadesWhitex7 - 30, rectHadesWhitey7 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite7)
+
+        rectHadesWhitex8 = hadesWhiteRect.centerx + step * 2
+        rectHadesWhitey8 = hadesWhiteRect.centery
+        rectHadesWhite8 = pygame.Rect(rectHadesWhitex8 - 30, rectHadesWhitey8 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite8)
+
+        rectHadesWhitex9 = hadesWhiteRect.centerx + step * 3
+        rectHadesWhitey9 = hadesWhiteRect.centery
+        rectHadesWhite9 = pygame.Rect(rectHadesWhitex9 - 30, rectHadesWhitey9 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite9)
+
+        rectHadesWhitex10 = hadesWhiteRect.centerx + step
+        rectHadesWhitey10 = hadesWhiteRect.centery + step
+        rectHadesWhite10 = pygame.Rect(rectHadesWhitex10 - 30, rectHadesWhitey10 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite10)
+
+        rectHadesWhitex11 = hadesWhiteRect.centerx + step * 2
+        rectHadesWhitey11 = hadesWhiteRect.centery + step * 2
+        rectHadesWhite11 = pygame.Rect(rectHadesWhitex11 - 30, rectHadesWhitey11 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite11)
+
+        rectHadesWhitex12 = hadesWhiteRect.centerx - step
+        rectHadesWhitey12 = hadesWhiteRect.centery - step
+        rectHadesWhite12 = pygame.Rect(rectHadesWhitex12 - 30, rectHadesWhitey12 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite12)
+
+        rectHadesWhitex13 = hadesWhiteRect.centerx - step * 2
+        rectHadesWhitey13 = hadesWhiteRect.centery - step * 2
+        rectHadesWhite13 = pygame.Rect(rectHadesWhitex13 - 30, rectHadesWhitey13 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite13)
+
+        rectHadesWhitex14 = hadesWhiteRect.centerx - step * 3
+        rectHadesWhitey14 = hadesWhiteRect.centery - step * 3
+        rectHadesWhite14 = pygame.Rect(rectHadesWhitex14 - 30, rectHadesWhitey14 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite14)
+
+        rectHadesWhitex15 = hadesWhiteRect.centerx - step
+        rectHadesWhitey15 = hadesWhiteRect.centery
+        rectHadesWhite15 = pygame.Rect(rectHadesWhitex15 - 30, rectHadesWhitey15 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite15)
+
+        rectHadesWhitex16 = hadesWhiteRect.centerx - step * 2
+        rectHadesWhitey16 = hadesWhiteRect.centery
+        rectHadesWhite16 = pygame.Rect(rectHadesWhitex16 - 30, rectHadesWhitey16 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite16)
+
+        rectHadesWhitex17 = hadesWhiteRect.centerx - step * 3
+        rectHadesWhitey17 = hadesWhiteRect.centery
+        rectHadesWhite17 = pygame.Rect(rectHadesWhitex17 - 30, rectHadesWhitey17 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite17)
+
+        rectHadesWhitex18 = hadesWhiteRect.centerx - step
+        rectHadesWhitey18 = hadesWhiteRect.centery + step
+        rectHadesWhite18 = pygame.Rect(rectHadesWhitex18 - 30, rectHadesWhitey18 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite18)
+
+        rectHadesWhitex19 = hadesWhiteRect.centerx - step * 2
+        rectHadesWhitey19 = hadesWhiteRect.centery + step * 2
+        rectHadesWhite19 = pygame.Rect(rectHadesWhitex19 - 30, rectHadesWhitey19 - 30, 60, 60)
+        rectsHadesWhite.append(rectHadesWhite19)
+
+        # Persefona bílá
+        rectsPersephoneWhite = []
+
+        rectPersephoneWhitex1 = persephoneWhiteRect.centerx + step
+        rectPersephoneWhitey1 = persephoneWhiteRect.centery
+        rectPersephoneWhite1 = pygame.Rect(rectPersephoneWhitex1 - 30, rectPersephoneWhitey1 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite1)
+
+        rectPersephoneWhitex2 = persephoneWhiteRect.centerx + step
+        rectPersephoneWhitey2 = persephoneWhiteRect.centery - step
+        rectPersephoneWhite2 = pygame.Rect(rectPersephoneWhitex2 - 30, rectPersephoneWhitey2 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite2)
+
+        rectPersephoneWhitex3 = persephoneWhiteRect.centerx
+        rectPersephoneWhitey3 = persephoneWhiteRect.centery - step
+        rectPersephoneWhite3 = pygame.Rect(rectPersephoneWhitex3 - 30, rectPersephoneWhitey3 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite3)
+
+        rectPersephoneWhitex4 = persephoneWhiteRect.centerx - step
+        rectPersephoneWhitey4 = persephoneWhiteRect.centery - step
+        rectPersephoneWhite4 = pygame.Rect(rectPersephoneWhitex4 - 30, rectPersephoneWhitey4 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite4)
+
+        rectPersephoneWhitex5 = persephoneWhiteRect.centerx - step
+        rectPersephoneWhitey5 = persephoneWhiteRect.centery
+        rectPersephoneWhite5 = pygame.Rect(rectPersephoneWhitex5 - 30, rectPersephoneWhitey5 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite5)
+
+        rectPersephoneWhitex6 = persephoneWhiteRect.centerx - step
+        rectPersephoneWhitey6 = persephoneWhiteRect.centery + step
+        rectPersephoneWhite6 = pygame.Rect(rectPersephoneWhitex6 - 30, rectPersephoneWhitey6 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite6)
+
+        rectPersephoneWhitex7 = persephoneWhiteRect.centerx
+        rectPersephoneWhitey7 = persephoneWhiteRect.centery + step
+        rectPersephoneWhite7 = pygame.Rect(rectPersephoneWhitex7 - 30, rectPersephoneWhitey7 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite7)
+
+        rectPersephoneWhitex8 = persephoneWhiteRect.centerx
+        rectPersephoneWhitey8 = persephoneWhiteRect.centery + step
+        rectPersephoneWhite8 = pygame.Rect(rectPersephoneWhitex8 - 30, rectPersephoneWhitey8 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite8)
+
+        rectPersephoneWhitex9 = persephoneWhiteRect.centerx + step
+        rectPersephoneWhitey9 = persephoneWhiteRect.centery + step
+        rectPersephoneWhite9 = pygame.Rect(rectPersephoneWhitex9 - 30, rectPersephoneWhitey9 - 30, 60, 60)
+        rectsPersephoneWhite.append(rectPersephoneWhite9)
+
+        # Kardinál bílý 1
+        rectsCardinalWhite_1 = []
+
+        rectCardinalWhitex1_1 = cardinalWhiteRect1.centerx + step
+        rectCardinalWhitey1_1 = cardinalWhiteRect1.centery - step
+        rectCardinalWhite1_1 = pygame.Rect(rectCardinalWhitex1_1 - 30, rectCardinalWhitey1_1 - 30, 60, 60)
+        rectsCardinalWhite_1.append(rectCardinalWhite1_1)
+
+        rectCardinalWhitex2_1 = cardinalWhiteRect1.centerx + step
+        rectCardinalWhitey2_1 = cardinalWhiteRect1.centery + step
+        rectCardinalWhite2_1 = pygame.Rect(rectCardinalWhitex2_1 - 30, rectCardinalWhitey2_1 - 30, 60, 60)
+        rectsCardinalWhite_1.append(rectCardinalWhite2_1)
+
+        rectCardinalWhitex3_1 = cardinalWhiteRect1.centerx - step
+        rectCardinalWhitey3_1 = cardinalWhiteRect1.centery - step
+        rectCardinalWhite3_1 = pygame.Rect(rectCardinalWhitex3_1 - 30, rectCardinalWhitey3_1 - 30, 60, 60)
+        rectsCardinalWhite_1.append(rectCardinalWhite3_1)
+
+        rectCardinalWhitex4_1 = cardinalWhiteRect1.centerx - step
+        rectCardinalWhitey4_1 = cardinalWhiteRect1.centery + step
+        rectCardinalWhite4_1 = pygame.Rect(rectCardinalWhitex4_1 - 30, rectCardinalWhitey4_1 - 30, 60, 60)
+        rectsCardinalWhite_1.append(rectCardinalWhite4_1)
+
+        # Arcibiskup bílý 1
+        rectsArchbishopWhite_1 = []
+
+        rectArchbishopWhitex1_1 = archbishopWhiteRect1.centerx + step * 2
+        rectArchbishopWhitey1_1 = archbishopWhiteRect1.centery
+        rectArchbishopWhite1_1 = pygame.Rect(rectArchbishopWhitex1_1 - 30, rectArchbishopWhitey1_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite1_1)
+
+        rectArchbishopWhitex2_1 = archbishopWhiteRect1.centerx + step * 2
+        rectArchbishopWhitey2_1 = archbishopWhiteRect1.centery - step
+        rectArchbishopWhite2_1 = pygame.Rect(rectArchbishopWhitex2_1 - 30, rectArchbishopWhitey2_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite2_1)
+
+        rectArchbishopWhitex3_1 = archbishopWhiteRect1.centerx + step * 2
+        rectArchbishopWhitey3_1 = archbishopWhiteRect1.centery + step
+        rectArchbishopWhite3_1 = pygame.Rect(rectArchbishopWhitex3_1 - 30, rectArchbishopWhitey3_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite3_1)
+
+        rectArchbishopWhitex4_1 = archbishopWhiteRect1.centerx
+        rectArchbishopWhitey4_1 = archbishopWhiteRect1.centery + step * 2
+        rectArchbishopWhite4_1 = pygame.Rect(rectArchbishopWhitex4_1 - 30, rectArchbishopWhitey4_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite4_1)
+
+        rectArchbishopWhitex5_1 = archbishopWhiteRect1.centerx + step
+        rectArchbishopWhitey5_1 = archbishopWhiteRect1.centery + step * 2
+        rectArchbishopWhite5_1 = pygame.Rect(rectArchbishopWhitex5_1 - 30, rectArchbishopWhitey5_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite5_1)
+
+        rectArchbishopWhitex6_1 = archbishopWhiteRect1.centerx - step
+        rectArchbishopWhitey6_1 = archbishopWhiteRect1.centery + step * 2
+        rectArchbishopWhite6_1 = pygame.Rect(rectArchbishopWhitex6_1 - 30, rectArchbishopWhitey6_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite6_1)
+
+        rectArchbishopWhitex7_1 = archbishopWhiteRect1.centerx - step * 2
+        rectArchbishopWhitey7_1 = archbishopWhiteRect1.centery
+        rectArchbishopWhite7_1 = pygame.Rect(rectArchbishopWhitex7_1 - 30, rectArchbishopWhitey7_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite7_1)
+
+        rectArchbishopWhitex8_1 = archbishopWhiteRect1.centerx - step * 2
+        rectArchbishopWhitey8_1 = archbishopWhiteRect1.centery - step
+        rectArchbishopWhite8_1 = pygame.Rect(rectArchbishopWhitex8_1 - 30, rectArchbishopWhitey8_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite8_1)
+
+        rectArchbishopWhitex9_1 = archbishopWhiteRect1.centerx - step * 2
+        rectArchbishopWhitey9_1 = archbishopWhiteRect1.centery + step
+        rectArchbishopWhite9_1 = pygame.Rect(rectArchbishopWhitex9_1 - 30, rectArchbishopWhitey9_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite9_1)
+
+        rectArchbishopWhitex10_1 = archbishopWhiteRect1.centerx
+        rectArchbishopWhitey10_1 = archbishopWhiteRect1.centery - step * 2
+        rectArchbishopWhite10_1 = pygame.Rect(rectArchbishopWhitex10_1 - 30, rectArchbishopWhitey10_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite10_1)
+
+        rectArchbishopWhitex11_1 = archbishopWhiteRect1.centerx + step
+        rectArchbishopWhitey11_1 = archbishopWhiteRect1.centery - step * 2
+        rectArchbishopWhite11_1 = pygame.Rect(rectArchbishopWhitex11_1 - 30, rectArchbishopWhitey11_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite11_1)
+
+        rectArchbishopWhitex12_1 = archbishopWhiteRect1.centerx - step
+        rectArchbishopWhitey12_1 = archbishopWhiteRect1.centery - step * 2
+        rectArchbishopWhite12_1 = pygame.Rect(rectArchbishopWhitex12_1 - 30, rectArchbishopWhitey12_1 - 30, 60, 60)
+        rectsArchbishopWhite_1.append(rectArchbishopWhite12_1)
+
+        # Morový doktor bílý 1
+        rectsPlagueDoctorWhite_1 = []
+
+        rectPlagueWhitex1_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey1_1 = plagueDoctorWhiteRect1.centery + step
+        rectPlagueWhite1_1 = pygame.Rect(rectPlagueWhitex1_1 - 30, rectPlagueWhitey1_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite1_1)
+
+        rectPlagueWhitex2_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey2_1 = plagueDoctorWhiteRect1.centery + step * 2
+        rectPlagueWhite2_1 = pygame.Rect(rectPlagueWhitex2_1 - 30, rectPlagueWhitey2_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite2_1)
+
+        rectPlagueWhitex3_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey3_1 = plagueDoctorWhiteRect1.centery + step * 3
+        rectPlagueWhite3_1 = pygame.Rect(rectPlagueWhitex3_1 - 30, rectPlagueWhitey3_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite3_1)
+
+        rectPlagueWhitex4_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey4_1 = plagueDoctorWhiteRect1.centery + step * 4
+        rectPlagueWhite4_1 = pygame.Rect(rectPlagueWhitex4_1 - 30, rectPlagueWhitey4_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite4_1)
+
+        rectPlagueWhitex5_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey5_1 = plagueDoctorWhiteRect1.centery + step * 5
+        rectPlagueWhite5_1 = pygame.Rect(rectPlagueWhitex5_1 - 30, rectPlagueWhitey5_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite5_1)
+
+        rectPlagueWhitex6_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey6_1 = plagueDoctorWhiteRect1.centery + step * 6
+        rectPlagueWhite6_1 = pygame.Rect(rectPlagueWhitex6_1 - 30, rectPlagueWhitey6_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite6_1)
+
+        rectPlagueWhitex7_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey7_1 = plagueDoctorWhiteRect1.centery + step * 7
+        rectPlagueWhite7_1 = pygame.Rect(rectPlagueWhitex7_1 - 30, rectPlagueWhitey7_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite7_1)
+
+        rectPlagueWhitex8_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey8_1 = plagueDoctorWhiteRect1.centery - step
+        rectPlagueWhite8_1 = pygame.Rect(rectPlagueWhitex8_1 - 30, rectPlagueWhitey8_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite8_1)
+
+        rectPlagueWhitex9_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey9_1 = plagueDoctorWhiteRect1.centery - step * 2
+        rectPlagueWhite9_1 = pygame.Rect(rectPlagueWhitex9_1 - 30, rectPlagueWhitey9_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite9_1)
+
+        rectPlagueWhitex10_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey10_1 = plagueDoctorWhiteRect1.centery - step * 3
+        rectPlagueWhite10_1 = pygame.Rect(rectPlagueWhitex10_1 - 30, rectPlagueWhitey10_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite10_1)
+
+        rectPlagueWhitex11_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey11_1 = plagueDoctorWhiteRect1.centery - step * 4
+        rectPlagueWhite11_1 = pygame.Rect(rectPlagueWhitex11_1 - 30, rectPlagueWhitey11_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite11_1)
+
+        rectPlagueWhitex12_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey12_1 = plagueDoctorWhiteRect1.centery - step * 5
+        rectPlagueWhite12_1 = pygame.Rect(rectPlagueWhitex12_1 - 30, rectPlagueWhitey12_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite12_1)
+
+        rectPlagueWhitex13_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey13_1 = plagueDoctorWhiteRect1.centery - step * 6
+        rectPlagueWhite13_1 = pygame.Rect(rectPlagueWhitex13_1 - 30, rectPlagueWhitey13_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite13_1)
+
+        rectPlagueWhitex14_1 = plagueDoctorWhiteRect1.centerx
+        rectPlagueWhitey14_1 = plagueDoctorWhiteRect1.centery - step * 7
+        rectPlagueWhite14_1 = pygame.Rect(rectPlagueWhitex14_1 - 30, rectPlagueWhitey14_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite14_1)
+
+        rectPlagueWhitex15_1 = plagueDoctorWhiteRect1.centerx + step
+        rectPlagueWhitey15_1 = plagueDoctorWhiteRect1.centery
+        rectPlagueWhite15_1 = pygame.Rect(rectPlagueWhitex15_1 - 30, rectPlagueWhitey15_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite15_1)
+
+        rectPlagueWhitex16_1 = plagueDoctorWhiteRect1.centerx + step * 2
+        rectPlagueWhitey16_1 = plagueDoctorWhiteRect1.centery
+        rectPlagueWhite16_1 = pygame.Rect(rectPlagueWhitex16_1 - 30, rectPlagueWhitey16_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite16_1)
+
+        rectPlagueWhitex17_1 = plagueDoctorWhiteRect1.centerx - step
+        rectPlagueWhitey17_1 = plagueDoctorWhiteRect1.centery
+        rectPlagueWhite17_1 = pygame.Rect(rectPlagueWhitex17_1 - 30, rectPlagueWhitey17_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite17_1)
+
+        rectPlagueWhitex18_1 = plagueDoctorWhiteRect1.centerx - step * 2
+        rectPlagueWhitey18_1 = plagueDoctorWhiteRect1.centery
+        rectPlagueWhite18_1 = pygame.Rect(rectPlagueWhitex18_1 - 30, rectPlagueWhitey18_1 - 30, 60, 60)
+        rectsPlagueDoctorWhite_1.append(rectPlagueWhite18_1)
+
+        # Válečník bílý 1
+        rectsWarriorWhite = []
+
+        rectWarriorWhitex1 = warriorWhiteRect.centerx + step
+        rectWarriorWhitey1 = warriorWhiteRect.centery
+        rectWarriorWhite1 = pygame.Rect(rectWarriorWhitex1 - 30, rectWarriorWhitey1 - 30, 60, 60)
+        rectsWarriorWhite.append(rectWarriorWhite1)
+
+        rectWarriorWhitex2 = warriorWhiteRect.centerx - step
+        rectWarriorWhitey2 = warriorWhiteRect.centery
+        rectWarriorWhite2 = pygame.Rect(rectWarriorWhitex2 - 30, rectWarriorWhitey2 - 30, 60, 60)
+        rectsWarriorWhite.append(rectWarriorWhite2)
+
+        rectWarriorWhitex3 = warriorWhiteRect.centerx
+        rectWarriorWhitey3 = warriorWhiteRect.centery + step
+        rectWarriorWhite3 = pygame.Rect(rectWarriorWhitex3 - 30, rectWarriorWhitey3 - 30, 60, 60)
+        rectsWarriorWhite.append(rectWarriorWhite3)
+
+        rectWarriorWhitex4 = warriorWhiteRect.centerx
+        rectWarriorWhitey4 = warriorWhiteRect.centery - step
+        rectWarriorWhite4 = pygame.Rect(rectWarriorWhitex4 - 30, rectWarriorWhitey4 - 30, 60, 60)
+        rectsWarriorWhite.append(rectWarriorWhite4)
+
+        # Válečník bílý 1 abilita
+        rectsWarriorWhiteAbility = []
+
+        rectWarriorWhitex1Ability = warriorWhiteRect.centerx + step * 2
+        rectWarriorWhitey1Ability = warriorWhiteRect.centery
+        rectWarriorWhite1Ability = pygame.Rect(rectWarriorWhitex1Ability - 30, rectWarriorWhitey1Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility.append(rectWarriorWhite1Ability)
+
+        rectWarriorWhitex2Ability = warriorWhiteRect.centerx - step * 2
+        rectWarriorWhitey2Ability = warriorWhiteRect.centery
+        rectWarriorWhite2Ability = pygame.Rect(rectWarriorWhitex2Ability - 30, rectWarriorWhitey2Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility.append(rectWarriorWhite2Ability)
+
+        rectWarriorWhitex3Ability = warriorWhiteRect.centerx
+        rectWarriorWhitey3Ability = warriorWhiteRect.centery - step * 2
+        rectWarriorWhite3Ability = pygame.Rect(rectWarriorWhitex3Ability - 30, rectWarriorWhitey3Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility.append(rectWarriorWhite3Ability)
+
+        rectWarriorWhitex4Ability = warriorWhiteRect.centerx
+        rectWarriorWhitey4Ability = warriorWhiteRect.centery + step * 2
+        rectWarriorWhite4Ability = pygame.Rect(rectWarriorWhitex4Ability - 30, rectWarriorWhitey4Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility.append(rectWarriorWhite4Ability)
+
+        # Legionář bílý 1
+        rectsLegionaryWhite = []
+
+        rectLegionaryWhitex1 = legionaryWhiteRect.centerx + step
+        rectLegionaryWhitey1 = legionaryWhiteRect.centery + step
+        rectLegionaryWhite1 = pygame.Rect(rectLegionaryWhitex1 - 30, rectLegionaryWhitey1 - 30, 60, 60)
+        rectsLegionaryWhite.append(rectLegionaryWhite1)
+
+        rectLegionaryWhitex2 = legionaryWhiteRect.centerx
+        rectLegionaryWhitey2 = legionaryWhiteRect.centery + step
+        rectLegionaryWhite2 = pygame.Rect(rectLegionaryWhitex2 - 30, rectLegionaryWhitey2 - 30, 60, 60)
+        rectsLegionaryWhite.append(rectLegionaryWhite2)
+
+        rectLegionaryWhitex3 = legionaryWhiteRect.centerx - step
+        rectLegionaryWhitey3 = legionaryWhiteRect.centery + step
+        rectLegionaryWhite3 = pygame.Rect(rectLegionaryWhitex3 - 30, rectLegionaryWhitey3 - 30, 60, 60)
+        rectsLegionaryWhite.append(rectLegionaryWhite3)
+
+        # Válečník bílý 2
+        rectsWarriorWhite_1 = []
+
+        rectWarriorWhitex1_1 = warriorWhiteRect1.centerx + step
+        rectWarriorWhitey1_1 = warriorWhiteRect1.centery
+        rectWarriorWhite1_1 = pygame.Rect(rectWarriorWhitex1_1 - 30, rectWarriorWhitey1_1 - 30, 60, 60)
+        rectsWarriorWhite_1.append(rectWarriorWhite1_1)
+
+        rectWarriorWhitex2_1 = warriorWhiteRect1.centerx - step
+        rectWarriorWhitey2_1 = warriorWhiteRect1.centery
+        rectWarriorWhite2_1 = pygame.Rect(rectWarriorWhitex2_1 - 30, rectWarriorWhitey2_1 - 30, 60, 60)
+        rectsWarriorWhite_1.append(rectWarriorWhite2_1)
+
+        rectWarriorWhitex3_1 = warriorWhiteRect1.centerx
+        rectWarriorWhitey3_1 = warriorWhiteRect1.centery + step
+        rectWarriorWhite3_1 = pygame.Rect(rectWarriorWhitex3_1 - 30, rectWarriorWhitey3_1 - 30, 60, 60)
+        rectsWarriorWhite_1.append(rectWarriorWhite3_1)
+
+        rectWarriorWhitex4_1 = warriorWhiteRect1.centerx
+        rectWarriorWhitey4_1 = warriorWhiteRect1.centery - step
+        rectWarriorWhite4_1 = pygame.Rect(rectWarriorWhitex4_1 - 30, rectWarriorWhitey4_1 - 30, 60, 60)
+        rectsWarriorWhite_1.append(rectWarriorWhite4_1)
+
+        # Válečník bílý 2 abilita
+        rectsWarriorWhiteAbility_1 = []
+
+        rectWarriorWhitex1_1Ability = warriorWhiteRect1.centerx + step * 2
+        rectWarriorWhitey1_1Ability = warriorWhiteRect1.centery
+        rectWarriorWhite1_1Ability = pygame.Rect(rectWarriorWhitex1_1Ability - 30, rectWarriorWhitey1_1Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_1.append(rectWarriorWhite1_1Ability)
+
+        rectWarriorWhitex2_1Ability = warriorWhiteRect1.centerx - step * 2
+        rectWarriorWhitey2_1Ability = warriorWhiteRect1.centery
+        rectWarriorWhite2_1Ability = pygame.Rect(rectWarriorWhitex2_1Ability - 30, rectWarriorWhitey2_1Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_1.append(rectWarriorWhite2_1Ability)
+
+        rectWarriorWhitex3_1Ability = warriorWhiteRect1.centerx
+        rectWarriorWhitey3_1Ability = warriorWhiteRect1.centery - step * 2
+        rectWarriorWhite3_1Ability = pygame.Rect(rectWarriorWhitex3_1Ability - 30, rectWarriorWhitey3_1Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_1.append(rectWarriorWhite3_1Ability)
+
+        rectWarriorWhitex4_1Ability = warriorWhiteRect1.centerx
+        rectWarriorWhitey4_1Ability = warriorWhiteRect1.centery + step * 2
+        rectWarriorWhite4_1Ability = pygame.Rect(rectWarriorWhitex4_1Ability - 30, rectWarriorWhitey4_1Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_1.append(rectWarriorWhite4_1Ability)
+
+        # Legionář bílý 2
+        rectsLegionaryWhite_1 = []
+
+        rectLegionaryWhitex1_1 = legionaryWhiteRect1.centerx + step
+        rectLegionaryWhitey1_1 = legionaryWhiteRect1.centery + step
+        rectLegionaryWhite1_1 = pygame.Rect(rectLegionaryWhitex1_1 - 30, rectLegionaryWhitey1_1 - 30, 60, 60)
+        rectsLegionaryWhite_1.append(rectLegionaryWhite1_1)
+
+        rectLegionaryWhitex2_1 = legionaryWhiteRect1.centerx
+        rectLegionaryWhitey2_1 = legionaryWhiteRect1.centery + step
+        rectLegionaryWhite2_1 = pygame.Rect(rectLegionaryWhitex2_1 - 30, rectLegionaryWhitey2_1 - 30, 60, 60)
+        rectsLegionaryWhite_1.append(rectLegionaryWhite2_1)
+
+        rectLegionaryWhitex3_1 = legionaryWhiteRect1.centerx - step
+        rectLegionaryWhitey3_1 = legionaryWhiteRect1.centery + step
+        rectLegionaryWhite3_1 = pygame.Rect(rectLegionaryWhitex3_1 - 30, rectLegionaryWhitey3_1 - 30, 60, 60)
+        rectsLegionaryWhite_1.append(rectLegionaryWhite3_1)
+
+        #
+
+        rectsWarriorWhite_2 = []
+
+        rectWarriorWhitex1_2 = warriorWhiteRect2.centerx + step
+        rectWarriorWhitey1_2 = warriorWhiteRect2.centery
+        rectWarriorWhite1_2 = pygame.Rect(rectWarriorWhitex1_2 - 30, rectWarriorWhitey1_2 - 30, 60, 60)
+        rectsWarriorWhite_2.append(rectWarriorWhite1_2)
+
+        rectWarriorWhitex2_2 = warriorWhiteRect2.centerx - step
+        rectWarriorWhitey2_2 = warriorWhiteRect2.centery
+        rectWarriorWhite2_2 = pygame.Rect(rectWarriorWhitex2_2 - 30, rectWarriorWhitey2_2 - 30, 60, 60)
+        rectsWarriorWhite_2.append(rectWarriorWhite2_2)
+
+        rectWarriorWhitex3_2 = warriorWhiteRect2.centerx
+        rectWarriorWhitey3_2 = warriorWhiteRect2.centery + step
+        rectWarriorWhite3_2 = pygame.Rect(rectWarriorWhitex3_2 - 30, rectWarriorWhitey3_2 - 30, 60, 60)
+        rectsWarriorWhite_2.append(rectWarriorWhite3_2)
+
+        rectWarriorWhitex4_2 = warriorWhiteRect2.centerx
+        rectWarriorWhitey4_2 = warriorWhiteRect2.centery - step
+        rectWarriorWhite4_2 = pygame.Rect(rectWarriorWhitex4_2 - 30, rectWarriorWhitey4_2 - 30, 60, 60)
+        rectsWarriorWhite_2.append(rectWarriorWhite4_2)
+
+        # Válečník bílý 3 abilita
+        rectsWarriorWhiteAbility_2 = []
+
+        rectWarriorWhitex1_2Ability = warriorWhiteRect2.centerx + step * 2
+        rectWarriorWhitey1_2Ability = warriorWhiteRect2.centery
+        rectWarriorWhite1_2Ability = pygame.Rect(rectWarriorWhitex1_2Ability - 30, rectWarriorWhitey1_2Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_2.append(rectWarriorWhite1_2Ability)
+
+        rectWarriorWhitex2_2Ability = warriorWhiteRect2.centerx - step * 2
+        rectWarriorWhitey2_2Ability = warriorWhiteRect2.centery
+        rectWarriorWhite2_2Ability = pygame.Rect(rectWarriorWhitex2_2Ability - 30, rectWarriorWhitey2_2Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_2.append(rectWarriorWhite2_2Ability)
+
+        rectWarriorWhitex3_2Ability = warriorWhiteRect2.centerx
+        rectWarriorWhitey3_2Ability = warriorWhiteRect2.centery - step * 2
+        rectWarriorWhite3_2Ability = pygame.Rect(rectWarriorWhitex3_2Ability - 30, rectWarriorWhitey3_2Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_2.append(rectWarriorWhite3_2Ability)
+
+        rectWarriorWhitex4_2Ability = warriorWhiteRect2.centerx
+        rectWarriorWhitey4_2Ability = warriorWhiteRect2.centery + step * 2
+        rectWarriorWhite4_2Ability = pygame.Rect(rectWarriorWhitex4_2Ability - 30, rectWarriorWhitey4_2Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_2.append(rectWarriorWhite4_2Ability)
+
+        # Legionář bílý 3
+        rectsLegionaryWhite_2 = []
+
+        rectLegionaryWhitex1_2 = legionaryWhiteRect2.centerx + step
+        rectLegionaryWhitey1_2 = legionaryWhiteRect2.centery + step
+        rectLegionaryWhite1_2 = pygame.Rect(rectLegionaryWhitex1_2 - 30, rectLegionaryWhitey1_2 - 30, 60, 60)
+        rectsLegionaryWhite_2.append(rectLegionaryWhite1_2)
+
+        rectLegionaryWhitex2_2 = legionaryWhiteRect2.centerx
+        rectLegionaryWhitey2_2 = legionaryWhiteRect2.centery + step
+        rectLegionaryWhite2_2 = pygame.Rect(rectLegionaryWhitex2_2 - 30, rectLegionaryWhitey2_2 - 30, 60, 60)
+        rectsLegionaryWhite_2.append(rectLegionaryWhite2_2)
+
+        rectLegionaryWhitex3_2 = legionaryWhiteRect2.centerx - step
+        rectLegionaryWhitey3_2 = legionaryWhiteRect2.centery + step
+        rectLegionaryWhite3_2 = pygame.Rect(rectLegionaryWhitex3_2 - 30, rectLegionaryWhitey3_2 - 30, 60, 60)
+        rectsLegionaryWhite_2.append(rectLegionaryWhite3_2)
+
+        # Válečník bílý 4
+        rectsWarriorWhite_3 = []
+
+        rectWarriorWhitex1_3 = warriorWhiteRect3.centerx + step
+        rectWarriorWhitey1_3 = warriorWhiteRect3.centery
+        rectWarriorWhite1_3 = pygame.Rect(rectWarriorWhitex1_3 - 30, rectWarriorWhitey1_3 - 30, 60, 60)
+        rectsWarriorWhite_3.append(rectWarriorWhite1_3)
+
+        rectWarriorWhitex2_3 = warriorWhiteRect3.centerx - step
+        rectWarriorWhitey2_3 = warriorWhiteRect3.centery
+        rectWarriorWhite2_3 = pygame.Rect(rectWarriorWhitex2_3 - 30, rectWarriorWhitey2_3 - 30, 60, 60)
+        rectsWarriorWhite_3.append(rectWarriorWhite2_3)
+
+        rectWarriorWhitex3_3 = warriorWhiteRect3.centerx
+        rectWarriorWhitey3_3 = warriorWhiteRect3.centery + step
+        rectWarriorWhite3_3 = pygame.Rect(rectWarriorWhitex3_3 - 30, rectWarriorWhitey3_3 - 30, 60, 60)
+        rectsWarriorWhite_3.append(rectWarriorWhite3_3)
+
+        rectWarriorWhitex4_3 = warriorWhiteRect3.centerx
+        rectWarriorWhitey4_3 = warriorWhiteRect3.centery - step
+        rectWarriorWhite4_3 = pygame.Rect(rectWarriorWhitex4_3 - 30, rectWarriorWhitey4_3 - 30, 60, 60)
+        rectsWarriorWhite_3.append(rectWarriorWhite4_3)
+
+        # Válečník bílý 4 abilita
+        rectsWarriorWhiteAbility_3 = []
+
+        rectWarriorWhitex1_3Ability = warriorWhiteRect3.centerx + step * 2
+        rectWarriorWhitey1_3Ability = warriorWhiteRect3.centery
+        rectWarriorWhite1_3Ability = pygame.Rect(rectWarriorWhitex1_3Ability - 30, rectWarriorWhitey1_3Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_3.append(rectWarriorWhite1_3Ability)
+
+        rectWarriorWhitex2_3Ability = warriorWhiteRect3.centerx - step * 2
+        rectWarriorWhitey2_3Ability = warriorWhiteRect3.centery
+        rectWarriorWhite2_3Ability = pygame.Rect(rectWarriorWhitex2_3Ability - 30, rectWarriorWhitey2_3Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_3.append(rectWarriorWhite2_3Ability)
+
+        rectWarriorWhitex3_3Ability = warriorWhiteRect3.centerx
+        rectWarriorWhitey3_3Ability = warriorWhiteRect3.centery - step * 2
+        rectWarriorWhite3_3Ability = pygame.Rect(rectWarriorWhitex3_3Ability - 30, rectWarriorWhitey3_3Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_3.append(rectWarriorWhite3_3Ability)
+
+        rectWarriorWhitex4_3Ability = warriorWhiteRect3.centerx
+        rectWarriorWhitey4_3Ability = warriorWhiteRect3.centery + step * 2
+        rectWarriorWhite4_3Ability = pygame.Rect(rectWarriorWhitex4_3Ability - 30, rectWarriorWhitey4_3Ability - 30, 60, 60)
+        rectsWarriorWhiteAbility_3.append(rectWarriorWhite4_3Ability)
+
+        # Legionář bílý 4
+        rectsLegionaryWhite_3 = []
+
+        rectLegionaryWhitex1_3 = legionaryWhiteRect3.centerx + step
+        rectLegionaryWhitey1_3 = legionaryWhiteRect3.centery + step
+        rectLegionaryWhite1_3 = pygame.Rect(rectLegionaryWhitex1_3 - 30, rectLegionaryWhitey1_3 - 30, 60, 60)
+        rectsLegionaryWhite_3.append(rectLegionaryWhite1_3)
+
+        rectLegionaryWhitex2_3 = legionaryWhiteRect3.centerx
+        rectLegionaryWhitey2_3 = legionaryWhiteRect3.centery + step
+        rectLegionaryWhite2_3 = pygame.Rect(rectLegionaryWhitex2_3 - 30, rectLegionaryWhitey2_3 - 30, 60, 60)
+        rectsLegionaryWhite_3.append(rectLegionaryWhite2_3)
+
+        rectLegionaryWhitex3_3 = legionaryWhiteRect3.centerx - step
+        rectLegionaryWhitey3_3 = legionaryWhiteRect3.centery + step
+        rectLegionaryWhite3_3 = pygame.Rect(rectLegionaryWhitex3_3 - 30, rectLegionaryWhitey3_3 - 30, 60, 60)
+        rectsLegionaryWhite_3.append(rectLegionaryWhite3_3)
+
+        # Morový doktor černý 1
+        rectsPlagueDoctorBlack = []
+
+        rectPlagueBlackx1 = plagueDoctorBlackRect.centerx + step
+        rectPlagueBlacky1 = plagueDoctorBlackRect.centery
+        rectPlagueBlack1 = pygame.Rect(rectPlagueBlackx1 - 30, rectPlagueBlacky1 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack1)
+
+        rectPlagueBlackx2 = plagueDoctorBlackRect.centerx + step * 2
+        rectPlagueBlacky2 = plagueDoctorBlackRect.centery
+        rectPlagueBlack2 = pygame.Rect(rectPlagueBlackx2 - 30, rectPlagueBlacky2 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack2)
+
+        rectPlagueBlackx3 = plagueDoctorBlackRect.centerx - step
+        rectPlagueBlacky3 = plagueDoctorBlackRect.centery
+        rectPlagueBlack3 = pygame.Rect(rectPlagueBlackx3 - 30, rectPlagueBlacky3 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack3)
+
+        rectPlagueBlackx4 = plagueDoctorBlackRect.centerx - step * 2
+        rectPlagueBlacky4 = plagueDoctorBlackRect.centery
+        rectPlagueBlack4 = pygame.Rect(rectPlagueBlackx4 - 30, rectPlagueBlacky4 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack4)
+
+        rectPlagueBlackx5 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky5 = plagueDoctorBlackRect.centery + step
+        rectPlagueBlack5 = pygame.Rect(rectPlagueBlackx5 - 30, rectPlagueBlacky5 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack5)
+
+        rectPlagueBlackx6 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky6 = plagueDoctorBlackRect.centery + step * 2
+        rectPlagueBlack6 = pygame.Rect(rectPlagueBlackx6 - 30, rectPlagueBlacky6 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack6)
+
+        rectPlagueBlackx7 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky7 = plagueDoctorBlackRect.centery + step * 3
+        rectPlagueBlack7 = pygame.Rect(rectPlagueBlackx7 - 30, rectPlagueBlacky7 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack7)
+
+        rectPlagueBlackx8 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky8 = plagueDoctorBlackRect.centery + step * 4
+        rectPlagueBlack8 = pygame.Rect(rectPlagueBlackx8 - 30, rectPlagueBlacky8 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack8)
+
+        rectPlagueBlackx9 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky9 = plagueDoctorBlackRect.centery + step * 5
+        rectPlagueBlack9 = pygame.Rect(rectPlagueBlackx9 - 30, rectPlagueBlacky9 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack9)
+
+        rectPlagueBlackx10 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky10 = plagueDoctorBlackRect.centery + step * 6
+        rectPlagueBlack10 = pygame.Rect(rectPlagueBlackx10 - 30, rectPlagueBlacky10 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack10)
+
+        rectPlagueBlackx11 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky11 = plagueDoctorBlackRect.centery + step * 7
+        rectPlagueBlack11 = pygame.Rect(rectPlagueBlackx11 - 30, rectPlagueBlacky11 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack11)
+
+        rectPlagueBlackx12 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky12 = plagueDoctorBlackRect.centery - step
+        rectPlagueBlack12 = pygame.Rect(rectPlagueBlackx12 - 30, rectPlagueBlacky12 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack12)
+
+        rectPlagueBlackx13 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky13 = plagueDoctorBlackRect.centery - step * 2
+        rectPlagueBlack13 = pygame.Rect(rectPlagueBlackx13 - 30, rectPlagueBlacky13 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack13)
+
+        rectPlagueBlackx14 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky14 = plagueDoctorBlackRect.centery - step * 3
+        rectPlagueBlack14 = pygame.Rect(rectPlagueBlackx14 - 30, rectPlagueBlacky14 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack14)
+
+        rectPlagueBlackx15 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky15 = plagueDoctorBlackRect.centery - step * 4
+        rectPlagueBlack15 = pygame.Rect(rectPlagueBlackx15 - 30, rectPlagueBlacky15 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack15)
+
+        rectPlagueBlackx16 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky16 = plagueDoctorBlackRect.centery - step * 5
+        rectPlagueBlack16 = pygame.Rect(rectPlagueBlackx16 - 30, rectPlagueBlacky16 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack16)
+
+        rectPlagueBlackx17 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky17 = plagueDoctorBlackRect.centery - step * 6
+        rectPlagueBlack17 = pygame.Rect(rectPlagueBlackx17 - 30, rectPlagueBlacky17 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack17)
+
+        rectPlagueBlackx18 = plagueDoctorBlackRect.centerx
+        rectPlagueBlacky18 = plagueDoctorBlackRect.centery - step * 7
+        rectPlagueBlack18 = pygame.Rect(rectPlagueBlackx18 - 30, rectPlagueBlacky18 - 30, 60, 60)
+        rectsPlagueDoctorBlack.append(rectPlagueBlack18)
+
+        # Arcibiskup černý 1
+        rectsArchbishopBlack = []
+
+        rectArchbishopBlackx1 = archbishopBlackRect.centerx + step * 2
+        rectArchbishopBlacky1 = archbishopBlackRect.centery
+        rectArchbishopBlack1 = pygame.Rect(rectArchbishopBlackx1 - 30, rectArchbishopBlacky1 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack1)
+
+        rectArchbishopBlackx2 = archbishopBlackRect.centerx + step * 2
+        rectArchbishopBlacky2 = archbishopBlackRect.centery + step
+        rectArchbishopBlack2 = pygame.Rect(rectArchbishopBlackx2 - 30, rectArchbishopBlacky2 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack2)
+
+        rectArchbishopBlackx3 = archbishopBlackRect.centerx + step * 2
+        rectArchbishopBlacky3 = archbishopBlackRect.centery - step
+        rectArchbishopBlack3 = pygame.Rect(rectArchbishopBlackx3 - 30, rectArchbishopBlacky3 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack3)
+
+        rectArchbishopBlackx4 = archbishopBlackRect.centerx
+        rectArchbishopBlacky4 = archbishopBlackRect.centery + step * 2
+        rectArchbishopBlack4 = pygame.Rect(rectArchbishopBlackx4 - 30, rectArchbishopBlacky4 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack4)
+
+        rectArchbishopBlackx5 = archbishopBlackRect.centerx + step
+        rectArchbishopBlacky5 = archbishopBlackRect.centery + step * 2
+        rectArchbishopBlack5 = pygame.Rect(rectArchbishopBlackx5 - 30, rectArchbishopBlacky5 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack5)
+
+        rectArchbishopBlackx6 = archbishopBlackRect.centerx - step
+        rectArchbishopBlacky6 = archbishopBlackRect.centery + step * 2
+        rectArchbishopBlack6 = pygame.Rect(rectArchbishopBlackx6 - 30, rectArchbishopBlacky6 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack6)
+
+        rectArchbishopBlackx7 = archbishopBlackRect.centerx - step * 2
+        rectArchbishopBlacky7 = archbishopBlackRect.centery
+        rectArchbishopBlack7 = pygame.Rect(rectArchbishopBlackx7 - 30, rectArchbishopBlacky7 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack7)
+
+        rectArchbishopBlackx8 = archbishopBlackRect.centerx - step * 2
+        rectArchbishopBlacky8 = archbishopBlackRect.centery + step
+        rectArchbishopBlack8 = pygame.Rect(rectArchbishopBlackx8 - 30, rectArchbishopBlacky8 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack8)
+
+        rectArchbishopBlackx9 = archbishopBlackRect.centerx - step * 2
+        rectArchbishopBlacky9 = archbishopBlackRect.centery - step
+        rectArchbishopBlack9 = pygame.Rect(rectArchbishopBlackx9 - 30, rectArchbishopBlacky9 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack9)
+
+        rectArchbishopBlackx10 = archbishopBlackRect.centerx
+        rectArchbishopBlacky10 = archbishopBlackRect.centery - step * 2
+        rectArchbishopBlack10 = pygame.Rect(rectArchbishopBlackx10 - 30, rectArchbishopBlacky10 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack10)
+
+        rectArchbishopBlackx11 = archbishopBlackRect.centerx + step
+        rectArchbishopBlacky11 = archbishopBlackRect.centery - step * 2
+        rectArchbishopBlack11 = pygame.Rect(rectArchbishopBlackx11 - 30, rectArchbishopBlacky11 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack11)
+
+        rectArchbishopBlackx12 = archbishopBlackRect.centerx - step
+        rectArchbishopBlacky12 = archbishopBlackRect.centery - step * 2
+        rectArchbishopBlack12 = pygame.Rect(rectArchbishopBlackx12 - 30, rectArchbishopBlacky12 - 30, 60, 60)
+        rectsArchbishopBlack.append(rectArchbishopBlack12)
+
+        # Kardinál černý 1
+        rectsCardinalBlack = []
+
+        rectCardinalBlackx1 = cardinalBlackRect.centerx + step
+        rectCardinalBlacky1 = cardinalBlackRect.centery - step
+        rectCardinalBlack1 = pygame.Rect(rectCardinalBlackx1 - 30, rectCardinalBlacky1 - 30, 60, 60)
+        rectsCardinalBlack.append(rectCardinalBlack1)
+
+        rectCardinalBlackx2 = cardinalBlackRect.centerx - step
+        rectCardinalBlacky2 = cardinalBlackRect.centery - step
+        rectCardinalBlack2 = pygame.Rect(rectCardinalBlackx2 - 30, rectCardinalBlacky2 - 30, 60, 60)
+        rectsCardinalBlack.append(rectCardinalBlack2)
+
+        rectCardinalBlackx3 = cardinalBlackRect.centerx + step
+        rectCardinalBlacky3 = cardinalBlackRect.centery + step
+        rectCardinalBlack3 = pygame.Rect(rectCardinalBlackx3 - 30, rectCardinalBlacky3 - 30, 60, 60)
+        rectsCardinalBlack.append(rectCardinalBlack3)
+
+        rectCardinalBlackx4 = cardinalBlackRect.centerx - step
+        rectCardinalBlacky4 = cardinalBlackRect.centery + step
+        rectCardinalBlack4 = pygame.Rect(rectCardinalBlackx4 - 30, rectCardinalBlacky4 - 30, 60, 60)
+        rectsCardinalBlack.append(rectCardinalBlack4)
+
+        # Hádes černý
+        rectsHadesBlack = []
+
+        rectHadesBlackx1 = hadesBlackRect.centerx + step
+        rectHadesBlacky1 = hadesBlackRect.centery
+        rectHadesBlack1 = pygame.Rect(rectHadesBlackx1 - 30, rectHadesBlacky1 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack1)
+
+        rectHadesBlackx2 = hadesBlackRect.centerx + step * 2
+        rectHadesBlacky2 = hadesBlackRect.centery
+        rectHadesBlack2 = pygame.Rect(rectHadesBlackx2 - 30, rectHadesBlacky2 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack2)
+
+        rectHadesBlackx3 = hadesBlackRect.centerx + step * 3
+        rectHadesBlacky3 = hadesBlackRect.centery
+        rectHadesBlack3 = pygame.Rect(rectHadesBlackx3 - 30, rectHadesBlacky3 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack3)
+
+        rectHadesBlackx4 = hadesBlackRect.centerx - step
+        rectHadesBlacky4 = hadesBlackRect.centery
+        rectHadesBlack4 = pygame.Rect(rectHadesBlackx4 - 30, rectHadesBlacky4 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack4)
+
+        rectHadesBlackx5 = hadesBlackRect.centerx - step * 2
+        rectHadesBlacky5 = hadesBlackRect.centery
+        rectHadesBlack5 = pygame.Rect(rectHadesBlackx5 - 30, rectHadesBlacky5 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack5)
+
+        rectHadesBlackx6 = hadesBlackRect.centerx - step * 3
+        rectHadesBlacky6 = hadesBlackRect.centery
+        rectHadesBlack6 = pygame.Rect(rectHadesBlackx6 - 30, rectHadesBlacky6 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack6)
+
+        rectHadesBlackx7 = hadesBlackRect.centerx
+        rectHadesBlacky7 = hadesBlackRect.centery - step
+        rectHadesBlack7 = pygame.Rect(rectHadesBlackx7 - 30, rectHadesBlacky7 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack7)
+
+        rectHadesBlackx8 = hadesBlackRect.centerx
+        rectHadesBlacky8 = hadesBlackRect.centery - step * 2
+        rectHadesBlack8 = pygame.Rect(rectHadesBlackx8 - 30, rectHadesBlacky8 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack8)
+
+        rectHadesBlackx9 = hadesBlackRect.centerx
+        rectHadesBlacky9 = hadesBlackRect.centery - step * 3
+        rectHadesBlack9 = pygame.Rect(rectHadesBlackx9 - 30, rectHadesBlacky9 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack9)
+
+        rectHadesBlackx10 = hadesBlackRect.centerx + step
+        rectHadesBlacky10 = hadesBlackRect.centery - step
+        rectHadesBlack10 = pygame.Rect(rectHadesBlackx10 - 30, rectHadesBlacky10 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack10)
+
+        rectHadesBlackx11 = hadesBlackRect.centerx + step * 2
+        rectHadesBlacky11 = hadesBlackRect.centery - step * 2
+        rectHadesBlack11 = pygame.Rect(rectHadesBlackx11 - 30, rectHadesBlacky11 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack11)
+
+        rectHadesBlackx12 = hadesBlackRect.centerx + step * 3
+        rectHadesBlacky12 = hadesBlackRect.centery - step * 3
+        rectHadesBlack12 = pygame.Rect(rectHadesBlackx12 - 30, rectHadesBlacky12 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack12)
+
+        rectHadesBlackx13 = hadesBlackRect.centerx - step
+        rectHadesBlacky13 = hadesBlackRect.centery - step
+        rectHadesBlack13 = pygame.Rect(rectHadesBlackx13 - 30, rectHadesBlacky13 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack13)
+
+        rectHadesBlackx14 = hadesBlackRect.centerx - step * 2
+        rectHadesBlacky14 = hadesBlackRect.centery - step * 2
+        rectHadesBlack14 = pygame.Rect(rectHadesBlackx14 - 30, rectHadesBlacky14 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack14)
+
+        rectHadesBlackx15 = hadesBlackRect.centerx - step * 3
+        rectHadesBlacky15 = hadesBlackRect.centery - step * 3
+        rectHadesBlack15 = pygame.Rect(rectHadesBlackx15 - 30, rectHadesBlacky15 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack15)
+
+        rectHadesBlackx16 = hadesBlackRect.centerx + step
+        rectHadesBlacky16 = hadesBlackRect.centery + step
+        rectHadesBlack16 = pygame.Rect(rectHadesBlackx16 - 30, rectHadesBlacky16 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack16)
+
+        rectHadesBlackx17 = hadesBlackRect.centerx + step * 2
+        rectHadesBlacky17 = hadesBlackRect.centery + step * 2
+        rectHadesBlack17 = pygame.Rect(rectHadesBlackx17 - 30, rectHadesBlacky17 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack17)
+
+        rectHadesBlackx18 = hadesBlackRect.centerx - step
+        rectHadesBlacky18 = hadesBlackRect.centery + step
+        rectHadesBlack18 = pygame.Rect(rectHadesBlackx18 - 30, rectHadesBlacky18 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack18)
+
+        rectHadesBlackx19 = hadesBlackRect.centerx - step * 2
+        rectHadesBlacky19 = hadesBlackRect.centery + step * 2
+        rectHadesBlack19 = pygame.Rect(rectHadesBlackx19 - 30, rectHadesBlacky19 - 30, 60, 60)
+        rectsHadesBlack.append(rectHadesBlack19)
+
+        # Persefona černá
+        rectsPersephoneBlack = []
+
+        rectPersephoneBlackx1 = persephoneBlackRect.centerx + step
+        rectPersephoneBlacky1 = persephoneBlackRect.centery - step
+        rectPersephoneBlack1 = pygame.Rect(rectPersephoneBlackx1 - 30, rectPersephoneBlacky1 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack1)
+
+        rectPersephoneBlackx2 = persephoneBlackRect.centerx + step
+        rectPersephoneBlacky2 = persephoneBlackRect.centery
+        rectPersephoneBlack2 = pygame.Rect(rectPersephoneBlackx2 - 30, rectPersephoneBlacky2 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack2)
+
+        rectPersephoneBlackx3 = persephoneBlackRect.centerx + step
+        rectPersephoneBlacky3 = persephoneBlackRect.centery + step
+        rectPersephoneBlack3 = pygame.Rect(rectPersephoneBlackx3 - 30, rectPersephoneBlacky3 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack3)
+
+        rectPersephoneBlackx4 = persephoneBlackRect.centerx
+        rectPersephoneBlacky4 = persephoneBlackRect.centery + step
+        rectPersephoneBlack4 = pygame.Rect(rectPersephoneBlackx4 - 30, rectPersephoneBlacky4 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack4)
+
+        rectPersephoneBlackx5 = persephoneBlackRect.centerx
+        rectPersephoneBlacky5 = persephoneBlackRect.centery - step
+        rectPersephoneBlack5 = pygame.Rect(rectPersephoneBlackx5 - 30, rectPersephoneBlacky5 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack5)
+
+        rectPersephoneBlackx6 = persephoneBlackRect.centerx - step
+        rectPersephoneBlacky6 = persephoneBlackRect.centery - step
+        rectPersephoneBlack6 = pygame.Rect(rectPersephoneBlackx6 - 30, rectPersephoneBlacky6 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack6)
+
+        rectPersephoneBlackx7 = persephoneBlackRect.centerx - step
+        rectPersephoneBlacky7 = persephoneBlackRect.centery
+        rectPersephoneBlack7 = pygame.Rect(rectPersephoneBlackx7 - 30, rectPersephoneBlacky7 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack7)
+
+        rectPersephoneBlackx8 = persephoneBlackRect.centerx - step
+        rectPersephoneBlacky8 = persephoneBlackRect.centery + step
+        rectPersephoneBlack8 = pygame.Rect(rectPersephoneBlackx8 - 30, rectPersephoneBlacky8 - 30, 60, 60)
+        rectsPersephoneBlack.append(rectPersephoneBlack8)
+
+        # Kardinál černý 1
+        rectsCardinalBlack_1 = []
+
+        rectCardinalBlackx1_1 = cardinalBlackRect1.centerx + step
+        rectCardinalBlacky1_1 = cardinalBlackRect1.centery - step
+        rectCardinalBlack1_1 = pygame.Rect(rectCardinalBlackx1_1 - 30, rectCardinalBlacky1_1 - 30, 60, 60)
+        rectsCardinalBlack_1.append(rectCardinalBlack1_1)
+
+        rectCardinalBlackx2_1 = cardinalBlackRect1.centerx + step
+        rectCardinalBlacky2_1 = cardinalBlackRect1.centery + step
+        rectCardinalBlack2_1 = pygame.Rect(rectCardinalBlackx2_1 - 30, rectCardinalBlacky2_1 - 30, 60, 60)
+        rectsCardinalBlack_1.append(rectCardinalBlack2_1)
+
+        rectCardinalBlackx3_1 = cardinalBlackRect1.centerx - step
+        rectCardinalBlacky3_1 = cardinalBlackRect1.centery - step
+        rectCardinalBlack3_1 = pygame.Rect(rectCardinalBlackx3_1 - 30, rectCardinalBlacky3_1 - 30, 60, 60)
+        rectsCardinalBlack_1.append(rectCardinalBlack3_1)
+
+        rectCardinalBlackx4_1 = cardinalBlackRect1.centerx - step
+        rectCardinalBlacky4_1 = cardinalBlackRect1.centery + step
+        rectCardinalBlack4_1 = pygame.Rect(rectCardinalBlackx4_1 - 30, rectCardinalBlacky4_1 - 30, 60, 60)
+        rectsCardinalBlack_1.append(rectCardinalBlack4_1)
+
+        # Arcibiskup černý 1
+        rectsArchbishopBlack_1 = []
+
+        rectArchbishopBlackx1_1 = archbishopBlackRect1.centerx + step * 2
+        rectArchbishopBlacky1_1 = archbishopBlackRect1.centery
+        rectArchbishopBlack1_1 = pygame.Rect(rectArchbishopBlackx1_1 - 30, rectArchbishopBlacky1_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack1_1)
+
+        rectArchbishopBlackx2_1 = archbishopBlackRect1.centerx + step * 2
+        rectArchbishopBlacky2_1 = archbishopBlackRect1.centery - step
+        rectArchbishopBlack2_1 = pygame.Rect(rectArchbishopBlackx2_1 - 30, rectArchbishopBlacky2_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack2_1)
+
+        rectArchbishopBlackx3_1 = archbishopBlackRect1.centerx + step * 2
+        rectArchbishopBlacky3_1 = archbishopBlackRect1.centery + step
+        rectArchbishopBlack3_1 = pygame.Rect(rectArchbishopBlackx3_1 - 30, rectArchbishopBlacky3_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack3_1)
+
+        rectArchbishopBlackx4_1 = archbishopBlackRect1.centerx - step * 2
+        rectArchbishopBlacky4_1 = archbishopBlackRect1.centery
+        rectArchbishopBlack4_1 = pygame.Rect(rectArchbishopBlackx4_1 - 30, rectArchbishopBlacky4_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack4_1)
+
+        rectArchbishopBlackx5_1 = archbishopBlackRect1.centerx - step * 2
+        rectArchbishopBlacky5_1 = archbishopBlackRect1.centery - step
+        rectArchbishopBlack5_1 = pygame.Rect(rectArchbishopBlackx5_1 - 30, rectArchbishopBlacky5_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack5_1)
+
+        rectArchbishopBlackx6_1 = archbishopBlackRect1.centerx - step * 2
+        rectArchbishopBlacky6_1 = archbishopBlackRect1.centery + step
+        rectArchbishopBlack6_1 = pygame.Rect(rectArchbishopBlackx6_1 - 30, rectArchbishopBlacky6_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack6_1)
+
+        rectArchbishopBlackx7_1 = archbishopBlackRect1.centerx
+        rectArchbishopBlacky7_1 = archbishopBlackRect1.centery + step * 2
+        rectArchbishopBlack7_1 = pygame.Rect(rectArchbishopBlackx7_1 - 30, rectArchbishopBlacky7_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack7_1)
+
+        rectArchbishopBlackx8_1 = archbishopBlackRect1.centerx - step
+        rectArchbishopBlacky8_1 = archbishopBlackRect1.centery + step * 2
+        rectArchbishopBlack8_1 = pygame.Rect(rectArchbishopBlackx8_1 - 30, rectArchbishopBlacky8_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack8_1)
+
+        rectArchbishopBlackx9_1 = archbishopBlackRect1.centerx + step
+        rectArchbishopBlacky9_1 = archbishopBlackRect1.centery + step * 2
+        rectArchbishopBlack9_1 = pygame.Rect(rectArchbishopBlackx9_1 - 30, rectArchbishopBlacky9_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack9_1)
+
+        rectArchbishopBlackx10_1 = archbishopBlackRect1.centerx
+        rectArchbishopBlacky10_1 = archbishopBlackRect1.centery - step * 2
+        rectArchbishopBlack10_1 = pygame.Rect(rectArchbishopBlackx10_1 - 30, rectArchbishopBlacky10_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack10_1)
+
+        rectArchbishopBlackx11_1 = archbishopBlackRect1.centerx - step
+        rectArchbishopBlacky11_1 = archbishopBlackRect1.centery - step * 2
+        rectArchbishopBlack11_1 = pygame.Rect(rectArchbishopBlackx11_1 - 30, rectArchbishopBlacky11_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack11_1)
+
+        rectArchbishopBlackx12_1 = archbishopBlackRect1.centerx + step
+        rectArchbishopBlacky12_1 = archbishopBlackRect1.centery - step * 2
+        rectArchbishopBlack12_1 = pygame.Rect(rectArchbishopBlackx12_1 - 30, rectArchbishopBlacky12_1 - 30, 60, 60)
+        rectsArchbishopBlack_1.append(rectArchbishopBlack12_1)
+
+        # Morový doktor černý 1
+        rectsPlagueDoctorBlack_1 = []
+
+        rectPlagueBlackx1_1 = plagueDoctorBlackRect1.centerx + step
+        rectPlagueBlacky1_1 = plagueDoctorBlackRect1.centery
+        rectPlagueBlack1_1 = pygame.Rect(rectPlagueBlackx1_1 - 30, rectPlagueBlacky1_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack1_1)
+
+        rectPlagueBlackx2_1 = plagueDoctorBlackRect1.centerx + step * 2
+        rectPlagueBlacky2_1 = plagueDoctorBlackRect1.centery
+        rectPlagueBlack2_1 = pygame.Rect(rectPlagueBlackx2_1 - 30, rectPlagueBlacky2_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack2_1)
+
+        rectPlagueBlackx3_1 = plagueDoctorBlackRect1.centerx - step
+        rectPlagueBlacky3_1 = plagueDoctorBlackRect1.centery
+        rectPlagueBlack3_1 = pygame.Rect(rectPlagueBlackx3_1 - 30, rectPlagueBlacky3_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack3_1)
+
+        rectPlagueBlackx4_1 = plagueDoctorBlackRect1.centerx - step * 2
+        rectPlagueBlacky4_1 = plagueDoctorBlackRect1.centery
+        rectPlagueBlack4_1 = pygame.Rect(rectPlagueBlackx4_1 - 30, rectPlagueBlacky4_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack4_1)
+
+        rectPlagueBlackx5_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky5_1 = plagueDoctorBlackRect1.centery + step
+        rectPlagueBlack5_1 = pygame.Rect(rectPlagueBlackx5_1 - 30, rectPlagueBlacky5_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack5_1)
+
+        rectPlagueBlackx6_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky6_1 = plagueDoctorBlackRect1.centery + step * 2
+        rectPlagueBlack6_1 = pygame.Rect(rectPlagueBlackx6_1 - 30, rectPlagueBlacky6_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack6_1)
+
+        rectPlagueBlackx7_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky7_1 = plagueDoctorBlackRect1.centery + step * 3
+        rectPlagueBlack7_1 = pygame.Rect(rectPlagueBlackx7_1 - 30, rectPlagueBlacky7_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack7_1)
+
+        rectPlagueBlackx8_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky8_1 = plagueDoctorBlackRect1.centery + step * 4
+        rectPlagueBlack8_1 = pygame.Rect(rectPlagueBlackx8_1 - 30, rectPlagueBlacky8_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack8_1)
+
+        rectPlagueBlackx9_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky9_1 = plagueDoctorBlackRect1.centery + step * 5
+        rectPlagueBlack9_1 = pygame.Rect(rectPlagueBlackx9_1 - 30, rectPlagueBlacky9_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack9_1)
+
+        rectPlagueBlackx10_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky10_1 = plagueDoctorBlackRect1.centery + step * 6
+        rectPlagueBlack10_1 = pygame.Rect(rectPlagueBlackx10_1 - 30, rectPlagueBlacky10_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack10_1)
+
+        rectPlagueBlackx11_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky11_1 = plagueDoctorBlackRect1.centery + step * 7
+        rectPlagueBlack11_1 = pygame.Rect(rectPlagueBlackx11_1 - 30, rectPlagueBlacky11_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack11_1)
+
+        rectPlagueBlackx12_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky12_1 = plagueDoctorBlackRect1.centery - step
+        rectPlagueBlack12_1 = pygame.Rect(rectPlagueBlackx12_1 - 30, rectPlagueBlacky12_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack12_1)
+
+        rectPlagueBlackx13_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky13_1 = plagueDoctorBlackRect1.centery - step * 2
+        rectPlagueBlack13_1 = pygame.Rect(rectPlagueBlackx13_1 - 30, rectPlagueBlacky13_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack13_1)
+
+        rectPlagueBlackx14_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky14_1 = plagueDoctorBlackRect1.centery - step * 3
+        rectPlagueBlack14_1 = pygame.Rect(rectPlagueBlackx14_1 - 30, rectPlagueBlacky14_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack14_1)
+
+        rectPlagueBlackx15_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky15_1 = plagueDoctorBlackRect1.centery - step * 4
+        rectPlagueBlack15_1 = pygame.Rect(rectPlagueBlackx15_1 - 30, rectPlagueBlacky15_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack15_1)
+
+        rectPlagueBlackx16_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky16_1 = plagueDoctorBlackRect1.centery - step * 5
+        rectPlagueBlack16_1 = pygame.Rect(rectPlagueBlackx16_1 - 30, rectPlagueBlacky16_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack16_1)
+
+        rectPlagueBlackx17_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky17_1 = plagueDoctorBlackRect1.centery - step * 6
+        rectPlagueBlack17_1 = pygame.Rect(rectPlagueBlackx17_1 - 30, rectPlagueBlacky17_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack17_1)
+
+        rectPlagueBlackx18_1 = plagueDoctorBlackRect1.centerx
+        rectPlagueBlacky18_1 = plagueDoctorBlackRect1.centery - step * 7
+        rectPlagueBlack18_1 = pygame.Rect(rectPlagueBlackx18_1 - 30, rectPlagueBlacky18_1 - 30, 60, 60)
+        rectsPlagueDoctorBlack_1.append(rectPlagueBlack18_1)
+
+        # Legionář černý
+        rectsLegionaryBlack = []
+
+        rectLegionaryBlackx1 = legionaryBlackRect.centerx + step
+        rectLegionaryBlacky1 = legionaryBlackRect.centery - step
+        rectLegionaryBlack1 = pygame.Rect(rectLegionaryBlackx1 - 30, rectLegionaryBlacky1 - 30, 60, 60)
+        rectsLegionaryBlack.append(rectLegionaryBlack1)
+
+        rectLegionaryBlackx2 = legionaryBlackRect.centerx
+        rectLegionaryBlacky2 = legionaryBlackRect.centery - step
+        rectLegionaryBlack2 = pygame.Rect(rectLegionaryBlackx2 - 30, rectLegionaryBlacky2 - 30, 60, 60)
+        rectsLegionaryBlack.append(rectLegionaryBlack2)
+
+        rectLegionaryBlackx3 = legionaryBlackRect.centerx - step
+        rectLegionaryBlacky3 = legionaryBlackRect.centery - step
+        rectLegionaryBlack3 = pygame.Rect(rectLegionaryBlackx3 - 30, rectLegionaryBlacky3 - 30, 60, 60)
+        rectsLegionaryBlack.append(rectLegionaryBlack3)
+
+        # Válečník černý
+        rectsWarriorBlack = []
+
+        rectWarriorBlackx1 = warriorBlackRect.centerx + step
+        rectWarriorBlacky1 = warriorBlackRect.centery
+        rectWarriorBlack1 = pygame.Rect(rectWarriorBlackx1 - 30, rectWarriorBlacky1 - 30, 60, 60)
+        rectsWarriorBlack.append(rectWarriorBlack1)
+
+        rectWarriorBlackx2 = warriorBlackRect.centerx
+        rectWarriorBlacky2 = warriorBlackRect.centery + step
+        rectWarriorBlack2 = pygame.Rect(rectWarriorBlackx2 - 30, rectWarriorBlacky2 - 30, 60, 60)
+        rectsWarriorBlack.append(rectWarriorBlack2)
+
+        rectWarriorBlackx3 = warriorBlackRect.centerx - step
+        rectWarriorBlacky3 = warriorBlackRect.centery
+        rectWarriorBlack3 = pygame.Rect(rectWarriorBlackx3 - 30, rectWarriorBlacky3 - 30, 60, 60)
+        rectsWarriorBlack.append(rectWarriorBlack3)
+
+        rectWarriorBlackx4 = warriorBlackRect.centerx
+        rectWarriorBlacky4 = warriorBlackRect.centery - step
+        rectWarriorBlack4 = pygame.Rect(rectWarriorBlackx4 - 30, rectWarriorBlacky4 - 30, 60, 60)
+        rectsWarriorBlack.append(rectWarriorBlack4)
+
+        # Válečník černý abilita
+        rectsWarriorBlackAbility = []
+
+        rectWarriorBlackx1Ability = warriorBlackRect.centerx + step * 2
+        rectWarriorBlack1Ability = warriorBlackRect.centery
+        rectWarriorBlack1Ability = pygame.Rect(rectWarriorBlackx1Ability - 30, rectWarriorBlack1Ability - 30,
+                                            60, 60)
+        rectsWarriorBlackAbility.append(rectWarriorBlack1Ability)
+
+        rectWarriorBlackx2Ability = warriorBlackRect.centerx - step * 2
+        rectWarriorBlacky2Ability = warriorBlackRect.centery
+        rectWarriorBlack2Ability = pygame.Rect(rectWarriorBlackx2Ability - 30, rectWarriorBlacky2Ability - 30,
+                                            60, 60)
+        rectsWarriorBlackAbility.append(rectWarriorBlack2Ability)
+
+        rectWarriorBlackx3Ability = warriorBlackRect.centerx
+        rectWarriorBlacky3Ability = warriorBlackRect.centery - step * 2
+        rectWarriorBlack3Ability = pygame.Rect(rectWarriorBlackx3Ability - 30, rectWarriorBlacky3Ability - 30,
+                                            60, 60)
+        rectsWarriorBlackAbility.append(rectWarriorBlack3Ability)
+
+        rectWarriorBlackx4Ability = warriorBlackRect.centerx
+        rectWarriorBlacky4Ability = warriorBlackRect.centery + step * 2
+        rectWarriorBlack4Ability = pygame.Rect(rectWarriorBlackx4Ability - 30, rectWarriorBlacky4Ability - 30,
+                                            60, 60)
+        rectsWarriorBlackAbility.append(rectWarriorBlack4Ability)
+
+        # Legionář černý 1
+        rectsLegionaryBlack_1 = []
+
+        rectLegionaryBlackx1_1 = legionaryBlackRect1.centerx + step
+        rectLegionaryBlacky1_1 = legionaryBlackRect1.centery - step
+        rectLegionaryBlack1_1 = pygame.Rect(rectLegionaryBlackx1_1 - 30, rectLegionaryBlacky1_1 - 30, 60, 60)
+        rectsLegionaryBlack_1.append(rectLegionaryBlack1_1)
+
+        rectLegionaryBlackx2_1 = legionaryBlackRect1.centerx
+        rectLegionaryBlacky2_1 = legionaryBlackRect1.centery - step
+        rectLegionaryBlack2_1 = pygame.Rect(rectLegionaryBlackx2_1 - 30, rectLegionaryBlacky2_1 - 30, 60, 60)
+        rectsLegionaryBlack_1.append(rectLegionaryBlack2_1)
+
+        rectLegionaryBlackx3_1 = legionaryBlackRect1.centerx - step
+        rectLegionaryBlacky3_1 = legionaryBlackRect1.centery - step
+        rectLegionaryBlack3_1 = pygame.Rect(rectLegionaryBlackx3_1 - 30, rectLegionaryBlacky3_1 - 30, 60, 60)
+        rectsLegionaryBlack_1.append(rectLegionaryBlack3_1)
+
+        # Válečník černý 1
+        rectsWarriorBlack_1 = []
+
+        rectWarriorBlackx1_1 = warriorBlackRect1.centerx + step
+        rectWarriorBlacky1_1 = warriorBlackRect1.centery
+        rectWarriorBlack1_1 = pygame.Rect(rectWarriorBlackx1_1 - 30, rectWarriorBlacky1_1 - 30, 60, 60)
+        rectsWarriorBlack_1.append(rectWarriorBlack1_1)
+
+        rectWarriorBlackx2_1 = warriorBlackRect1.centerx
+        rectWarriorBlacky2_1 = warriorBlackRect1.centery + step
+        rectWarriorBlack2_1 = pygame.Rect(rectWarriorBlackx2_1 - 30, rectWarriorBlacky2_1 - 30, 60, 60)
+        rectsWarriorBlack_1.append(rectWarriorBlack2_1)
+
+        rectWarriorBlackx3_1 = warriorBlackRect1.centerx
+        rectWarriorBlacky3_1 = warriorBlackRect1.centery - step
+        rectWarriorBlack3_1 = pygame.Rect(rectWarriorBlackx3_1 - 30, rectWarriorBlacky3_1 - 30, 60, 60)
+        rectsWarriorBlack_1.append(rectWarriorBlack3_1)
+
+        rectWarriorBlackx4_1 = warriorBlackRect1.centerx - step
+        rectWarriorBlacky4_1 = warriorBlackRect1.centery
+        rectWarriorBlack4_1 = pygame.Rect(rectWarriorBlackx4_1 - 30, rectWarriorBlacky4_1 - 30, 60, 60)
+        rectsWarriorBlack_1.append(rectWarriorBlack4_1)
+
+        # Válečník černý 1 abilita
+        rectsWarriorBlackAbility_1 = []
+
+        rectWarriorBlackx1_1Ability = warriorBlackRect1.centerx + step * 2
+        rectWarriorBlacky1_1Ability = warriorBlackRect1.centery
+        rectWarriorBlack1_1Ability = pygame.Rect(rectWarriorBlackx1_1Ability - 30, rectWarriorBlacky1_1Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_1.append(rectWarriorBlack1_1Ability)
+
+        rectWarriorBlackx2_1Ability = warriorBlackRect1.centerx - step * 2
+        rectWarriorBlacky2_1Ability = warriorBlackRect1.centery
+        rectWarriorBlack2_1Ability = pygame.Rect(rectWarriorBlackx2_1Ability - 30, rectWarriorBlacky2_1Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_1.append(rectWarriorBlack2_1Ability)
+
+        rectWarriorBlackx3_1Ability = warriorBlackRect1.centerx
+        rectWarriorBlacky3_1Ability = warriorBlackRect1.centery - step * 2
+        rectWarriorBlack3_1Ability = pygame.Rect(rectWarriorBlackx3_1Ability - 30, rectWarriorBlacky3_1Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_1.append(rectWarriorBlack3_1Ability)
+
+        rectWarriorBlackx4_1Ability = warriorBlackRect1.centerx
+        rectWarriorBlacky4_1Ability = warriorBlackRect1.centery + step * 2
+        rectWarriorBlack4_1Ability = pygame.Rect(rectWarriorBlackx4_1Ability - 30, rectWarriorBlacky4_1Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_1.append(rectWarriorBlack4_1Ability)
+
+        # Legionář černý 2
+        rectsLegionaryBlack_2 = []
+
+        rectLegionaryBlackx1_2 = legionaryBlackRect2.centerx + step
+        rectLegionaryBlacky1_2 = legionaryBlackRect2.centery - step
+        rectLegionaryBlack1_2 = pygame.Rect(rectLegionaryBlackx1_2 - 30, rectLegionaryBlacky1_2 - 30, 60, 60)
+        rectsLegionaryBlack_2.append(rectLegionaryBlack1_2)
+
+        rectLegionaryBlackx2_2 = legionaryBlackRect2.centerx
+        rectLegionaryBlacky2_2 = legionaryBlackRect2.centery - step
+        rectLegionaryBlack2_2 = pygame.Rect(rectLegionaryBlackx2_2 - 30, rectLegionaryBlacky2_2 - 30, 60, 60)
+        rectsLegionaryBlack_2.append(rectLegionaryBlack2_2)
+
+        rectLegionaryBlackx3_2 = legionaryBlackRect2.centerx - step
+        rectLegionaryBlacky3_2 = legionaryBlackRect2.centery - step
+        rectLegionaryBlack3_2 = pygame.Rect(rectLegionaryBlackx3_2 - 30, rectLegionaryBlacky3_2 - 30, 60, 60)
+        rectsLegionaryBlack_2.append(rectLegionaryBlack3_2)
+
+        # Válečník černý 2
+        rectsWarriorBlack_2 = []
+
+        rectWarriorBlackx1_2 = warriorBlackRect2.centerx + step
+        rectWarriorBlacky1_2 = warriorBlackRect2.centery
+        rectWarriorBlack1_2 = pygame.Rect(rectWarriorBlackx1_2 - 30, rectWarriorBlacky1_2 - 30, 60, 60)
+        rectsWarriorBlack_2.append(rectWarriorBlack1_2)
+
+        rectWarriorBlackx2_2 = warriorBlackRect2.centerx
+        rectWarriorBlacky2_2 = warriorBlackRect2.centery + step
+        rectWarriorBlack2_2 = pygame.Rect(rectWarriorBlackx2_2 - 30, rectWarriorBlacky2_2 - 30, 60, 60)
+        rectsWarriorBlack_2.append(rectWarriorBlack2_2)
+
+        rectWarriorBlackx3_2 = warriorBlackRect2.centerx - step
+        rectWarriorBlacky3_2 = warriorBlackRect2.centery
+        rectWarriorBlack3_2 = pygame.Rect(rectWarriorBlackx3_2 - 30, rectWarriorBlacky3_2 - 30, 60, 60)
+        rectsWarriorBlack_2.append(rectWarriorBlack3_2)
+
+        rectWarriorBlackx4_2 = warriorBlackRect2.centerx
+        rectWarriorBlacky4_2 = warriorBlackRect2.centery - step
+        rectWarriorBlack4_2 = pygame.Rect(rectWarriorBlackx4_2 - 30, rectWarriorBlacky4_2 - 30, 60, 60)
+        rectsWarriorBlack_2.append(rectWarriorBlack4_2)
+
+        # Válečník černý 2 abilita
+        rectsWarriorBlackAbility_2 = []
+
+        rectWarriorBlackx1_2Ability = warriorBlackRect2.centerx + step * 2
+        rectWarriorBlacky1_2Ability = warriorBlackRect2.centery
+        rectWarriorBlack1_2Ability = pygame.Rect(rectWarriorBlackx1_2Ability - 30, rectWarriorBlacky1_2Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_2.append(rectWarriorBlack1_2Ability)
+
+        rectWarriorBlackx2_2Ability = warriorBlackRect2.centerx - step * 2
+        rectWarriorBlacky2_2Ability = warriorBlackRect2.centery
+        rectWarriorBlack2_2Ability = pygame.Rect(rectWarriorBlackx2_2Ability - 30, rectWarriorBlacky2_2Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_2.append(rectWarriorBlack2_2Ability)
+
+        rectWarriorBlackx3_2Ability = warriorBlackRect2.centerx
+        rectWarriorBlacky3_2Ability = warriorBlackRect2.centery - step * 2
+        rectWarriorBlack3_2Ability = pygame.Rect(rectWarriorBlackx3_2Ability - 30, rectWarriorBlacky3_2Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_2.append(rectWarriorBlack3_2Ability)
+
+        rectWarriorBlackx4_2Ability = warriorBlackRect2.centerx
+        rectWarriorBlacky4_2Ability = warriorBlackRect2.centery + step * 2
+        rectWarriorBlack4_2Ability = pygame.Rect(rectWarriorBlackx4_2Ability - 30, rectWarriorBlacky4_2Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_2.append(rectWarriorBlack4_2Ability)
+
+        # Legionář černý 3
+        rectsLegionaryBlack_3 = []
+
+        rectLegionaryBlackx1_3 = legionaryBlackRect3.centerx + step
+        rectLegionaryBlacky1_3 = legionaryBlackRect3.centery - step
+        rectLegionaryBlack1_3 = pygame.Rect(rectLegionaryBlackx1_3 - 30, rectLegionaryBlacky1_3 - 30, 60, 60)
+        rectsLegionaryBlack_3.append(rectLegionaryBlack1_3)
+
+        rectLegionaryBlackx2_3 = legionaryBlackRect3.centerx
+        rectLegionaryBlacky2_3 = legionaryBlackRect3.centery - step
+        rectLegionaryBlack2_3 = pygame.Rect(rectLegionaryBlackx2_3 - 30, rectLegionaryBlacky2_3 - 30, 60, 60)
+        rectsLegionaryBlack_3.append(rectLegionaryBlack2_3)
+
+        rectLegionaryBlackx3_3 = legionaryBlackRect3.centerx - step
+        rectLegionaryBlacky3_3 = legionaryBlackRect3.centery - step
+        rectLegionaryBlack3_3 = pygame.Rect(rectLegionaryBlackx3_3 - 30, rectLegionaryBlacky3_3 - 30, 60, 60)
+        rectsLegionaryBlack_3.append(rectLegionaryBlack3_3)
+
+        # Válečník černý 3
+        rectsWarriorBlack_3 = []
+
+        rectWarriorBlackx1_3 = warriorBlackRect3.centerx
+        rectWarriorBlacky1_3 = warriorBlackRect3.centery + step
+        rectWarriorBlack1_3 = pygame.Rect(rectWarriorBlackx1_3 - 30, rectWarriorBlacky1_3 - 30, 60, 60)
+        rectsWarriorBlack_3.append(rectWarriorBlack1_3)
+
+        rectWarriorBlackx2_3 = warriorBlackRect3.centerx - step
+        rectWarriorBlacky2_3 = warriorBlackRect3.centery
+        rectWarriorBlack2_3 = pygame.Rect(rectWarriorBlackx2_3 - 30, rectWarriorBlacky2_3 - 30, 60, 60)
+        rectsWarriorBlack_3.append(rectWarriorBlack2_3)
+
+        rectWarriorBlackx3_3 = warriorBlackRect3.centerx
+        rectWarriorBlacky3_3 = warriorBlackRect3.centery - step
+        rectWarriorBlack3_3 = pygame.Rect(rectWarriorBlackx3_3 - 30, rectWarriorBlacky3_3 - 30, 60, 60)
+        rectsWarriorBlack_3.append(rectWarriorBlack3_3)
+
+        rectWarriorBlackx4_3 = warriorBlackRect3.centerx + step
+        rectWarriorBlacky4_3 = warriorBlackRect3.centery
+        rectWarriorBlack4_3 = pygame.Rect(rectWarriorBlackx4_3 - 30, rectWarriorBlacky4_3 - 30, 60, 60)
+        rectsWarriorBlack_3.append(rectWarriorBlack4_3)
+
+        # Válečník černý 3 abilita
+        rectsWarriorBlackAbility_3 = []
+
+        rectWarriorBlackx1_3Ability = warriorBlackRect3.centerx + step * 2
+        rectWarriorBlacky1_3Ability = warriorBlackRect3.centery
+        rectWarriorBlack1_3Ability = pygame.Rect(rectWarriorBlackx1_3Ability - 30, rectWarriorBlacky1_3Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_3.append(rectWarriorBlack1_3Ability)
+
+        rectWarriorBlackx2_3Ability = warriorBlackRect3.centerx - step * 2
+        rectWarriorBlacky2_3Ability = warriorBlackRect3.centery
+        rectWarriorBlack2_3Ability = pygame.Rect(rectWarriorBlackx2_3Ability - 30, rectWarriorBlacky2_3Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_3.append(rectWarriorBlack2_3Ability)
+
+        rectWarriorBlackx3_3Ability = warriorBlackRect3.centerx
+        rectWarriorBlacky3_3Ability = warriorBlackRect3.centery - step * 2
+        rectWarriorBlack3_3Ability = pygame.Rect(rectWarriorBlackx3_3Ability - 30, rectWarriorBlacky3_3Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_3.append(rectWarriorBlack3_3Ability)
+
+        rectWarriorBlackx4_3Ability = warriorBlackRect3.centerx
+        rectWarriorBlacky4_3Ability = warriorBlackRect3.centery + step * 2
+        rectWarriorBlack4_3Ability = pygame.Rect(rectWarriorBlackx4_3Ability - 30, rectWarriorBlacky4_3Ability - 30,
+                                                60, 60)
+        rectsWarriorBlackAbility_3.append(rectWarriorBlack4_3Ability)
 
         if event.type == pygame.MOUSEBUTTONDOWN and event.button==1:
 
@@ -3796,6 +5877,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 plagueDoctorWhitePlaying=True
                 elif plagueDoctorWhitePlaying:
+                    plagueWhitexInit=plagueDoctorWhiteRect.centerx
+                    plagueWhiteyInit = plagueDoctorWhiteRect.centery 
                     if rectPlagueWhite1.collidepoint(event.pos):
                         plagueDoctorWhiteRect.centerx = rectPlagueWhite1.centerx
                         plagueDoctorWhiteRect.centery = rectPlagueWhite1.centery
@@ -3980,6 +6063,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 archbishopWhitePlaying=True
                 elif archbishopWhitePlaying:
+                    archbishopWhitexInit=archbishopWhiteRect.centerx
+                    archbishopWhiteyInit=archbishopWhiteRect.centery
                     if rectArchbishopWhite1.collidepoint(event.pos):
                         archbishopWhiteRect.centerx = rectArchbishopWhite1.centerx
                         archbishopWhiteRect.centery = rectArchbishopWhite1.centery
@@ -4135,6 +6220,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 cardinalWhitePlaying=True
                 elif cardinalWhitePlaying:
+                    cardinalWhitexInit=cardinalWhiteRect.centerx
+                    cardinalWhiteyInit=cardinalWhiteRect.centery
                     if rectCardinalWhite1.collidepoint(event.pos):
                         cardinalWhiteRect.centerx = rectCardinalWhite1.centerx
                         cardinalWhiteRect.centery = rectCardinalWhite1.centery
@@ -4249,6 +6336,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 hadesWhitePlaying=True
                 elif hadesWhitePlaying:
+                    hadesWhitexInit=hadesWhiteRect.centerx
+                    hadesWhiteyInit=hadesWhiteRect.centery
                     if rectHadesWhite1.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite1.centerx
                         hadesWhiteRect.centery = rectHadesWhite1.centery
@@ -4434,6 +6523,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 persephoneWhitePlaying=True
                 elif persephoneWhitePlaying:
+                    persephoneWhitexInit=persephoneWhiteRect.centerx
+                    persephoneWhiteyInit=persephoneWhiteRect.centery
                     if rectPersephoneWhite1.collidepoint(event.pos):
                         persephoneWhiteRect.centerx = rectPersephoneWhite1.centerx
                         persephoneWhiteRect.centery = rectPersephoneWhite1.centery
@@ -4570,6 +6661,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 cardinalWhitePlaying1=True
                 elif cardinalWhitePlaying1:
+                    cardinalWhitexInit1=cardinalWhiteRect1.centerx
+                    cardinalWhiteyInit1=cardinalWhiteRect1.centery
                     if rectCardinalWhite1.collidepoint(event.pos):
                         cardinalWhiteRect1.centerx = rectCardinalWhite1.centerx
                         cardinalWhiteRect1.centery = rectCardinalWhite1.centery
@@ -4680,6 +6773,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 archbishopWhitePlaying1=True
                 elif archbishopWhitePlaying1:
+                    archbishopWhitexInit1=archbishopWhiteRect1.centery
+                    archbishopWhiteyInit1=archbishopWhiteRect1.centery
                     if rectArchbishopWhite1.collidepoint(event.pos):
                         archbishopWhiteRect1.centerx = rectArchbishopWhite1.centerx
                         archbishopWhiteRect1.centery = rectArchbishopWhite1.centery
@@ -4831,6 +6926,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 plagueDoctorWhitePlaying1=True
                 elif plagueDoctorWhitePlaying1:
+                    plagueWhitexInit1=plagueDoctorWhiteRect1.centerx
+                    plagueWhiteyInit1=plagueDoctorWhiteRect1.centery
                     if rectPlagueWhite1_1.collidepoint(event.pos):
                         plagueDoctorWhiteRect1.centerx = rectPlagueWhite1_1.centerx
                         plagueDoctorWhiteRect1.centery = rectPlagueWhite1_1.centery
@@ -4998,6 +7095,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 warriorWhitePlaying=True
                 elif warriorWhitePlaying:
+                    warriorWhitexInit=warriorWhiteRect.centerx
+                    warriorWhiteyInit=warriorWhiteRect.centery
                     if rectWarriorWhite1Ability.collidepoint(event.pos) and counter % 4 == 0:
                         warriorWhiteRect.centerx = rectWarriorWhite1Ability.centerx
                         warriorWhiteRect.centery = rectWarriorWhite1Ability.centery
@@ -5131,104 +7230,103 @@ while run:
                                 elif x==len(figuresWhitePlaying)-1:
                                     legionaryWhitePlaying=True
                 elif legionaryWhitePlaying:
+                    legionaryWhitexInit=legionaryWhiteRect.centerx
+                    legionaryWhiteyInit=legionaryWhiteRect.centery
                     if rectLegionaryWhite1.collidepoint(event.pos):
-                        rectLegionaryWhitex1_1 = legionaryWhitexInit1
-                        rectLegionaryWhitey1_1 = legionaryWhiteyInit1
-                        legionaryWhiteRect1.centerx = rectLegionaryWhite1.centerx
-                        legionaryWhiteRect1.centery = rectLegionaryWhite1.centery
+
+                        legionaryWhiteRect.centerx = rectLegionaryWhite1.centerx
+                        legionaryWhiteRect.centery = rectLegionaryWhite1.centery
                         counter += 1
                         legionaryWhitePlaying=False
                     elif rectLegionaryWhite2.collidepoint(event.pos):
-                        rectLegionaryWhitex1_1 = legionaryWhitexInit1
-                        rectLegionaryWhitey1_1 = legionaryWhitexInit1
-                        legionaryWhiteRect1.centerx = rectLegionaryWhite2.centerx
-                        legionaryWhiteRect1.centery = rectLegionaryWhite2.centery
+           
+                        legionaryWhiteRect.centerx = rectLegionaryWhite2.centerx
+                        legionaryWhiteRect.centery = rectLegionaryWhite2.centery
                         counter += 1
                         legionaryWhitePlaying=False
                     elif rectLegionaryWhite3.collidepoint(event.pos):
-                        legionar_bily_x_abilita_1 = legionaryWhitexInit1
-                        legionar_bily_y_abilita_1 = legionaryWhiteyInit1
-                        legionaryWhiteRect1.centerx = rectLegionaryWhite3.centerx
-                        legionaryWhiteRect1.centery = rectLegionaryWhite3.centery
+    
+                        legionaryWhiteRect.centerx = rectLegionaryWhite3.centerx
+                        legionaryWhiteRect.centery = rectLegionaryWhite3.centery
                         counter += 1
                         legionaryWhitePlaying=False
                     else:
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         legionaryWhitePlaying=False
-                    if legionaryWhiteRect1.colliderect(plagueDoctorWhiteRect):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    if legionaryWhiteRect.colliderect(plagueDoctorWhiteRect):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(archbishopWhiteRect):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(archbishopWhiteRect):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(cardinalWhiteRect):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(cardinalWhiteRect):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(hadesWhiteRect):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(hadesWhiteRect):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(cardinalWhiteRect1):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(cardinalWhiteRect1):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(persephoneWhiteRect):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(persephoneWhiteRect):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(archbishopWhiteRect1):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(archbishopWhiteRect1):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(plagueDoctorWhiteRect1):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(plagueDoctorWhiteRect1):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(warriorWhiteRect):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(legionaryWhiteRect):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(legionaryWhiteRect1):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect1):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(warriorWhiteRect1):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect2):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(warriorWhiteRect2):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(legionaryWhiteRect2):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(legionaryWhiteRect2):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(warriorWhiteRect3):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(warriorWhiteRect3):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
-                    elif legionaryWhiteRect1.colliderect(legionaryWhiteRect3):
-                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
-                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                    elif legionaryWhiteRect.colliderect(legionaryWhiteRect3):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
                         counter -= 1
                         legionaryWhitePlaying=False
                        
@@ -5244,6 +7342,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 warriorWhitePlaying1=True
                 elif warriorWhitePlaying1:
+                    warriorWhitexInit1=warriorWhiteRect1.centerx
+                    warriorWhiteyInit1=warriorWhiteRect1.centery
                     if rectWarriorWhite1_1Ability.collidepoint(event.pos) and counter % 4 == 0:
                         warriorWhiteRect1.centerx = rectWarriorWhite1_1Ability.centerx
                         warriorWhiteRect1.centery = rectWarriorWhite1_1Ability.centery
@@ -5374,6 +7474,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 legionaryWhitePlaying1=True
                 elif legionaryWhitePlaying1:
+                    legionaryWhitexInit1=legionaryWhiteRect1.centerx
+                    legionaryWhiteyInit1=legionaryWhiteRect1.centery
                     if rectLegionaryWhite1_1.collidepoint(event.pos):
                         rectLegionaryWhitex1_1 = legionaryWhitexInit1
                         rectLegionaryWhitey1_1 = legionaryWhiteyInit1
@@ -5486,6 +7588,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 warriorWhitePlaying2=True
                 elif warriorWhitePlaying2:
+                    warriorWhitexInit2=warriorWhiteRect2.centerx
+                    warriorWhiteyInit2=warriorWhiteRect2.centery
                     if rectWarriorWhite1_2Ability.collidepoint(event.pos) and counter % 4 == 0:
                         warriorWhiteRect2.centerx = rectWarriorWhite1_2Ability.centerx
                         warriorWhiteRect2.centery = rectWarriorWhite1_2Ability.centery
@@ -5622,6 +7726,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 legionaryWhitePlaying2=True
                 elif legionaryWhitePlaying2:
+                    legionaryWhitexInit2=legionaryWhiteRect2.centerx
+                    legionaryWhiteyInit2=legionaryWhiteRect2.centery
                     if rectLegionaryWhite1_2.collidepoint(event.pos):
                         legionar_bily_x_abilita_2 = legionaryWhitexInit2
                         legionar_bily_y_abilita_2 = legionaryWhiteyInit2
@@ -5733,6 +7839,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 warriorWhitePlaying3=True
                 elif warriorWhitePlaying3:
+                    warriorWhitexInit3=warriorWhiteRect3.centerx
+                    warriorWhiteyInit3=warriorWhiteRect3.centery
                     if rectWarriorWhite1_3Ability.collidepoint(event.pos) and counter % 4 == 0:
                         warriorWhiteRect3.centerx = rectWarriorWhite1_3Ability.centerx
                         warriorWhiteRect3.centery = rectWarriorWhite1_3Ability.centery
@@ -5864,6 +7972,8 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 legionaryWhitePlaying3=True
                 elif legionaryWhitePlaying3:
+                    legionaryWhitexInit3=legionaryWhiteRect3.centerx
+                    legionaryWhiteyInit3=legionaryWhiteRect3.centery
                     if rectLegionaryWhite1_3.collidepoint(event.pos):
                         legionar_bily_x_abilita_3 = legionaryWhitexInit3
                         legionar_bily_y_abilita_3 = legionaryWhiteyInit3
@@ -5976,6 +8086,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 plagueDoctorBlackPlaying=True
                 elif plagueDoctorBlackPlaying:
+                    plagueBlackxInit=plagueDoctorBlackRect.centerx
+                    plagueBlackyInit=plagueDoctorBlackRect.centery
                     if rectPlagueBlack1.collidepoint(event.pos):
                         plagueDoctorBlackRect.centerx = rectPlagueBlack1.centerx
                         plagueDoctorBlackRect.centery = rectPlagueBlack1.centery
@@ -6156,6 +8268,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 archbishopBlackPlaying=True
                 elif archbishopBlackPlaying:
+                    archbishopBlackxInit=archbishopBlackRect.centerx
+                    archbishopBlackyInit=archbishopBlackRect.centery
                     if rectArchbishopBlack1.collidepoint(event.pos):
                         archbishopBlackRect.centerx = rectArchbishopBlack1.centerx
                         archbishopBlackRect.centery = rectArchbishopBlack1.centery
@@ -6308,6 +8422,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 cardinalBlackPlaying=True
                 elif cardinalBlackPlaying:
+                    cardinalBlackxInit=cardinalBlackRect.centerx
+                    cardinalBlackyInit=cardinalBlackRect.centery
                     if rectCardinalBlack1.collidepoint(event.pos):
                         cardinalBlackRect.centerx = rectCardinalBlack1.centerx
                         cardinalBlackRect.centery = rectCardinalBlack1.centery
@@ -6419,6 +8535,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 hadesBlackPlaying=True
                 elif hadesBlackPlaying:
+                    hadesBlackxInit=hadesBlackRect.centerx
+                    hadesBlackyInit=hadesBlackRect.centery
                     if rectHadesBlack1.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack1.centerx
                         hadesBlackRect.centery = rectHadesBlack1.centery
@@ -6604,6 +8722,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 persephoneBlackPlaying=True
                 elif persephoneBlackPlaying:
+                    persephoneBlackxInit=persephoneBlackRect.centerx
+                    persephoneBlackyInit=persephoneBlackRect.centery
                     if rectPersephoneBlack1.collidepoint(event.pos):
                         persephoneBlackRect.centerx = rectPersephoneBlack1.centerx
                         persephoneBlackRect.centery = rectPersephoneBlack1.centery
@@ -6734,6 +8854,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 cardinalBlackPlaying1=True
                 elif cardinalBlackPlaying1:
+                    cardinalBlackxInit1=cardinalBlackRect1.centerx
+                    cardinalBlackyInit1=cardinalBlackRect1.centery
                     if rectCardinalBlack1_1.collidepoint(event.pos):
                         cardinalBlackRect1.centerx = rectCardinalBlack1_1.centerx
                         cardinalBlackRect1.centery = rectCardinalBlack1_1.centery
@@ -6845,6 +8967,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 archbishopBlackPlaying1=True
                 elif archbishopBlackPlaying1:
+                    archbishopBlackxInit1=archbishopBlackRect1.centerx
+                    archbishopBlackyInit1=archbishopBlackRect1.centery
                     if rectArchbishopBlack1_1.collidepoint(event.pos):
                         archbishopBlackRect1.centerx = rectArchbishopBlack1_1.centerx
                         archbishopBlackRect1.centery = rectArchbishopBlack1_1.centery
@@ -6995,6 +9119,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 plagueDoctorBlackPlaying1=True
                 elif plagueDoctorBlackPlaying1:
+                    plagueBlackxInit1=plagueDoctorBlackRect1.centerx
+                    plagueBlackyInit1=plagueDoctorBlackRect1.centery
                     if rectPlagueBlack1_1.collidepoint(event.pos):
                         plagueDoctorBlackRect1.centerx = rectPlagueBlack1_1.centerx
                         plagueDoctorBlackRect1.centery = rectPlagueBlack1_1.centery
@@ -7175,6 +9301,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying=True
                 elif legionaryBlackPlaying:
+                    legionaryBlackxInit=legionaryBlackRect.centerx
+                    legionaryBlackyInit=legionaryBlackRect.centery
                     if rectLegionaryBlack1.collidepoint(event.pos):
                         legionar_cerny_x_abilita = legionaryBlackxInit
                         legionar_cerny_y_abilita = legionaryBlackyInit
@@ -7286,6 +9414,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying=True
                 elif warriorBlackPlaying:
+                    warriorBlackxInit=warriorBlackRect.centerx
+                    warriorBlackyInit=warriorBlackRect.centery
                     if rectWarriorBlack1Ability.collidepoint(event.pos) and (counter - 1) % 4 == 0:
                         warriorBlackRect.centerx = rectWarriorBlack1Ability.centerx
                         warriorBlackRect.centery = rectWarriorBlack1Ability.centery
@@ -7416,6 +9546,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying1=True
                 elif warriorBlackPlaying1:
+                    warriorBlackxInit1=warriorBlackRect1.centerx
+                    warriorBlackyInit1=warriorBlackRect1.centery
                     if rectWarriorBlack1_1Ability.collidepoint(event.pos) and (counter - 1) % 4 == 0:
                         warriorBlackRect1.centerx = rectWarriorBlack1_1Ability.centerx
                         warriorBlackRect1.centery = rectWarriorBlack1_1Ability.centery
@@ -7441,17 +9573,17 @@ while run:
                         warriorBlackRect1.centery = rectWarriorBlack1_1.centery
                         counter += 1
                         warriorBlackPlaying1=False
-                    elif rectWarriorBlack2_1.collidepoint:
+                    elif rectWarriorBlack2_1.collidepoint(event.pos):
                         warriorBlackRect1.centerx = rectWarriorBlack2_1.centerx
                         warriorBlackRect1.centery = rectWarriorBlack2_1.centery
                         counter += 1
                         warriorBlackPlaying1=False
-                    elif rectWarriorBlack3_1.colliderect(rectWarriorBlack3_1):
+                    elif rectWarriorBlack3_1.collidepoint(event.pos):
                         warriorBlackRect1.centerx = rectWarriorBlack3_1.centerx
                         warriorBlackRect1.centery = rectWarriorBlack3_1.centery
                         counter += 1
                         warriorBlackPlaying1=False
-                    elif rectWarriorBlack4_1.colliderect(rectWarriorBlack4_1):
+                    elif rectWarriorBlack4_1.collidepoint(event.pos):
                         warriorBlackRect1.centerx = rectWarriorBlack4_1.centerx
                         warriorBlackRect1.centery = rectWarriorBlack4_1.centery
                         counter += 1
@@ -7546,6 +9678,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying1=True
                 elif legionaryBlackPlaying1:
+                    legionaryBlackxInit1=legionaryBlackRect1.centerx
+                    legionaryBlackyInit1=legionaryBlackRect1.centery
                     if rectLegionaryBlack1_1.collidepoint(event.pos):
                         legionar_cerny_x_abilita_1 = legionaryBlackxInit1
                         legionar_cerny_y_abilita_1 = legionaryBlackyInit1
@@ -7657,6 +9791,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying2=True
                 elif warriorBlackPlaying2:
+                    warriorBlackxInit2=warriorBlackRect2.centerx
+                    warriorBlackyInit2=warriorBlackRect2.centery
                     if rectWarriorBlack1_2Ability.collidepoint(event.pos) and (counter - 1) % 4 == 0:
                         warriorBlackRect2.centerx = rectWarriorBlack1_2Ability.centerx
                         warriorBlackRect2.centery = rectWarriorBlack1_2Ability.centery
@@ -7788,6 +9924,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying2=True
                 elif legionaryBlackPlaying2:
+                    legionaryBlackxInit2=legionaryBlackRect2.centerx
+                    legionaryBlackyInit2=legionaryBlackRect2.centery
                     if rectLegionaryBlack1_2.collidepoint(event.pos):
                         legionar_cerny_x_abilita_2 = legionaryBlackxInit2
                         legionar_cerny_y_abilita_2 = legionaryBlackyInit2
@@ -7899,6 +10037,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying3=True
                 elif legionaryBlackPlaying3:
+                    legionaryBlackxInit3=legionaryBlackRect3.centerx
+                    legionaryBlackyInit3=legionaryBlackRect3.centery
                     if rectLegionaryBlack1_3.collidepoint(event.pos):
                         legionar_cerny_x_abilita_3 = legionaryBlackxInit3
                         legionar_cerny_y_abilita_3 = legionaryBlackyInit3
@@ -8010,6 +10150,8 @@ while run:
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying3=True
                 elif warriorBlackPlaying3:
+                    warriorBlackxInit3=warriorBlackRect3.centerx
+                    warriorBlackyInit3=warriorBlackRect3.centery
                     if rectWarriorBlack1_3Ability.collidepoint(event.pos) and (counter - 1) % 4 == 0:
                         warriorBlackRect3.centerx = rectWarriorBlack1_3Ability.centerx
                         warriorBlackRect3.centery = rectWarriorBlack1_3Ability.centery
@@ -8652,2087 +10794,7 @@ while run:
             # todo: Kontrola kolize
             # Bude to fungovat tak, že jakmile dojde ke kolizi mezi dvěma figurkami, zkontroluje se hodnota counteru a v závislosti na jeho modulu bude odebrána figurka příslušné barvy
             # counter=0 odehrál bílý, tedy musí brát černou figurku
-            if counter % 2 != 0:
-                if plagueDoctorWhiteRect.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if plagueDoctorWhiteRect.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if plagueDoctorWhiteRect.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if plagueDoctorWhiteRect.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if plagueDoctorWhiteRect.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if plagueDoctorWhiteRect.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if plagueDoctorWhiteRect.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if plagueDoctorWhiteRect.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if plagueDoctorWhiteRect.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if plagueDoctorWhiteRect.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if plagueDoctorWhiteRect.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if plagueDoctorWhiteRect.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if plagueDoctorWhiteRect.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if plagueDoctorWhiteRect.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if plagueDoctorWhiteRect.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if plagueDoctorWhiteRect.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if archbishopWhiteRect.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if archbishopWhiteRect.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if archbishopWhiteRect.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if archbishopWhiteRect.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if archbishopWhiteRect.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if archbishopWhiteRect.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if archbishopWhiteRect.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if archbishopWhiteRect.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if archbishopWhiteRect.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if archbishopWhiteRect.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if archbishopWhiteRect.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if archbishopWhiteRect.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if archbishopWhiteRect.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if archbishopWhiteRect.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if archbishopWhiteRect.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if archbishopWhiteRect.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if cardinalWhiteRect.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if cardinalWhiteRect.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if cardinalWhiteRect.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if cardinalWhiteRect.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if cardinalWhiteRect.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if cardinalWhiteRect.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if cardinalWhiteRect.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if cardinalWhiteRect.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if cardinalWhiteRect.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if cardinalWhiteRect.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if cardinalWhiteRect.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if cardinalWhiteRect.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if cardinalWhiteRect.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if cardinalWhiteRect.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if cardinalWhiteRect.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if cardinalWhiteRect.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if hadesWhiteRect.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if hadesWhiteRect.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if hadesWhiteRect.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if hadesWhiteRect.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if hadesWhiteRect.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if hadesWhiteRect.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if hadesWhiteRect.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if hadesWhiteRect.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if hadesWhiteRect.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if hadesWhiteRect.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if hadesWhiteRect.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if hadesWhiteRect.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if hadesWhiteRect.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if hadesWhiteRect.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if hadesWhiteRect.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if hadesWhiteRect.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if persephoneWhiteRect.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if persephoneWhiteRect.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if persephoneWhiteRect.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if persephoneWhiteRect.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if persephoneWhiteRect.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if persephoneWhiteRect.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if persephoneWhiteRect.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if persephoneWhiteRect.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if persephoneWhiteRect.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if persephoneWhiteRect.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if persephoneWhiteRect.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if persephoneWhiteRect.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if persephoneWhiteRect.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if persephoneWhiteRect.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if persephoneWhiteRect.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if persephoneWhiteRect.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if cardinalWhiteRect1.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if cardinalWhiteRect1.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if cardinalWhiteRect1.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if cardinalWhiteRect1.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if cardinalWhiteRect1.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if cardinalWhiteRect1.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if cardinalWhiteRect1.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if cardinalWhiteRect1.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if cardinalWhiteRect1.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if cardinalWhiteRect1.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if cardinalWhiteRect1.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if cardinalWhiteRect1.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if cardinalWhiteRect1.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if cardinalWhiteRect1.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if cardinalWhiteRect1.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if cardinalWhiteRect1.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if archbishopWhiteRect1.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if archbishopWhiteRect1.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if archbishopWhiteRect1.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if archbishopWhiteRect1.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if archbishopWhiteRect1.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if archbishopWhiteRect1.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if archbishopWhiteRect1.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if archbishopWhiteRect1.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if archbishopWhiteRect1.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if archbishopWhiteRect1.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if archbishopWhiteRect1.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if archbishopWhiteRect1.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if archbishopWhiteRect1.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if archbishopWhiteRect1.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if archbishopWhiteRect1.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if archbishopWhiteRect1.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if plagueDoctorWhiteRect1.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if plagueDoctorWhiteRect1.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if legionaryWhiteRect.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if legionaryWhiteRect.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if legionaryWhiteRect.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if legionaryWhiteRect.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if legionaryWhiteRect.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if legionaryWhiteRect.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if legionaryWhiteRect.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if legionaryWhiteRect.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if legionaryWhiteRect.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if legionaryWhiteRect.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if legionaryWhiteRect.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if legionaryWhiteRect.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if legionaryWhiteRect.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if legionaryWhiteRect.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if legionaryWhiteRect.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if legionaryWhiteRect.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if warriorWhiteRect.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if warriorWhiteRect.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if warriorWhiteRect.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if warriorWhiteRect.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if warriorWhiteRect.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if warriorWhiteRect.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if warriorWhiteRect.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if warriorWhiteRect.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if warriorWhiteRect.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if warriorWhiteRect.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if warriorWhiteRect.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if warriorWhiteRect.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if warriorWhiteRect.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if warriorWhiteRect.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if warriorWhiteRect.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if warriorWhiteRect.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if legionaryWhiteRect1.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if legionaryWhiteRect1.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if legionaryWhiteRect1.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if legionaryWhiteRect1.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if legionaryWhiteRect1.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if legionaryWhiteRect1.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if legionaryWhiteRect1.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if legionaryWhiteRect1.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if legionaryWhiteRect1.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if legionaryWhiteRect1.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if legionaryWhiteRect1.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if legionaryWhiteRect1.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if legionaryWhiteRect1.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if legionaryWhiteRect1.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if legionaryWhiteRect1.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if legionaryWhiteRect1.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if warriorWhiteRect1.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if warriorWhiteRect1.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if warriorWhiteRect1.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if warriorWhiteRect1.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if warriorWhiteRect1.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if warriorWhiteRect1.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if warriorWhiteRect1.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if warriorWhiteRect1.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if warriorWhiteRect1.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if warriorWhiteRect1.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if warriorWhiteRect1.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if warriorWhiteRect1.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if warriorWhiteRect1.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if warriorWhiteRect1.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if warriorWhiteRect1.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if warriorWhiteRect1.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if legionaryWhiteRect2.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if legionaryWhiteRect2.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if legionaryWhiteRect2.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if legionaryWhiteRect2.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if legionaryWhiteRect2.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if legionaryWhiteRect2.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if legionaryWhiteRect2.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if legionaryWhiteRect2.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if legionaryWhiteRect2.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if legionaryWhiteRect2.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if legionaryWhiteRect2.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if legionaryWhiteRect2.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if legionaryWhiteRect2.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if legionaryWhiteRect2.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if legionaryWhiteRect2.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if legionaryWhiteRect2.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if warriorWhiteRect2.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if warriorWhiteRect2.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if warriorWhiteRect2.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if warriorWhiteRect2.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if warriorWhiteRect2.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if warriorWhiteRect2.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if warriorWhiteRect2.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if warriorWhiteRect2.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if warriorWhiteRect2.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if warriorWhiteRect2.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if warriorWhiteRect2.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if warriorWhiteRect2.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if warriorWhiteRect2.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if warriorWhiteRect2.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if warriorWhiteRect2.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if warriorWhiteRect2.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if legionaryWhiteRect3.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if legionaryWhiteRect3.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if legionaryWhiteRect3.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if legionaryWhiteRect3.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if legionaryWhiteRect3.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if legionaryWhiteRect3.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if legionaryWhiteRect3.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if legionaryWhiteRect3.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if legionaryWhiteRect3.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if legionaryWhiteRect3.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if legionaryWhiteRect3.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if legionaryWhiteRect3.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if legionaryWhiteRect3.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if legionaryWhiteRect3.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if legionaryWhiteRect3.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if legionaryWhiteRect3.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-                if warriorWhiteRect3.colliderect(plagueDoctorBlackRect):
-                    figuresBlack[0] = ""
-                    plagueDoctorBlackRect.centerx = -60
-                    plagueDoctorBlackRect.centery = -60
-                if warriorWhiteRect3.colliderect(archbishopBlackRect):
-                    figuresBlack[1] = ""
-                    archbishopBlackRect.centerx = -60
-                    archbishopBlackRect.centery = -60
-                if warriorWhiteRect3.colliderect(cardinalBlackRect):
-                    figuresBlack[2] = ""
-                    cardinalBlackRect.centerx = -60
-                    cardinalBlackRect.centery = -60
-                if warriorWhiteRect3.colliderect(hadesBlackRect):
-                    figuresBlack[3] = ""
-                    hadesBlackRect.centerx = -60
-                    hadesBlackRect.centery = -60
-                if warriorWhiteRect3.colliderect(persephoneBlackRect):
-                    figuresBlack[4] = ""
-                    persephoneBlackRect.centerx = -60
-                    persephoneBlackRect.centery = -60
-                if warriorWhiteRect3.colliderect(cardinalBlackRect1):
-                    figuresBlack[5] = ""
-                    cardinalBlackRect1.centerx = -60
-                    cardinalBlackRect1.centery = -60
-                if warriorWhiteRect3.colliderect(archbishopBlackRect1):
-                    figuresBlack[6] = ""
-                    archbishopBlackRect1.centerx = -60
-                    archbishopBlackRect1.centery = -60
-                if warriorWhiteRect3.colliderect(plagueDoctorBlackRect1):
-                    figuresBlack[7] = ""
-                    plagueDoctorBlackRect1.centerx = -60
-                    plagueDoctorBlackRect1.centery = -60
-                if warriorWhiteRect3.colliderect(legionaryBlackRect):
-                    figuresBlack[8] = ""
-                    legionaryBlackRect.centerx = -60
-                    legionaryBlackRect.centery = -60
-                if warriorWhiteRect3.colliderect(warriorBlackRect):
-                    figuresBlack[9] = ""
-                    warriorBlackRect.centerx = -60
-                    warriorBlackRect.centery = -60
-                if warriorWhiteRect3.colliderect(legionaryBlackRect1):
-                    figuresBlack[10] = ""
-                    legionaryBlackRect1.centerx = -60
-                    legionaryBlackRect1.centery = -60
-                if warriorWhiteRect3.colliderect(warriorBlackRect1):
-                    figuresBlack[11] = ""
-                    warriorBlackRect1.centerx = -60
-                    warriorBlackRect1.centery = -60
-                if warriorWhiteRect3.colliderect(legionaryBlackRect2):
-                    figuresBlack[12] = ""
-                    legionaryBlackRect2.centerx = -60
-                    legionaryBlackRect2.centery = -60
-                if warriorWhiteRect3.colliderect(warriorBlackRect2):
-                    figuresBlack[13] = ""
-                    warriorBlackRect2.centerx = -60
-                    warriorBlackRect2.centery = -60
-                if warriorWhiteRect3.colliderect(legionaryBlackRect3):
-                    figuresBlack[14] = ""
-                    legionaryBlackRect3.centerx = -60
-                    legionaryBlackRect3.centery = -60
-                if warriorWhiteRect3.colliderect(warriorBlackRect3):
-                    figuresBlack[15] = ""
-                    warriorBlackRect3.centerx = -60
-                    warriorBlackRect3.centery = -60
-
-            else:
-                if plagueDoctorBlackRect.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if plagueDoctorBlackRect.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if plagueDoctorBlackRect.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if plagueDoctorBlackRect.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if plagueDoctorBlackRect.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if plagueDoctorBlackRect.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if plagueDoctorBlackRect.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if plagueDoctorBlackRect.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if plagueDoctorBlackRect.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if plagueDoctorBlackRect.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if plagueDoctorBlackRect.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if plagueDoctorBlackRect.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if plagueDoctorBlackRect.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if plagueDoctorBlackRect.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if plagueDoctorBlackRect.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if plagueDoctorBlackRect.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if archbishopBlackRect.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if archbishopBlackRect.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if archbishopBlackRect.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if archbishopBlackRect.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if archbishopBlackRect.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if archbishopBlackRect.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if archbishopBlackRect.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if archbishopBlackRect.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if archbishopBlackRect.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if archbishopBlackRect.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if archbishopBlackRect.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if archbishopBlackRect.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if archbishopBlackRect.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if archbishopBlackRect.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if archbishopBlackRect.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if archbishopBlackRect.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if cardinalBlackRect.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if cardinalBlackRect.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if cardinalBlackRect.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if cardinalBlackRect.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if cardinalBlackRect.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if cardinalBlackRect.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if cardinalBlackRect.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if cardinalBlackRect.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if cardinalBlackRect.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if cardinalBlackRect.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if cardinalBlackRect.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if cardinalBlackRect.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if cardinalBlackRect.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if cardinalBlackRect.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if cardinalBlackRect.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if cardinalBlackRect.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if hadesBlackRect.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if hadesBlackRect.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if hadesBlackRect.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if hadesBlackRect.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if hadesBlackRect.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if hadesBlackRect.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if hadesBlackRect.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if hadesBlackRect.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if hadesBlackRect.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if hadesBlackRect.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if hadesBlackRect.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if hadesBlackRect.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if hadesBlackRect.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if hadesBlackRect.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if hadesBlackRect.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if hadesBlackRect.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if persephoneBlackRect.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if persephoneBlackRect.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if persephoneBlackRect.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if persephoneBlackRect.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if persephoneBlackRect.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if persephoneBlackRect.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if persephoneBlackRect.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if persephoneBlackRect.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if persephoneBlackRect.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if persephoneBlackRect.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if persephoneBlackRect.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if persephoneBlackRect.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if persephoneBlackRect.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if persephoneBlackRect.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if persephoneBlackRect.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if persephoneBlackRect.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if cardinalBlackRect1.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if cardinalBlackRect1.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if cardinalBlackRect1.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if cardinalBlackRect1.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if cardinalBlackRect1.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if cardinalBlackRect1.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if cardinalBlackRect1.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if cardinalBlackRect1.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if cardinalBlackRect1.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if cardinalBlackRect1.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if cardinalBlackRect1.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if cardinalBlackRect1.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if cardinalBlackRect1.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if cardinalBlackRect1.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if cardinalBlackRect1.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if cardinalBlackRect1.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if archbishopBlackRect1.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if archbishopBlackRect1.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if archbishopBlackRect1.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if archbishopBlackRect1.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if archbishopBlackRect1.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if archbishopBlackRect1.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if archbishopBlackRect1.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if archbishopBlackRect1.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if archbishopBlackRect1.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if archbishopBlackRect1.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if archbishopBlackRect1.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if archbishopBlackRect1.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if archbishopBlackRect1.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if archbishopBlackRect1.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if archbishopBlackRect1.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if archbishopBlackRect1.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if plagueDoctorBlackRect1.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if plagueDoctorBlackRect1.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if plagueDoctorBlackRect1.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if plagueDoctorBlackRect1.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if plagueDoctorBlackRect1.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if plagueDoctorBlackRect1.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if plagueDoctorBlackRect1.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if plagueDoctorBlackRect1.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if plagueDoctorBlackRect1.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if plagueDoctorBlackRect1.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if plagueDoctorBlackRect1.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if plagueDoctorBlackRect1.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if plagueDoctorBlackRect1.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if legionaryBlackRect.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if legionaryBlackRect.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if legionaryBlackRect.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if legionaryBlackRect.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if legionaryBlackRect.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if legionaryBlackRect.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if legionaryBlackRect.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if legionaryBlackRect.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if legionaryBlackRect.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if legionaryBlackRect.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if legionaryBlackRect.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if legionaryBlackRect.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if warriorBlackRect.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if warriorBlackRect.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if warriorBlackRect.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if warriorBlackRect.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if warriorBlackRect.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if warriorBlackRect.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if warriorBlackRect.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if warriorBlackRect.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if warriorBlackRect.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if warriorBlackRect.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if warriorBlackRect.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if warriorBlackRect.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if legionaryBlackRect1.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect1.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect1.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect1.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if legionaryBlackRect1.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect1.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if legionaryBlackRect1.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if legionaryBlackRect1.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if legionaryBlackRect1.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if legionaryBlackRect1.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if legionaryBlackRect1.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if legionaryBlackRect1.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if legionaryBlackRect1.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if legionaryBlackRect1.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if legionaryBlackRect1.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if legionaryBlackRect1.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if warriorBlackRect1.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect1.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect1.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect1.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if warriorBlackRect1.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect1.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if warriorBlackRect1.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if warriorBlackRect1.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if warriorBlackRect1.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if warriorBlackRect1.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if warriorBlackRect1.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if warriorBlackRect1.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if warriorBlackRect1.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if warriorBlackRect1.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if warriorBlackRect1.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if warriorBlackRect1.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if legionaryBlackRect2.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect2.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect2.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect2.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if legionaryBlackRect2.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect2.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if legionaryBlackRect2.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if legionaryBlackRect2.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if legionaryBlackRect2.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if legionaryBlackRect2.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if legionaryBlackRect2.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if legionaryBlackRect2.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if legionaryBlackRect2.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if legionaryBlackRect2.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if legionaryBlackRect2.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if legionaryBlackRect2.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if warriorBlackRect2.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect2.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect2.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect2.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if warriorBlackRect2.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect2.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if warriorBlackRect2.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if warriorBlackRect2.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if warriorBlackRect2.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if warriorBlackRect2.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if warriorBlackRect2.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if warriorBlackRect2.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if warriorBlackRect2.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if warriorBlackRect2.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if warriorBlackRect2.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if warriorBlackRect2.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if legionaryBlackRect3.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect3.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if legionaryBlackRect3.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect3.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if legionaryBlackRect3.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if legionaryBlackRect3.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if legionaryBlackRect3.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if legionaryBlackRect3.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if legionaryBlackRect3.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if legionaryBlackRect3.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if legionaryBlackRect3.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if legionaryBlackRect3.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if legionaryBlackRect3.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if legionaryBlackRect3.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if legionaryBlackRect3.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if legionaryBlackRect3.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
-
-                if warriorBlackRect3.colliderect(plagueDoctorWhiteRect):
-                    figuresWhite[0] = ""
-                    plagueDoctorWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect3.colliderect(archbishopWhiteRect):
-                    figuresWhite[1] = ""
-                    archbishopWhiteRect.centerx = -120
-                    plagueDoctorWhiteRect.centery = -120
-                if warriorBlackRect3.colliderect(cardinalWhiteRect):
-                    figuresWhite[2] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect3.colliderect(hadesWhiteRect):
-                    figuresWhite[3] = ""
-                    hadesWhiteRect.centerx = -120
-                    hadesWhiteRect.centery = -120
-                if warriorBlackRect3.colliderect(persephoneWhiteRect):
-                    figuresWhite[4] = ""
-                    cardinalBlackRect.centerx = -120
-                    cardinalBlackRect.centery = -120
-                if warriorBlackRect3.colliderect(cardinalWhiteRect1):
-                    figuresWhite[5] = ""
-                    cardinalWhiteRect1.centerx = -120
-                    cardinalWhiteRect1.centery = -120
-                if warriorBlackRect3.colliderect(archbishopWhiteRect1):
-                    figuresWhite[6] = ""
-                    archbishopWhiteRect1.centerx = -120
-                    archbishopWhiteRect1.centery = -120
-                if warriorBlackRect3.colliderect(plagueDoctorWhiteRect1):
-                    figuresWhite[7] = ""
-                    plagueDoctorWhiteRect1.centerx = -120
-                    plagueDoctorWhiteRect1.centery = -120
-                if warriorBlackRect3.colliderect(legionaryWhiteRect):
-                    figuresWhite[8] = ""
-                    legionaryWhiteRect.centerx = -120
-                    legionaryWhiteRect.centery = -120
-                if warriorBlackRect3.colliderect(warriorWhiteRect):
-                    figuresWhite[9] = ""
-                    warriorWhiteRect.centerx = -120
-                    warriorWhiteRect.centery = -120
-                if warriorBlackRect3.colliderect(legionaryWhiteRect1):
-                    figuresWhite[10] = ""
-                    legionaryWhiteRect1.centerx = -120
-                    legionaryWhiteRect1.centery = -120
-                if warriorBlackRect3.colliderect(warriorWhiteRect1):
-                    figuresWhite[11] = ""
-                    warriorWhiteRect1.centerx = -120
-                    warriorWhiteRect1.centery = -120
-                if warriorBlackRect3.colliderect(legionaryWhiteRect2):
-                    figuresWhite[12] = ""
-                    legionaryWhiteRect2.centerx = -120
-                    legionaryWhiteRect2.centery = -120
-                if warriorBlackRect3.colliderect(warriorWhiteRect2):
-                    figuresWhite[13] = ""
-                    warriorWhiteRect2.centerx = -120
-                    warriorWhiteRect2.centery = -120
-                if warriorBlackRect3.colliderect(legionaryWhiteRect3):
-                    figuresWhite[14] = ""
-                    legionaryWhiteRect3.centerx = -120
-                    legionaryWhiteRect3.centery = -120
-                if warriorBlackRect3.colliderect(warriorWhiteRect3):
-                    figuresWhite[15] = ""
-                    warriorWhiteRect3.centerx = -120
-                    warriorWhiteRect3.centery = -120
+         
 
     pygame.display.update()
 
