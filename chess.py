@@ -586,7 +586,6 @@ while run:
                 figuresBlack[0] = ""
                 plagueDoctorBlackRect.centerx = -60
                 plagueDoctorBlackRect.centery = -60
-                plagueDoctorBlackRect=False
             if plagueDoctorWhiteRect.colliderect(archbishopBlackRect):
                 figuresBlack[1] = ""
                 archbishopBlackRect.centerx = -60
@@ -647,7 +646,6 @@ while run:
                 figuresBlack[15] = ""
                 warriorBlackRect3.centerx = -60
                 warriorBlackRect3.centery = -60
-
             if archbishopWhiteRect.colliderect(plagueDoctorBlackRect):
                 figuresBlack[0] = ""
                 plagueDoctorBlackRect.centerx = -60
@@ -2605,7 +2603,7 @@ while run:
             if warriorBlackRect3.colliderect(archbishopWhiteRect):
                 figuresWhite[1] = ""
                 archbishopWhiteRect.centerx = -120
-                plagueDoctorWhiteRect.centery = -120
+                archbishopWhiteRect.centery = -120
             if warriorBlackRect3.colliderect(cardinalWhiteRect):
                 figuresWhite[2] = ""
                 cardinalBlackRect.centerx = -120
@@ -4889,6 +4887,10 @@ while run:
         rectLegionaryWhite3 = pygame.Rect(rectLegionaryWhitex3 - 30, rectLegionaryWhitey3 - 30, 60, 60)
         rectsLegionaryWhite.append(rectLegionaryWhite3)
 
+        #Legionář bílý 1 abilita
+        rectLegionaryWhitexAbility=legionaryWhiteRect.centerx
+        rectLegionaryWhiteyAbility=legionaryWhiteRect.centery
+
         # Válečník bílý 2
         rectsWarriorWhite_1 = []
 
@@ -4953,8 +4955,11 @@ while run:
         rectLegionaryWhite3_1 = pygame.Rect(rectLegionaryWhitex3_1 - 30, rectLegionaryWhitey3_1 - 30, 60, 60)
         rectsLegionaryWhite_1.append(rectLegionaryWhite3_1)
 
-        #
+        #Legionář bílý 2 abilita
+        rectLegionaryWhitexAbility_1=legionaryWhiteRect1.centerx
+        rectLegionaryWhiteyAbility_1=legionaryWhiteRect1.centery
 
+        #Válečník bílý 2
         rectsWarriorWhite_2 = []
 
         rectWarriorWhitex1_2 = warriorWhiteRect2.centerx + step
@@ -5018,6 +5023,10 @@ while run:
         rectLegionaryWhite3_2 = pygame.Rect(rectLegionaryWhitex3_2 - 30, rectLegionaryWhitey3_2 - 30, 60, 60)
         rectsLegionaryWhite_2.append(rectLegionaryWhite3_2)
 
+        #Legionář bílý 3 abilita
+        rectLegionaryWhitexAbility_2=legionaryWhiteRect2.centerx
+        rectLegionaryWhiteyAbility_2=legionaryWhiteRect2.centery
+        
         # Válečník bílý 4
         rectsWarriorWhite_3 = []
 
@@ -5081,6 +5090,10 @@ while run:
         rectLegionaryWhitey3_3 = legionaryWhiteRect3.centery + step
         rectLegionaryWhite3_3 = pygame.Rect(rectLegionaryWhitex3_3 - 30, rectLegionaryWhitey3_3 - 30, 60, 60)
         rectsLegionaryWhite_3.append(rectLegionaryWhite3_3)
+
+        #Legionář bílý 4 abilita
+        rectLegionaryWhitexAbility_3=legionaryWhiteRect3.centerx
+        rectLegionaryWhiteyAbilita_3=legionaryWhiteRect3.centery 
 
         # Morový doktor černý 1
         rectsPlagueDoctorBlack = []
@@ -5854,7 +5867,7 @@ while run:
         rectsWarriorBlackAbility_3.append(rectWarriorBlack4_3Ability)
 
         if event.type == pygame.MOUSEBUTTONDOWN and event.button==1:
-
+            print(event.pos)
             pohyb = True
             """for figurka_cerna in figuresBlack:
                 if figurka_cerna.collidepoint(event.pos):
@@ -5973,6 +5986,11 @@ while run:
                         plagueDoctorWhiteRect.centerx = plagueWhitexInit
                         plagueDoctorWhiteRect.centery = plagueWhiteyInit
                         plagueDoctorWhitePlaying=False
+                    if (plagueDoctorWhiteRect.centerx <= 480 or plagueDoctorWhiteRect.centerx >= 1440) or (plagueDoctorWhiteRect.centery <= 60 or plagueDoctorWhiteRect.centery >= 1020):
+                        plagueDoctorWhiteRect.centerx = plagueWhitexInit
+                        plagueDoctorWhiteRect.centery = plagueWhiteyInit
+                        plagueDoctorWhitePlaying=False
+                        counter-=1
                     if plagueDoctorWhiteRect.colliderect(archbishopWhiteRect):
                         plagueDoctorWhiteRect.centerx = plagueWhitexInit
                         plagueDoctorWhiteRect.centery = plagueWhiteyInit
@@ -6129,6 +6147,11 @@ while run:
                         archbishopWhiteRect.centerx = archbishopWhitexInit
                         archbishopWhiteRect.centery = archbishopWhiteyInit
                         archbishopWhitePlaying=False
+                    if (archbishopWhiteRect.centerx <= 480 or archbishopWhiteRect.centerx >= 1440) or (archbishopWhiteRect.centery <= 60 or archbishopWhiteRect.centery >= 1020):
+                        archbishopWhiteRect.centerx = archbishopWhitexInit
+                        archbishopWhiteRect.centery = archbishopWhiteyInit
+                        archbishopWhitePlaying=False
+                        counter-=1
                     if archbishopWhiteRect.colliderect(plagueDoctorWhiteRect):
                         archbishopWhiteRect.centerx = archbishopWhitexInit
                         archbishopWhiteRect.centery = archbishopWhiteyInit
@@ -6246,6 +6269,11 @@ while run:
                         cardinalWhiteRect.centerx = cardinalWhitexInit
                         cardinalWhiteRect.centery = cardinalWhiteyInit
                         cardinalWhitePlaying=False
+                    if (cardinalWhiteRect.centerx <= 480 or cardinalWhiteRect.centerx >= 1440) or (cardinalWhiteRect.centery <= 60 or cardinalWhiteRect.centery >= 1020):
+                        cardinalWhiteRect.centerx = cardinalWhitexInit
+                        cardinalWhiteRect.centery = cardinalWhiteyInit
+                        cardinalWhitePlaying=False
+                        counter-=1
                     if cardinalWhiteRect.colliderect(plagueDoctorWhiteRect):
                         cardinalWhiteRect.centerx = cardinalWhitexInit
                         cardinalWhiteRect.centery = cardinalWhiteyInit
@@ -6437,6 +6465,11 @@ while run:
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
                         hadesWhitePlaying=False
+                    if (hadesWhiteRect.centerx <= 480 or hadesWhiteRect.centerx >= 1440) or (hadesWhiteRect.centery <= 60 or hadesWhiteRect.centery >= 1020):
+                        hadesWhiteRect.centerx = hadesWhitexInit
+                        hadesWhiteRect.centery = hadesWhiteyInit
+                        cardinalWhitePlaying=False
+                        counter-=1
                     if hadesWhiteRect.colliderect(plagueDoctorWhiteRect):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
@@ -6574,6 +6607,11 @@ while run:
                         persephoneWhiteRect.centerx = persephoneWhitexInit
                         persephoneWhiteRect.centery = persephoneWhiteyInit
                         persephoneWhitePlaying=False
+                    if (persephoneWhiteRect.centerx <= 480 or persephoneWhiteRect.centerx >= 1440) or (persephoneWhiteRect.centery <= 60 or persephoneWhiteRect.centery >= 1020):
+                        persephoneWhiteRect.centerx = persephoneWhitexInit
+                        persephoneWhiteRect.centery = persephoneWhiteyInit
+                        persephoneWhitePlaying=False
+                        counter-=1
                     if persephoneWhiteRect.colliderect(plagueDoctorWhiteRect):
                         persephoneWhiteRect.centerx = persephoneWhitexInit
                         persephoneWhiteRect.centery = persephoneWhiteyInit
@@ -6687,6 +6725,11 @@ while run:
                         cardinalWhiteRect1.centerx = cardinalWhitexInit1
                         cardinalWhiteRect1.centery = cardinalWhiteyInit1
                         cardinalWhitePlaying1=False
+                    if (cardinalWhiteRect1.centerx <= 480 or cardinalWhiteRect1.centerx >= 1440) or (cardinalWhiteRect1.centery <= 60 or cardinalWhiteRect1.centery >= 1020):
+                        cardinalWhiteRect1.centerx = cardinalWhitexInit1
+                        cardinalWhiteRect1.centery = cardinalWhiteyInit1
+                        cardinalWhitePlaying1=False
+                        counter-=1
                     if cardinalWhiteRect1.colliderect(plagueDoctorWhiteRect):
                         cardinalWhiteRect1.centerx = cardinalWhitexInit1
                         cardinalWhiteRect1.centery = cardinalWhiteyInit1
@@ -6773,72 +6816,77 @@ while run:
                             elif x==len(figuresWhitePlaying)-1:
                                 archbishopWhitePlaying1=True
                 elif archbishopWhitePlaying1:
-                    archbishopWhitexInit1=archbishopWhiteRect1.centery
+                    archbishopWhitexInit1=archbishopWhiteRect1.centerx
                     archbishopWhiteyInit1=archbishopWhiteRect1.centery
-                    if rectArchbishopWhite1.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite1.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite1.centery
+                    if rectArchbishopWhite1_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite1_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite1_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite2.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite2.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite2.centery
+                    elif rectArchbishopWhite2_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite2_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite2_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite3.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite3.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite3.centery
+                    elif rectArchbishopWhite3_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite3_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite3_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite4.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite4.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite4.centery
+                    elif rectArchbishopWhite4_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite4_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite4_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite5.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite5.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite5.centery
+                    elif rectArchbishopWhite5_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite5_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite5_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite6.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite6.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite6.centery
+                    elif rectArchbishopWhite6_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite6_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite6_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite7.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite7.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite7.centery
+                    elif rectArchbishopWhite7_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite7_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite7_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite8.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite8.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite8.centery
+                    elif rectArchbishopWhite8_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite8_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite8_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite9.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite9.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite9.centery
+                    elif rectArchbishopWhite9_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite9_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite9_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite10.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite10.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite10.centery
+                    elif rectArchbishopWhite10_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite10_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite10_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite11.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite11.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite11.centery
+                    elif rectArchbishopWhite11_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite11_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite11_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
-                    elif rectArchbishopWhite12.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = rectArchbishopWhite12.centerx
-                        archbishopWhiteRect1.centery = rectArchbishopWhite12.centery
+                    elif rectArchbishopWhite12_1.collidepoint(event.pos):
+                        archbishopWhiteRect1.centerx = rectArchbishopWhite12_1.centerx
+                        archbishopWhiteRect1.centery = rectArchbishopWhite12_1.centery
                         counter += 1
                         archbishopWhitePlaying1=False
                     else:
                         archbishopWhiteRect1.centerx = archbishopWhitexInit1
                         archbishopWhiteRect1.centery = archbishopWhiteyInit1
                         archbishopWhitePlaying1=False
+                    if (archbishopWhiteRect1.centerx <= 480 or archbishopWhiteRect1.centerx >= 1440) or (archbishopWhiteRect1.centery <= 60 or archbishopWhiteRect1.centery >= 1020):
+                        archbishopWhiteRect1.centerx = archbishopWhitexInit1
+                        archbishopWhiteRect1.centery = archbishopWhiteyInit1
+                        archbishopWhitePlaying1=False
+                        counter-=1
                     if archbishopWhiteRect1.colliderect(plagueDoctorWhiteRect):
                         archbishopWhiteRect1.centerx = archbishopWhitexInit1
                         archbishopWhiteRect1.centery = archbishopWhiteyInit1
@@ -7021,66 +7069,87 @@ while run:
                     else:
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        plagueDoctorWhitePlaying1=False
+                    if (plagueDoctorWhiteRect1.centerx <= 480 or plagueDoctorWhiteRect1.centerx >= 1440) or (plagueDoctorWhiteRect1.centery <= 60 or plagueDoctorWhiteRect1.centery >= 1020):
+                        plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
+                        plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
+                        plagueDoctorWhitePlaying1=False
+                        counter-=1
                     if plagueDoctorWhiteRect1.colliderect(plagueDoctorWhiteRect):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(archbishopWhiteRect):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(cardinalWhiteRect):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(hadesWhiteRect):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(cardinalWhiteRect1):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(persephoneWhiteRect):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(archbishopWhiteRect1):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect1):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect1):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect2):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect2):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(warriorWhiteRect3):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
                     elif plagueDoctorWhiteRect1.colliderect(legionaryWhiteRect3):
                         plagueDoctorWhiteRect1.centerx = plagueWhitexInit1
                         plagueDoctorWhiteRect1.centery = plagueWhiteyInit1
                         counter -= 1
+                        plagueDoctorWhitePlaying1=False
 
 
 
@@ -7141,6 +7210,11 @@ while run:
                         warriorWhiteRect.centerx = warriorWhitexInit
                         warriorWhiteRect.centery = warriorWhiteyInit
                         warriorWhitePlaying=False
+                    if (warriorWhiteRect.centerx <= 480 or warriorWhiteRect.centerx >= 1440) or (warriorWhiteRect.centery <= 60 or warriorWhiteRect.centery >= 1020):
+                        warriorWhiteRect.centerx = warriorWhitexInit
+                        warriorWhiteRect.centery = warriorWhiteyInit
+                        warriorWhitePlaying=False
+                        counter-=1
                     if warriorWhiteRect.colliderect(plagueDoctorWhiteRect):
                         warriorWhiteRect.centerx = warriorWhitexInit
                         warriorWhiteRect.centery = warriorWhiteyInit
@@ -7217,10 +7291,8 @@ while run:
                         counter -= 1
                         warriorWhitePlaying=False
                             
-
-
-
                 if legionaryWhiteRect.collidepoint(event.pos):
+                    keys=pygame.key.get_pressed()
                     if not legionaryWhitePlaying:
                             for x,playing in enumerate(figuresWhitePlaying):
                                 if playing==True:
@@ -7232,20 +7304,26 @@ while run:
                 elif legionaryWhitePlaying:
                     legionaryWhitexInit=legionaryWhiteRect.centerx
                     legionaryWhiteyInit=legionaryWhiteRect.centery
+                    if keys== and counter%4==0:
+                        legionaryWhiteRect.centerx=rectLegionaryWhitexAbility
+                        legionaryWhiteRect.centery=rectLegionaryWhiteyAbility
                     if rectLegionaryWhite1.collidepoint(event.pos):
-
+                        rectLegionaryWhitexAbility=legionaryWhiteRect.centerx
+                        rectLegionaryWhiteyAbility=legionaryWhiteRect.centery
                         legionaryWhiteRect.centerx = rectLegionaryWhite1.centerx
                         legionaryWhiteRect.centery = rectLegionaryWhite1.centery
                         counter += 1
                         legionaryWhitePlaying=False
                     elif rectLegionaryWhite2.collidepoint(event.pos):
-           
+                        rectLegionaryWhitexAbility=legionaryWhiteRect.centerx
+                        rectLegionaryWhiteyAbility=legionaryWhiteRect.centery
                         legionaryWhiteRect.centerx = rectLegionaryWhite2.centerx
                         legionaryWhiteRect.centery = rectLegionaryWhite2.centery
                         counter += 1
                         legionaryWhitePlaying=False
                     elif rectLegionaryWhite3.collidepoint(event.pos):
-    
+                        rectLegionaryWhitexAbility=legionaryWhiteRect.centerx
+                        rectLegionaryWhiteyAbility=legionaryWhiteRect.centery
                         legionaryWhiteRect.centerx = rectLegionaryWhite3.centerx
                         legionaryWhiteRect.centery = rectLegionaryWhite3.centery
                         counter += 1
@@ -7254,6 +7332,11 @@ while run:
                         legionaryWhiteRect.centerx = legionaryWhitexInit
                         legionaryWhiteRect.centery = legionaryWhiteyInit
                         legionaryWhitePlaying=False
+                    if (legionaryWhiteRect.centerx <= 480 or legionaryWhiteRect.centerx >= 1440) or (legionaryWhiteRect.centery <= 60 or legionaryWhiteRect.centery >= 1020):
+                        legionaryWhiteRect.centerx = legionaryWhitexInit
+                        legionaryWhiteRect.centery = legionaryWhiteyInit
+                        legionaryWhitePlaying=False
+                        counter-=1
                     if legionaryWhiteRect.colliderect(plagueDoctorWhiteRect):
                         legionaryWhiteRect.centerx = legionaryWhitexInit
                         legionaryWhiteRect.centery = legionaryWhiteyInit
@@ -7388,6 +7471,11 @@ while run:
                         warriorWhiteRect1.centerx = warriorWhitexInit1
                         warriorWhiteRect1.centery = warriorWhiteyInit1
                         warriorWhitePlaying1=False
+                    if (warriorWhiteRect1.centerx <= 480 or warriorWhiteRect1.centerx >= 1440) or (warriorWhiteRect1.centery <= 60 or warriorWhiteRect1.centery >= 1020):
+                        warriorWhiteRect1.centerx = warriorWhitexInit1
+                        warriorWhiteRect1.centery = warriorWhitexInit1
+                        warriorWhitePlaying1=False
+                        counter-=1
                     if warriorWhiteRect1.colliderect(plagueDoctorWhiteRect):
                         warriorWhiteRect1.centerx = warriorWhitexInit1
                         warriorWhiteRect1.centery = warriorWhiteyInit1
@@ -7501,6 +7589,11 @@ while run:
                         legionaryWhiteRect1.centerx = legionaryWhitexInit1
                         legionaryWhiteRect1.centery = legionaryWhiteyInit1
                         legionaryWhitePlaying1=False
+                    if (legionaryWhiteRect1.centerx <= 480 or legionaryWhiteRect1.centerx >= 1440) or (legionaryWhiteRect1.centery <= 60 or legionaryWhiteRect1.centery >= 1020):
+                        legionaryWhiteRect1.centerx = legionaryWhitexInit1
+                        legionaryWhiteRect1.centery = legionaryWhiteyInit1
+                        legionaryWhitePlaying1=False
+                        counter-=1
                     if legionaryWhiteRect1.colliderect(plagueDoctorWhiteRect):
                         legionaryWhiteRect1.centerx = legionaryWhitexInit1
                         legionaryWhiteRect1.centery = legionaryWhiteyInit1
@@ -7634,6 +7727,11 @@ while run:
                         warriorWhiteRect2.centerx = warriorWhitexInit2
                         warriorWhiteRect2.centery = warriorWhiteyInit2
                         warriorWhitePlaying2=False
+                    if (warriorWhiteRect2.centerx <= 480 or warriorWhiteRect2.centerx >= 1440) or (warriorWhiteRect2.centery <= 60 or warriorWhiteRect2.centery >= 1020):
+                        warriorWhiteRect2.centerx = warriorWhitexInit2
+                        warriorWhiteRect2.centery = warriorWhiteyInit2
+                        warriorWhitePlaying2=False
+                        counter-=1
                     if warriorWhiteRect2.colliderect(plagueDoctorWhiteRect):
                         warriorWhiteRect2.centerx = warriorWhitexInit2
                         warriorWhiteRect2.centery = warriorWhiteyInit2
@@ -7753,6 +7851,11 @@ while run:
                         legionaryWhiteRect2.centerx = legionaryWhitexInit2
                         legionaryWhiteRect2.centery = legionaryWhiteyInit2
                         legionaryWhitePlaying2=False
+                    if (legionaryWhiteRect2.centerx <= 480 or legionaryWhiteRect2.centerx >= 1440) or (legionaryWhiteRect2.centery <= 60 or legionaryWhiteRect2.centery >= 1020):
+                        legionaryWhiteRect2.centerx = legionaryWhitexInit2
+                        legionaryWhiteRect2.centery = legionaryWhiteyInit2
+                        legionaryWhitePlaying2=False
+                        counter-=1
                     if legionaryWhiteRect2.colliderect(plagueDoctorWhiteRect):
                         legionaryWhiteRect2.centerx = legionaryWhitexInit2
                         legionaryWhiteRect2.centery = legionaryWhiteyInit2
@@ -7885,6 +7988,11 @@ while run:
                         warriorWhiteRect3.centerx = warriorWhitexInit3
                         warriorWhiteRect3.centery = warriorWhiteyInit3
                         warriorWhitePlaying3=False
+                    if (warriorWhiteRect3.centerx <= 480 or warriorWhiteRect3.centerx >= 1440) or (warriorWhiteRect3.centery <= 60 or warriorWhiteRect3.centery >= 1020):
+                        warriorWhiteRect3.centerx = warriorWhitexInit3
+                        warriorWhiteRect3.centery = warriorWhiteyInit3
+                        warriorWhitePlaying3=False
+                        counter-=1
                     if warriorWhiteRect3.colliderect(plagueDoctorWhiteRect):
                         warriorWhiteRect3.centerx = warriorWhitexInit3
                         warriorWhiteRect3.centery = warriorWhiteyInit3
@@ -7999,6 +8107,11 @@ while run:
                         legionaryWhiteRect3.centerx = legionaryWhitexInit3
                         legionaryWhiteRect3.centery = legionaryWhiteyInit3
                         legionaryWhitePlaying3=False
+                    if (legionaryWhiteRect3.centerx <= 480 or legionaryWhiteRect3.centerx >= 1440) or (legionaryWhiteRect3.centery <= 60 or legionaryWhiteRect3.centery >= 1020):
+                        legionaryWhiteRect3.centerx = legionaryWhitexInit3
+                        legionaryWhiteRect3.centery = legionaryWhiteyInit3
+                        legionaryWhitePlaying3=False
+                        counter-=1
                     if legionaryWhiteRect3.colliderect(plagueDoctorWhiteRect):
                         legionaryWhiteRect3.centerx = legionaryWhitexInit3
                         legionaryWhiteRect3.centery = legionaryWhiteyInit3
@@ -8187,6 +8300,11 @@ while run:
                         plagueDoctorBlackRect.centery = plagueBlackyInit
                         counter -= 1
                         plagueDoctorBlackPlaying=False
+                    if (plagueDoctorBlackRect.centerx <= 480 or plagueDoctorBlackRect.centerx >= 1440) or (plagueDoctorBlackRect.centery <= 60 or plagueDoctorBlackRect.centery >= 1020):
+                        plagueDoctorBlackRect.centerx = plagueBlackxInit
+                        plagueDoctorBlackRect.centery = plagueBlackyInit
+                        plagueDoctorBlackPlaying=False
+                        counter-=1
                     elif plagueDoctorBlackRect.colliderect(cardinalBlackRect):
                         plagueDoctorBlackRect.centerx = plagueBlackxInit
                         plagueDoctorBlackRect.centery = plagueBlackyInit
@@ -8334,6 +8452,11 @@ while run:
                         archbishopBlackRect.centerx = archbishopBlackxInit
                         archbishopBlackRect.centery = archbishopBlackyInit
                         archbishopBlackPlaying=False
+                    if (archbishopBlackRect.centerx <= 480 or archbishopBlackRect.centerx >= 1440) or (archbishopBlackRect.centery <= 60 or archbishopBlackRect.centery >= 1020):
+                        archbishopBlackRect.centerx = archbishopBlackxInit
+                        archbishopBlackRect.centery = archbishopBlackyInit
+                        archbishopBlackPlaying=False
+                        counter-=1
                     if archbishopBlackRect.colliderect(plagueDoctorBlackRect):
                         archbishopBlackRect.centerx = archbishopBlackxInit
                         archbishopBlackRect.centery = archbishopBlackyInit
@@ -8448,6 +8571,11 @@ while run:
                         cardinalBlackRect.centerx = cardinalBlackxInit
                         cardinalBlackRect.centery = cardinalBlackyInit
                         cardinalBlackPlaying=False
+                    if (cardinalBlackRect.centerx <= 480 or cardinalBlackRect.centerx >= 1440) or (cardinalBlackRect.centery <= 60 or cardinalBlackRect.centery >= 1020):
+                        cardinalBlackRect.centerx = cardinalBlackxInit
+                        cardinalBlackRect.centery = cardinalBlackyInit
+                        cardinalBlackPlaying=False
+                        counter-=1
                     if cardinalBlackRect.colliderect(plagueDoctorBlackRect):
                         cardinalBlackRect.centerx = cardinalBlackxInit
                         cardinalBlackRect.centery = cardinalBlackyInit
@@ -8636,6 +8764,11 @@ while run:
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
                         hadesBlackPlaying=False
+                    if (hadesBlackRect.centerx <= 480 or hadesBlackRect.centerx >= 1440) or (hadesBlackRect.centery <= 60 or hadesBlackRect.centery >= 1020):
+                        hadesBlackRect.centerx = hadesBlackxInit
+                        hadesBlackRect.centery = hadesBlackyInit
+                        hadesBlackPlaying=False
+                        counter-=1
                     if hadesBlackRect.colliderect(plagueDoctorBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
@@ -8768,6 +8901,11 @@ while run:
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         persephoneBlackPlaying=False
+                    if (persephoneBlackRect.centerx <= 480 or persephoneBlackRect.centerx >= 1440) or (persephoneBlackRect.centery <= 60 or persephoneBlackRect.centery >= 1020):
+                        persephoneBlackRect.centerx = persephoneBlackxInit
+                        persephoneBlackRect.centery = persephoneBlackyInit
+                        persephoneBlackPlaying=False
+                        counter-=1
                     if persephoneBlackRect.colliderect(plagueDoctorBlackRect):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
@@ -8880,6 +9018,11 @@ while run:
                         cardinalBlackRect1.centerx = cardinalBlackxInit1
                         cardinalBlackRect1.centery = cardinalBlackyInit1
                         cardinalBlackPlaying1=False
+                    if (cardinalBlackRect1.centerx <= 480 or cardinalBlackRect1.centerx >= 1440) or (cardinalBlackRect1.centery <= 60 or cardinalBlackRect1.centery >= 1020):
+                        cardinalBlackRect1.centerx = cardinalBlackxInit1
+                        cardinalBlackRect1.centery = cardinalBlackyInit1
+                        cardinalBlackPlaying1=False
+                        counter-=1
                     if cardinalBlackRect1.colliderect(plagueDoctorBlackRect):
                         cardinalBlackRect1.centerx = cardinalBlackxInit1
                         cardinalBlackRect1.centery = cardinalBlackyInit1
@@ -9033,6 +9176,11 @@ while run:
                         archbishopBlackRect1.centerx = archbishopBlackxInit1
                         archbishopBlackRect1.centery = archbishopBlackyInit1
                         archbishopBlackPlaying1=False
+                    if (archbishopBlackRect1.centerx <= 480 or archbishopBlackRect1.centerx >= 1440) or (archbishopBlackRect1.centery <= 60 or archbishopBlackRect1.centery >= 1020):
+                        archbishopBlackRect1.centerx = archbishopBlackxInit1
+                        archbishopBlackRect1.centery = archbishopBlackyInit1
+                        archbishopBlackPlaying1=False
+                        counter-=1
                     if archbishopBlackRect1.colliderect(plagueDoctorBlackRect):
                         archbishopBlackRect1.centerx = archbishopBlackxInit1
                         archbishopBlackRect1.centery = archbishopBlackyInit1
@@ -9215,6 +9363,11 @@ while run:
                         plagueDoctorBlackRect1.centerx = plagueBlackxInit1
                         plagueDoctorBlackRect1.centery = plagueBlackyInit1
                         plagueDoctorBlackPlaying1=False
+                    if (plagueDoctorBlackRect1.centerx <= 480 or plagueDoctorBlackRect1.centerx >= 1440) or (plagueDoctorBlackRect1.centery <= 60 or plagueDoctorBlackRect1.centery >= 1020):
+                        plagueDoctorBlackRect1.centerx = plagueBlackxInit1
+                        plagueDoctorBlackRect1.centery = plagueBlackyInit1
+                        plagueDoctorBlackPlaying1=False
+                        counter-=1
                     if plagueDoctorBlackRect1.colliderect(plagueDoctorBlackRect):
                         plagueDoctorBlackRect1.centerx = plagueBlackxInit1
                         plagueDoctorBlackRect1.centery = plagueBlackyInit1
@@ -9328,6 +9481,11 @@ while run:
                         legionaryBlackRect.centerx = legionaryBlackxInit
                         legionaryBlackRect.centery = legionaryBlackyInit
                         legionaryBlackPlaying=False
+                    if (legionaryBlackRect.centerx <= 480 or legionaryBlackRect.centerx >= 1440) or (legionaryBlackRect.centery <= 60 or legionaryBlackRect.centery >= 1020):
+                        legionaryBlackRect.centerx = legionaryBlackxInit
+                        legionaryBlackRect.centery = legionaryBlackyInit
+                        legionaryBlackPlaying=False
+                        counter-=1
                     if legionaryBlackRect.colliderect(plagueDoctorBlackRect):
                         legionaryBlackRect.centerx = legionaryBlackxInit
                         legionaryBlackRect.centery = legionaryBlackyInit
@@ -9460,6 +9618,11 @@ while run:
                         warriorBlackRect.centerx = warriorBlackxInit
                         warriorBlackRect.centery = warriorBlackyInit
                         warriorBlackPlaying=False
+                    if (warriorBlackRect.centerx <= 480 or warriorBlackRect.centerx >= 1440) or (warriorBlackRect.centery <= 60 or warriorBlackRect.centery >= 1020):
+                        warriorBlackRect.centerx = warriorBlackxInit
+                        warriorBlackRect.centery = warriorBlackyInit
+                        warriorBlackPlaying=False
+                        counter-=1
                     if warriorBlackRect.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect.centerx = warriorBlackxInit
                         warriorBlackRect.centery = warriorBlackyInit
@@ -9592,6 +9755,11 @@ while run:
                         warriorBlackRect1.centerx = warriorBlackxInit1
                         warriorBlackRect1.centery = warriorBlackyInit1
                         warriorBlackPlaying1=False
+                    if (warriorBlackRect1.centerx <= 480 or warriorBlackRect1.centerx >= 1440) or (warriorBlackRect1.centery <= 60 or warriorBlackRect1.centery >= 1020):
+                        warriorBlackRect1.centerx = warriorBlackxInit1
+                        warriorBlackRect1.centery = warriorBlackyInit1
+                        warriorBlackPlaying1=False
+                        counter-=1
                     if warriorBlackRect1.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect1.centerx = warriorBlackxInit1
                         warriorBlackRect1.centery = warriorBlackyInit1
@@ -9705,6 +9873,11 @@ while run:
                         legionaryBlackRect1.centerx = legionaryBlackxInit1
                         legionaryBlackRect1.centery = legionaryBlackyInit1
                         legionaryBlackPlaying1=False
+                    if (legionaryBlackRect1.centerx <= 480 or legionaryBlackRect1.centerx >= 1440) or (legionaryBlackRect1.centery <= 60 or legionaryBlackRect1.centery >= 1020):
+                        legionaryBlackRect1.centerx = legionaryBlackxInit1
+                        legionaryBlackRect1.centery = legionaryBlackyInit1
+                        legionaryBlackPlaying1=False
+                        counter-=1
                     if legionaryBlackRect1.colliderect(plagueDoctorBlackRect):
                         legionaryBlackRect1.centerx = legionaryBlackxInit1
                         legionaryBlackRect1.centery = legionaryBlackyInit1
@@ -9837,6 +10010,11 @@ while run:
                         warriorBlackRect2.centerx = warriorBlackxInit2
                         warriorBlackRect2.centery = warriorBlackyInit2
                         warriorBlackPlaying2=False
+                    if (warriorBlackRect2.centerx <= 480 or warriorBlackRect2.centerx >= 1440) or (warriorBlackRect2.centery <= 60 or warriorBlackRect2.centery >= 1020):
+                        warriorBlackRect2.centerx = warriorBlackxInit2
+                        warriorBlackRect2.centery = warriorBlackyInit2
+                        warriorBlackPlaying2=False
+                        counter-=1
                     if warriorBlackRect2.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect2.centerx = warriorBlackxInit2
                         warriorBlackRect2.centery = warriorBlackyInit2
@@ -9951,6 +10129,11 @@ while run:
                         legionaryBlackRect2.centerx = legionaryBlackxInit2
                         legionaryBlackRect2.centery = legionaryBlackyInit2
                         legionaryBlackPlaying2=False
+                    if (legionaryBlackRect2.centerx <= 480 or legionaryBlackRect2.centerx >= 1440) or (legionaryBlackRect2.centery <= 60 or legionaryBlackRect2.centery >= 1020):
+                        legionaryBlackRect2.centerx = legionaryBlackxInit2
+                        legionaryBlackRect2.centery = legionaryBlackyInit2
+                        legionaryBlackPlaying2=False
+                        counter-=1
                     if legionaryBlackRect2.colliderect(plagueDoctorBlackRect):
                         legionaryBlackRect2.centerx = legionaryBlackxInit2
                         legionaryBlackRect2.centery = legionaryBlackyInit2
@@ -10064,6 +10247,11 @@ while run:
                         legionaryBlackRect3.centerx = legionaryBlackxInit3
                         legionaryBlackRect3.centery = legionaryBlackyInit3
                         legionaryBlackPlaying3=False
+                    if (legionaryBlackRect3.centerx <= 480 or legionaryBlackRect3.centerx >= 1440) or (legionaryBlackRect3.centery <= 60 or legionaryBlackRect3.centery >= 1020):
+                        legionaryBlackRect3.centerx = legionaryBlackxInit3
+                        legionaryBlackRect3.centery = legionaryBlackyInit3
+                        legionaryBlackPlaying3=False
+                        counter-=1
                     if legionaryBlackRect3.colliderect(plagueDoctorBlackRect):
                         legionaryBlackRect3.centerx = legionaryBlackxInit3
                         legionaryBlackRect3.centery = legionaryBlackyInit3
@@ -10172,22 +10360,22 @@ while run:
                         warriorBlackRect3.centery = rectWarriorBlack4_3Ability.centery
                         counter += 1
                         warriorBlackPlaying3=False
-                    elif warriorBlackRect3.colliderect(rectWarriorBlack1_3):
+                    elif rectWarriorBlack1_3.collidepoint(event.pos):
                         warriorBlackRect3.centerx = rectWarriorBlack1_3.centerx
                         warriorBlackRect3.centery = rectWarriorBlack1_3.centery
                         counter += 1
                         warriorBlackPlaying3=False
-                    elif warriorBlackRect3.colliderect(rectWarriorBlack2_3):
+                    elif rectWarriorBlack2_3.collidepoint(event.pos):
                         warriorBlackRect3.centerx = rectWarriorBlack2_3.centerx
                         warriorBlackRect3.centery = rectWarriorBlack2_3.centery
                         counter += 1
                         warriorBlackPlaying3=False
-                    elif warriorBlackRect3.colliderect(rectWarriorBlack3_3):
+                    elif rectWarriorBlack3_3.collidepoint(event.pos):
                         warriorBlackRect3.centerx = rectWarriorBlack3_3.centerx
                         warriorBlackRect3.centery = rectWarriorBlack3_3.centery
                         counter += 1
                         warriorBlackPlaying3=False
-                    elif warriorBlackRect3.colliderect(rectWarriorBlack4_3):
+                    elif rectWarriorBlack4_3.collidepoint(event.pos):
                         warriorBlackRect3.centerx = rectWarriorBlack4_3.centerx
                         warriorBlackRect3.centery = rectWarriorBlack4_3.centery
                         counter += 1
@@ -10196,6 +10384,11 @@ while run:
                         warriorBlackRect3.centerx = warriorBlackxInit3
                         warriorBlackRect3.centery = warriorBlackyInit3
                         warriorBlackPlaying3=False
+                    if (warriorBlackRect3.centerx <= 480 or warriorBlackRect3.centerx >= 1440) or (warriorBlackRect3.centery <= 60 or warriorBlackRect3.centery >= 1020):
+                        warriorBlackRect3.centerx = warriorBlackxInit3
+                        warriorBlackRect3.centery = warriorBlackyInit3
+                        warriorBlackPlaying3=False
+                        counter-=1
                     if warriorBlackRect3.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect3.centerx = warriorBlackxInit3
                         warriorBlackRect3.centery = warriorBlackyInit3
@@ -10271,6 +10464,7 @@ while run:
                         warriorBlackRect3.centery = warriorBlackyInit3
                         counter -= 1
                         warriorBlackPlaying3=False
+
 
 
         if plagueDoctorWhitePlaying:
@@ -10365,6 +10559,11 @@ while run:
                         pygame.draw.rect(screen, black, ctverec, 5)
             if counter % 4 == 0:
                 for ctverec in rectsWarriorWhiteAbility_3:
+                    if (ctverec.right < 1440 or ctverec.left > 475) or (
+                            ctverec.bottom < 850 or ctverec.top > 60):
+                        pygame.draw.rect(screen, black, ctverec, 5)
+        if legionaryWhitePlaying3:
+            for ctverec in rectsLegionaryWhite_3:
                     if (ctverec.right < 1440 or ctverec.left > 475) or (
                             ctverec.bottom < 850 or ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
