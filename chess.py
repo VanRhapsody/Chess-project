@@ -80,7 +80,7 @@ db_connection = mysql.connector.connect(
 
 cursor = db_connection.cursor()
 
-cursor.execute("SELECT * FROM leaderboard")
+cursor.execute("SELECT DISTINCT(email),win_count FROM registracechess ORDER BY win_count DESC LIMIT 15")
 result = cursor.fetchall()
 
 cursor.close()
@@ -188,13 +188,13 @@ blue = (0, 0, 255)
 active_color = (255, 255, 255)
 passive_collor = (180, 180, 180)
 # Nastavení pozadí
-background_image = pygame.image.load("loginpozadi.jpg")
+background_image = pygame.image.load("images/loginpozadi.jpg")
 background_image_rect = background_image.get_rect()
 background_image_rect.center = (screen_width / 2, screen_height / 2)
 
 # Hudba v pozadí
-songs = ["Anguish.mp3", "Bleach OST 3-Clavar La Espada.mp3", "y2mate.com - Kyrie Ⅱ.mp3", "Nube Negra.mp3",
-         "y2mate.com - American Prometheus.mp3"]
+songs = ["music/Anguish.mp3", "music/Bleach OST 3-Clavar La Espada.mp3", "music/y2mate.com - Kyrie Ⅱ.mp3", "music/Nube Negra.mp3",
+         "music/y2mate.com - American Prometheus.mp3","music/y2mate.com - オールフォーワンの力.mp3"]
 song = random.choice(songs)
 pygame.mixer.music.load(song)
 pygame.mixer.music.play(1, 0)
@@ -221,14 +221,20 @@ button_text_start_game_rect2.center = (screen_width / 2, 600)
 
 # Text pro leaderboard a pozadí pro ni
 leaderboard_font = pygame.font.SysFont("georgia", 80, False)
-leadeboard_text_font = pygame.font.SysFont("georgia", 50, False)
+leadeboard_text_font = pygame.font.SysFont("georgia", 30, False)
 leaderboard_text = leaderboard_font.render("Leaderboard", True, white)
 leaderboard_text_rect = leaderboard_text.get_rect()
 leaderboard_text_rect.center = (1650, 60)
 leaderboard_background = pygame.Rect(1400, 10, 500, 1050)
 
 # Zvuk zahájení hry
-start_game = pygame.mixer.Sound("Sound effect bell.mp3")
+start_game = pygame.mixer.Sound("sounds/Sound effect bell.mp3")
+
+#Zvuk ability kardinála
+cardinalAbilitySound=pygame.mixer.Sound("sounds/bankai1.mp3")
+
+#Zvuk late game
+lateGameMusic=pygame.mixer.Sound("music/y2mate.com - Bleach OST  Invasion.mp3")
 
 # Text pro input
 header_font = pygame.font.SysFont("georgia", 50, False)
@@ -263,6 +269,7 @@ failed_header_rect.midleft = (100, 710)
 fill_header = header_font.render("Vyplňte prosím všechna pole", True, white)
 fill_header_rect = fill_header.get_rect()
 fill_header_rect.midleft = (100, 710)
+
 
 # Text pro název hry
 title_font = pygame.font.SysFont("georgia", 80, False)
@@ -338,6 +345,13 @@ cardinalBlackAbilityActivated=False
 cardinalBlackAbilityCounter_1=1
 cardinalBlackAbilityActivated_1=False
 
+#Nastavení counteru a bool proměnných pro abilitu Hádese
+hadesWhiteAbilityActivated=False
+hadesWhiteAbilityCounter=2
+
+hadesBlackAbilityActivated=False
+hadesBlackAbilityCounter=2
+
 #Nastavení nových figurek pro kardinála při použití jeho ability
 cardinalWhiteRectCopy=cardinalWhite.get_rect()
 cardinalWhiteRectCopy.centerx=-500
@@ -374,6 +388,15 @@ show_main_menu = True
 play_game = False
 run = True
 pohybuje = False
+late_game=False
+user1_logged_in=False
+user2_logged_in=False
+user1_win=False
+user2_win=False
+
+#Nastavení emailů uživatelů pro funkčnost programu v prvotní fázi
+user_email_1=""
+user_email_2=""
 
 #Nastavení bool proměnných pro možnost tažení pro danou figurku, aby nemohly v současnou chvíli táhnout i jiné figurky
 plagueDoctorWhitePlaying=False
@@ -433,55 +456,115 @@ while run:
         if event.type == pygame.QUIT:
             run = False
         if event.type == pygame.MOUSEBUTTONDOWN:
-            if button2.collidepoint(event.pos) and show_main_menu:
-                run = False
-            if button.collidepoint(event.pos) and show_main_menu:
-                show_main_menu = False
-                play_game = True
-                pygame.mixer.music.stop()
-                start_game.play()
-                screen.fill((0, 0, 0))
-            if input_box1.collidepoint(event.pos) and show_main_menu:
-                active = True
-            else:
-                active = False
-            if input_box2.collidepoint(event.pos) and show_main_menu:
-                active1 = True
-            else:
-                active1 = False
-            if send_box.collidepoint(event.pos) and show_main_menu:
-                active2 = True
-                if input_user_text1 == '' or input_user_text2 == '':
-                    screen.blit(fill_header, fill_header_rect)
-                    empty = True
+            if user1_logged_in:
+                if button2.collidepoint(event.pos) and show_main_menu:
+                    run = False
+                if button.collidepoint(event.pos) and show_main_menu:
+                    show_main_menu = False
+                    play_game = True
+                    pygame.mixer.music.stop()
+                    start_game.play()
+                    screen.fill((0, 0, 0))
+                if input_box1.collidepoint(event.pos) and show_main_menu:
+                    active = True
                 else:
-                    empty = False
-                    conn = mysql.connector.connect(
-                        host="dbs.spskladno.cz",
-                        user="student3",
-                        password="spsnet",
-                        database="vyuka3"
-                    )
-                    cursor1 = conn.cursor()
-                    print(input_user_text1, input_user_text2)
-                    query = "SELECT * FROM registracechess WHERE email = %s AND password = %s"
-                    cursor1.execute(query, (input_user_text1, input_user_text2))
-                    user = cursor1.fetchone()
-                    # cursor1.close() z nějakého důvodu to s tímto po přihlášení padá, AI nepomohlo
-                    conn.close()
-
-                    if user:
-                        screen.blit(logged_header, logged_header_rect)
-                        print("Úspěch")
-                        user_email = input_user_text1
-                        input_user_text1 = ''
-                        input_user_text2 = ''
-
+                    active = False
+                if input_box2.collidepoint(event.pos) and show_main_menu:
+                    active1 = True
+                else:
+                    active1 = False
+                if send_box.collidepoint(event.pos) and show_main_menu:
+                    active2 = True
+                    if input_user_text1 == '' or input_user_text2 == '':
+                        screen.blit(fill_header, fill_header_rect)
+                        empty = True
                     else:
-                        screen.blit(failed_header, failed_header_rect)
-                        print("Neúspěch")
+                        empty = False
+                        conn = mysql.connector.connect(
+                            host="dbs.spskladno.cz",
+                            user="student3",
+                            password="spsnet",
+                            database="vyuka3"
+                        )
+                        cursor1 = conn.cursor()
+                        print(input_user_text1, input_user_text2)
+                        query = "SELECT * FROM registracechess WHERE email = %s AND password = %s"
+                        cursor1.execute(query, (input_user_text1, input_user_text2))
+                        user = cursor1.fetchone()
+                        # cursor1.close() z nějakého důvodu to s tímto po přihlášení padá, AI nepomohlo
+                        conn.close()
+                        if user:
+                            screen.blit(logged_header, logged_header_rect)
+
+                            user_email_2 = input_user_text1
+                            input_user_text1 = ''
+                            input_user_text2 = ''
+                            user2_logged_in=True
+                            inputUserText2Hidden = ''
+
+                        else:
+                            screen.blit(failed_header, failed_header_rect)
+                            inputUserText2Hidden = ''
+                            input_user_text1 = ''
+                else:
+                    active2 = False
+                screen.blit(login_header, login_header_rect)
             else:
-                active2 = False
+                if button2.collidepoint(event.pos) and show_main_menu:
+                    run = False
+                if button.collidepoint(event.pos) and show_main_menu:
+                    show_main_menu = False
+                    play_game = True
+                    pygame.mixer.music.stop()
+                    start_game.play()
+                    screen.fill((0, 0, 0))
+                if input_box1.collidepoint(event.pos) and show_main_menu:
+                    active = True
+                else:
+                    active = False
+                if input_box2.collidepoint(event.pos) and show_main_menu:
+                    active1 = True
+                else:
+                    active1 = False
+                if send_box.collidepoint(event.pos) and show_main_menu:
+                    active2 = True
+                    if input_user_text1 == '' or input_user_text2 == '':
+                        screen.blit(fill_header, fill_header_rect)
+                        empty = True
+                    else:
+                        empty = False
+                        conn = mysql.connector.connect(
+                            host="dbs.spskladno.cz",
+                            user="student3",
+                            password="spsnet",
+                            database="vyuka3"
+                        )
+                        cursor1 = conn.cursor()
+                        print(input_user_text1, input_user_text2)
+                        query = "SELECT * FROM registracechess WHERE email = %s AND password = %s"
+                        cursor1.execute(query, (input_user_text1, input_user_text2))
+                        user = cursor1.fetchone()
+                        # cursor1.close() z nějakého důvodu to s tímto po přihlášení padá, AI nepomohlo
+                        conn.close()
+                        if user:
+                            screen.blit(logged_header, logged_header_rect)
+
+                            user_email_1 = input_user_text1
+                            input_user_text1 = ''
+                            input_user_text2 = ''
+                            inputUserText2Hidden = ''
+                            user1_logged_in=True
+                        else:
+                            screen.blit(failed_header, failed_header_rect)
+                            inputUserText2Hidden = ''
+                            input_user_text1 = ''
+                else:
+                    active2 = False
+                screen.blit(login_header, login_header_rect)
+            print(user_email_1,user_email_2)
+
+
+
 
         if event.type == pygame.KEYDOWN and show_main_menu:
             if event.key == pygame.K_BACKSPACE:
@@ -533,14 +616,16 @@ while run:
         pygame.draw.rect(screen, black, leaderboard_background)
         screen.blit(leaderboard_text, leaderboard_text_rect)
 
+
+
         # Vypsání dat pro leadeboard
         y = 100
         for row in result:
             text = " - ".join(str(item) for item in row)
             text_surface = leadeboard_text_font.render(text, True, white)
             print(text_surface)
-            screen.blit(text_surface, (1500, y))
-            y += 40
+            screen.blit(text_surface, (1400, y))
+            y += 70
 
             # Vykreslení login formu
         if active:
@@ -561,6 +646,19 @@ while run:
                 screen.blit(failed_header, failed_header_rect)
         else:
             color2 = passive_collor
+        if user1_logged_in:
+            login_header = header_font.render("Přihlášení druhého uživatele", True, white)
+            login_header_rect = pass_header.get_rect()
+            login_header_rect.midleft = (100, 160)
+        if user1_logged_in and user2_logged_in:
+            login_header = header_font.render("", True, white)
+            login_header_rect = pass_header.get_rect()
+            login_header_rect.midleft = (100, 160)
+        if not user1_logged_in:
+            login_header = header_font.render("Přihlášení prvního uživatele", True, white)
+            login_header_rect = pass_header.get_rect()
+            login_header_rect.midleft = (100, 160)
+        screen.blit(login_header,login_header_rect)
 
         # Vykreslení login formu
         pygame.draw.rect(screen, color, input_box1)
@@ -586,6 +684,7 @@ while run:
 
     if play_game:
         # Zastavení hudby v pozadí
+        login_header = header_font.render("", True, white)
         pygame.mixer.music.stop()
 
         scale = 120
@@ -678,9 +777,18 @@ while run:
             if plagueDoctorWhiteRect.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                lateGameMusic.play()
+                late_game=True
             if plagueDoctorWhiteRect.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if plagueDoctorWhiteRect.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -737,10 +845,20 @@ while run:
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
                 archbishopWhiteFiguresCount+=1
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if archbishopWhiteRect.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
                 archbishopWhiteFiguresCount+=1
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if archbishopWhiteRect.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -806,9 +924,19 @@ while run:
             if cardinalWhiteRect.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalWhiteRect.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if cardinalWhiteRect.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -862,9 +990,19 @@ while run:
             if hadesWhiteRect.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if hadesWhiteRect.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if hadesWhiteRect.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -918,9 +1056,19 @@ while run:
             if persephoneWhiteRect.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if persephoneWhiteRect.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if persephoneWhiteRect.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -973,9 +1121,19 @@ while run:
             if cardinalWhiteRect1.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalWhiteRect1.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if cardinalWhiteRect1.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1032,9 +1190,19 @@ while run:
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
                 archbishopWhiteFiguresCount_1+=1
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if archbishopWhiteRect1.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
                 archbishopWhiteFiguresCount_1+=1
             if archbishopWhiteRect1.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
@@ -1101,9 +1269,19 @@ while run:
             if plagueDoctorWhiteRect1.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if plagueDoctorWhiteRect1.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if plagueDoctorWhiteRect1.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1156,9 +1334,19 @@ while run:
             if legionaryWhiteRect.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryWhiteRect.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if legionaryWhiteRect.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1211,9 +1399,19 @@ while run:
             if warriorWhiteRect.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorWhiteRect.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if warriorWhiteRect.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1266,9 +1464,19 @@ while run:
             if legionaryWhiteRect1.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryWhiteRect1.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if legionaryWhiteRect1.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1321,9 +1529,19 @@ while run:
             if warriorWhiteRect1.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorWhiteRect1.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if warriorWhiteRect1.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1376,9 +1594,19 @@ while run:
             if legionaryWhiteRect2.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryWhiteRect2.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if legionaryWhiteRect2.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1431,9 +1659,19 @@ while run:
             if warriorWhiteRect2.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorWhiteRect2.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if warriorWhiteRect2.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1486,9 +1724,19 @@ while run:
             if legionaryWhiteRect3.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryWhiteRect3.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if legionaryWhiteRect3.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1541,9 +1789,19 @@ while run:
             if warriorWhiteRect3.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorWhiteRect3.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if warriorWhiteRect3.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1596,9 +1854,19 @@ while run:
             if cardinalWhiteRectCopy.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalWhiteRectCopy.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if cardinalWhiteRectCopy.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1651,9 +1919,20 @@ while run:
             if cardinalWhiteRectCopy_1.colliderect(hadesBlackRect):
                 hadesBlackRect.centerx = screen_width-step
                 hadesBlackRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalWhiteRectCopy_1.colliderect(persephoneBlackRect):
                 persephoneBlackRect.centerx = screen_width-step*2
                 persephoneBlackRect.centery = step*2
+                play_game=False
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user1_win=True
             if cardinalWhiteRectCopy_1.colliderect(cardinalBlackRect1):
                 cardinalBlackRect1.centerx = screen_width-step*3
                 cardinalBlackRect1.centery = step*2
@@ -1707,9 +1986,19 @@ while run:
             if plagueDoctorBlackRect.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if plagueDoctorBlackRect.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if plagueDoctorBlackRect.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -1765,11 +2054,21 @@ while run:
             if archbishopBlackRect.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
                 archbishopBlackFiguresCount+=1
             if archbishopBlackRect.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
                 archbishopBlackFiguresCount+=1
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if archbishopBlackRect.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -1833,9 +2132,19 @@ while run:
             if cardinalBlackRect.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalBlackRect.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if cardinalBlackRect.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -1888,9 +2197,19 @@ while run:
             if hadesBlackRect.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if hadesBlackRect.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if hadesBlackRect.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -1943,9 +2262,19 @@ while run:
             if persephoneBlackRect.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if persephoneBlackRect.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if persephoneBlackRect.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -1998,9 +2327,19 @@ while run:
             if cardinalBlackRect1.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalBlackRect1.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if cardinalBlackRect1.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2057,10 +2396,20 @@ while run:
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
                 archbishopBlackFiguresCount_1+=1
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if archbishopBlackRect1.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
                 archbishopBlackFiguresCount_1+=1
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if archbishopBlackRect1.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2126,9 +2475,19 @@ while run:
             if plagueDoctorBlackRect1.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if plagueDoctorBlackRect1.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if plagueDoctorBlackRect1.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2181,9 +2540,19 @@ while run:
             if legionaryBlackRect.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryBlackRect.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if legionaryBlackRect.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2236,9 +2605,19 @@ while run:
             if warriorBlackRect.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorBlackRect.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if warriorBlackRect.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2291,9 +2670,19 @@ while run:
             if legionaryBlackRect1.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryBlackRect1.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if legionaryBlackRect1.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2346,9 +2735,19 @@ while run:
             if warriorBlackRect1.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorBlackRect1.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if warriorBlackRect1.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2402,9 +2801,19 @@ while run:
             if legionaryBlackRect2.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryBlackRect2.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if legionaryBlackRect2.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2457,9 +2866,19 @@ while run:
             if warriorBlackRect2.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorBlackRect2.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if warriorBlackRect2.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2512,9 +2931,19 @@ while run:
             if legionaryBlackRect3.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if legionaryBlackRect3.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if legionaryBlackRect3.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2567,9 +2996,19 @@ while run:
             if warriorBlackRect3.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if warriorBlackRect3.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if warriorBlackRect3.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2622,9 +3061,19 @@ while run:
             if cardinalBlackRectCopy.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalBlackRectCopy.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if cardinalBlackRectCopy.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -2677,9 +3126,19 @@ while run:
             if cardinalBlackRectCopy_1.colliderect(hadesWhiteRect):
                 hadesWhiteRect.centerx = step
                 hadesWhiteRect.centery = step*2
+                if not late_game:
+                    lateGameMusic.play()
+                    late_game=True
             if cardinalBlackRectCopy_1.colliderect(persephoneWhiteRect):
                 persephoneWhiteRect.centerx = step*2
                 persephoneWhiteRect.centery = step*2
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
+                user2_win=True
             if cardinalBlackRectCopy_1.colliderect(cardinalWhiteRect1):
                 cardinalWhiteRect1.centerx = step*3
                 cardinalWhiteRect1.centery = step*2
@@ -6860,6 +7319,8 @@ while run:
                         cardinalWhitePlaying=False
                 if cardinalWhiteAbilityActivated:
                     if plagueDoctorBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         plagueDoctorBlackxBefore=plagueDoctorBlackRect.centerx
                         plagueDoctorBlackyBefore=plagueDoctorBlackRect.centery
@@ -6870,6 +7331,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if archbishopBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         archbishopBlackxBefore=archbishopBlackRect.centerx
                         archbishopBlackyBefore=archbishopBlackRect.centery
@@ -6880,6 +7343,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if cardinalBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         cardinalBlackxBefore=cardinalBlackRect.centerx
                         cardinalBlackyBefore=cardinalBlackRect.centery
@@ -6890,6 +7355,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if cardinalBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         cardinalBlackxBefore_1=cardinalBlackRect1.centerx
                         cardinalBlackyBefore_1=cardinalBlackRect1.centery
@@ -6900,6 +7367,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if archbishopBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         archbishopBlackxBefore_1=archbishopBlackRect1.centerx
                         archbishopBlackyBefore_1=archbishopBlackRect1.centery
@@ -6911,6 +7380,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if plagueDoctorBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         plagueDoctorBlackxBefore_1=plagueDoctorBlackRect1.centerx
                         plagueDoctorBlackyBefore_1=plagueDoctorBlackRect1.centery
@@ -6922,6 +7393,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if legionaryBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore=legionaryBlackRect.centerx
                         legionaryBlackyBefore=legionaryBlackRect.centery
@@ -6933,6 +7406,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if warriorBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore=warriorBlackRect.centerx
                         warriorBlackyBefore=warriorBlackRect.centery
@@ -6944,6 +7419,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if legionaryBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore_1=legionaryBlackRect1.centerx
                         legionaryBlackyBefore_1=legionaryBlackRect1.centery
@@ -6955,6 +7432,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if warriorBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore_1=warriorBlackRect1.centerx
                         warriorBlackyBefore_1=warriorBlackRect1.centery
@@ -6966,6 +7445,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if legionaryBlackRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore_2=legionaryBlackRect2.centerx
                         legionaryBlackyBefore_2=legionaryBlackRect2.centery
@@ -6977,6 +7458,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if warriorBlackRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore_2=warriorBlackRect2.centerx
                         warriorBlackyBefore_2=warriorBlackRect2.centery
@@ -6988,6 +7471,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if legionaryBlackRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore_3=legionaryBlackRect3.centerx
                         legionaryBlackyBefore_3=legionaryBlackRect3.centery
@@ -6998,6 +7483,8 @@ while run:
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if warriorBlackRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore_3=warriorBlackRect3.centerx
                         warriorBlackyBefore_3=warriorBlackRect3.centery
@@ -7023,97 +7510,154 @@ while run:
                     if rectHadesWhite1.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite1.centerx
                         hadesWhiteRect.centery = rectHadesWhite1.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite2.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite2.centerx
                         hadesWhiteRect.centery = rectHadesWhite2.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite3.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite3.centerx
                         hadesWhiteRect.centery = rectHadesWhite3.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite4.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite4.centerx
                         hadesWhiteRect.centery = rectHadesWhite4.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite5.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite5.centerx
                         hadesWhiteRect.centery = rectHadesWhite5.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite6.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite6.centerx
                         hadesWhiteRect.centery = rectHadesWhite6.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite7.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite7.centerx
                         hadesWhiteRect.centery = rectHadesWhite7.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite8.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite8.centerx
                         hadesWhiteRect.centery = rectHadesWhite8.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite9.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite9.centerx
                         hadesWhiteRect.centery = rectHadesWhite9.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite10.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite10.centerx
                         hadesWhiteRect.centery = rectHadesWhite10.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite11.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite11.centerx
                         hadesWhiteRect.centery = rectHadesWhite11.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite12.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite12.centerx
                         hadesWhiteRect.centery = rectHadesWhite12.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite13.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite13.centerx
                         hadesWhiteRect.centery = rectHadesWhite13.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite14.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite14.centerx
                         hadesWhiteRect.centery = rectHadesWhite14.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite15.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite15.centerx
                         hadesWhiteRect.centery = rectHadesWhite15.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite16.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite16.centerx
                         hadesWhiteRect.centery = rectHadesWhite16.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite17.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite17.centerx
                         hadesWhiteRect.centery = rectHadesWhite17.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite18.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite18.centerx
                         hadesWhiteRect.centery = rectHadesWhite18.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     elif rectHadesWhite19.collidepoint(event.pos):
                         hadesWhiteRect.centerx = rectHadesWhite19.centerx
                         hadesWhiteRect.centery = rectHadesWhite19.centery
-                        counter += 1
+                        if not hadesWhiteAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesWhiteAbilityCounter-=1
                         hadesWhitePlaying=False
                     else:
                         hadesWhiteRect.centerx = hadesWhitexInit
@@ -7122,82 +7666,98 @@ while run:
                     if (hadesWhiteRect.centerx <= 480 or hadesWhiteRect.centerx >= 1440) or (hadesWhiteRect.centery <= 60 or hadesWhiteRect.centery >= 1020):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        cardinalWhitePlaying=False
-                        counter-=1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
+                        hadesWhitePlaying=False
                     if hadesWhiteRect.colliderect(plagueDoctorWhiteRect):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(archbishopWhiteRect):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(cardinalWhiteRect):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(persephoneWhiteRect):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(plagueDoctorWhiteRect1):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(cardinalWhiteRect1):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(archbishopWhiteRect1):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(warriorWhiteRect):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(legionaryWhiteRect):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(warriorWhiteRect1):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(legionaryWhiteRect1):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(warriorWhiteRect2):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(legionaryWhiteRect2):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(warriorWhiteRect3):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                     elif hadesWhiteRect.colliderect(legionaryWhiteRect3):
                         hadesWhiteRect.centerx = hadesWhitexInit
                         hadesWhiteRect.centery = hadesWhiteyInit
-                        counter -= 1
+                        if not hadesWhiteAbilityActivated:
+                            counter-=1
                         hadesWhitePlaying=False
                        
                 if persephoneWhiteRect.collidepoint(event.pos):
@@ -7581,6 +8141,8 @@ while run:
                         cardinalWhitePlaying1=False
                 if cardinalWhiteAbilityActivated_1:
                     if plagueDoctorBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         plagueDoctorBlackxBefore=plagueDoctorBlackRect.centerx
                         plagueDoctorBlackyBefore=plagueDoctorBlackRect.centery
                         plagueDoctorBlackRect.centerx = screen_width-step
@@ -7591,6 +8153,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if archbishopBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         archbishopBlackxBefore=archbishopBlackRect.centerx
                         archbishopBlackyBefore=archbishopBlackRect.centery
                         archbishopBlackRect.centerx = screen_width-step*2
@@ -7601,6 +8165,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if cardinalBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         cardinalBlackxBefore=cardinalBlackRect.centerx
                         cardinalBlackyBefore=cardinalBlackRect.centery
                         cardinalBlackRect.centerx = screen_width-step*3
@@ -7611,6 +8177,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if cardinalBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         cardinalBlackxBefore_1=cardinalBlackRect1.centerx
                         cardinalBlackyBefore_1=cardinalBlackRect1.centery
                         cardinalBlackRect1.centerx = screen_width-step
@@ -7621,6 +8189,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if archbishopBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         archbishopBlackxBefore_1=archbishopBlackRect1.centerx
                         archbishopBlackyBefore_1=archbishopBlackRect1.centery
                         archbishopBlackRect1.centerx = screen_width-step*2
@@ -7631,6 +8201,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if plagueDoctorBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         plagueDoctorBlackxBefore_1=plagueDoctorBlackRect1.centerx
                         plagueDoctorBlackyBefore_1=plagueDoctorBlackRect1.centery
                         plagueDoctorBlackRect1.centerx = screen_width-step*3
@@ -7641,6 +8213,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if legionaryBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore=legionaryBlackRect.centerx
                         legionaryBlackyBefore=legionaryBlackRect.centery
@@ -7651,6 +8225,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore=warriorBlackRect.centerx
                         warriorBlackyBefore=warriorBlackRect.centery
@@ -7661,6 +8237,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if legionaryBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore_1=legionaryBlackRect1.centerx
                         legionaryBlackyBefore_1=legionaryBlackRect1.centery
@@ -7671,16 +8249,20 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore_1=warriorBlackRect1.centerx
                         warriorBlackyBefore_1=warriorBlackRect1.centery
                         warriorBlackRect1.centerx = screen_width-step
                         warriorBlackRect1.centery = step*4
-                        cardinalWhiteRectCopy_1.centerx=legionaryBlackxBefore_1
-                        cardinalWhiteRectCopy_1.centery=legionaryBlackxBefore_1
+                        cardinalWhiteRectCopy_1.centerx=warriorBlackxBefore_1
+                        cardinalWhiteRectCopy_1.centery=warriorBlackyBefore_1
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if legionaryBlackRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore_2=legionaryBlackRect2.centerx
                         legionaryBlackyBefore_2=legionaryBlackRect2.centery
@@ -7691,6 +8273,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore_2=warriorBlackRect2.centerx
                         warriorBlackyBefore_2=warriorBlackRect2.centery
@@ -7701,6 +8285,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if legionaryBlackRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         legionaryBlackxBefore_3=legionaryBlackRect3.centerx
                         legionaryBlackyBefore_3=legionaryBlackRect3.centery
@@ -7711,6 +8297,8 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         counter+=1
                         warriorBlackxBefore_3=warriorBlackRect3.centerx
                         warriorBlackyBefore_3=warriorBlackRect3.centery
@@ -8561,8 +9149,6 @@ while run:
                         counter -= 1
                         legionaryWhitePlaying=False
                        
-
-
                 if warriorWhiteRect1.collidepoint(event.pos):
                     if not warriorWhitePlaying1:
                         for x,playing in enumerate(figuresWhitePlaying):
@@ -10073,6 +10659,8 @@ while run:
                         cardinalBlackPlaying=False
                 if cardinalBlackAbilityActivated:
                     if plagueDoctorWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         plagueDoctorWhitexBefore=plagueDoctorWhiteRect.centerx
                         plagueDoctorWhiteyBefore=plagueDoctorWhiteRect.centery
                         plagueDoctorWhiteRect.centerx = step
@@ -10083,6 +10671,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if archbishopWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         archbishopWhitexBefore=archbishopWhiteRect.centerx
                         archbishopWhiteyBefore=archbishopWhiteRect.centery
                         archbishopWhiteRect.centerx = step*2
@@ -10093,6 +10683,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if cardinalWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         cardinalWhitexBefore=cardinalWhiteRect.centerx
                         cardinalWhiteyBefore=cardinalWhiteRect.centery
                         cardinalWhiteRect.centerx = step*3
@@ -10103,6 +10695,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if cardinalWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         cardinalWhitexBefore_1=cardinalWhiteRect1.centerx
                         cardinalWhiteyBefore_1=cardinalWhiteRect1.centery
                         cardinalWhiteRect1.centerx = step
@@ -10113,6 +10707,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if archbishopWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         archbishopWhitexBefore_1=archbishopWhiteRect1.centerx
                         archbishopWhiteyBefore_1=archbishopWhiteRect1.centery
                         archbishopWhiteRect1.centerx = step*2
@@ -10123,6 +10719,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if plagueDoctorWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         plagueDoctorWhitexBefore_1=plagueDoctorWhiteRect1.centerx
                         plagueDoctorWhiteyBefore_1=plagueDoctorWhiteRect1.centery
                         plagueDoctorWhiteRect1.centerx = step*3
@@ -10133,6 +10731,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if legionaryWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore=legionaryWhiteRect.centerx
                         legionaryWhiteyBefore=legionaryWhiteRect.centery
                         legionaryWhiteRect.centerx = step
@@ -10143,6 +10743,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if warriorWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore=warriorWhiteRect.centerx
                         warriorWhiteyBefore=warriorWhiteRect.centery
                         warriorWhiteRect.centerx = step*2
@@ -10153,6 +10755,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if legionaryWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore_1=legionaryWhiteRect1.centerx
                         legionaryWhiteyBefore_1=legionaryWhiteRect1.centery
                         legionaryWhiteRect1.centerx = step*3
@@ -10163,6 +10767,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if warriorWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore_1=warriorWhiteRect1.centerx
                         warriorWhiteyBefore_1=warriorWhiteRect1.centery
                         warriorWhiteRect1.centerx = step
@@ -10173,6 +10779,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if legionaryWhiteRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore_2=legionaryWhiteRect2.centerx
                         legionaryWhiteyBefore_2=legionaryWhiteRect2.centery
                         legionaryWhiteRect2.centerx = step*2
@@ -10183,6 +10791,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if warriorWhiteRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore_2=warriorWhiteRect2.centerx
                         warriorWhiteyBefore_2=warriorWhiteRect2.centery
                         warriorWhiteRect2.centerx = step*2
@@ -10193,6 +10803,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if legionaryWhiteRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore_3=legionaryWhiteRect3.centerx
                         legionaryWhiteyBefore_3=legionaryWhiteRect3.centery
                         legionaryWhiteRect3.centerx = step*3
@@ -10203,6 +10815,8 @@ while run:
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
                     if warriorWhiteRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore_3=warriorWhiteRect3.centerx
                         warriorWhiteyBefore_3=warriorWhiteRect3.centery
                         warriorWhiteRect3.centerx = step
@@ -10229,97 +10843,154 @@ while run:
                     if rectHadesBlack1.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack1.centerx
                         hadesBlackRect.centery = rectHadesBlack1.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack2.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack2.centerx
                         hadesBlackRect.centery = rectHadesBlack2.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack3.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack3.centerx
                         hadesBlackRect.centery = rectHadesBlack3.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack4.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack4.centerx
                         hadesBlackRect.centery = rectHadesBlack4.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack5.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack5.centerx
                         hadesBlackRect.centery = rectHadesBlack5.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack6.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack6.centerx
                         hadesBlackRect.centery = rectHadesBlack6.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack7.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack7.centerx
                         hadesBlackRect.centery = rectHadesBlack7.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack8.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack8.centerx
                         hadesBlackRect.centery = rectHadesBlack8.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack9.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack9.centerx
                         hadesBlackRect.centery = rectHadesBlack9.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack10.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack10.centerx
                         hadesBlackRect.centery = rectHadesBlack10.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack11.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack11.centerx
                         hadesBlackRect.centery = rectHadesBlack11.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack12.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack12.centerx
                         hadesBlackRect.centery = rectHadesBlack12.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack13.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack13.centerx
                         hadesBlackRect.centery = rectHadesBlack13.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack14.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack14.centerx
                         hadesBlackRect.centery = rectHadesBlack14.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack15.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack15.centerx
                         hadesBlackRect.centery = rectHadesBlack15.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack16.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack16.centerx
                         hadesBlackRect.centery = rectHadesBlack16.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack17.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack17.centerx
                         hadesBlackRect.centery = rectHadesBlack17.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack18.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack18.centerx
                         hadesBlackRect.centery = rectHadesBlack18.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     elif rectHadesBlack19.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack19.centerx
                         hadesBlackRect.centery = rectHadesBlack19.centery
-                        counter += 1
+                        if not hadesBlackAbilityActivated:
+                            counter += 1
+                        else:
+                            hadesBlackAbilityCounter-=1
                         hadesBlackPlaying=False
                     else:
                         hadesBlackRect.centerx = hadesBlackxInit
@@ -10329,81 +11000,129 @@ while run:
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
                         hadesBlackPlaying=False
-                        counter-=1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                     if hadesBlackRect.colliderect(plagueDoctorBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(archbishopBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(cardinalBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(persephoneBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(cardinalBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(archbishopBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(plagueDoctorBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect2):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect2):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect3):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect3):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
-                        counter -= 1
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
 
                 if persephoneBlackRect.collidepoint(event.pos):
@@ -10418,50 +11137,170 @@ while run:
                 elif persephoneBlackPlaying:
                     persephoneBlackxInit=persephoneBlackRect.centerx
                     persephoneBlackyInit=persephoneBlackRect.centery
-                    if rectPersephoneBlack1.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack1.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack1.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
-                    elif rectPersephoneBlack2.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack2.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack2.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
-                    elif rectPersephoneBlack3.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack3.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack3.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
-                    elif rectPersephoneBlack4.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack4.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack4.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
-                    elif rectPersephoneBlack5.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack5.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack5.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
-                    elif rectPersephoneBlack6.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack6.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack6.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
-                    elif rectPersephoneBlack7.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack7.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack7.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
-                    elif rectPersephoneBlack8.collidepoint(event.pos):
-                        persephoneBlackRect.centerx = rectPersephoneBlack8.centerx
-                        persephoneBlackRect.centery = rectPersephoneBlack8.centery
-                        counter += 1
-                        persephoneBlackPlaying=False
+                    if persephoneBlackAbilityActivated:
+                        if rectPersephoneBlack1Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack1Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack1Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack2Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack2Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack2Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack3Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack3Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack3Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack4Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack4Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack4Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack5Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack5Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack5Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack6Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack6Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack6Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack7Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack7Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack7Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack8Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack8Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack8Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack9Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack9Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack9Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack10Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack10Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack10Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack11Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack11Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack11Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack12Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack12Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack12Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack13Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack13Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack13Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack14Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack14Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack14Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack15Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack15Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack15Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack16Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack16Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack16Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack17Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack17Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack17Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack18Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack18Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack18Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        if rectPersephoneBlack19Ability.collidepoint(event.pos):
+                            persephoneBlackRect.centerx=rectPersephoneBlack19Ability.centerx
+                            persephoneBlackRect.centery=rectPersephoneBlack19Ability.centery
+                            counter+=1
+                            persephoneBlackPlaying=False
+                            persephoneBlackAbilityCounter-=1
+                        else:
+                            persephoneBlackRect.centerx = persephoneBlackxInit
+                            persephoneBlackRect.centery = persephoneBlackyInit
+                            persephoneBlackPlaying=False
                     else:
-                        persephoneBlackRect.centerx = persephoneBlackxInit
-                        persephoneBlackRect.centery = persephoneBlackyInit
-                        persephoneBlackPlaying=False
+                        if rectPersephoneBlack1.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack1.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack1.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        elif rectPersephoneBlack2.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack2.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack2.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        elif rectPersephoneBlack3.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack3.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack3.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        elif rectPersephoneBlack4.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack4.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack4.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        elif rectPersephoneBlack5.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack5.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack5.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        elif rectPersephoneBlack6.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack6.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack6.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        elif rectPersephoneBlack7.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack7.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack7.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        elif rectPersephoneBlack8.collidepoint(event.pos):
+                            persephoneBlackRect.centerx = rectPersephoneBlack8.centerx
+                            persephoneBlackRect.centery = rectPersephoneBlack8.centery
+                            counter += 1
+                            persephoneBlackPlaying=False
+                        else:
+                            persephoneBlackRect.centerx = persephoneBlackxInit
+                            persephoneBlackRect.centery = persephoneBlackyInit
+                            persephoneBlackPlaying=False
                     if (persephoneBlackRect.centerx <= 480 or persephoneBlackRect.centerx >= 1440) or (persephoneBlackRect.centery <= 60 or persephoneBlackRect.centery >= 1020):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
@@ -10661,6 +11500,8 @@ while run:
                         cardinalBlackPlaying1=False
                 if cardinalBlackAbilityActivated_1:
                     if plagueDoctorWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         plagueDoctorWhitexBefore=plagueDoctorWhiteRect.centerx
                         plagueDoctorWhiteyBefore=plagueDoctorWhiteRect.centery
                         plagueDoctorWhiteRect.centerx = step
@@ -10671,6 +11512,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if archbishopWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         archbishopWhitexBefore=archbishopWhiteRect.centerx
                         archbishopWhiteyBefore=archbishopWhiteRect.centery
                         archbishopWhiteRect.centerx = step*2
@@ -10681,6 +11524,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if cardinalWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         cardinalWhitexBefore=cardinalWhiteRect.centerx
                         cardinalWhiteyBefore=cardinalWhiteRect.centery
                         cardinalWhiteRect.centerx = step*3
@@ -10691,6 +11536,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if cardinalWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         cardinalWhitexBefore_1=cardinalWhiteRect1.centerx
                         cardinalWhiteyBefore_1=cardinalWhiteRect1.centery
                         cardinalWhiteRect1.centerx = step
@@ -10701,6 +11548,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if archbishopWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         archbishopWhitexBefore_1=archbishopWhiteRect1.centerx
                         archbishopWhiteyBefore_1=archbishopWhiteRect1.centery
                         archbishopWhiteRect1.centerx = step*2
@@ -10711,6 +11560,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if plagueDoctorWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         plagueDoctorWhitexBefore_1=plagueDoctorWhiteRect1.centerx
                         plagueDoctorWhiteyBefore_1=plagueDoctorWhiteRect1.centery
                         plagueDoctorWhiteRect1.centerx = step*3
@@ -10721,6 +11572,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if legionaryWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore=legionaryWhiteRect.centerx
                         legionaryWhiteyBefore=legionaryWhiteRect.centery
                         legionaryWhiteRect.centerx = step
@@ -10731,6 +11584,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if warriorWhiteRect.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore=warriorWhiteRect.centerx
                         warriorWhiteyBefore=warriorWhiteRect.centery
                         warriorWhiteRect.centerx = step*2
@@ -10741,6 +11596,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if legionaryWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore_1=legionaryWhiteRect1.centerx
                         legionaryWhiteyBefore_1=legionaryWhiteRect1.centery
                         legionaryWhiteRect1.centerx = step*3
@@ -10751,6 +11608,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if warriorWhiteRect1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore_1=warriorWhiteRect1.centerx
                         warriorWhiteyBefore_1=warriorWhiteRect1.centery
                         warriorWhiteRect1.centerx = step
@@ -10761,6 +11620,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if legionaryWhiteRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore_2=legionaryWhiteRect2.centerx
                         legionaryWhiteyBefore_2=legionaryWhiteRect2.centery
                         legionaryWhiteRect2.centerx = step*2
@@ -10771,6 +11632,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if warriorWhiteRect2.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore_2=warriorWhiteRect2.centerx
                         warriorWhiteyBefore_2=warriorWhiteRect2.centery
                         warriorWhiteRect2.centerx = step*2
@@ -10781,6 +11644,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if legionaryWhiteRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         legionaryWhitexBefore_3=legionaryWhiteRect3.centerx
                         legionaryWhiteyBefore_3=legionaryWhiteRect3.centery
                         legionaryWhiteRect3.centerx = step*3
@@ -10791,6 +11656,8 @@ while run:
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
                     if warriorWhiteRect3.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
                         warriorWhitexBefore_3=warriorWhiteRect3.centerx
                         warriorWhiteyBefore_3=warriorWhiteRect3.centery
                         warriorWhiteRect3.centerx = step
@@ -12528,11 +13395,89 @@ while run:
             persephoneWhiteAbilityActivated=True
         elif keys[pygame.K_F9] and persephoneBlackPlaying and persephoneBlackAbilityCounter!=0:
             persephoneBlackAbilityActivated=True
+        if keys[pygame.K_F9] and hadesWhitePlaying and hadesWhiteAbilityCounter!=0:
+            hadesWhiteAbilityActivated=True
+        elif keys[pygame.K_F9] and hadesBlackPlaying and hadesBlackAbilityCounter!=0:
+            hadesBlackAbilityActivated=True
         
         if persephoneWhiteAbilityCounter==0:
             persephoneWhiteAbilityActivated=False
         if persephoneBlackAbilityCounter==0:
             persephoneBlackAbilityActivated=False 
+        
+        if hadesWhiteAbilityCounter==0:
+            hadesWhiteAbilityActivated=False
+        if hadesWhiteAbilityCounter==0:
+            hadesWhiteAbilityActivated=False
+
+        if late_game:
+            if hadesWhiteRect.centerx==step:
+                persephoneWhiteAbilityActivated=True
+            else:
+                persephoneBlackAbilityActivated=True
+        print(user1_win,user2_win)
+        if user1_win:
+            conn = mysql.connector.connect(
+                host="dbs.spskladno.cz",
+                user="student3",
+                password="spsnet",
+                database="vyuka3"
+            )
+            cursor1 = conn.cursor()
+            query = "UPDATE registracechess SET win_count=win_count+1 WHERE email=%s"
+            cursor1.execute(query,(user_email_1,))
+            conn.commit() 
+            # cursor1.close() z nějakého důvodu to s tímto po přihlášení padá, AI nepomohlo
+            conn.close()
+            play_game=False
+            show_main_menu=True
+            #Opětovné získání dat pro leaderboard pro možnost obnovení počtu výher po ukončení hry
+            db_connection = mysql.connector.connect(
+                host="dbs.spskladno.cz",
+                user="student3",
+                password="spsnet",
+                database="vyuka3"
+            )
+
+            cursor = db_connection.cursor()
+
+            cursor.execute("SELECT DISTINCT(email),win_count FROM registracechess ORDER BY win_count LIMIT 15")
+            result = cursor.fetchall()
+
+            cursor.close()
+            db_connection.close()
+            pygame.time.wait(1000)
+        if user2_win:
+            conn = mysql.connector.connect(
+                        host="dbs.spskladno.cz",
+                        user="student3",
+                        password="spsnet",
+                        database="vyuka3"
+                    )
+            cursor1 = conn.cursor()
+            query = "UPDATE registracechess SET win_count=win_count+1 WHERE email=%s"
+            cursor1.execute(query,(user_email_2,))
+            conn.commit() 
+            # cursor1.close() z nějakého důvodu to s tímto po přihlášení padá, AI nepomohlo
+            conn.close()
+            play_game=False
+            show_main_menu=False
+            #Opětovné získání dat pro leaderboard pro možnost obnovení počtu výher po ukončení hry
+            db_connection = mysql.connector.connect(
+                host="dbs.spskladno.cz",
+                user="student3",
+                password="spsnet",
+                database="vyuka3"
+            )
+
+            cursor = db_connection.cursor()
+
+            cursor.execute("SELECT DISTINCT(email),win_count FROM registracechess ORDER BY win_count LIMIT 15")
+            result = cursor.fetchall()
+
+            cursor.close()
+            db_connection.close()
+            pygame.time.wait(1000)
         
         if counter%2==0:
             if plagueDoctorWhitePlaying:
