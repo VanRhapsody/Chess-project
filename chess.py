@@ -1,4 +1,3 @@
-
 import pygame
 import mysql.connector
 import random
@@ -6688,7 +6687,7 @@ while run:
             if counter % 2 == 0:  # Algoritmus funguje následovně - pokud je counter sudé číslo, hraje bílý, pokud je liché, hraje černý hráč
                 keys = pygame.key.get_pressed()
                 
-                if plagueDoctorWhiteRect.collidepoint(event.pos):
+                if plagueDoctorWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not plagueDoctorWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -6910,7 +6909,7 @@ while run:
                         #plagueDoctorWhiteRect.centerx = event.pos[0]
                         #plagueDoctorWhiteRect.centery = event.pos[1]
 
-                if archbishopWhiteRect.collidepoint(event.pos):
+                if archbishopWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not archbishopWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -7066,7 +7065,7 @@ while run:
                         archbishopWhiteRect.centery = archbishopWhiteyInit
                         counter -= 1
                         archbishopWhitePlaying=False
-                if archbishopWhiteAbilityActivated:
+                if archbishopWhiteAbilityActivated and not hadesWhiteAbilityActivated:
                     if plagueDoctorBlackRect.collidepoint(event.pos):
                         plagueDoctorBlackRect.centerx = screen_width-step
                         plagueDoctorBlackRect.centery = step
@@ -7201,7 +7200,7 @@ while run:
                         #archbishopWhiteRect.centerx = event.pos[0]
                         #archbishopWhiteRect.centery = event.pos[1]
 
-                if cardinalWhiteRect.collidepoint(event.pos):
+                if cardinalWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not cardinalWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -7317,7 +7316,7 @@ while run:
                         cardinalWhiteRect.centery = cardinalWhiteyInit
                         counter -= 1
                         cardinalWhitePlaying=False
-                if cardinalWhiteAbilityActivated:
+                if cardinalWhiteAbilityActivated and not hadesWhiteAbilityActivated:
                     if plagueDoctorBlackRect.collidepoint(event.pos):
                         cardinalAbilitySound.play()
                         pygame.time.wait(5000)
@@ -7760,7 +7759,7 @@ while run:
                             counter-=1
                         hadesWhitePlaying=False
                        
-                if persephoneWhiteRect.collidepoint(event.pos):
+                if persephoneWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not persephoneWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -8023,7 +8022,7 @@ while run:
                         persephoneWhitePlaying=False
                      
 
-                if cardinalWhiteRect1.collidepoint(event.pos):
+                if cardinalWhiteRect1.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not cardinalWhitePlaying1:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -8309,7 +8308,7 @@ while run:
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
 
-                if archbishopWhiteRect1.collidepoint(event.pos):
+                if archbishopWhiteRect1.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not archbishopWhitePlaying1:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -8598,7 +8597,7 @@ while run:
 
 
 
-                if plagueDoctorWhiteRect1.collidepoint(event.pos):
+                if plagueDoctorWhiteRect1.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not plagueDoctorWhitePlaying1:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -8894,7 +8893,7 @@ while run:
 
 
 
-                if warriorWhiteRect.collidepoint(event.pos):
+                if warriorWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not warriorWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9031,7 +9030,7 @@ while run:
                         counter -= 1
                         warriorWhitePlaying=False
                             
-                if legionaryWhiteRect.collidepoint(event.pos):
+                if legionaryWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not legionaryWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9149,7 +9148,7 @@ while run:
                         counter -= 1
                         legionaryWhitePlaying=False
                        
-                if warriorWhiteRect1.collidepoint(event.pos):
+                if warriorWhiteRect1.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not warriorWhitePlaying1:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9286,7 +9285,7 @@ while run:
                         counter -= 1
                         warriorWhitePlaying1=False
 
-                if legionaryWhiteRect1.collidepoint(event.pos):
+                if legionaryWhiteRect1.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not legionaryWhitePlaying1:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9405,7 +9404,7 @@ while run:
                         legionaryWhitePlaying1=False
                     
 
-                if warriorWhiteRect2.collidepoint(event.pos):
+                if warriorWhiteRect2.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not warriorWhitePlaying2:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9548,7 +9547,7 @@ while run:
                         warriorWhitePlaying2=False
 
 
-                if legionaryWhiteRect2.collidepoint(event.pos):
+                if legionaryWhiteRect2.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not legionaryWhitePlaying2:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9666,7 +9665,7 @@ while run:
                         counter -= 1
                         legionaryWhitePlaying2=False
 
-                if warriorWhiteRect3.collidepoint(event.pos):
+                if warriorWhiteRect3.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not warriorWhitePlaying3:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9804,7 +9803,7 @@ while run:
                         warriorWhitePlaying3=False
 
 
-                if legionaryWhiteRect3.collidepoint(event.pos):
+                if legionaryWhiteRect3.collidepoint(event.pos) and not hadesWhiteAbilityActivated:
                     if not legionaryWhitePlaying3:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9922,7 +9921,7 @@ while run:
                         counter -= 1
                         legionaryWhitePlaying3=False
 
-                if cardinalWhiteRectCopy.collidepoint(event.pos) and counter%2==0:
+                if cardinalWhiteRectCopy.collidepoint(event.pos) and counter%2==0 and not hadesWhiteAbilityActivated:
                     if not cardinalWhitePlayingCopy:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9964,7 +9963,7 @@ while run:
                         cardinalWhitePlayingCopy=False
                         counter-=1
                 
-                if cardinalWhiteRectCopy_1.collidepoint(event.pos) and counter%2==0:
+                if cardinalWhiteRectCopy_1.collidepoint(event.pos) and counter%2==0 and not hadesWhiteAbilityActivated:
                     if not cardinalWhitePlayingCopy1:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -10008,7 +10007,7 @@ while run:
 
 
             else:
-                if plagueDoctorBlackRect.collidepoint(event.pos):
+                if plagueDoctorBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not plagueDoctorBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -10271,7 +10270,7 @@ while run:
                         plagueDoctorBlackPlaying=False
                         counter+=1
 
-                if archbishopBlackRect.collidepoint(event.pos):
+                if archbishopBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not archbishopBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -10541,7 +10540,7 @@ while run:
                         archbishopBlackAbilityCounter-=1
                         counter+=1
 
-                if cardinalBlackRect.collidepoint(event.pos):
+                if cardinalBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not cardinalBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11125,7 +11124,7 @@ while run:
                             hadesBlackAbilityCounter+=1
                         hadesBlackPlaying=False
 
-                if persephoneBlackRect.collidepoint(event.pos):
+                if persephoneBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not persephoneBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11382,7 +11381,7 @@ while run:
                         counter -= 1
                         persephoneBlackPlaying=False
 
-                if cardinalBlackRect1.collidepoint(event.pos):
+                if cardinalBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not cardinalBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11670,7 +11669,7 @@ while run:
 
                
 
-                if archbishopBlackRect1.collidepoint(event.pos):
+                if archbishopBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not archbishopBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11940,7 +11939,7 @@ while run:
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
 
-                if plagueDoctorBlackRect1.collidepoint(event.pos):
+                if plagueDoctorBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not plagueDoctorBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12218,7 +12217,7 @@ while run:
                         counter+=1
                         rectPlagueDoctorBlackAbilityCounter_1-=1
 
-                if legionaryBlackRect.collidepoint(event.pos):
+                if legionaryBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not legionaryBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12336,7 +12335,7 @@ while run:
                         counter -= 1
                         legionaryBlackPlaying=False
 
-                if warriorBlackRect.collidepoint(event.pos):
+                if warriorBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not warriorBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12473,7 +12472,7 @@ while run:
                         counter -= 1
                         warriorBlackPlaying=False
                         
-                if warriorBlackRect1.collidepoint(event.pos):
+                if warriorBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not warriorBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12610,7 +12609,7 @@ while run:
                         warriorBlackPlaying1=False
 
 
-                if legionaryBlackRect1.collidepoint(event.pos):
+                if legionaryBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not legionaryBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12728,7 +12727,7 @@ while run:
                         counter -= 1
                         legionaryBlackPlaying1=False
 
-                if warriorBlackRect2.collidepoint(event.pos):
+                if warriorBlackRect2.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not warriorBlackPlaying2:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12866,7 +12865,7 @@ while run:
                         warriorBlackPlaying2=False
 
 
-                if legionaryBlackRect2.collidepoint(event.pos):
+                if legionaryBlackRect2.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not legionaryBlackPlaying2:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12984,7 +12983,7 @@ while run:
                         counter -= 1
                         legionaryBlackPlaying2=False
 
-                if legionaryBlackRect3.collidepoint(event.pos):
+                if legionaryBlackRect3.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not legionaryBlackPlaying3:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -13102,7 +13101,7 @@ while run:
                         counter -= 1
                         legionaryBlackPlaying3=False
 
-                if warriorBlackRect3.collidepoint(event.pos):
+                if warriorBlackRect3.collidepoint(event.pos) and not hadesBlackAbilityActivated:
                     if not warriorBlackPlaying3:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
