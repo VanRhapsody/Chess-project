@@ -9171,7 +9171,7 @@ while run:
                         cardinalWhiteRectCopy.centery = cardinalWhiteyInitCopy
                         counter -= 1
                         cardinalWhitePlayingCopy=False
-                
+                #Tažení kopie kardinála bílého po použití ability 1 
                 if cardinalWhiteRectCopy_1.collidepoint(event.pos) and counter%2==0 and not hadesWhiteAbilityActivated and cardinalWhiteRectCopy_1!=step*3:
                     if not cardinalWhitePlayingCopy1:
                         for x,playing in enumerate(figuresWhitePlaying):

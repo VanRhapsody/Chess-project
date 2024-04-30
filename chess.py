@@ -5257,8 +5257,8 @@ while run:
         rectPersephoneWhitey19Ability = persephoneWhiteRect.centery + step * 2
         rectPersephoneWhite19Ability = pygame.Rect(rectPersephoneWhitex19Ability - 30, rectPersephoneWhitey19Ability - 30, 60, 60)
         rectsPersephoneWhiteAbility.append(rectPersephoneWhite19Ability)
-
-
+        
+        #Událost při stisku tlačítka na myši, které je LMB
         if event.type == pygame.MOUSEBUTTONDOWN and event.button==1:
             print(event.pos)
             pohyb = True
@@ -5270,10 +5270,12 @@ while run:
                 if figurka_bila.collidepoint(event.pos):
                     figurka_bila.centerx=event.pos[0]
                     figurka_bila.centery=event.pos[1]"""
+            
             if counter % 2 == 0:  # Algoritmus funguje následovně - pokud je counter sudé číslo, hraje bílý, pokud je liché, hraje černý hráč
                 keys = pygame.key.get_pressed()
-                
+                #Možnost tažení morového doktora bílého
                 if plagueDoctorWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated and plagueDoctorWhiteRect.centerx!=step:
+                    #Pokud daná figurka nehraje a hraje jiná, nastaví se playing proměnná dané figurky na False a jeho na True
                     if not plagueDoctorWhitePlaying:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -5282,6 +5284,7 @@ while run:
                                 break
                             elif x==len(figuresWhitePlaying)-1:
                                 plagueDoctorWhitePlaying=True
+                #Zobrazení čtverců pro nápovědu tažení 
                 elif plagueDoctorWhitePlaying:
                     plagueWhitexInit=plagueDoctorWhiteRect.centerx
                     plagueWhiteyInit = plagueDoctorWhiteRect.centery 
@@ -5379,6 +5382,7 @@ while run:
                         plagueDoctorWhiteRect.centerx = plagueWhitexInit
                         plagueDoctorWhiteRect.centery = plagueWhiteyInit
                         plagueDoctorWhitePlaying=False
+                    #Pokud figurka
                     if (plagueDoctorWhiteRect.centerx <= 480 or plagueDoctorWhiteRect.centerx >= 1440) or (plagueDoctorWhiteRect.centery <= 60 or plagueDoctorWhiteRect.centery >= 1020):
                         plagueDoctorWhiteRect.centerx = plagueWhitexInit
                         plagueDoctorWhiteRect.centery = plagueWhiteyInit
@@ -10551,98 +10555,112 @@ while run:
                         archbishopBlackPlaying1=False
                 if archbishopBlackAbilityActivated_1:
                     if plagueDoctorWhiteRect.collidepoint(event.pos):
-                        plagueDoctorWhiteRect.centerx = screen_width-step
+                        plagueDoctorWhiteRect.centerx = step
                         plagueDoctorWhiteRect.centery = step
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if archbishopWhiteRect.collidepoint(event.pos):
-                        archbishopWhiteRect.centerx = screen_width-step*2
+                        archbishopWhiteRect.centerx = step*2
                         archbishopWhiteRect.centery = step
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if cardinalWhiteRect.collidepoint(event.pos):
-                        cardinalWhiteRect.centerx = screen_width-step*3
+                        cardinalWhiteRect.centerx = step*3
                         cardinalWhiteRect.centery = step
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if cardinalWhiteRect1.collidepoint(event.pos):
-                        cardinalWhiteRect1.centerx = screen_width-step*3
+                        cardinalWhiteRect1.centerx = step*3
                         cardinalWhiteRect1.centery = step*2
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if archbishopWhiteRect1.collidepoint(event.pos):
-                        archbishopWhiteRect1.centerx = screen_width-step
+                        archbishopWhiteRect1.centerx = step
                         archbishopWhiteRect1.centery = step*3
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if plagueDoctorWhiteRect1.collidepoint(event.pos):
-                        plagueDoctorWhiteRect1.centerx = screen_width-step*2
+                        plagueDoctorWhiteRect1.centerx = step*2
                         plagueDoctorWhiteRect1.centery = step*3
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if legionaryWhiteRect.collidepoint(event.pos):
-                        legionaryWhiteRect.centerx = screen_width-step*3
+                        legionaryWhiteRect.centerx = step*3
                         legionaryWhiteRect.centery = step*3
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if warriorWhiteRect.collidepoint(event.pos):
-                        warriorWhiteRect.centerx = screen_width-step
+                        warriorWhiteRect.centerx = step
                         warriorWhiteRect.centery = step*4
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if legionaryWhiteRect1.collidepoint(event.pos):
-                        legionaryWhiteRect1.centerx = screen_width-step*2
+                        legionaryWhiteRect1.centerx = step*2
                         legionaryWhiteRect1.centery = step*4
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if warriorWhiteRect1.collidepoint(event.pos):
-                        warriorWhiteRect1.centerx = screen_width-step*3
+                        warriorWhiteRect1.centerx = step*3
                         warriorWhiteRect1.centery = step*4
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if legionaryWhiteRect2.collidepoint(event.pos):
-                        legionaryWhiteRect2.centerx = screen_width-step
+                        legionaryWhiteRect2.centerx = step
                         legionaryWhiteRect2.centery = step*5
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if warriorWhiteRect2.collidepoint(event.pos):
-                        warriorWhiteRect2.centerx = screen_width-step*2
+                        warriorWhiteRect2.centerx = step*2
                         warriorWhiteRect2.centery = step*5
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if legionaryWhiteRect3.collidepoint(event.pos):
-                        legionaryWhiteRect3.centerx = screen_width-step*3
+                        legionaryWhiteRect3.centerx = step*3
                         legionaryWhiteRect3.centery = step*5
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
                         archbishopBlackAbilityCounter_1-=1
                         counter+=1
                     if warriorWhiteRect3.collidepoint(event.pos):
-                        warriorWhiteRect3.centerx = screen_width-step
+                        warriorWhiteRect3.centerx = step
+                        warriorWhiteRect3.centery = step*6
+                        archbishopBlackPlaying1=False
+                        archbishopBlackAbilityActivated_1=False
+                        archbishopBlackAbilityCounter_1-=1
+                        counter+=1
+                    if cardinalWhiteRe.collidepoint(event.pos):
+                        warriorWhiteRect3.centerx = step
+                        warriorWhiteRect3.centery = step*6
+                        archbishopBlackPlaying1=False
+                        archbishopBlackAbilityActivated_1=False
+                        archbishopBlackAbilityCounter_1-=1
+                        counter+=1
+                    if warriorWhiteRect3.collidepoint(event.pos):
+                        warriorWhiteRect3.centerx = step
                         warriorWhiteRect3.centery = step*6
                         archbishopBlackPlaying1=False
                         archbishopBlackAbilityActivated_1=False
