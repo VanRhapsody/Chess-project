@@ -222,6 +222,12 @@ button_text_start_game2 = button_font.render("Ukončit hru", True, black)
 button_text_start_game_rect2 = button_text_start_game2.get_rect()
 button_text_start_game_rect2.center = (screen_width / 2, 600)
 
+#Text pro ukončení hry a rectangle pro to
+quit_game_button = pygame.Rect(10, 10, 300, 80)
+button_text_end_game = button_font.render("Ukončit hru", True, black)
+button_text_end_game_rect = button_text_end_game.get_rect()
+button_text_end_game_rect.topleft = (10, 10)
+
 # Text pro leaderboard a pozadí pro ni
 leaderboard_font = pygame.font.SysFont("georgia", 80, False)
 leadeboard_text_font = pygame.font.SysFont("georgia", 30, False)
@@ -808,6 +814,8 @@ while run:
         screen.blit(title_header, title_header_rect)
 
     if play_game:
+        pygame.draw.rect(screen,color,quit_game_button)
+        screen.blit(button_text_end_game, button_text_end_game_rect)
         #Označení uživatelů
         screen.blit(user_1_text,user_1_text_rect)
         screen.blit(user_2_text,user_2_text_rect)
@@ -5260,6 +5268,13 @@ while run:
 
         #Event při stisknutí tlačíka myší, které je LMB
         if event.type == pygame.MOUSEBUTTONDOWN and event.button==1:
+            if quit_game_button.collidepoint(event.pos):
+                play_game=False
+                show_main_menu=True
+                pygame.mixer.pause()
+                song = random.choice(songs)
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play(1, 0)
             pohyb = True
             """for figurka_cerna in figuresBlack:
                 if figurka_cerna.collidepoint(event.pos):
