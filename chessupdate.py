@@ -13,7 +13,7 @@ db_connection = mysql.connector.connect(
 )
 
 cursor = db_connection.cursor()
-
+#Získání dat pro leaderboard
 cursor.execute("SELECT DISTINCT(email),win_count FROM registracechess ORDER BY win_count DESC LIMIT 15")
 result = cursor.fetchall()
 
@@ -510,7 +510,6 @@ while run:
                             database="vyuka3"
                         )
                         cursor1 = conn.cursor()
-                        print(input_user_text1, input_user_text2)
                         query = "SELECT * FROM registracechess WHERE email = %s AND password = %s"
                         cursor1.execute(query, (input_user_text1, input_user_text2))
                         user = cursor1.fetchone()
@@ -518,7 +517,6 @@ while run:
                         conn.close()
                         if user:
                             screen.blit(logged_header, logged_header_rect)
-
                             user_email_2 = input_user_text1
                             input_user_text1 = '' #Vyprázdnění input boxů po vyplnění údajů
                             input_user_text2 = '' #Vyprázdnění input boxů po vyplnění údajů
@@ -668,7 +666,6 @@ while run:
                             database="vyuka3"
                         )
                         cursor1 = conn.cursor()
-                        print(input_user_text1, input_user_text2)
                         query = "SELECT * FROM registracechess WHERE email = %s AND password = %s"
                         cursor1.execute(query, (input_user_text1, input_user_text2))
                         user = cursor1.fetchone()
@@ -676,7 +673,6 @@ while run:
                         conn.close()
                         if user:
                             screen.blit(logged_header, logged_header_rect)
-
                             user_email_1 = input_user_text1
                             input_user_text1 = ''
                             input_user_text2 = ''
@@ -750,7 +746,6 @@ while run:
         for row in result:
             text = " - ".join(str(item) for item in row)
             text_surface = leadeboard_text_font.render(text, True, white)
-            print(text_surface)
             screen.blit(text_surface, (1400, y))
             y += 70
 
@@ -902,6 +897,8 @@ while run:
         screen.blit(cardinalBlack,cardinalBlackRectCopy_1)
         
         #Kolize jednotlivých figurek
+        # Bude to fungovat tak, že jakmile dojde ke kolizi mezi dvěma figurkami, zkontroluje se hodnota counteru a v závislosti na jeho modulu bude odebrána figurka příslušné barvy
+        # counter=0 odehrál bílý, tedy musí brát černou figurku
         if counter % 2 != 0:
             #Kolize morového doktora bílého
             if plagueDoctorWhiteRect.colliderect(plagueDoctorBlackRect):
@@ -2169,7 +2166,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if plagueDoctorBlackRect.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if plagueDoctorBlackRect.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2238,7 +2235,7 @@ while run:
                 archbishopBlackFiguresCount+=1
             if archbishopBlackRect.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
                 archbishopBlackFiguresCount+=1
             if archbishopBlackRect.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
@@ -2321,7 +2318,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if cardinalBlackRect.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if cardinalBlackRect.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2389,7 +2386,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if hadesBlackRect.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if hadesBlackRect.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2457,7 +2454,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if persephoneBlackRect.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if persephoneBlackRect.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2525,7 +2522,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if cardinalBlackRect1.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if cardinalBlackRect1.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2594,7 +2591,7 @@ while run:
                 archbishopBlackFiguresCount_1+=1
             if archbishopBlackRect1.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
                 archbishopBlackFiguresCount_1+=1
             if archbishopBlackRect1.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
@@ -2679,7 +2676,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if plagueDoctorBlackRect1.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if plagueDoctorBlackRect1.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2747,7 +2744,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if legionaryBlackRect.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if legionaryBlackRect.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2815,7 +2812,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if warriorBlackRect.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if warriorBlackRect.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2883,7 +2880,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if legionaryBlackRect1.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if legionaryBlackRect1.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -2951,7 +2948,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if warriorBlackRect1.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if warriorBlackRect1.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -3019,7 +3016,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if legionaryBlackRect2.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if legionaryBlackRect2.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -3087,7 +3084,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if warriorBlackRect2.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if warriorBlackRect2.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -3155,7 +3152,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if legionaryBlackRect3.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if legionaryBlackRect3.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -3223,7 +3220,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if warriorBlackRect3.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if warriorBlackRect3.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -3290,7 +3287,7 @@ while run:
                 plagueDoctorWhiteRect.centery = step
             if cardinalBlackRectCopy.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if cardinalBlackRectCopy.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -3351,13 +3348,14 @@ while run:
             if cardinalBlackRectCopy.colliderect(cardinalWhiteRectCopy_1):
                 cardinalWhiteRectCopy_1.centerx=step*3
                 cardinalWhiteRectCopy_1.centery=step*6
+
             #Kolize kopie kardinála černého po použití ability 1
             if cardinalBlackRectCopy_1.colliderect(plagueDoctorWhiteRect):
                 plagueDoctorWhiteRect.centerx = step
                 plagueDoctorWhiteRect.centery = step
             if cardinalBlackRectCopy_1.colliderect(archbishopWhiteRect):
                 archbishopWhiteRect.centerx = step*2
-                plagueDoctorWhiteRect.centery = step
+                archbishopWhiteRect.centery = step
             if cardinalBlackRectCopy_1.colliderect(cardinalWhiteRect):
                 cardinalWhiteRect.centerx = step*3
                 cardinalWhiteRect.centery = step
@@ -5262,7 +5260,6 @@ while run:
 
         #Event při stisknutí tlačíka myší, které je LMB
         if event.type == pygame.MOUSEBUTTONDOWN and event.button==1:
-            print(event.pos)
             pohyb = True
             """for figurka_cerna in figuresBlack:
                 if figurka_cerna.collidepoint(event.pos):
@@ -5587,7 +5584,7 @@ while run:
                         plagueDoctorWhitePlaying=False        
                         rectPlagueDoctorWhiteAbilityActivated=False
                         rectPlagueDoctorWhiteAbilityCounter-=1
-                    elif cardinalWhiteRectCopy.collidepoint(event.pos) and cardinalWhiteRectCopy.centerx==step:
+                    elif cardinalWhiteRectCopy.collidepoint(event.pos) and cardinalWhiteRectCopy.centerx==step*2:
                         plagueDoctorAbilitySound.play()
                         cardinalWhiteRectCopy.centerx=cardinalWhitexInitCopy
                         cardinalWhiteRectCopy.centery=cardinalWhiteyInitCopy
@@ -5595,7 +5592,7 @@ while run:
                         plagueDoctorWhitePlaying1=False  
                         rectPlagueDoctorWhiteAbilityActivated_1=False
                         rectPlagueDoctorWhiteAbilityCounter_1-=1
-                    elif cardinalWhiteRectCopy_1.collidepoint(event.pos) and cardinalWhiteRectCopy_1.centerx==step:
+                    elif cardinalWhiteRectCopy_1.collidepoint(event.pos) and cardinalWhiteRectCopy_1.centerx==step*3:
                         plagueDoctorAbilitySound.play()
                         cardinalWhiteRectCopy_1.centerx=cardinalWhitexInitCopy1
                         cardinalWhiteRectCopy_1.centery=cardinalWhiteyInitCopy1
@@ -5716,22 +5713,6 @@ while run:
                                 archbishopWhiteAbilityActivated=False
                                 archbishopWhiteAbilityCounter-=1
                                 counter+=1
-                            if hadesBlackRect.collidepoint(event.pos):
-                                hadesBlackRect.centerx = screen_width-step
-                                hadesBlackRect.centery = step*2
-                                archbishopWhiteFiguresCount+=1
-                                archbishopWhitePlaying=False
-                                archbishopWhiteAbilityActivated=False
-                                archbishopWhiteAbilityCounter-=1
-                                counter+=1
-                            if persephoneBlackRect.collidepoint(event.pos):
-                                persephoneBlackRect.centerx = screen_width-step*2
-                                persephoneBlackRect.centery = step*2
-                                archbishopWhiteFiguresCount+=1
-                                archbishopWhitePlaying=False
-                                archbishopWhiteAbilityActivated=False
-                                archbishopWhiteAbilityCounter-=1
-                                counter+=1
                             if cardinalBlackRect1.collidepoint(event.pos):
                                 cardinalBlackRect1.centerx = screen_width-step*3
                                 cardinalBlackRect1.centery = step*2
@@ -5820,17 +5801,17 @@ while run:
                                 archbishopWhiteAbilityActivated=False
                                 archbishopWhiteAbilityCounter-=1
                                 counter+=1
-                            if cardinalWhiteRectCopy.collidepoint(event.pos):
-                                cardinalWhiteRectCopy.centerx = screen_width-step*2
-                                cardinalWhiteRectCopy.centery = step*6
+                            if cardinalBlackRectCopy.collidepoint(event.pos):
+                                cardinalBlackRectCopy.centerx = screen_width-step*2
+                                cardinalBlackRectCopy.centery = step*6
                                 archbishopWhiteFiguresCount+=1
                                 archbishopWhitePlaying=False
                                 archbishopWhiteAbilityActivated=False
                                 archbishopWhiteAbilityCounter-=1
                                 counter+=1
-                            if cardinalWhiteRectCopy_1.collidepoint(event.pos):
-                                cardinalWhiteRectCopy_1.centerx = screen_width-step*3
-                                cardinalWhiteRectCopy_1.centery = step*6
+                            if cardinalBlackRectCopy_1.collidepoint(event.pos):
+                                cardinalBlackRectCopy_1.centerx = screen_width-step*3
+                                cardinalBlackRectCopy_1.centery = step*6
                                 archbishopWhiteFiguresCount+=1
                                 archbishopWhitePlaying=False
                                 archbishopWhiteAbilityActivated=False
@@ -5936,9 +5917,6 @@ while run:
                         counter -= 1
                         archbishopWhitePlaying=False
                     
-
-
-
                 #Tažení kardinála bílého
                 if cardinalWhiteRect.collidepoint(event.pos) and not hadesWhiteAbilityActivated and cardinalWhiteRect.centerx!=step*3:
                     #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
@@ -5974,7 +5952,7 @@ while run:
                         cardinalWhiteRect.centerx = rectCardinalWhite4.centerx
                         cardinalWhiteRect.centery = rectCardinalWhite4.centery
                         counter += 1
-                        cardinalWhitePlaying=False
+                        cardinalWhitePlaying=False          
                     else:
                         cardinalWhiteRect.centerx = cardinalWhitexInit
                         cardinalWhiteRect.centery = cardinalWhiteyInit
@@ -6061,12 +6039,12 @@ while run:
                         cardinalWhiteRect.centery = cardinalWhiteyInit
                         counter -= 1
                         cardinalWhitePlaying=False
-                    elif cardinalWhiteRectCopy.colliderect(cardinalWhiteRectCopy):
+                    elif cardinalWhiteRect.colliderect(cardinalWhiteRectCopy):
                         cardinalWhiteRect.centerx = cardinalWhitexInit
                         cardinalWhiteRect.centery = cardinalWhiteyInit
                         counter -= 1
                         cardinalWhitePlaying=False
-                    elif cardinalWhiteRectCopy_1.colliderect(cardinalWhiteRectCopy_1):
+                    elif cardinalWhiteRect.colliderect(cardinalWhiteRectCopy_1):
                         cardinalWhiteRect.centerx = cardinalWhitexInit
                         cardinalWhiteRect.centery = cardinalWhiteyInit
                         counter -= 1
@@ -6084,6 +6062,8 @@ while run:
                         plagueDoctorBlackRect.centery = step
                         cardinalWhiteRectCopy.centerx=plagueDoctorBlackxBefore
                         cardinalWhiteRectCopy.centery=plagueDoctorBlackyBefore
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if archbishopBlackRect.collidepoint(event.pos):
@@ -6096,6 +6076,8 @@ while run:
                         archbishopBlackRect.centery = step
                         cardinalWhiteRectCopy.centerx=archbishopBlackxBefore
                         cardinalWhiteRectCopy.centery=archbishopBlackyBefore
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if cardinalBlackRect.collidepoint(event.pos):
@@ -6108,6 +6090,8 @@ while run:
                         cardinalBlackRect.centery = step
                         cardinalWhiteRectCopy.centerx=cardinalBlackxBefore
                         cardinalWhiteRectCopy.centery=cardinalBlackyBefore
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if cardinalBlackRect1.collidepoint(event.pos):
@@ -6120,6 +6104,8 @@ while run:
                         cardinalBlackRect1.centery = step*2
                         cardinalWhiteRectCopy.centerx=cardinalBlackxBefore_1
                         cardinalWhiteRectCopy.centery=cardinalBlackyBefore_1
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if archbishopBlackRect1.collidepoint(event.pos):
@@ -6132,6 +6118,8 @@ while run:
                         archbishopBlackRect1.centery = step*3
                         cardinalWhiteRectCopy.centerx=archbishopBlackxBefore_1
                         cardinalWhiteRectCopy.centery=archbishopBlackyBefore_1
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6145,6 +6133,8 @@ while run:
                         plagueDoctorBlackRect1.centery = step*3
                         cardinalWhiteRectCopy.centerx=plagueDoctorBlackxBefore_1
                         cardinalWhiteRectCopy.centery=plagueDoctorBlackyBefore_1
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6158,6 +6148,8 @@ while run:
                         legionaryBlackRect.centery = step*3
                         cardinalWhiteRectCopy.centerx=legionaryBlackxBefore
                         cardinalWhiteRectCopy.centery=legionaryBlackyBefore
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6171,6 +6163,8 @@ while run:
                         warriorBlackRect.centery = step*4
                         cardinalWhiteRectCopy.centerx=warriorBlackxBefore
                         cardinalWhiteRectCopy.centery=warriorBlackyBefore
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6184,6 +6178,8 @@ while run:
                         legionaryBlackRect1.centery = step*4
                         cardinalWhiteRectCopy.centerx=legionaryBlackxBefore_1
                         cardinalWhiteRectCopy.centery=legionaryBlackyBefore_1
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6197,6 +6193,8 @@ while run:
                         warriorBlackRect1.centery = step*4
                         cardinalWhiteRectCopy.centerx=warriorBlackxBefore_1
                         cardinalWhiteRectCopy.centery=warriorBlackyBefore_1
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6210,6 +6208,8 @@ while run:
                         legionaryBlackRect2.centery = step*5
                         cardinalWhiteRectCopy.centerx=legionaryBlackxBefore_2
                         cardinalWhiteRectCopy.centery=legionaryBlackyBefore_2
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6223,6 +6223,8 @@ while run:
                         warriorBlackRect2.centery = step*5
                         cardinalWhiteRectCopy.centerx=warriorBlackxBefore_2
                         cardinalWhiteRectCopy.centery=warriorBlackyBefore_2
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhitePlayingCopy=False
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
@@ -6236,6 +6238,8 @@ while run:
                         legionaryBlackRect3.centery = step*5
                         cardinalWhiteRectCopy.centerx=legionaryBlackxBefore_3
                         cardinalWhiteRectCopy.centery=legionaryBlackyBefore_3
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     if warriorBlackRect3.collidepoint(event.pos):
@@ -6248,6 +6252,36 @@ while run:
                         warriorBlackRect3.centery = step*6
                         cardinalWhiteRectCopy.centerx=warriorBlackxBefore_3
                         cardinalWhiteRectCopy.centery=warriorBlackyBefore_3
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
+                        cardinalWhiteAbilityActivated=False
+                        cardinalWhiteAbilityCounter-=1
+                    if cardinalBlackRectCopy.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        counter+=1
+                        cardinalBlackxBeforeCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyBeforeCopy=cardinalBlackRectCopy.centery
+                        cardinalBlackRectCopy.centerx = screen_width-step*2
+                        cardinalBlackRectCopy.centery = step*6
+                        cardinalWhiteRectCopy.centerx=cardinalBlackxBeforeCopy
+                        cardinalWhiteRectCopy.centery=cardinalBlackyBeforeCopy
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
+                        cardinalWhiteAbilityActivated=False
+                        cardinalWhiteAbilityCounter-=1
+                    if cardinalBlackRectCopy_1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        counter+=1
+                        cardinalBlackxBeforeCopy_1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyBeforeCopy_1=cardinalBlackRectCopy_1.centery
+                        cardinalBlackRectCopy_1.centerx = screen_width-step*3
+                        cardinalBlackRectCopy_1.centery = step*6
+                        cardinalWhiteRectCopy.centerx=cardinalBlackxBeforeCopy_1
+                        cardinalWhiteRectCopy.centery=cardinalBlackyBeforeCopy_1
+                        cardinalWhitexInitCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyInitCopy=cardinalWhiteRectCopy.centery
                         cardinalWhiteAbilityActivated=False
                         cardinalWhiteAbilityCounter-=1
                     else:
@@ -6840,6 +6874,7 @@ while run:
                         persephoneWhiteRect.centery = persephoneWhiteyInit
                         persephoneWhitePlaying=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if persephoneWhiteRect.colliderect(plagueDoctorWhiteRect):
                         persephoneWhiteRect.centerx = persephoneWhitexInit
                         persephoneWhiteRect.centery = persephoneWhiteyInit
@@ -6942,24 +6977,24 @@ while run:
                 elif cardinalWhitePlaying1:
                     cardinalWhitexInit1=cardinalWhiteRect1.centerx
                     cardinalWhiteyInit1=cardinalWhiteRect1.centery
-                    if rectCardinalWhite1.collidepoint(event.pos):
-                        cardinalWhiteRect1.centerx = rectCardinalWhite1.centerx
-                        cardinalWhiteRect1.centery = rectCardinalWhite1.centery
+                    if rectCardinalWhite1_1.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite1_1.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite1_1.centery
                         counter += 1
                         cardinalWhitePlaying1=False
-                    elif rectCardinalWhite2.collidepoint(event.pos):
-                        cardinalWhiteRect1.centerx = rectCardinalWhite2.centerx
-                        cardinalWhiteRect1.centery = rectCardinalWhite2.centery
+                    elif rectCardinalWhite2_1.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite2_1.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite2_1.centery
                         counter += 1
                         cardinalWhitePlaying1=False
-                    elif rectCardinalWhite3.collidepoint(event.pos):
-                        cardinalWhiteRect1.centerx = rectCardinalWhite3.centerx
-                        cardinalWhiteRect1.centery = rectCardinalWhite3.centery
+                    elif rectCardinalWhite3_1.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite3_1.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite3_1.centery
                         counter += 1
                         cardinalWhitePlaying1=False
-                    elif rectCardinalWhite4.collidepoint(event.pos):
-                        cardinalWhiteRect1.centerx = rectCardinalWhite4.centerx
-                        cardinalWhiteRect1.centery = rectCardinalWhite4.centery
+                    elif rectCardinalWhite4_1.collidepoint(event.pos):
+                        cardinalWhiteRect1.centerx = rectCardinalWhite4_1.centerx
+                        cardinalWhiteRect1.centery = rectCardinalWhite4_1.centery
                         counter += 1
                         cardinalWhitePlaying1=False
                     else:
@@ -7070,6 +7105,8 @@ while run:
                         plagueDoctorBlackRect.centery = step
                         cardinalWhiteRectCopy_1.centerx=plagueDoctorBlackxBefore
                         cardinalWhiteRectCopy_1.centery=plagueDoctorBlackyBefore
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         counter+=1
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
@@ -7082,6 +7119,8 @@ while run:
                         archbishopBlackRect.centery = step
                         cardinalWhiteRectCopy_1.centerx=archbishopBlackxBefore
                         cardinalWhiteRectCopy_1.centery=archbishopBlackyBefore
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         counter+=1
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
@@ -7094,6 +7133,8 @@ while run:
                         cardinalBlackRect.centery = step
                         cardinalWhiteRectCopy_1.centerx=cardinalBlackxBefore
                         cardinalWhiteRectCopy_1.centery=cardinalBlackyBefore
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         counter+=1
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
@@ -7106,6 +7147,8 @@ while run:
                         cardinalBlackRect1.centery = step*2
                         cardinalWhiteRectCopy_1.centerx=cardinalBlackxBefore_1
                         cardinalWhiteRectCopy_1.centery=cardinalBlackyBefore_1
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         counter+=1
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
@@ -7118,6 +7161,8 @@ while run:
                         archbishopBlackRect1.centery = step*3
                         cardinalWhiteRectCopy_1.centerx=archbishopBlackxBefore_1
                         cardinalWhiteRectCopy_1.centery=archbishopBlackyBefore_1
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         counter+=1
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
@@ -7130,6 +7175,8 @@ while run:
                         plagueDoctorBlackRect1.centery = step*3
                         cardinalWhiteRectCopy_1.centerx=plagueDoctorBlackxBefore_1
                         cardinalWhiteRectCopy_1.centery=plagueDoctorBlackyBefore_1
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         counter+=1
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
@@ -7143,6 +7190,8 @@ while run:
                         legionaryBlackRect.centery = step*3
                         cardinalWhiteRectCopy_1.centerx=legionaryBlackxBefore
                         cardinalWhiteRectCopy_1.centery=legionaryBlackyBefore
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect.collidepoint(event.pos):
@@ -7155,6 +7204,8 @@ while run:
                         warriorBlackRect.centery = step*4
                         cardinalWhiteRectCopy_1.centerx=warriorBlackxBefore
                         cardinalWhiteRectCopy_1.centery=warriorBlackyBefore
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if legionaryBlackRect1.collidepoint(event.pos):
@@ -7167,6 +7218,8 @@ while run:
                         legionaryBlackRect1.centery = step*4
                         cardinalWhiteRectCopy_1.centerx=legionaryBlackxBefore_1
                         cardinalWhiteRectCopy_1.centery=legionaryBlackyBefore_1
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect1.collidepoint(event.pos):
@@ -7179,6 +7232,8 @@ while run:
                         warriorBlackRect1.centery = step*4
                         cardinalWhiteRectCopy_1.centerx=warriorBlackxBefore_1
                         cardinalWhiteRectCopy_1.centery=warriorBlackyBefore_1
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if legionaryBlackRect2.collidepoint(event.pos):
@@ -7191,6 +7246,8 @@ while run:
                         legionaryBlackRect2.centery = step*5
                         cardinalWhiteRectCopy_1.centerx=legionaryBlackxBefore_2
                         cardinalWhiteRectCopy_1.centery=legionaryBlackyBefore_2
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect2.collidepoint(event.pos):
@@ -7203,6 +7260,8 @@ while run:
                         warriorBlackRect2.centery = step*5
                         cardinalWhiteRectCopy_1.centerx=warriorBlackxBefore_2
                         cardinalWhiteRectCopy_1.centery=warriorBlackyBefore_2
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if legionaryBlackRect3.collidepoint(event.pos):
@@ -7215,6 +7274,8 @@ while run:
                         legionaryBlackRect3.centery = step*5
                         cardinalWhiteRectCopy_1.centerx=legionaryBlackxBefore_3
                         cardinalWhiteRectCopy_1.centery=legionaryBlackyBefore_3
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     if warriorBlackRect3.collidepoint(event.pos):
@@ -7227,6 +7288,36 @@ while run:
                         warriorBlackRect3.centery = step*6
                         cardinalWhiteRectCopy_1.centerx=warriorBlackxBefore_3
                         cardinalWhiteRectCopy_1.centery=warriorBlackyBefore_3
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
+                        cardinalWhiteAbilityActivated_1=False
+                        cardinalWhiteAbilityCounter_1-=1
+                    if cardinalBlackRectCopy.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        counter+=1
+                        cardinalBlackxBeforeCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyBeforeCopy=cardinalBlackRectCopy.centery
+                        cardinalBlackRectCopy.centerx = screen_width-step*2
+                        cardinalBlackRectCopy.centery = step*6
+                        cardinalWhiteRectCopy_1.centerx=cardinalBlackxBeforeCopy
+                        cardinalWhiteRectCopy_1.centery=cardinalBlackyBeforeCopy
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
+                        cardinalWhiteAbilityActivated_1=False
+                        cardinalWhiteAbilityCounter_1-=1
+                    if cardinalBlackRectCopy_1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        counter+=1
+                        cardinalBlackxBeforeCopy_1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyBeforeCopy_1=cardinalBlackRectCopy_1.centery
+                        cardinalBlackRectCopy_1.centerx = screen_width-step*3
+                        cardinalBlackRectCopy_1.centery = step*6
+                        cardinalWhiteRectCopy_1.centerx=cardinalBlackxBeforeCopy_1
+                        cardinalWhiteRectCopy_1.centery=cardinalBlackyBeforeCopy_1
+                        cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
                         cardinalWhiteAbilityActivated_1=False
                         cardinalWhiteAbilityCounter_1-=1
                     else:
@@ -7338,22 +7429,6 @@ while run:
                                 archbishopWhiteAbilityActivated_1=False
                                 archbishopWhiteAbilityCounter_1-=1
                                 counter+=1
-                            if hadesBlackRect.collidepoint(event.pos):
-                                hadesBlackRect.centerx = screen_width-step
-                                hadesBlackRect.centery = step*2
-                                archbishopWhiteFiguresCount_1+=1
-                                archbishopWhitePlaying1=False
-                                archbishopWhiteAbilityActivated_1=False
-                                archbishopWhiteAbilityCounter_1-=1
-                                counter+=1
-                            if persephoneBlackRect.collidepoint(event.pos):
-                                persephoneBlackRect.centerx = screen_width-step*2
-                                persephoneBlackRect.centery = step*2
-                                archbishopWhiteFiguresCount_1+=1
-                                archbishopWhitePlaying1=False
-                                archbishopWhiteAbilityActivated_1=False
-                                archbishopWhiteAbilityCounter_1-=1
-                                counter+=1
                             if cardinalBlackRect1.collidepoint(event.pos):
                                 cardinalBlackRect1.centerx = screen_width-step*3
                                 cardinalBlackRect1.centery = step*2
@@ -7442,17 +7517,17 @@ while run:
                                 archbishopWhiteAbilityActivated_1=False
                                 archbishopWhiteAbilityCounter_1-=1
                                 counter+=1
-                            if cardinalWhiteRectCopy.collidepoint(event.pos):
-                                cardinalWhiteRectCopy.centerx = screen_width-step
-                                cardinalWhiteRectCopy.centery = step*6
+                            if cardinalBlackRectCopy.collidepoint(event.pos):
+                                cardinalBlackRectCopy.centerx = screen_width-step*2
+                                cardinalBlackRectCopy.centery = step*6
                                 archbishopWhiteFiguresCount_1+=1
                                 archbishopWhitePlaying1=False
                                 archbishopWhiteAbilityActivated_1=False
                                 archbishopWhiteAbilityCounter_1-=1
                                 counter+=1
-                            if cardinalWhiteRectCopy_1.collidepoint(event.pos):
-                                cardinalWhiteRectCopy_1.centerx = screen_width-step
-                                cardinalWhiteRectCopy_1.centery = step*6
+                            if cardinalBlackRectCopy_1.collidepoint(event.pos):
+                                cardinalBlackRectCopy_1.centerx = screen_width-step*3
+                                cardinalBlackRectCopy_1.centery = step*6
                                 archbishopWhiteFiguresCount_1+=1
                                 archbishopWhitePlaying1=False
                                 archbishopWhiteAbilityActivated_1=False
@@ -7558,8 +7633,6 @@ while run:
                         counter -= 1
                         archbishopWhitePlaying1=False
                
-
-
                 #Tažení morového doktora bílého 1
                 if plagueDoctorWhiteRect1.collidepoint(event.pos) and not hadesWhiteAbilityActivated and plagueDoctorWhiteRect1.centerx!=step*2:
                     #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
@@ -7798,7 +7871,7 @@ while run:
                             plagueDoctorWhitePlaying1=False
                             rectPlagueDoctorWhiteAbilityActivated_1=False
                             rectPlagueDoctorWhiteAbilityCounter_1-=1
-                        elif archbishopWhiteRect1.collidepoint(event.pos) and archbishopWhiteRect.centerx==step:
+                        elif archbishopWhiteRect1.collidepoint(event.pos) and archbishopWhiteRect1.centerx==step:
                             plagueDoctorAbilitySound.play()
                             archbishopWhiteRect1.centerx=archbishopWhitexInit1
                             archbishopWhiteRect1.centery=archbishopWhiteyInit1
@@ -9171,8 +9244,11 @@ while run:
                         cardinalWhiteRectCopy.centery = cardinalWhiteyInitCopy
                         counter -= 1
                         cardinalWhitePlayingCopy=False
+
                 #Tažení kopie kardinála bílého po použití ability 1 
                 if cardinalWhiteRectCopy_1.collidepoint(event.pos) and counter%2==0 and not hadesWhiteAbilityActivated and cardinalWhiteRectCopy_1!=step*3:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not cardinalWhitePlayingCopy1:
                         for x,playing in enumerate(figuresWhitePlaying):
                             if playing==True:
@@ -9181,6 +9257,7 @@ while run:
                                 break
                             elif x==len(figuresWhitePlaying)-1:
                                 cardinalWhitePlayingCopy1=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif cardinalWhitePlayingCopy1:
                     cardinalWhitexInitCopy1=cardinalWhiteRectCopy_1.centerx
                     cardinalWhiteyInitCopy1=cardinalWhiteRectCopy_1.centery
@@ -9208,6 +9285,7 @@ while run:
                         cardinalWhiteRectCopy_1.centerx=cardinalWhitexInitCopy1
                         cardinalWhiteRectCopy_1.centery=cardinalWhiteyInitCopy1
                         cardinalWhitePlayingCopy1=False
+                    #Když táhne dál, než je hrací pole, bude vrácen na původní pozici
                     if (cardinalWhiteRectCopy_1.centerx <= 480 or cardinalWhiteRectCopy_1.centerx >= 1440) or (cardinalWhiteRectCopy_1.centery <= 60 or cardinalWhiteRectCopy_1.centery >= 1020):
                         cardinalWhiteRectCopy_1.centerx = cardinalWhitexInitCopy1
                         cardinalWhiteRectCopy_1.centery = cardinalWhiteyInitCopy1
@@ -9299,8 +9377,12 @@ while run:
                         cardinalWhiteRectCopy_1.centery = cardinalWhiteyInitCopy1
                         counter -= 1
                         cardinalWhitePlayingCopy1=False
+            #Tažení černých figurek při opačné podmínce pro counter
             else:
+                #Tažení morového doktora černého
                 if plagueDoctorBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated and plagueDoctorBlackRect.centerx!=screen_width-step:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not plagueDoctorBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -9309,6 +9391,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 plagueDoctorBlackPlaying=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif plagueDoctorBlackPlaying:
                     plagueBlackxInit=plagueDoctorBlackRect.centerx
                     plagueBlackyInit=plagueDoctorBlackRect.centery
@@ -9406,16 +9489,18 @@ while run:
                         plagueDoctorBlackRect.centerx = plagueBlackxInit
                         plagueDoctorBlackRect.centery = plagueBlackyInit
                         plagueDoctorBlackPlaying=False
-                    if plagueDoctorBlackRect.colliderect(archbishopBlackRect):
-                        plagueDoctorBlackRect.centerx = plagueBlackxInit
-                        plagueDoctorBlackRect.centery = plagueBlackyInit
-                        counter -= 1
-                        plagueDoctorBlackPlaying=False
+                    #Když figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (plagueDoctorBlackRect.centerx <= 480 or plagueDoctorBlackRect.centerx >= 1440) or (plagueDoctorBlackRect.centery <= 60 or plagueDoctorBlackRect.centery >= 1020):
                         plagueDoctorBlackRect.centerx = plagueBlackxInit
                         plagueDoctorBlackRect.centery = plagueBlackyInit
                         plagueDoctorBlackPlaying=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
+                    if plagueDoctorBlackRect.colliderect(archbishopBlackRect):
+                        plagueDoctorBlackRect.centerx = plagueBlackxInit
+                        plagueDoctorBlackRect.centery = plagueBlackyInit
+                        counter -= 1
+                        plagueDoctorBlackPlaying=False
                     elif plagueDoctorBlackRect.colliderect(cardinalBlackRect):
                         plagueDoctorBlackRect.centerx = plagueBlackxInit
                         plagueDoctorBlackRect.centery = plagueBlackyInit
@@ -9486,6 +9571,19 @@ while run:
                         plagueDoctorBlackRect.centery = plagueBlackyInit
                         counter -= 1
                         plagueDoctorBlackPlaying=False
+                    elif plagueDoctorBlackRect.colliderect(cardinalBlackRectCopy):
+                        plagueDoctorBlackRect.centerx = plagueBlackxInit
+                        plagueDoctorBlackRect.centery = plagueBlackyInit
+                        counter -= 1
+                        plagueDoctorBlackPlaying=False
+                    elif plagueDoctorBlackRect.colliderect(cardinalBlackRectCopy_1):
+                        plagueDoctorBlackRect.centerx = plagueBlackxInit
+                        plagueDoctorBlackRect.centery = plagueBlackyInit
+                        counter -= 1
+                        plagueDoctorBlackPlaying=False
+                #Možnost pro aktivaci ability morového doktora bílého
+                #Při kliknutí na danou vyřazenou přátelskou figurku se daná figurka vrátí do hracího pole na pozici, na níž se nacházela před posledním tažením
+                #Je to proto, aby se figurka nevrátila na pozici, kde je teď nepřátelská figurka a hned ji tím vyřadila
                 if rectPlagueDoctorBlackAbilityActivated:
                     if archbishopBlackRect.collidepoint(event.pos) and archbishopBlackRect.centerx==screen_width-step*2:
                         plagueDoctorAbilitySound.play()
@@ -9559,7 +9657,7 @@ while run:
                         legionaryBlackRect3.centery=legionaryBlackyInit3
                         plagueDoctorBlackPlaying=False
                         counter+=1
-                    elif warriorBlackRect3.collidepoint(event.pos) and warriorBlackRect3==screen_width-step:
+                    elif warriorBlackRect3.collidepoint(event.pos) and warriorBlackRect3.centerx==screen_width-step:
                         plagueDoctorAbilitySound.play()
                         warriorBlackRect3.centerx=warriorBlackxInit3
                         warriorBlackRect3.centery=warriorBlackyInit3
@@ -9581,7 +9679,10 @@ while run:
                         rectPlagueDoctorBlackAbilityActivated=False
                         plagueDoctorBlackPlaying=False
 
+                #Tažení arcibiskupa černého
                 if archbishopBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated and archbishopBlackRect.centerx!=screen_width-step*2:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not archbishopBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -9590,6 +9691,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 archbishopBlackPlaying=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif archbishopBlackPlaying:
                     archbishopBlackxInit=archbishopBlackRect.centerx
                     archbishopBlackyInit=archbishopBlackRect.centery
@@ -9654,6 +9756,9 @@ while run:
                         counter += 1
                         archbishopBlackPlaying=False
                     else:
+                        #Možnost pro aktivaci ability arcibiskupa bílého
+                        #Při kliknutí na zvolenou nepřátelskou figurku bude vyřazena ze hry
+                        #abilitu může použít jen jednou za hru
                         if archbishopBlackAbilityActivated and not hadesBlackAbilityActivated:
                             if plagueDoctorWhiteRect.collidepoint(event.pos):
                                 plagueDoctorWhiteRect.centerx = step
@@ -9753,15 +9858,34 @@ while run:
                                 archbishopBlackAbilityActivated=False
                                 archbishopBlackAbilityCounter-=1
                                 counter+=1
+                            if cardinalWhiteRectCopy.collidepoint(event.pos):
+                                cardinalWhiteRectCopy.centerx = step*2
+                                cardinalWhiteRectCopy.centery = step*6
+                                archbishopBlackPlaying=False
+                                archbishopBlackAbilityActivated=False
+                                archbishopBlackAbilityCounter-=1
+                                counter+=1
+                            if cardinalWhiteRectCopy_1.collidepoint(event.pos):
+                                cardinalWhiteRectCopy_1.centerx = step*3
+                                cardinalWhiteRectCopy_1.centery = step*6
+                                archbishopBlackPlaying=False
+                                archbishopBlackAbilityActivated=False
+                                archbishopBlackAbilityCounter-=1
+                                counter+=1
+                            else:
+                                archbishopBlackPlaying=False
+                                archbishopBlackAbilityActivated=False
                         else:
                             archbishopBlackRect.centerx = archbishopBlackxInit
                             archbishopBlackRect.centery = archbishopBlackyInit
                             archbishopBlackPlaying=False
+                    #Když figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (archbishopBlackRect.centerx <= 480 or archbishopBlackRect.centerx >= 1440) or (archbishopBlackRect.centery <= 60 or archbishopBlackRect.centery >= 1020):
                         archbishopBlackRect.centerx = archbishopBlackxInit
                         archbishopBlackRect.centery = archbishopBlackyInit
                         archbishopBlackPlaying=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if archbishopBlackRect.colliderect(plagueDoctorBlackRect):
                         archbishopBlackRect.centerx = archbishopBlackxInit
                         archbishopBlackRect.centery = archbishopBlackyInit
@@ -9837,9 +9961,21 @@ while run:
                         archbishopBlackRect.centery = archbishopBlackyInit
                         counter -= 1
                         archbishopBlackPlaying=False
-              
+                    elif archbishopBlackRect.colliderect(cardinalBlackRectCopy):
+                        archbishopBlackRect.centerx = archbishopBlackxInit
+                        archbishopBlackRect.centery = archbishopBlackyInit
+                        counter -= 1
+                        archbishopBlackPlaying=False
+                    elif archbishopBlackRect.colliderect(cardinalBlackRectCopy_1):
+                        archbishopBlackRect.centerx = archbishopBlackxInit
+                        archbishopBlackRect.centery = archbishopBlackyInit
+                        counter -= 1
+                        archbishopBlackPlaying=False
 
+                #Tažení kardinála černého
                 if cardinalBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated and cardinalBlackRect.centerx!=screen_width-step*3:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not cardinalBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -9848,6 +9984,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 cardinalBlackPlaying=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif cardinalBlackPlaying:
                     cardinalBlackxInit=cardinalBlackRect.centerx
                     cardinalBlackyInit=cardinalBlackRect.centery
@@ -9875,11 +10012,13 @@ while run:
                         cardinalBlackRect.centerx = cardinalBlackxInit
                         cardinalBlackRect.centery = cardinalBlackyInit
                         cardinalBlackPlaying=False
+                    #Když figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (cardinalBlackRect.centerx <= 480 or cardinalBlackRect.centerx >= 1440) or (cardinalBlackRect.centery <= 60 or cardinalBlackRect.centery >= 1020):
                         cardinalBlackRect.centerx = cardinalBlackxInit
                         cardinalBlackRect.centery = cardinalBlackyInit
                         cardinalBlackPlaying=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if cardinalBlackRect.colliderect(plagueDoctorBlackRect):
                         cardinalBlackRect.centerx = cardinalBlackxInit
                         cardinalBlackRect.centery = cardinalBlackyInit
@@ -9955,6 +10094,18 @@ while run:
                         cardinalBlackRect.centery = cardinalBlackyInit
                         counter -= 1
                         cardinalBlackPlaying=False
+                    elif cardinalBlackRect.colliderect(cardinalBlackRectCopy):
+                        cardinalBlackRect.centerx = cardinalBlackxInit
+                        cardinalBlackRect.centery = cardinalBlackyInit
+                        counter -= 1
+                        cardinalBlackPlaying=False
+                    elif cardinalBlackRect.colliderect(cardinalBlackRectCopy_1):
+                        cardinalBlackRect.centerx = cardinalBlackxInit
+                        cardinalBlackRect.centery = cardinalBlackyInit
+                        counter -= 1
+                        cardinalBlackPlaying=False
+                #Možnost pro aktivaci ability kardinála bílého 1
+                #Při kliknutí na nepřátelskou figurku se tato figurka vyřadí a na jejím místě se objeví kopie tohoto kardinála
                 if cardinalBlackAbilityActivated:
                     if plagueDoctorWhiteRect.collidepoint(event.pos):
                         cardinalAbilitySound.play()
@@ -9965,6 +10116,8 @@ while run:
                         plagueDoctorWhiteRect.centery = step
                         cardinalBlackRectCopy.centerx=plagueDoctorWhitexBefore
                         cardinalBlackRectCopy.centery=plagueDoctorWhiteyBefore
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -9977,6 +10130,8 @@ while run:
                         archbishopWhiteRect.centery = step
                         cardinalBlackRectCopy.centerx=archbishopWhitexBefore
                         cardinalBlackRectCopy.centery=archbishopWhiteyBefore
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -9989,6 +10144,8 @@ while run:
                         cardinalWhiteRect.centery = step
                         cardinalBlackRectCopy.centerx=cardinalWhitexBefore
                         cardinalBlackRectCopy.centery=cardinalWhiteyBefore
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -9997,10 +10154,12 @@ while run:
                         pygame.time.wait(5000)
                         cardinalWhitexBefore_1=cardinalWhiteRect1.centerx
                         cardinalWhiteyBefore_1=cardinalWhiteRect1.centery
-                        cardinalWhiteRect1.centerx = step
+                        cardinalWhiteRect1.centerx = step*3
                         cardinalWhiteRect1.centery = step*2
                         cardinalBlackRectCopy.centerx=cardinalWhitexBefore_1
                         cardinalBlackRectCopy.centery=cardinalWhiteyBefore_1
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10009,10 +10168,12 @@ while run:
                         pygame.time.wait(5000)
                         archbishopWhitexBefore_1=archbishopWhiteRect1.centerx
                         archbishopWhiteyBefore_1=archbishopWhiteRect1.centery
-                        archbishopWhiteRect1.centerx = step*2
-                        archbishopWhiteRect1.centery = step*2
+                        archbishopWhiteRect1.centerx = step
+                        archbishopWhiteRect1.centery = step*3
                         cardinalBlackRectCopy.centerx=archbishopWhitexBefore_1
                         cardinalBlackRectCopy.centery=archbishopWhiteyBefore_1
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10021,10 +10182,12 @@ while run:
                         pygame.time.wait(5000)
                         plagueDoctorWhitexBefore_1=plagueDoctorWhiteRect1.centerx
                         plagueDoctorWhiteyBefore_1=plagueDoctorWhiteRect1.centery
-                        plagueDoctorWhiteRect1.centerx = step*3
-                        plagueDoctorWhiteRect1.centery = step*2
+                        plagueDoctorWhiteRect1.centerx = step*2
+                        plagueDoctorWhiteRect1.centery = step*3
                         cardinalBlackRectCopy.centerx=plagueDoctorWhitexBefore_1
                         cardinalBlackRectCopy.centery=plagueDoctorWhiteyBefore_1
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10033,10 +10196,12 @@ while run:
                         pygame.time.wait(5000)
                         legionaryWhitexBefore=legionaryWhiteRect.centerx
                         legionaryWhiteyBefore=legionaryWhiteRect.centery
-                        legionaryWhiteRect.centerx = step
+                        legionaryWhiteRect.centerx = step*3
                         legionaryWhiteRect.centery = step*3
                         cardinalBlackRectCopy.centerx=legionaryWhitexBefore
-                        cardinalBlackRectCopy.centery=legionaryWhitexBefore
+                        cardinalBlackRectCopy.centery=legionaryWhiteyBefore
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10045,10 +10210,12 @@ while run:
                         pygame.time.wait(5000)
                         warriorWhitexBefore=warriorWhiteRect.centerx
                         warriorWhiteyBefore=warriorWhiteRect.centery
-                        warriorWhiteRect.centerx = step*2
-                        warriorWhiteRect.centery = step*3
+                        warriorWhiteRect.centerx = step
+                        warriorWhiteRect.centery = step*4
                         cardinalBlackRectCopy.centerx=warriorWhitexBefore
                         cardinalBlackRectCopy.centery=warriorWhiteyBefore
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10057,10 +10224,12 @@ while run:
                         pygame.time.wait(5000)
                         legionaryWhitexBefore_1=legionaryWhiteRect1.centerx
                         legionaryWhiteyBefore_1=legionaryWhiteRect1.centery
-                        legionaryWhiteRect1.centerx = step*3
-                        legionaryWhiteRect1.centery = step*3
+                        legionaryWhiteRect1.centerx = step*2
+                        legionaryWhiteRect1.centery = step*4
                         cardinalBlackRectCopy.centerx=legionaryWhitexBefore_1
                         cardinalBlackRectCopy.centery=legionaryWhiteyBefore_1
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10069,10 +10238,12 @@ while run:
                         pygame.time.wait(5000)
                         warriorWhitexBefore_1=warriorWhiteRect1.centerx
                         warriorWhiteyBefore_1=warriorWhiteRect1.centery
-                        warriorWhiteRect1.centerx = step
+                        warriorWhiteRect1.centerx = step*3
                         warriorWhiteRect1.centery = step*4
                         cardinalBlackRectCopy.centerx=warriorWhitexBefore_1
                         cardinalBlackRectCopy.centery=warriorWhiteyBefore_1
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10081,10 +10252,12 @@ while run:
                         pygame.time.wait(5000)
                         legionaryWhitexBefore_2=legionaryWhiteRect2.centerx
                         legionaryWhiteyBefore_2=legionaryWhiteRect2.centery
-                        legionaryWhiteRect2.centerx = step*2
-                        legionaryWhiteRect2.centery = step*4
+                        legionaryWhiteRect2.centerx = step
+                        legionaryWhiteRect2.centery = step*5
                         cardinalBlackRectCopy.centerx=legionaryWhitexBefore_2
                         cardinalBlackRectCopy.centery=legionaryWhiteyBefore_2
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10094,9 +10267,11 @@ while run:
                         warriorWhitexBefore_2=warriorWhiteRect2.centerx
                         warriorWhiteyBefore_2=warriorWhiteRect2.centery
                         warriorWhiteRect2.centerx = step*2
-                        warriorWhiteRect2.centery = step*4
+                        warriorWhiteRect2.centery = step*5
                         cardinalBlackRectCopy.centerx=warriorWhitexBefore_2
                         cardinalBlackRectCopy.centery=warriorWhiteyBefore_2
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10106,9 +10281,11 @@ while run:
                         legionaryWhitexBefore_3=legionaryWhiteRect3.centerx
                         legionaryWhiteyBefore_3=legionaryWhiteRect3.centery
                         legionaryWhiteRect3.centerx = step*3
-                        legionaryWhiteRect3.centery = step*4
+                        legionaryWhiteRect3.centery = step*5
                         cardinalBlackRectCopy.centerx=legionaryWhitexBefore_3
                         cardinalBlackRectCopy.centery=legionaryWhiteyBefore_3
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInit=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
@@ -10118,15 +10295,50 @@ while run:
                         warriorWhitexBefore_3=warriorWhiteRect3.centerx
                         warriorWhiteyBefore_3=warriorWhiteRect3.centery
                         warriorWhiteRect3.centerx = step
-                        warriorWhiteRect3.centery = step*5
+                        warriorWhiteRect3.centery = step*6
                         cardinalBlackRectCopy.centerx=warriorWhitexBefore_3
                         cardinalBlackRectCopy.centery=warriorWhiteyBefore_3
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
                         counter+=1
                         cardinalBlackAbilityActivated=False
                         cardinalBlackAbilityCounter-=1
+                    if cardinalWhiteRectCopy.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        cardinalWhitexBeforeCopy=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyBeforeCopy=cardinalWhiteRectCopy.centery
+                        cardinalWhiteRectCopy.centerx = step*2
+                        cardinalWhiteRectCopy.centery = step*6
+                        cardinalBlackRectCopy.centerx=cardinalWhitexBeforeCopy
+                        cardinalBlackRectCopy.centery=cardinalWhiteyBeforeCopy
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
+                        counter+=1
+                        cardinalBlackAbilityActivated=False
+                        cardinalBlackAbilityCounter-=1
+                    if cardinalWhiteRectCopy_1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        cardinalWhitexBeforeCopy_1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyBeforeCopy_1=cardinalWhiteRectCopy_1.centery
+                        cardinalWhiteRectCopy_1.centerx = step*3
+                        cardinalWhiteRectCopy_1.centery = step*6
+                        cardinalBlackRectCopy.centerx=cardinalWhitexBeforeCopy_1
+                        cardinalBlackRectCopy.centery=cardinalWhiteyBeforeCopy_1
+                        cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
+                        cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
+                        counter+=1
+                        cardinalBlackAbilityActivated=False
+                        cardinalBlackAbilityCounter-=1
+                    else:
+                        cardinalBlackAbilityActivated=False
+                        cardinalBlackPlaying=False
 
-
+                #Tažení Hádese černého
                 if hadesBlackRect.collidepoint(event.pos) and hadesBlackRect.centerx!=screen_width-step:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not hadesBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -10135,184 +10347,205 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 hadesBlackPlaying=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif hadesBlackPlaying:
                     hadesBlackxInit=hadesBlackRect.centerx
                     hadesBlackyInit=hadesBlackRect.centery
                     if rectHadesBlack1.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack1.centerx
                         hadesBlackRect.centery = rectHadesBlack1.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack2.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack2.centerx
                         hadesBlackRect.centery = rectHadesBlack2.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack3.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack3.centerx
                         hadesBlackRect.centery = rectHadesBlack3.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack4.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack4.centerx
                         hadesBlackRect.centery = rectHadesBlack4.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack5.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack5.centerx
                         hadesBlackRect.centery = rectHadesBlack5.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack6.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack6.centerx
                         hadesBlackRect.centery = rectHadesBlack6.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack7.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack7.centerx
                         hadesBlackRect.centery = rectHadesBlack7.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack8.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack8.centerx
                         hadesBlackRect.centery = rectHadesBlack8.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack9.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack9.centerx
                         hadesBlackRect.centery = rectHadesBlack9.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack10.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack10.centerx
                         hadesBlackRect.centery = rectHadesBlack10.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack11.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack11.centerx
                         hadesBlackRect.centery = rectHadesBlack11.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack12.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack12.centerx
                         hadesBlackRect.centery = rectHadesBlack12.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack13.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack13.centerx
                         hadesBlackRect.centery = rectHadesBlack13.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack14.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack14.centerx
                         hadesBlackRect.centery = rectHadesBlack14.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack15.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack15.centerx
                         hadesBlackRect.centery = rectHadesBlack15.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack16.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack16.centerx
                         hadesBlackRect.centery = rectHadesBlack16.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack17.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack17.centerx
                         hadesBlackRect.centery = rectHadesBlack17.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack18.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack18.centerx
                         hadesBlackRect.centery = rectHadesBlack18.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     elif rectHadesBlack19.collidepoint(event.pos):
                         hadesBlackRect.centerx = rectHadesBlack19.centerx
                         hadesBlackRect.centery = rectHadesBlack19.centery
+                        #Pokud není hádesova abilita aktivována, zvýší se counter o 1
+                        #Když je aktivována, nezapočte se zvýšení counteru, ale sníži se počet použití Hádesovy ability
                         if not hadesBlackAbilityActivated:
                             counter += 1
                         else:
                             hadesBlackAbilityCounter-=1
-                            counter += 2
                         hadesBlackPlaying=False
                     else:
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
                         hadesBlackPlaying=False
+                    #Když figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (hadesBlackRect.centerx <= 480 or hadesBlackRect.centerx >= 1440) or (hadesBlackRect.centery <= 60 or hadesBlackRect.centery >= 1020):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
@@ -10321,145 +10554,181 @@ while run:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
+                    #Kontrola kolize s přátelskými figurkami
                     if hadesBlackRect.colliderect(plagueDoctorBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(archbishopBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(cardinalBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(persephoneBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(cardinalBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(archbishopBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(plagueDoctorBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect1):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect2):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect2):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(legionaryBlackRect3):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
                     elif hadesBlackRect.colliderect(warriorBlackRect3):
                         hadesBlackRect.centerx = hadesBlackxInit
                         hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
                         if not hadesBlackAbilityActivated:
                             counter -= 1
                         else:
                             hadesBlackAbilityCounter+=1
-                            counter -= 2
                         hadesBlackPlaying=False
-                print(counter)
-
+                    elif hadesBlackRect.colliderect(cardinalBlackRectCopy):
+                        hadesBlackRect.centerx = hadesBlackxInit
+                        hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
+                        hadesBlackPlaying=False
+                    elif hadesBlackRect.colliderect(cardinalBlackRectCopy_1):
+                        hadesBlackRect.centerx = hadesBlackxInit
+                        hadesBlackRect.centery = hadesBlackyInit
+                        #Pokud není hádesova abilita aktivována, sníží se counter o 1, aby se vykompenzovalo jeho tažení
+                        #Když je aktivována, nezapočte se snížení counteru, ale zváší se počet použití Hádesovy ability, aby se vykompenzovalo jeho tažení
+                        if not hadesBlackAbilityActivated:
+                            counter -= 1
+                        else:
+                            hadesBlackAbilityCounter+=1
+                        hadesBlackPlaying=False
+                #Tažení persefony černé
                 if persephoneBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated and persephoneBlackRect.centerx!=screen_width-step*2:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not persephoneBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -10468,9 +10737,12 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 persephoneBlackPlaying=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif persephoneBlackPlaying:
                     persephoneBlackxInit=persephoneBlackRect.centerx
                     persephoneBlackyInit=persephoneBlackRect.centery
+                    #Možnost pro aktivaci ability Persefony bílé
+                    #Pokud je aktivována, nabídne se jí rozšířené tažení jako Hádes
                     if persephoneBlackAbilityActivated:
                         if rectPersephoneBlack1Ability.collidepoint(event.pos):
                             persephoneBlackRect.centerx=rectPersephoneBlack1Ability.centerx
@@ -10478,8 +10750,6 @@ while run:
                             persephoneBlackAbilityCounter-=1
                             persephoneBlackPlaying=False
                             counter+=1
-                            print(f"rect {rectPersephoneBlack1Ability.center}")
-                            print(f"na začátku {persephoneBlackRect.center}")
                         elif rectPersephoneBlack2Ability.collidepoint(event.pos):
                             persephoneBlackRect.centerx=rectPersephoneBlack2Ability.centerx
                             persephoneBlackRect.centery=rectPersephoneBlack2Ability.centery
@@ -10592,7 +10862,7 @@ while run:
                             persephoneBlackRect.centerx = persephoneBlackxInit
                             persephoneBlackRect.centery = persephoneBlackyInit
                             persephoneBlackPlaying=False
-                            
+                    #Varianta, kdy její abilita není aktivována, tudíž má základní tažení
                     else:
                         if rectPersephoneBlack1.collidepoint(event.pos):
                             persephoneBlackRect.centerx = rectPersephoneBlack1.centerx
@@ -10646,106 +10916,102 @@ while run:
                             persephoneBlackRect.centerx = persephoneBlackxInit
                             persephoneBlackRect.centery = persephoneBlackyInit
                             persephoneBlackPlaying=False
-                            
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (persephoneBlackRect.centerx <= 480 or persephoneBlackRect.centerx >= 1440) or (persephoneBlackRect.centery <= 60 or persephoneBlackRect.centery >= 1020):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         persephoneBlackPlaying=False
                         counter-=1
-                        print("kolize")
+                    #Kolize s přátelskými figurkami
                     if persephoneBlackRect.colliderect(plagueDoctorBlackRect):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(archbishopBlackRect):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(cardinalBlackRect):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(hadesBlackRect):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(cardinalBlackRect1):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(archbishopBlackRect1):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(plagueDoctorBlackRect1):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(legionaryBlackRect):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(warriorBlackRect):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(legionaryBlackRect1):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(warriorBlackRect1):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(legionaryBlackRect2):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(warriorBlackRect2):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(legionaryBlackRect3):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
                     elif persephoneBlackRect.colliderect(warriorBlackRect3):
                         persephoneBlackRect.centerx = persephoneBlackxInit
                         persephoneBlackRect.centery = persephoneBlackyInit
                         counter -= 1
                         persephoneBlackPlaying=False
-                        print("kolize")
-                    print(f"na konci {persephoneBlackRect.center}")
-
+                    elif persephoneBlackRect.colliderect(cardinalBlackRectCopy):
+                        persephoneBlackRect.centerx = persephoneBlackxInit
+                        persephoneBlackRect.centery = persephoneBlackyInit
+                        counter -= 1
+                        persephoneBlackPlaying=False
+                    elif persephoneBlackRect.colliderect(cardinalBlackRectCopy_1):
+                        persephoneBlackRect.centerx = persephoneBlackxInit
+                        persephoneBlackRect.centery = persephoneBlackyInit
+                        counter -= 1
+                        persephoneBlackPlaying=False
+                #Tažení kardinála černého 1
                 if cardinalBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated and cardinalBlackRect1.centerx!=screen_width-step*3:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not cardinalBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -10754,6 +11020,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 cardinalBlackPlaying1=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif cardinalBlackPlaying1:
                     cardinalBlackxInit1=cardinalBlackRect1.centerx
                     cardinalBlackyInit1=cardinalBlackRect1.centery
@@ -10781,11 +11048,13 @@ while run:
                         cardinalBlackRect1.centerx = cardinalBlackxInit1
                         cardinalBlackRect1.centery = cardinalBlackyInit1
                         cardinalBlackPlaying1=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (cardinalBlackRect1.centerx <= 480 or cardinalBlackRect1.centerx >= 1440) or (cardinalBlackRect1.centery <= 60 or cardinalBlackRect1.centery >= 1020):
                         cardinalBlackRect1.centerx = cardinalBlackxInit1
                         cardinalBlackRect1.centery = cardinalBlackyInit1
                         cardinalBlackPlaying1=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if cardinalBlackRect1.colliderect(plagueDoctorBlackRect):
                         cardinalBlackRect1.centerx = cardinalBlackxInit1
                         cardinalBlackRect1.centery = cardinalBlackyInit1
@@ -10861,6 +11130,18 @@ while run:
                         cardinalBlackRect1.centery = cardinalBlackyInit1
                         counter -= 1
                         cardinalBlackPlaying1=False
+                    elif cardinalBlackRect1.colliderect(cardinalBlackRectCopy):
+                        cardinalBlackRect1.centerx = cardinalBlackxInit1
+                        cardinalBlackRect1.centery = cardinalBlackyInit1
+                        counter -= 1
+                        cardinalBlackPlaying1=False
+                    elif cardinalBlackRect1.colliderect(cardinalBlackRectCopy_1):
+                        cardinalBlackRect1.centerx = cardinalBlackxInit1
+                        cardinalBlackRect1.centery = cardinalBlackyInit1
+                        counter -= 1
+                        cardinalBlackPlaying1=False
+                #Možnost pro aktivaci ability kardinála bílého 1
+                #Při kliknutí na nepřátelskou figurku se tato figurka vyřadí a na jejím místě se objeví kopie tohoto kardinála 1
                 if cardinalBlackAbilityActivated_1:
                     if plagueDoctorWhiteRect.collidepoint(event.pos):
                         cardinalAbilitySound.play()
@@ -10871,6 +11152,8 @@ while run:
                         plagueDoctorWhiteRect.centery = step
                         cardinalBlackRectCopy_1.centerx=plagueDoctorWhitexBefore
                         cardinalBlackRectCopy_1.centery=plagueDoctorWhiteyBefore
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10883,6 +11166,8 @@ while run:
                         archbishopWhiteRect.centery = step
                         cardinalBlackRectCopy_1.centerx=archbishopWhitexBefore
                         cardinalBlackRectCopy_1.centery=archbishopWhiteyBefore
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10895,6 +11180,8 @@ while run:
                         cardinalWhiteRect.centery = step
                         cardinalBlackRectCopy_1.centerx=cardinalWhitexBefore
                         cardinalBlackRectCopy_1.centery=cardinalWhiteyBefore
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10903,10 +11190,12 @@ while run:
                         pygame.time.wait(5000)
                         cardinalWhitexBefore_1=cardinalWhiteRect1.centerx
                         cardinalWhiteyBefore_1=cardinalWhiteRect1.centery
-                        cardinalWhiteRect1.centerx = step
+                        cardinalWhiteRect1.centerx = step*3
                         cardinalWhiteRect1.centery = step*2
                         cardinalBlackRectCopy_1.centerx=cardinalWhitexBefore_1
                         cardinalBlackRectCopy_1.centery=cardinalWhiteyBefore_1
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10915,10 +11204,12 @@ while run:
                         pygame.time.wait(5000)
                         archbishopWhitexBefore_1=archbishopWhiteRect1.centerx
                         archbishopWhiteyBefore_1=archbishopWhiteRect1.centery
-                        archbishopWhiteRect1.centerx = step*2
-                        archbishopWhiteRect1.centery = step*2
+                        archbishopWhiteRect1.centerx = step
+                        archbishopWhiteRect1.centery = step*3
                         cardinalBlackRectCopy_1.centerx=archbishopWhitexBefore_1
                         cardinalBlackRectCopy_1.centery=archbishopWhiteyBefore_1
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10927,10 +11218,12 @@ while run:
                         pygame.time.wait(5000)
                         plagueDoctorWhitexBefore_1=plagueDoctorWhiteRect1.centerx
                         plagueDoctorWhiteyBefore_1=plagueDoctorWhiteRect1.centery
-                        plagueDoctorWhiteRect1.centerx = step*3
-                        plagueDoctorWhiteRect1.centery = step*2
+                        plagueDoctorWhiteRect1.centerx = step*2
+                        plagueDoctorWhiteRect1.centery = step*3
                         cardinalBlackRectCopy_1.centerx=plagueDoctorWhitexBefore_1
                         cardinalBlackRectCopy_1.centery=plagueDoctorWhiteyBefore_1
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10939,10 +11232,12 @@ while run:
                         pygame.time.wait(5000)
                         legionaryWhitexBefore=legionaryWhiteRect.centerx
                         legionaryWhiteyBefore=legionaryWhiteRect.centery
-                        legionaryWhiteRect.centerx = step
+                        legionaryWhiteRect.centerx = step*3
                         legionaryWhiteRect.centery = step*3
                         cardinalBlackRectCopy_1.centerx=legionaryWhitexBefore
-                        cardinalBlackRectCopy_1.centery=legionaryWhitexBefore
+                        cardinalBlackRectCopy_1.centery=legionaryWhiteyBefore
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10951,10 +11246,12 @@ while run:
                         pygame.time.wait(5000)
                         warriorWhitexBefore=warriorWhiteRect.centerx
                         warriorWhiteyBefore=warriorWhiteRect.centery
-                        warriorWhiteRect.centerx = step*2
-                        warriorWhiteRect.centery = step*3
+                        warriorWhiteRect.centerx = step
+                        warriorWhiteRect.centery = step*4
                         cardinalBlackRectCopy_1.centerx=warriorWhitexBefore
                         cardinalBlackRectCopy_1.centery=warriorWhiteyBefore
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10963,10 +11260,12 @@ while run:
                         pygame.time.wait(5000)
                         legionaryWhitexBefore_1=legionaryWhiteRect1.centerx
                         legionaryWhiteyBefore_1=legionaryWhiteRect1.centery
-                        legionaryWhiteRect1.centerx = step*3
-                        legionaryWhiteRect1.centery = step*3
+                        legionaryWhiteRect1.centerx = step*2
+                        legionaryWhiteRect1.centery = step*4
                         cardinalBlackRectCopy_1.centerx=legionaryWhitexBefore_1
                         cardinalBlackRectCopy_1.centery=legionaryWhiteyBefore_1
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10975,10 +11274,12 @@ while run:
                         pygame.time.wait(5000)
                         warriorWhitexBefore_1=warriorWhiteRect1.centerx
                         warriorWhiteyBefore_1=warriorWhiteRect1.centery
-                        warriorWhiteRect1.centerx = step
+                        warriorWhiteRect1.centerx = step*3
                         warriorWhiteRect1.centery = step*4
                         cardinalBlackRectCopy_1.centerx=warriorWhitexBefore_1
                         cardinalBlackRectCopy_1.centery=warriorWhiteyBefore_1
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -10987,10 +11288,12 @@ while run:
                         pygame.time.wait(5000)
                         legionaryWhitexBefore_2=legionaryWhiteRect2.centerx
                         legionaryWhiteyBefore_2=legionaryWhiteRect2.centery
-                        legionaryWhiteRect2.centerx = step*2
-                        legionaryWhiteRect2.centery = step*4
+                        legionaryWhiteRect2.centerx = step
+                        legionaryWhiteRect2.centery = step*5
                         cardinalBlackRectCopy_1.centerx=legionaryWhitexBefore_2
                         cardinalBlackRectCopy_1.centery=legionaryWhiteyBefore_2
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -11000,9 +11303,11 @@ while run:
                         warriorWhitexBefore_2=warriorWhiteRect2.centerx
                         warriorWhiteyBefore_2=warriorWhiteRect2.centery
                         warriorWhiteRect2.centerx = step*2
-                        warriorWhiteRect2.centery = step*4
+                        warriorWhiteRect2.centery = step*5
                         cardinalBlackRectCopy_1.centerx=warriorWhitexBefore_2
                         cardinalBlackRectCopy_1.centery=warriorWhiteyBefore_2
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -11012,9 +11317,11 @@ while run:
                         legionaryWhitexBefore_3=legionaryWhiteRect3.centerx
                         legionaryWhiteyBefore_3=legionaryWhiteRect3.centery
                         legionaryWhiteRect3.centerx = step*3
-                        legionaryWhiteRect3.centery = step*4
+                        legionaryWhiteRect3.centery = step*5
                         cardinalBlackRectCopy_1.centerx=legionaryWhitexBefore_3
                         cardinalBlackRectCopy_1.centery=legionaryWhiteyBefore_3
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
@@ -11024,16 +11331,49 @@ while run:
                         warriorWhitexBefore_3=warriorWhiteRect3.centerx
                         warriorWhiteyBefore_3=warriorWhiteRect3.centery
                         warriorWhiteRect3.centerx = step
-                        warriorWhiteRect3.centery = step*5
+                        warriorWhiteRect3.centery = step*6
                         cardinalBlackRectCopy_1.centerx=warriorWhitexBefore_3
                         cardinalBlackRectCopy_1.centery=warriorWhiteyBefore_3
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
                         counter+=1
                         cardinalBlackAbilityActivated_1=False
                         cardinalBlackAbilityCounter_1-=1
-
-               
-
+                    if cardinalWhiteRectCopy.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        cardinalWhitexBefore=cardinalWhiteRectCopy.centerx
+                        cardinalWhiteyBefore=cardinalWhiteRectCopy.centery
+                        cardinalWhiteRectCopy.centerx = step*2
+                        cardinalWhiteRectCopy.centery = step*6
+                        cardinalBlackRectCopy_1.centerx=cardinalWhitexBefore
+                        cardinalBlackRectCopy_1.centery=cardinalWhiteyBefore
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
+                        counter+=1
+                        cardinalBlackAbilityActivated_1=False
+                        cardinalBlackAbilityCounter_1-=1
+                    if cardinalWhiteRectCopy_1.collidepoint(event.pos):
+                        cardinalAbilitySound.play()
+                        pygame.time.wait(5000)
+                        cardinalWhitexBefore_1=cardinalWhiteRectCopy_1.centerx
+                        cardinalWhiteyBefore_1=cardinalWhiteRectCopy_1.centery
+                        cardinalWhiteRectCopy_1.centerx = step*3
+                        cardinalWhiteRectCopy_1.centery = step*6
+                        cardinalBlackRectCopy_1.centerx=cardinalWhitexBefore_1
+                        cardinalBlackRectCopy_1.centery=cardinalWhiteyBefore_1
+                        cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
+                        cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
+                        counter+=1
+                        cardinalBlackAbilityActivated_1=False
+                        cardinalBlackAbilityCounter_1-=1
+                    else:
+                        cardinalBlackAbilityActivated_1=False
+                        cardinalBlackPlaying1=False
+                #Tažení arcibiskupa černého 1
                 if archbishopBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated and archbishopBlackRect1.centerx!=screen_width-step:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not archbishopBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11042,6 +11382,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 archbishopBlackPlaying1=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif archbishopBlackPlaying1:
                     archbishopBlackxInit1=archbishopBlackRect1.centerx
                     archbishopBlackyInit1=archbishopBlackRect1.centery
@@ -11106,6 +11447,9 @@ while run:
                         counter += 1
                         archbishopBlackPlaying1=False
                     else:
+                        #Možnost pro aktivaci ability arcibiskupa bílého
+                        #Při kliknutí na zvolenou nepřátelskou figurku bude vyřazena ze hry
+                        #abilitu může použít jen jednou za hru
                         if archbishopBlackAbilityActivated_1 and not hadesBlackAbilityActivated:
                             if plagueDoctorWhiteRect.collidepoint(event.pos):
                                 plagueDoctorWhiteRect.centerx = step
@@ -11205,14 +11549,34 @@ while run:
                                 archbishopBlackAbilityActivated_1=False
                                 archbishopBlackAbilityCounter_1-=1
                                 counter+=1
-                        archbishopBlackRect1.centerx = archbishopBlackxInit1
-                        archbishopBlackRect1.centery = archbishopBlackyInit1
-                        archbishopBlackPlaying1=False
+                            if cardinalWhiteRectCopy.collidepoint(event.pos):
+                                cardinalWhiteRectCopy.centerx = step*2
+                                cardinalWhiteRectCopy.centery = step*6
+                                archbishopBlackPlaying1=False
+                                archbishopBlackAbilityActivated_1=False
+                                archbishopBlackAbilityCounter_1-=1
+                                counter+=1
+                            if cardinalWhiteRectCopy_1.collidepoint(event.pos):
+                                cardinalWhiteRectCopy_1.centerx = step*3
+                                cardinalWhiteRectCopy_1.centery = step*6
+                                archbishopBlackPlaying1=False
+                                archbishopBlackAbilityActivated_1=False
+                                archbishopBlackAbilityCounter_1-=1
+                                counter+=1
+                            else:
+                                archbishopBlackPlaying1=False
+                                archbishopBlackAbilityActivated_1=False
+                        else:
+                            archbishopBlackRect1.centerx = archbishopBlackxInit1
+                            archbishopBlackRect1.centery = archbishopBlackyInit1
+                            archbishopBlackPlaying1=False
+                    #Když figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (archbishopBlackRect1.centerx <= 480 or archbishopBlackRect1.centerx >= 1440) or (archbishopBlackRect1.centery <= 60 or archbishopBlackRect1.centery >= 1020):
                         archbishopBlackRect1.centerx = archbishopBlackxInit1
                         archbishopBlackRect1.centery = archbishopBlackyInit1
                         archbishopBlackPlaying1=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if archbishopBlackRect1.colliderect(plagueDoctorBlackRect):
                         archbishopBlackRect1.centerx = archbishopBlackxInit1
                         archbishopBlackRect1.centery = archbishopBlackyInit1
@@ -11288,9 +11652,21 @@ while run:
                         archbishopBlackRect1.centery = archbishopBlackyInit1
                         counter -= 1
                         archbishopBlackPlaying1=False
-          
+                    elif archbishopBlackRect1.colliderect(cardinalBlackRectCopy):
+                        archbishopBlackRect1.centerx = archbishopBlackxInit1
+                        archbishopBlackRect1.centery = archbishopBlackyInit1
+                        counter -= 1
+                        archbishopBlackPlaying1=False
+                    elif archbishopBlackRect1.colliderect(cardinalBlackRectCopy_1):
+                        archbishopBlackRect1.centerx = archbishopBlackxInit1
+                        archbishopBlackRect1.centery = archbishopBlackyInit1
+                        counter -= 1
+                        archbishopBlackPlaying1=False
 
+                #Kolize morového doktora černého 1
                 if plagueDoctorBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated and plagueDoctorBlackRect1.centerx!=screen_width-step*2:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not plagueDoctorBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11299,6 +11675,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 plagueDoctorBlackPlaying1=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif plagueDoctorBlackPlaying1:
                     plagueBlackxInit1=plagueDoctorBlackRect1.centerx
                     plagueBlackyInit1=plagueDoctorBlackRect1.centery
@@ -11396,6 +11773,7 @@ while run:
                         plagueDoctorBlackRect1.centerx = plagueBlackxInit1
                         plagueDoctorBlackRect1.centery = plagueBlackyInit1
                         plagueDoctorBlackPlaying1=False
+                    #Když figurka táhne dále, než je hrací pole, bude vrácen na původní pozici
                     if (plagueDoctorBlackRect1.centerx <= 480 or plagueDoctorBlackRect1.centerx >= 1440) or (plagueDoctorBlackRect1.centery <= 60 or plagueDoctorBlackRect1.centery >= 1020):
                         plagueDoctorBlackRect1.centerx = plagueBlackxInit1
                         plagueDoctorBlackRect1.centery = plagueBlackyInit1
@@ -11476,6 +11854,19 @@ while run:
                         plagueDoctorBlackRect1.centery = plagueBlackyInit1
                         counter -= 1
                         plagueDoctorBlackPlaying1=False
+                    elif plagueDoctorBlackRect1.colliderect(cardinalBlackRectCopy):
+                        plagueDoctorBlackRect1.centerx = plagueBlackxInit1
+                        plagueDoctorBlackRect1.centery = plagueBlackyInit1
+                        counter -= 1
+                        plagueDoctorBlackPlaying1=False
+                    elif plagueDoctorBlackRect1.colliderect(cardinalBlackRectCopy_1):
+                        plagueDoctorBlackRect1.centerx = plagueBlackxInit1
+                        plagueDoctorBlackRect1.centery = plagueBlackyInit1
+                        counter -= 1
+                        plagueDoctorBlackPlaying1=False
+                #Možnost pro aktivaci ability morového doktora bílého
+                #Při kliknutí na danou vyřazenou přátelskou figurku se daná figurka vrátí do hracího pole na pozici, na níž se nacházela před posledním tažením
+                #Je to proto, aby se figurka nevrátila na pozici, kde je teď nepřátelská figurka a hned ji tím vyřadila
                 if rectPlagueDoctorBlackAbilityActivated_1:
                     if archbishopBlackRect.collidepoint(event.pos) and archbishopBlackRect.centerx==screen_width-step*2:
                         plagueDoctorAbilitySound.play()
@@ -11505,10 +11896,10 @@ while run:
                         plagueDoctorBlackPlaying1=False
                         counter+=1
                         rectPlagueDoctorBlackAbilityCounter_1-=1
-                    elif plagueDoctorBlackRect1.collidepoint(event.pos) and plagueDoctorBlackRect1.centerx==screen_width-step*2:
+                    elif plagueDoctorBlackRect.collidepoint(event.pos) and plagueDoctorBlackRect.centerx==screen_width-step:
                         plagueDoctorAbilitySound.play()
-                        plagueDoctorBlackRect1.centerx=plagueBlackxInit1
-                        plagueDoctorBlackRect1.centery=plagueBlackyInit1
+                        plagueDoctorBlackRect.centerx=plagueBlackxInit
+                        plagueDoctorBlackRect.centery=plagueBlackyInit
                         plagueDoctorBlackPlaying1=False
                         counter+=1
                         rectPlagueDoctorBlackAbilityCounter_1-=1
@@ -11574,8 +11965,7 @@ while run:
                         cardinalBlackRectCopy.centery=cardinalBlackyInitCopy
                         plagueDoctorBlackPlaying1=False
                         counter+=1
-                        rectPlagueDoctorBlackAbilityCounter_1-=1
-                        
+                        rectPlagueDoctorBlackAbilityCounter_1-=1   
                     elif cardinalBlackRectCopy_1.collidepoint(event.pos) and cardinalBlackRectCopy_1.centerx==screen_width-step*3:
                         plagueDoctorAbilitySound.play()
                         cardinalBlackRectCopy_1.centerx=cardinalBlackxInitCopy1
@@ -11586,8 +11976,10 @@ while run:
                     else:
                         plagueDoctorBlackPlaying1=False
                         rectPlagueDoctorBlackAbilityActivated=False
-
+                #Tažení legionáře černého
                 if legionaryBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated and legionaryBlackRect.centerx!=screen_width-step*3:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not legionaryBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11596,6 +11988,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif legionaryBlackPlaying:
                     legionaryBlackxInit=legionaryBlackRect.centerx
                     legionaryBlackyInit=legionaryBlackRect.centery
@@ -11624,6 +12017,7 @@ while run:
                         legionaryBlackRect.centerx = legionaryBlackxInit
                         legionaryBlackRect.centery = legionaryBlackyInit
                         legionaryBlackPlaying=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (legionaryBlackRect.centerx <= 480 or legionaryBlackRect.centerx >= 1440) or (legionaryBlackRect.centery <= 60 or legionaryBlackRect.centery >= 1020):
                         legionaryBlackRect.centerx = legionaryBlackxInit
                         legionaryBlackRect.centery = legionaryBlackyInit
@@ -11704,8 +12098,20 @@ while run:
                         legionaryBlackRect.centery = legionaryBlackyInit
                         counter -= 1
                         legionaryBlackPlaying=False
-
+                    elif legionaryBlackRect.colliderect(cardinalBlackRectCopy):
+                        legionaryBlackRect.centerx = legionaryBlackxInit
+                        legionaryBlackRect.centery = legionaryBlackyInit
+                        counter -= 1
+                        legionaryBlackPlaying=False
+                    elif legionaryBlackRect.colliderect(cardinalBlackRectCopy_1):
+                        legionaryBlackRect.centerx = legionaryBlackxInit
+                        legionaryBlackRect.centery = legionaryBlackyInit
+                        counter -= 1
+                        legionaryBlackPlaying=False
+                #Tažení válečníka černého
                 if warriorBlackRect.collidepoint(event.pos) and not hadesBlackAbilityActivated and warriorBlackRect.centerx!=screen_width-step:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not warriorBlackPlaying:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11714,6 +12120,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif warriorBlackPlaying:
                     warriorBlackxInit=warriorBlackRect.centerx
                     warriorBlackyInit=warriorBlackRect.centery
@@ -11761,11 +12168,13 @@ while run:
                         warriorBlackRect.centerx = warriorBlackxInit
                         warriorBlackRect.centery = warriorBlackyInit
                         warriorBlackPlaying=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (warriorBlackRect.centerx <= 480 or warriorBlackRect.centerx >= 1440) or (warriorBlackRect.centery <= 60 or warriorBlackRect.centery >= 1020):
                         warriorBlackRect.centerx = warriorBlackxInit
                         warriorBlackRect.centery = warriorBlackyInit
                         warriorBlackPlaying=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if warriorBlackRect.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect.centerx = warriorBlackxInit
                         warriorBlackRect.centery = warriorBlackyInit
@@ -11841,8 +12250,20 @@ while run:
                         warriorBlackRect.centery = warriorBlackyInit
                         counter -= 1
                         warriorBlackPlaying=False
-                        
+                    elif warriorBlackRect.colliderect(cardinalBlackRectCopy):
+                        warriorBlackRect.centerx = warriorBlackxInit
+                        warriorBlackRect.centery = warriorBlackyInit
+                        counter -= 1
+                        warriorBlackPlaying=False
+                    elif warriorBlackRect.colliderect(cardinalBlackRectCopy_1):
+                        warriorBlackRect.centerx = warriorBlackxInit
+                        warriorBlackRect.centery = warriorBlackyInit
+                        counter -= 1
+                        warriorBlackPlaying=False
+                #Tažení válečníka černého 1
                 if warriorBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated and warriorBlackRect1.centerx!=screen_width-step*3:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not warriorBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11851,6 +12272,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying1=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif warriorBlackPlaying1:
                     warriorBlackxInit1=warriorBlackRect1.centerx
                     warriorBlackyInit1=warriorBlackRect1.centery
@@ -11898,11 +12320,13 @@ while run:
                         warriorBlackRect1.centerx = warriorBlackxInit1
                         warriorBlackRect1.centery = warriorBlackyInit1
                         warriorBlackPlaying1=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (warriorBlackRect1.centerx <= 480 or warriorBlackRect1.centerx >= 1440) or (warriorBlackRect1.centery <= 60 or warriorBlackRect1.centery >= 1020):
                         warriorBlackRect1.centerx = warriorBlackxInit1
                         warriorBlackRect1.centery = warriorBlackyInit1
                         warriorBlackPlaying1=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if warriorBlackRect1.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect1.centerx = warriorBlackxInit1
                         warriorBlackRect1.centery = warriorBlackyInit1
@@ -11977,9 +12401,20 @@ while run:
                         warriorBlackRect1.centery = warriorBlackyInit1
                         counter -= 1
                         warriorBlackPlaying1=False
-
-
+                    elif warriorBlackRect1.colliderect(cardinalBlackRectCopy):
+                        warriorBlackRect1.centerx = warriorBlackxInit1
+                        warriorBlackRect1.centery = warriorBlackyInit1
+                        counter -= 1
+                        warriorBlackPlaying1=False
+                    elif warriorBlackRect1.colliderect(cardinalBlackRectCopy_1):
+                        warriorBlackRect1.centerx = warriorBlackxInit1
+                        warriorBlackRect1.centery = warriorBlackyInit1
+                        counter -= 1
+                        warriorBlackPlaying1=False
+                #Tažení legionáře černého 1
                 if legionaryBlackRect1.collidepoint(event.pos) and not hadesBlackAbilityActivated and legionaryBlackRect1.centerx!=screen_width-step*2:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not legionaryBlackPlaying1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -11988,6 +12423,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying1=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif legionaryBlackPlaying1:
                     legionaryBlackxInit1=legionaryBlackRect1.centerx
                     legionaryBlackyInit1=legionaryBlackRect1.centery
@@ -12016,11 +12452,13 @@ while run:
                         legionaryBlackRect1.centerx = legionaryBlackxInit1
                         legionaryBlackRect1.centery = legionaryBlackyInit1
                         legionaryBlackPlaying1=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (legionaryBlackRect1.centerx <= 480 or legionaryBlackRect1.centerx >= 1440) or (legionaryBlackRect1.centery <= 60 or legionaryBlackRect1.centery >= 1020):
                         legionaryBlackRect1.centerx = legionaryBlackxInit1
                         legionaryBlackRect1.centery = legionaryBlackyInit1
                         legionaryBlackPlaying1=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if legionaryBlackRect1.colliderect(plagueDoctorBlackRect):
                         legionaryBlackRect1.centerx = legionaryBlackxInit1
                         legionaryBlackRect1.centery = legionaryBlackyInit1
@@ -12096,8 +12534,20 @@ while run:
                         legionaryBlackRect1.centery = legionaryBlackyInit1
                         counter -= 1
                         legionaryBlackPlaying1=False
-
+                    elif legionaryBlackRect1.colliderect(cardinalBlackRectCopy):
+                        legionaryBlackRect1.centerx = legionaryBlackxInit1
+                        legionaryBlackRect1.centery = legionaryBlackyInit1
+                        counter -= 1
+                        legionaryBlackPlaying1=False
+                    elif legionaryBlackRect1.colliderect(cardinalBlackRectCopy_1):
+                        legionaryBlackRect1.centerx = legionaryBlackxInit1
+                        legionaryBlackRect1.centery = legionaryBlackyInit1
+                        counter -= 1
+                        legionaryBlackPlaying1=False
+                #Tažení válečníka černého 2
                 if warriorBlackRect2.collidepoint(event.pos) and not hadesBlackAbilityActivated and warriorBlackRect2.centerx!=screen_width-step*2:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not warriorBlackPlaying2:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12106,6 +12556,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying2=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif warriorBlackPlaying2:
                     warriorBlackxInit2=warriorBlackRect2.centerx
                     warriorBlackyInit2=warriorBlackRect2.centery
@@ -12153,11 +12604,13 @@ while run:
                         warriorBlackRect2.centerx = warriorBlackxInit2
                         warriorBlackRect2.centery = warriorBlackyInit2
                         warriorBlackPlaying2=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (warriorBlackRect2.centerx <= 480 or warriorBlackRect2.centerx >= 1440) or (warriorBlackRect2.centery <= 60 or warriorBlackRect2.centery >= 1020):
                         warriorBlackRect2.centerx = warriorBlackxInit2
                         warriorBlackRect2.centery = warriorBlackyInit2
                         warriorBlackPlaying2=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if warriorBlackRect2.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect2.centerx = warriorBlackxInit2
                         warriorBlackRect2.centery = warriorBlackyInit2
@@ -12233,9 +12686,20 @@ while run:
                         warriorBlackRect2.centery = warriorBlackyInit2
                         counter -= 1
                         warriorBlackPlaying2=False
-
-
+                    elif warriorBlackRect2.colliderect(cardinalBlackRectCopy):
+                        warriorBlackRect2.centerx = warriorBlackxInit2
+                        warriorBlackRect2.centery = warriorBlackyInit2
+                        counter -= 1
+                        warriorBlackPlaying2=False
+                    elif warriorBlackRect2.colliderect(cardinalBlackRectCopy_1):
+                        warriorBlackRect2.centerx = warriorBlackxInit2
+                        warriorBlackRect2.centery = warriorBlackyInit2
+                        counter -= 1
+                        warriorBlackPlaying2=False
+                #Tažení legionáře černého 2
                 if legionaryBlackRect2.collidepoint(event.pos) and not hadesBlackAbilityActivated and legionaryBlackRect2.centerx!=screen_width-step:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not legionaryBlackPlaying2:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12244,6 +12708,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying2=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif legionaryBlackPlaying2:
                     legionaryBlackxInit2=legionaryBlackRect2.centerx
                     legionaryBlackyInit2=legionaryBlackRect2.centery
@@ -12272,6 +12737,7 @@ while run:
                         legionaryBlackRect2.centerx = legionaryBlackxInit2
                         legionaryBlackRect2.centery = legionaryBlackyInit2
                         legionaryBlackPlaying2=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (legionaryBlackRect2.centerx <= 480 or legionaryBlackRect2.centerx >= 1440) or (legionaryBlackRect2.centery <= 60 or legionaryBlackRect2.centery >= 1020):
                         legionaryBlackRect2.centerx = legionaryBlackxInit2
                         legionaryBlackRect2.centery = legionaryBlackyInit2
@@ -12352,8 +12818,20 @@ while run:
                         legionaryBlackRect2.centery = legionaryBlackyInit2
                         counter -= 1
                         legionaryBlackPlaying2=False
-
+                    elif legionaryBlackRect2.colliderect(cardinalBlackRectCopy):
+                        legionaryBlackRect2.centerx = legionaryBlackxInit2
+                        legionaryBlackRect2.centery = legionaryBlackyInit2
+                        counter -= 1
+                        legionaryBlackPlaying2=False
+                    elif legionaryBlackRect2.colliderect(cardinalBlackRectCopy_1):
+                        legionaryBlackRect2.centerx = legionaryBlackxInit2
+                        legionaryBlackRect2.centery = legionaryBlackyInit2
+                        counter -= 1
+                        legionaryBlackPlaying2=False
+                #Tažení legionáře černého 3
                 if legionaryBlackRect3.collidepoint(event.pos) and not hadesBlackAbilityActivated and legionaryBlackRect3.centerx!=screen_width-step*3:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not legionaryBlackPlaying3:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12362,6 +12840,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 legionaryBlackPlaying3=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif legionaryBlackPlaying3:
                     legionaryBlackxInit3=legionaryBlackRect3.centerx
                     legionaryBlackyInit3=legionaryBlackRect3.centery
@@ -12390,11 +12869,13 @@ while run:
                         legionaryBlackRect3.centerx = legionaryBlackxInit3
                         legionaryBlackRect3.centery = legionaryBlackyInit3
                         legionaryBlackPlaying3=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (legionaryBlackRect3.centerx <= 480 or legionaryBlackRect3.centerx >= 1440) or (legionaryBlackRect3.centery <= 60 or legionaryBlackRect3.centery >= 1020):
                         legionaryBlackRect3.centerx = legionaryBlackxInit3
                         legionaryBlackRect3.centery = legionaryBlackyInit3
                         legionaryBlackPlaying3=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if legionaryBlackRect3.colliderect(plagueDoctorBlackRect):
                         legionaryBlackRect3.centerx = legionaryBlackxInit3
                         legionaryBlackRect3.centery = legionaryBlackyInit3
@@ -12470,8 +12951,20 @@ while run:
                         legionaryBlackRect3.centery = legionaryBlackyInit3
                         counter -= 1
                         legionaryBlackPlaying3=False
-
+                    elif legionaryBlackRect3.colliderect(cardinalBlackRectCopy):
+                        legionaryBlackRect3.centerx = legionaryBlackxInit3
+                        legionaryBlackRect3.centery = legionaryBlackyInit3
+                        counter -= 1
+                        legionaryBlackPlaying3=False
+                    elif legionaryBlackRect3.colliderect(cardinalBlackRectCopy_1):
+                        legionaryBlackRect3.centerx = legionaryBlackxInit3
+                        legionaryBlackRect3.centery = legionaryBlackyInit3
+                        counter -= 1
+                        legionaryBlackPlaying3=False
+                #Tažení válečníka černého 3
                 if warriorBlackRect3.collidepoint(event.pos) and not hadesBlackAbilityActivated and warriorBlackRect3.centerx!=screen_width-step:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not warriorBlackPlaying3:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12480,6 +12973,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 warriorBlackPlaying3=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif warriorBlackPlaying3:
                     warriorBlackxInit3=warriorBlackRect3.centerx
                     warriorBlackyInit3=warriorBlackRect3.centery
@@ -12527,11 +13021,13 @@ while run:
                         warriorBlackRect3.centerx = warriorBlackxInit3
                         warriorBlackRect3.centery = warriorBlackyInit3
                         warriorBlackPlaying3=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (warriorBlackRect3.centerx <= 480 or warriorBlackRect3.centerx >= 1440) or (warriorBlackRect3.centery <= 60 or warriorBlackRect3.centery >= 1020):
                         warriorBlackRect3.centerx = warriorBlackxInit3
                         warriorBlackRect3.centery = warriorBlackyInit3
                         warriorBlackPlaying3=False
                         counter-=1
+                    #Kolize s přátelskými figurkami
                     if warriorBlackRect3.colliderect(plagueDoctorBlackRect):
                         warriorBlackRect3.centerx = warriorBlackxInit3
                         warriorBlackRect3.centery = warriorBlackyInit3
@@ -12607,8 +13103,20 @@ while run:
                         warriorBlackRect3.centery = warriorBlackyInit3
                         counter -= 1
                         warriorBlackPlaying3=False
-
+                    elif warriorBlackRect3.colliderect(cardinalBlackRectCopy):
+                        warriorBlackRect3.centerx = warriorBlackxInit3
+                        warriorBlackRect3.centery = warriorBlackyInit3
+                        counter -= 1
+                        warriorBlackPlaying3=False
+                    elif warriorBlackRect3.colliderect(cardinalBlackRectCopy_1):
+                        warriorBlackRect3.centerx = warriorBlackxInit3
+                        warriorBlackRect3.centery = warriorBlackyInit3
+                        counter -= 1
+                        warriorBlackPlaying3=False
+                #Tažení kopie kardinála černého po použití ability
                 if cardinalBlackRectCopy.collidepoint(event.pos) and counter%2!=0 and cardinalBlackRectCopy.centerx!=screen_width-step*2:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not cardinalBlackPlayingCopy:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12617,6 +13125,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 cardinalBlackPlayingCopy=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif cardinalBlackPlayingCopy:
                     cardinalBlackxInitCopy=cardinalBlackRectCopy.centerx
                     cardinalBlackyInitCopy=cardinalBlackRectCopy.centery
@@ -12644,13 +13153,102 @@ while run:
                         cardinalBlackRectCopy.centerx=cardinalBlackxInitCopy
                         cardinalBlackRectCopy.centery=cardinalBlackyInitCopy
                         cardinalBlackPlayingCopy=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (cardinalBlackRectCopy.centerx <= 480 or cardinalBlackRectCopy.centerx >= 1440) or (cardinalBlackRectCopy.centery <= 60 or cardinalBlackRectCopy.centery >= 1020):
                         cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
                         cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
                         cardinalBlackPlayingCopy=False
                         counter-=1
-                
+                    #Kolize s přátelskými figurkami
+                    if cardinalBlackRectCopy.colliderect(plagueDoctorBlackRect):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(archbishopBlackRect):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(cardinalBlackRect):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(hadesBlackRect):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(persephoneBlackRect):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(cardinalBlackRect1):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(archbishopBlackRect1):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(plagueDoctorBlackRect1):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(legionaryBlackRect):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(warriorBlackRect):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(legionaryBlackRect1):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(warriorBlackRect1):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(legionaryBlackRect2):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(legionaryBlackRect3):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(warriorBlackRect2):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(warriorBlackRect3):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                    elif cardinalBlackRectCopy.colliderect(cardinalBlackRectCopy_1):
+                        cardinalBlackRectCopy.centerx = cardinalBlackxInitCopy
+                        cardinalBlackRectCopy.centery = cardinalBlackyInitCopy
+                        counter -= 1
+                        cardinalBlackPlayingCopy=False
+                #Tažení kopie kardinála černého po použití ability 1
                 if cardinalBlackRectCopy_1.collidepoint(event.pos) and counter%2!=0 and cardinalBlackRectCopy_1.centerx!=screen_width-step*3:
+                    #Pokud nehraje, nastaví se jeho playing na True, pokud hraje někdo jiný, zruší se playing té figurky
+                    #a jeho se nastaví na True
                     if not cardinalBlackPlayingCopy1:
                         for x,playing in enumerate(figuresBlackPlaying):
                             if playing==True:
@@ -12659,6 +13257,7 @@ while run:
                                 break
                             elif x==len(figuresBlackPlaying)-1:
                                 cardinalBlackPlayingCopy1=True
+                #Zobrazení čtverců pro nápovědu tažení
                 elif cardinalBlackPlayingCopy1:
                     cardinalBlackxInitCopy1=cardinalBlackRectCopy_1.centerx
                     cardinalBlackyInitCopy1=cardinalBlackRectCopy_1.centery
@@ -12686,12 +13285,100 @@ while run:
                         cardinalBlackRectCopy_1.centerx=cardinalBlackxInitCopy1
                         cardinalBlackRectCopy_1.centery=cardinalBlackyInitCopy1
                         cardinalBlackPlayingCopy1=False
+                    #Pokud figurka táhne dál, než je hrací pole, bude vrácena na původní pozici
                     if (cardinalBlackRectCopy_1.centerx <= 480 or cardinalBlackRectCopy_1.centerx >= 1440) or (cardinalBlackRectCopy_1.centery <= 60 or cardinalBlackRectCopy_1.centery >= 1020):
                         cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
                         cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
                         cardinalBlackPlayingCopy1=False
                         counter-=1
-
+                    #Kolize s přátelskými figurkami
+                    if cardinalBlackRectCopy_1.colliderect(plagueDoctorBlackRect):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(archbishopBlackRect):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(cardinalBlackRect):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(hadesBlackRect):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(persephoneBlackRect):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(cardinalBlackRect1):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(archbishopBlackRect1):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(plagueDoctorBlackRect1):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(legionaryBlackRect):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(warriorBlackRect):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(legionaryBlackRect1):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(warriorBlackRect1):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(legionaryBlackRect2):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(legionaryBlackRect3):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(warriorBlackRect2):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(warriorBlackRect3):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+                    elif cardinalBlackRectCopy_1.colliderect(cardinalBlackRectCopy):
+                        cardinalBlackRectCopy_1.centerx = cardinalBlackxInitCopy1
+                        cardinalBlackRectCopy_1.centery = cardinalBlackyInitCopy1
+                        counter -= 1
+                        cardinalBlackPlayingCopy1=False
+        
+        #Zobrazení textu pro možnost aktivaci ability při splnění dané podmínky v rámci counterů
         if legionaryWhitePlaying and counter%4==0:
             screen.blit(ability_text,ability_text_rect)
         elif legionaryWhitePlaying1 and counter%4==0:
@@ -12708,29 +13395,29 @@ while run:
             screen.blit(ability_text,ability_text_rect)
         elif legionaryBlackPlaying3 and (counter-1)%4==0:
             screen.blit(ability_text,ability_text_rect)
-        if plagueDoctorWhitePlaying and rectPlagueDoctorWhiteAbilityCounter==1:
+        if plagueDoctorWhitePlaying and rectPlagueDoctorWhiteAbilityCounter==1 and not rectPlagueDoctorWhiteAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
-        elif plagueDoctorWhitePlaying1 and rectPlagueDoctorWhiteAbilityCounter_1==1:
+        elif plagueDoctorWhitePlaying1 and rectPlagueDoctorWhiteAbilityCounter_1==1 and not rectPlagueDoctorWhiteAbilityActivated_1:
             screen.blit(ability_text,ability_text_rect)
-        elif plagueDoctorBlackPlaying and rectPlagueDoctorBlackAbilityCounter==1:
+        elif plagueDoctorBlackPlaying and rectPlagueDoctorBlackAbilityCounter==1 and not rectPlagueDoctorBlackAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
-        elif plagueDoctorBlackPlaying1 and rectPlagueDoctorBlackAbilityCounter_1==1:
+        elif plagueDoctorBlackPlaying1 and rectPlagueDoctorBlackAbilityCounter_1==1 and not rectPlagueDoctorBlackAbilityActivated_1:
             screen.blit(ability_text,ability_text_rect)
-        if archbishopWhitePlaying and archbishopWhiteAbilityCounter==1:
+        if archbishopWhitePlaying and archbishopWhiteAbilityCounter==1 and not archbishopWhiteAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
-        elif archbishopWhitePlaying1 and archbishopWhiteAbilityCounter_1==1:
+        elif archbishopWhitePlaying1 and archbishopWhiteAbilityCounter_1==1 and not archbishopWhiteAbilityActivated_1:
             screen.blit(ability_text,ability_text_rect)
-        elif archbishopBlackPlaying and archbishopBlackAbilityCounter==1:
+        elif archbishopBlackPlaying and archbishopBlackAbilityCounter==1 and not archbishopBlackAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
-        elif archbishopBlackPlaying1 and archbishopBlackAbilityCounter_1==1:
+        elif archbishopBlackPlaying1 and archbishopBlackAbilityCounter_1==1 and not archbishopBlackAbilityActivated_1:
             screen.blit(ability_text,ability_text_rect)
-        if cardinalWhitePlaying and cardinalWhiteAbilityCounter==1:
+        if cardinalWhitePlaying and cardinalWhiteAbilityCounter==1 and not cardinalWhiteAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
-        elif cardinalWhitePlaying1 and cardinalWhiteAbilityCounter_1==1:
+        elif cardinalWhitePlaying1 and cardinalWhiteAbilityCounter_1==1 and not cardinalWhiteAbilityActivated_1:
             screen.blit(ability_text,ability_text_rect)
-        elif cardinalBlackPlaying and cardinalBlackAbilityCounter==1:
+        elif cardinalBlackPlaying and cardinalBlackAbilityCounter==1 and not cardinalBlackAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
-        elif cardinalBlackPlaying1 and cardinalBlackAbilityCounter_1==1:
+        elif cardinalBlackPlaying1 and cardinalBlackAbilityCounter_1==1 and not cardinalBlackAbilityActivated_1:
             screen.blit(ability_text,ability_text_rect)
         if persephoneWhitePlaying and persephoneWhiteAbilityCounter!=0 and not persephoneWhiteAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
@@ -12741,7 +13428,9 @@ while run:
         elif hadesBlackPlaying and hadesBlackAbilityCounter!=0 and not hadesBlackAbilityActivated:
             screen.blit(ability_text,ability_text_rect)
         
+        #Aktivace abilit klávesou F9
         keys=pygame.key.get_pressed()
+        #Aktivace ability legionáře bílého
         if keys[pygame.K_F9] and legionaryWhitePlaying and counter%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12749,6 +13438,7 @@ while run:
             legionaryWhiteRect.centery=rectLegionaryWhiteyAbility
             counter+=1
             legionaryWhitePlaying=False
+        #Aktivace ability legionáře bílého 1
         elif keys[pygame.K_F9] and legionaryWhitePlaying1 and counter%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12756,6 +13446,7 @@ while run:
             legionaryWhiteRect1.centery=rectLegionaryWhiteyAbility_1
             counter+=1
             legionaryWhitePlaying1=False
+        #Aktivace ability legionáře bílého 2
         elif keys[pygame.K_F9] and legionaryWhitePlaying2 and counter%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12763,6 +13454,7 @@ while run:
             legionaryWhiteRect2.centery=rectLegionaryWhiteyAbility_2
             counter+=1
             legionaryWhitePlaying2=False
+        #Aktivace ability legionáře bílého 3
         elif keys[pygame.K_F9] and legionaryWhitePlaying3 and counter%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12770,6 +13462,7 @@ while run:
             legionaryWhiteRect3.centery=rectLegionaryWhiteyAbility_3
             counter+=1
             legionaryWhitePlaying3=False
+        #Aktivace ability legionáře černého
         if keys[pygame.K_F9] and legionaryBlackPlaying and (counter-1)%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12777,6 +13470,7 @@ while run:
             legionaryBlackRect.centery=rectLegionaryBlackyAbility
             counter+=1
             legionaryBlackPlaying=False
+        #Aktivace ability legionáře černého 1
         elif keys[pygame.K_F9] and legionaryBlackPlaying1 and (counter-1)%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12784,6 +13478,7 @@ while run:
             legionaryBlackRect1.centery=rectLegionaryBlackyAbility_1
             counter+=1
             legionaryBlackPlaying1=False
+        #Aktivace ability legionáře černého 2
         elif keys[pygame.K_F9] and legionaryBlackPlaying2 and (counter-1)%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12791,6 +13486,7 @@ while run:
             legionaryBlackRect2.centery=rectLegionaryBlackyAbility_2
             counter+=1
             legionaryBlackPlaying2=False
+        #Aktivace ability legionáře černého 3
         elif keys[pygame.K_F9] and legionaryBlackPlaying3 and (counter-1)%4==0:
             legionaryAbilitySound.play()
             pygame.time.wait(2000)
@@ -12798,49 +13494,68 @@ while run:
             legionaryBlackRect3.centery=rectLegionaryBlackyAbility_3
             counter+=1
             legionaryBlackPlaying3=False
+        #Aktivace ability morového doktora bílého
         if keys[pygame.K_F9] and plagueDoctorWhitePlaying and rectPlagueDoctorWhiteAbilityCounter==1:
             rectPlagueDoctorWhiteAbilityActivated=True
+        #Aktivace ability morového doktora bílého 1
         elif keys[pygame.K_F9] and plagueDoctorWhitePlaying1 and rectPlagueDoctorWhiteAbilityCounter_1==1:
             rectPlagueDoctorWhiteAbilityActivated_1=True
+        #Aktivace ability morového doktora černého
         elif keys[pygame.K_F9] and plagueDoctorBlackPlaying and rectPlagueDoctorBlackAbilityCounter==1:
             rectPlagueDoctorBlackAbilityActivated=True
+        #Aktivace ability morového doktora černého 1
         elif keys[pygame.K_F9] and plagueDoctorBlackPlaying1 and rectPlagueDoctorBlackAbilityCounter_1==1:
             rectPlagueDoctorBlackAbilityActivated_1=True
+        #Aktivace ability arcibiskupa bílého
         if keys[pygame.K_F9] and archbishopWhitePlaying and archbishopWhiteAbilityCounter==1:
             archbishopWhiteAbilityActivated=True
+        #Aktivace ability arcibiskupa bílého 1
         elif keys[pygame.K_F9] and archbishopWhitePlaying1 and archbishopWhiteAbilityCounter_1==1:
             archbishopWhiteAbilityActivated_1=True
+        #Aktivace ability arcibiskupa černého
         elif keys[pygame.K_F9] and archbishopBlackPlaying and archbishopBlackAbilityCounter==1:
             archbishopBlackAbilityActivated=True
+        #Aktivace ability arcibiskupa černého 1
         elif keys[pygame.K_F9] and archbishopBlackPlaying1 and archbishopBlackAbilityCounter_1==1:
             archbishopBlackAbilityActivated_1=True
+        #Aktivace ability kardinála bílého
         if keys[pygame.K_F9] and cardinalWhitePlaying and cardinalWhiteAbilityCounter==1:
             cardinalWhiteAbilityActivated=True
+        #Aktivace ability kardinála bílého 1
         elif keys[pygame.K_F9] and cardinalWhitePlaying1 and cardinalWhiteAbilityCounter_1==1:
             cardinalWhiteAbilityActivated_1=True
+        #Aktivace ability kardinála černého
         elif keys[pygame.K_F9] and cardinalBlackPlaying and cardinalBlackAbilityCounter==1:
             cardinalBlackAbilityActivated=True
+        #Aktivace ability kardinála černého 1
         elif keys[pygame.K_F9] and cardinalBlackPlaying1 and cardinalBlackAbilityCounter_1==1:
             cardinalBlackAbilityActivated_1=True
+        #Aktivace ability Persefony bílé
         if keys[pygame.K_F9] and persephoneWhitePlaying and persephoneWhiteAbilityCounter!=0:
             persephoneWhiteAbilityActivated=True
+        #Aktivace ability Persefony černé
         elif keys[pygame.K_F9] and persephoneBlackPlaying and persephoneBlackAbilityCounter!=0:
             persephoneBlackAbilityActivated=True
+        #Aktivace ability Hádese bílého
         if keys[pygame.K_F9] and hadesWhitePlaying and hadesWhiteAbilityCounter!=0:
             hadesWhiteAbilityActivated=True
+        #Aktivace ability Hádese černého
         elif keys[pygame.K_F9] and hadesBlackPlaying and hadesBlackAbilityCounter!=0:
             hadesBlackAbilityActivated=True
         
+        #Deaktivace ability pro Persefonu při snížení counteru na 0
         if persephoneWhiteAbilityCounter==0:
             persephoneWhiteAbilityActivated=False
         if persephoneBlackAbilityCounter==0:
             persephoneBlackAbilityActivated=False 
         
+        #Deaktivace ability pro Hádese při snížení counteru na 0
         if hadesBlackAbilityCounter==0:
             hadesBlackAbilityActivated=False
         if hadesWhiteAbilityCounter==0:
             hadesWhiteAbilityActivated=False
 
+        #V případě late game se nastaví 999 counter pro abilitu Persefony za účelem aktivace její ability až do konce hry
         if late_game:
             if hadesWhiteRect.centerx==step:
                 persephoneWhiteAbilityActivated=True
@@ -12849,7 +13564,7 @@ while run:
                 persephoneBlackAbilityActivated=True
                 persephoneBlackAbilityCounter=999
 
-        
+        #Při výhře prvního hráče se v rámci SQL query zvýší jeho win_counter v DB o 1
         if user1_win:
             conn = mysql.connector.connect(
                 host="dbs.spskladno.cz",
@@ -12882,6 +13597,8 @@ while run:
             cursor.close()
             db_connection.close()
             pygame.time.wait(1000)
+
+        #Při výhře druhého hráče se v rámci SQL query zvýší jeho win_counter v DB o 1
         if user2_win:
             conn = mysql.connector.connect(
                         host="dbs.spskladno.cz",
@@ -12915,245 +13632,328 @@ while run:
             db_connection.close()
             pygame.time.wait(1000)
         
+        #Blitnutí čtverců pro nápovědu tažení bílých figurek
         if counter%2==0:
+            #Blitnutí čtverců pro morového doktora bílého
             if plagueDoctorWhitePlaying:
                 for ctverec in rectsPlagueDoctorWhite:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro arcibiskupa bílého
             if archbishopWhitePlaying:
                 for ctverec in rectsArchbishopWhite:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kardinála bílého
             if cardinalWhitePlaying:
                 for ctverec in rectsCardinalWhite:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro Hádese bílého
             if hadesWhitePlaying:
                 for ctverec in rectsHadesWhite:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro abilitu tažení Persefony bílé
             if persephoneWhitePlaying and persephoneWhiteAbilityActivated:
                 for ctverec in rectsPersephoneWhiteAbility:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                                             ctverec.bottom < 1020 and ctverec.top > 60):
                                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro Persefonu bílou
             elif persephoneWhitePlaying:
                 for ctverec in rectsPersephoneWhite:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                                             ctverec.bottom < 1020 and ctverec.top > 60):
                                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kardinála bílého 1
             if cardinalWhitePlaying1:
                 for ctverec in rectsCardinalWhite_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro arcibiskupa bílého 1
             if archbishopWhitePlaying1:
                 for ctverec in rectsArchbishopWhite_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro morového doktora bílého 1
             if plagueDoctorWhitePlaying1:
                 for ctverec in rectsPlagueDoctorWhite_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro válečníka bílého
             if warriorWhitePlaying:
                 for ctverec in rectsWarriorWhite:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                         ctverec.bottom < 1020 and ctverec.top > 60):
                                     pygame.draw.rect(screen, black, ctverec, 5)
                         if counter % 4 == 0:
                                 for ctverec in rectsWarriorWhiteAbility:
+                                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                                             ctverec.bottom < 1020 and ctverec.top > 60):
                                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro legionáře bílého
             if legionaryWhitePlaying:
                 for ctverec in rectsLegionaryWhite:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
-                        pygame.draw.rect(screen, black, ctverec, 5)    
+                        pygame.draw.rect(screen, black, ctverec, 5)  
+            #Blitnutí čtverců pro válečníka bílého 1  
             if warriorWhitePlaying1:
                 for ctverec in rectsWarriorWhite_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
                 if counter % 4 == 0:
                     for ctverec in rectsWarriorWhiteAbility_1:
+                        #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)   
+            #Blitnutí čtverců pro legionáře bílého 1
             if legionaryWhitePlaying1:
                 for ctverec in rectsLegionaryWhite_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                             if (ctverec.right < 1440 and ctverec.left > 475) and (
                                     ctverec.bottom < 1020 and ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro válečníka bílého 2
             if warriorWhitePlaying2:
                 for ctverec in rectsWarriorWhite_2:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
                 if counter % 4 == 0:
                     for ctverec in rectsWarriorWhiteAbility_2:
+                        #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
-                            pygame.draw.rect(screen, black, ctverec, 5)   
+                            pygame.draw.rect(screen, black, ctverec, 5)  
+            #Blitnutí čtverců pro legionáře bílého 2 
             if legionaryWhitePlaying2:
                 for ctverec in rectsLegionaryWhite_2:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro válečníka bílého 3
             if warriorWhitePlaying3:
                 for ctverec in rectsWarriorWhite_3:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
                 if counter % 4 == 0:
                     for ctverec in rectsWarriorWhiteAbility_3:
+                        #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro legionáře bílého 3
             if legionaryWhitePlaying3:
                 for ctverec in rectsLegionaryWhite_3:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kopii kardinála bílého
             if cardinalWhitePlayingCopy:
                 for ctverec in rectsCardinalWhiteCopy:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kopii kardinála bílého 1
             if cardinalWhitePlayingCopy1:
                 for ctverec in rectsCardinalWhiteCopy_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+        #Blitnutí čtverců pro nápovědu tažení černých figurek
         else:
+            #Blitnutí čtverců pro morového doktora černého
             if plagueDoctorBlackPlaying:
                 for ctverec in rectsPlagueDoctorBlack:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro arcibiskupa černého
             if archbishopBlackPlaying:
                 for ctverec in rectsArchbishopBlack:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kardinála černého
             if cardinalBlackPlaying:
                 for ctverec in rectsCardinalBlack:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro Hádese černého
             if hadesBlackPlaying:
                 for ctverec in rectsHadesBlack:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro abilitu tažení Persefony černé
             if persephoneBlackAbilityActivated and persephoneBlackPlaying:
                 for ctverec in rectsPersephoneBlackAbility:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro Persefonu černou
             elif persephoneBlackPlaying:
                 for ctverec in rectsPersephoneBlack:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kardinála černého 1
             if cardinalBlackPlaying1:
                 for ctverec in rectsCardinalBlack_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro arcibiskupa černého 1
             if archbishopBlackPlaying1:
                 for ctverec in rectsArchbishopBlack_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro morového doktora černého 1
             if plagueDoctorBlackPlaying1:
                 for ctverec in rectsPlagueDoctorBlack_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro legionáře černého
             if legionaryBlackPlaying:
                 for ctverec in rectsLegionaryBlack:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro válečníka černého
             if warriorBlackPlaying:
                 for ctverec in rectsWarriorBlack:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
                 if (counter-1) % 4 == 0:
                     for ctverec in rectsWarriorBlackAbility:
+                        #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro legionáře černého 1
             if legionaryBlackPlaying1:
                 for ctverec in rectsLegionaryBlack_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro válečníka černého 1
             if warriorBlackPlaying1:
                 for ctverec in rectsWarriorBlack_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
                 if (counter-1) % 4 == 0:
                     for ctverec in rectsWarriorBlackAbility_1:
+                        #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro legionáře černého 2
             if legionaryBlackPlaying2:
                 for ctverec in rectsLegionaryBlack_2:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro válečníka černého 2
             if warriorBlackPlaying2:
                 for ctverec in rectsWarriorBlack_2:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
                 if (counter - 1) % 4 == 0:
                     for ctverec in rectsWarriorBlackAbility_2:
+                        #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                         if (ctverec.right < 1440 and ctverec.left > 475) and (
                                 ctverec.bottom < 1020 and ctverec.top > 60):
                             pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro legionáře černého 3
             if legionaryBlackPlaying3:
                 for ctverec in rectsLegionaryBlack_3:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro válečníka černého 3
             if warriorBlackPlaying3:
                 for ctverec in rectsWarriorBlack_3:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
                     if (counter - 1) % 4 == 0:
                         for ctverec in rectsWarriorBlackAbility_3:
+                            #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                             if (ctverec.right < 1440 and ctverec.left > 475) and (
                                     ctverec.bottom < 1020 and ctverec.top > 60):
                                 pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kopii kardinála černého
             if cardinalBlackPlayingCopy:
                 for ctverec in rectsCardinalBlackCopy:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
+            #Blitnutí čtverců pro kopii kardinála černého 1
             if cardinalBlackPlayingCopy1:
                 for ctverec in rectsCardinalBlackCopy_1:
+                    #Pokud jsou čtverce v rozsahu hracího pole, vykreslí se
                     if (ctverec.right < 1440 and ctverec.left > 475) and (
                             ctverec.bottom < 1020 and ctverec.top > 60):
                         pygame.draw.rect(screen, black, ctverec, 5)
 
-
-            # todo: Kontrola kolize
-            # Bude to fungovat tak, že jakmile dojde ke kolizi mezi dvěma figurkami, zkontroluje se hodnota counteru a v závislosti na jeho modulu bude odebrána figurka příslušné barvy
-            # counter=0 odehrál bílý, tedy musí brát černou figurku
-        
-
+    #Updatnutí obrazovky při změnách
     pygame.display.update()
 
+    #Nastavení FPS 60
     clock.tick(60)
 
+#Ukončení hry po nastavení run=False
 pygame.quit()
