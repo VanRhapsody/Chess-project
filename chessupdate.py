@@ -622,6 +622,10 @@ while run:
                     hadesBlackAbilityCounter=2
                     persephoneWhiteAbilityCounter=2
                     persephoneBlackAbilityCounter=2
+                    archbishopWhiteFiguresCount=0
+                    archbishopWhiteFiguresCount_1=0
+                    archbishopBlackFiguresCount=0
+                    archbishopBlackFiguresCount_1=0
 
                     show_main_menu = False
                     play_game = True
