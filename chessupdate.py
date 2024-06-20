@@ -21,8 +21,10 @@ cursor.close()
 db_connection.close()
 
 #Nastavení herního okna včetně jeho popisku
-screen = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
-screen_width,screen_height=screen.get_size()
+info = pygame.display.Info()
+screen_width, screen_height = info.current_w, info.current_h
+screen = pygame.display.set_mode((screen_width,screen_height),(pygame.FULLSCREEN))
+
 pygame.display.set_caption("Šachy dle našeho")
 
 # Nastavení fps
@@ -979,7 +981,7 @@ while run:
         screen.blit(pass_header, pass_header_rect)
         screen.blit(send_header, send_header_rect)
 
-        # Vykreslení názvu hry
+        # Vykreslení názvu hryů
         screen.blit(title_header, title_header_rect)
 
     if play_game:
