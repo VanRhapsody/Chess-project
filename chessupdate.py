@@ -25,7 +25,7 @@ info = pygame.display.Info()
 screen_width, screen_height = info.current_w, info.current_h
 screen = pygame.display.set_mode((screen_width,screen_height),(pygame.FULLSCREEN))
 
-pygame.display.set_caption("Šachy dle našeho")
+pygame.display.set_caption("Our Chess")
 
 # Nastavení fps
 clock = pygame.time.Clock()
@@ -203,7 +203,7 @@ songs = ["music/Anguish.mp3", "music/Clavar La Espada.mp3", "music/Kyrie II.mp3"
          "music/American Prometheus.mp3","music/All for One.mp3"]
 song = random.choice(songs)
 pygame.mixer.music.load(song)
-pygame.mixer.music.play(1, 0) #Toto způsobí, že se hudba bude neustále opakovat
+pygame.mixer.music.play(1, 0) #Toto způsobí, že se hudba přehraje jednou a nakonec se zavolá user event music end na konci
 
 # Texty pro buttony a samotné rectangle pro buttony
 button_font = pygame.font.SysFont("georgia", 40, False)
@@ -1027,8 +1027,8 @@ while run:
             screen.blit(plagueDoctorWhite, plagueDoctorWhiteRect1)
         if legionaryWhiteRect in figuresWhite:
             screen.blit(legionaryWhite, legionaryWhiteRect)
-        #if warriorWhiteRect in figuresWhite:
-        screen.blit(warriorWhite, warriorWhiteRect)
+        if warriorWhiteRect in figuresWhite:
+            screen.blit(warriorWhite, warriorWhiteRect)
         if legionaryWhiteRect1 in figuresWhite:
             screen.blit(legionaryWhite, legionaryWhiteRect1)
         if warriorWhiteRect1 in figuresWhite:
